@@ -1,0 +1,175 @@
+{% extends 'base.html.twig' %}
+
+{% block title resource.title %}
+{% block stylesheets %}
+    <style type="text/css">
+        .price
+        {
+            font-weight: bold;
+            font-size: 2rem;
+        }
+
+    </style>
+
+{% endblock %}
+{% block body %}
+
+    <div class="jumbotron">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-8">
+                    
+                </div>
+
+                <div class="col-md-4">
+                    <h1>{{ resource.title }}</h1>
+                    {% if 'Ouvrage' in resource.type %}<h2>{{ resource.type }} ({{ resource.lang }})</h2>{% endif %}
+                    <a href="#" class="btn btn-secondary btn-lg active">Ajouter à mes favoris</a>
+                </div>
+
+            </div>
+			
+        </div>
+
+    </div>
+    <!-- 
+	<div class="container mt-4">
+		<div class="col-md-12">
+    		<nav aria-label="Page navigation example">
+          		<ul class="pagination">
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </li>
+          	  </ul>			
+           </nav>
+	   </div>
+   </div>
+    -->
+    <div class="container mt-4">
+		
+        <p>
+            
+        </p>
+		
+        <div class="row">
+
+            <div class="col-md-7">
+                <h2>Présentation</h2>
+                <table class="table table-striped">
+                    {% if resource.auteur %}
+                    <tr>
+                        <td>Auteur</td>
+                        <td>{{ resource.auteur }}</td>
+                    </tr>
+                    {% endif %}
+                    {% if resource.resp1 %}
+                    <tr>
+                        <td>Première mention de responsabilité</td>
+                        <td>{{ resource.resp1 }}</td>
+                    </tr>
+                    {% endif %}
+                    {% if resource.editeur %}
+                    <tr>
+                        <td>Éditeur</td>
+                        <td>{{ resource.editeur }}</td>
+                    </tr>
+                    {% endif %}
+                    {% if resource.editeurlieu %}
+                    <tr>
+                        <td>Lieu d'édition</td>
+                        <td>{{ resource.editeurlieu }}</td>
+                    </tr>
+                    {% endif %}
+                    {% if resource.anneedit %}
+                    <tr>
+                        <td>Année d'édition</td>
+                        <td>{{ resource.anneedit }}</td>
+                    </tr>
+                    {% endif %}
+                    {% if resource.isbn %}
+                    <tr>
+                        <td>ISBN</td>
+                        <td>{{ resource.isbn }}</td>
+                    </tr>
+                    {% endif %}
+                    {% if resource.pagination %}
+                    <tr>
+                        <td>Pagination</td>
+                        <td>{{ resource.pagination }}</td>
+                    </tr>
+                    {% endif %}
+                    {% if resource.collection %}
+                    <tr>
+                        <td>Collection</td>
+                        <td>{{ resource.collection }}</td>
+                    </tr>
+                    {% endif %}
+                    {% if resource.comment %}
+                    <tr>
+                        <td>Note sur le contenu</td>
+                        <td>{{ resource.comment | nl2br }}</td>
+                    </tr>
+                    {% endif %}
+                    
+                  </table>
+            </div>
+
+            <div class="col-md-5" >
+                <h3>Descripteurs</h3>
+                {% if resource.oeuvre %}
+                <h5>Oeuvres</h5>
+                <ul class="list-inline">
+                        <li class="list-inline-item">{{ resource.oeuvre }}</li>
+                        <li class="list-inline-item">{{ resource.oeuvre }}</li>
+                        <li class="list-inline-item">{{ resource.oeuvre }}</li>
+                </ul>
+                {% endif %}
+                <h5>Personnes</h5>
+                {% if resource.person %}
+                <ul class="list-inline">
+                        <li class="list-inline-item">{{ resource.person }}</li>
+                        <li class="list-inline-item">{{ resource.person }}</li>
+                        <li class="list-inline-item">{{ resource.person }}</li>
+                </ul>
+                {% endif %}
+                <h5>Lieux</h5>
+                {% if resource.geo %}
+                <ul class="list-inline">
+                        <li class="list-inline-item">{{ resource.geo }}</li>
+                        <li class="list-inline-item">{{ resource.geo }}</li>
+                        <li class="list-inline-item">{{ resource.geo }}</li>
+                        <li class="list-inline-item">{{ resource.geo }}</li>
+                </ul>
+                {% endif %}
+                <h5>Mots-clès</h5>
+                {% if resource.tag %}
+                <ul class="list-inline">
+                        <li class="list-inline-item">{{ resource.tag }}</li>
+                        <li class="list-inline-item">{{ resource.tag }}</li>
+                        <li class="list-inline-item">{{ resource.tag }}</li>
+                        <li class="list-inline-item">{{ resource.tag }}</li>
+                        <li class="list-inline-item">{{ resource.tag }}</li>
+                </ul>
+                {% endif %}
+             </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}
