@@ -4,13 +4,37 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Cocur\Slugify\Slugify;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ResourceRepository")
+ * @UniqueEntity(
+ *  fields={"isbn"},
+ *  message="Attention ce champs doit être unique"
+ * )
  */
 class Resource
 {
+    const TypeDoc = [
+        0 => 'Affiche',
+        1 => 'Archives',
+        2 => 'Article',
+        3 => 'Carte postale',
+        4 => 'Dessin / oeuvre graphique',
+        5 => 'Document sonore',
+        6 => 'Document vidéo',
+        7 => 'Dossier documentaire',
+        8 => 'Manuscrit',
+        9 => 'Ouvrage',
+        10 => 'Dossier documentaire',
+        11 => 'Partition chorégraphique',
+        12 => 'Partition musicale',
+        13 => 'Photographie',
+        14 => 'Revue'
+    ];
+    
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -24,11 +48,13 @@ class Resource
     private $type;
 
     /**
+     * @Assert\Length(min=2)
      * @ORM\Column(type="string", length=255)
      */
     private $title;
 
     /**
+     * @Assert\Length(min=2)
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $lang;
@@ -44,27 +70,31 @@ class Resource
     private $person;
 
     /**
+     * @Assert\Length(min=2)
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $oeuvre;
 
     /**
+     * @Assert\Length(min=2)
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $organisme;
 
     /**
+     * @Assert\Length(min=2)
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $geo;
 
     /**
+     * @Assert\Length(min=2)
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $tag;
 
     /**
-     * @ORM\Column(type="boolean", nullable=true)
+     * @ORM\Column(type="boolean", nullable=false)
      */
     private $analyse;
 
@@ -109,17 +139,17 @@ class Resource
     private $anneedit;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $isbn;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $pagination;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255,  nullable=true)
      */
     private $collection;
     

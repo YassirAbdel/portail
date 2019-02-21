@@ -1,0 +1,45 @@
+		{{ form_start(form) }}
+			<div class="row">
+				<div class="col-md-3">{{ form_row(form.type) }}</div>
+				<div class="col-md-3">{{ form_row(form.title) }}</div>
+				<div class="col-md-3">{{ form_row(form.auteur) }}</div>
+				<div class="col-md-3">{{ form_row(form.resp1) }}</div>
+			</div>
+			<div class="row">
+				
+				<div class="col-md-4">{{ form_row(form.person) }}</div>
+				<div class="col-md-4">{{ form_row(form.oeuvre) }}</div>
+				<div class="col-md-4">{{ form_row(form.organisme) }}</div>
+				
+			</div>
+			<div class="row">
+				<div class="col-md-4">{{ form_row(form.tag) }}</div>
+				<div class="col-md-4">{{ form_row(form.geo) }}</div>
+				<div class="col-md-4">{{ form_row(form.person) }}</div>
+				
+			</div>
+			<div class="row">
+				<div class="col-md-3">{{ form_row(form.lang) }}</div>
+				<div class="col-md-3">{{ form_row(form.editeur) }}</div>
+				<div class="col-md-3">{{ form_row(form.editeurlieu) }}</div>
+				<div class="col-md-3">{{ form_row(form.anneedit) }}</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">{{ form_row(form.isbn) }}</div>
+				<div class="col-md-4">{{ form_row(form.pagination) }}</div>
+				<div class="col-md-4">{{ form_row(form.collection) }}</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">{{ form_row(form.analyse) }}</div>
+				<div class="col-md-4">{{ form_row(form.rights) }}</div>
+				<div class="col-md-4">{{ form_row(form.oai) }}</div>
+				
+			</div>
+			 
+			 	{{ form_row(form.comment) }}
+			
+			{{ form_widget(form) }}
+			
+			<button class="btn btn-primary">{{ button|default('Enregistrer') }}</button>
+			 
+		{{ form_end(form) }}

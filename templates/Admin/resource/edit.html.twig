@@ -1,11 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block title 'Toutes les ressources' %}
+{% block title 'Administration du portail' %}
 
 {% block body %}
 	<div class="container mt-4">
 		<h1>Éditer la ressource</h1>
-		
+	{{  include ('admin/resource/_form.html.twig', { button: 'Valider'}) }}
 	</div>
-	
 {% endblock %}
