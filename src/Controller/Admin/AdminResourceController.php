@@ -19,7 +19,6 @@ class AdminResourceController extends AbstractController {
     private $em;
     
     /**
-     *
      * @var ResourceRepository
      */
     

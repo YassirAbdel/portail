@@ -4,12 +4,14 @@
 
 {% block body %}
 	<div class="container mt-4">
+	{% if is_granted('ROLE_DOC')  %}
 	<h1>Gérer les ressources</h1>
 	{% for message in app.flashes('success') %}
 		<div class="alert alert-success">
 			{{ message }}
-	{% endfor %}
 		</div>
+	{% endfor %}
+		
 	<table class="table table-striped">
 		<thead>
 			<tr>
@@ -18,19 +20,21 @@
 			</tr>
 		</thead>
 		<tbody>
-		{% for resource in resources %}
-			<tr>
-				<td>{{ resource.title }}</td>
-				<td>
-					<a href="{{ path('admin.resource.edit', {id: resource.id}) }}" class="btn btn-secondary">Éditer</a>
-					<form method="post" action="{{ path('admin.resource.delete', {id: resource.id}) }}" style="display: inline-block" onsubmit="return confirm('Etes-vopus vraiment sûr ?')">
-						<input type="hidden" name="_method" value="DELETE">
-						<input type="hidden" name="_token" value="{{ csrf_token('delete' ~ resource.id) }}">
-						<button class="btn btn-danger">Supprimer</button>
-					</form>
-				</td>
-			</tr>
-		   {% endfor %}
+		
+    		{% for resource in resources %}
+    			<tr>
+    				<td>{{ resource.title }}</td>
+    				<td>
+    					<a href="{{ path('admin.resource.edit', {id: resource.id}) }}" class="btn btn-secondary">Éditer</a>
+    					<form method="post" action="{{ path('admin.resource.delete', {id: resource.id}) }}" style="display: inline-block" onsubmit="return confirm('Etes-vopus vraiment sûr ?')">
+    						<input type="hidden" name="_method" value="DELETE">
+    						<input type="hidden" name="_token" value="{{ csrf_token('delete' ~ resource.id) }}">
+    						<button class="btn btn-danger">Supprimer</button>
+    					</form>
+    				</td>
+    			</tr>
+    		   {% endfor %}
+		   
 		</tbody>
 	
 	</table>
@@ -38,7 +42,6 @@
 	<div class="text-right">
 		<a href="{{ path('admin.resource.add') }}" class="btn btn-primary">Nouvelle notice</a>
 	</div>		
-		
-	</div>
+	{% endif %}	
 	</div>
 {% endblock %}
