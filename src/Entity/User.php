@@ -46,7 +46,6 @@ class User implements UserInterface, \Serializable
     public function setUsername(string $username): self
     {
         $this->username = $username;
-
         return $this;
     }
 
@@ -97,7 +96,7 @@ class User implements UserInterface, \Serializable
         list (
             $this->id,
             $this->username,
-            $this->username
+            
         ) = unserialize($serialized, ['allowed_classes' => false]);
     }
 }

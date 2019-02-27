@@ -18,6 +18,10 @@ use Symfony\Component\Security\Csrf\CsrfToken;
 use Symfony\Component\Security\Csrf\CsrfTokenManagerInterface;
 use Symfony\Component\Security\Guard\Authenticator\AbstractFormLoginAuthenticator;
 use Symfony\Component\Security\Http\Util\TargetPathTrait;
+use Symfony\Component\HttpFoundation\Session\Session;
+use App\Repository\UserRepository;
+
+
 
 class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
 {
@@ -27,13 +31,15 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
     private $urlGenerator;
     private $csrfTokenManager;
     private $passwordEncoder;
+    private $userrepository;
 
-    public function __construct(EntityManagerInterface $entityManager, UrlGeneratorInterface $urlGenerator, CsrfTokenManagerInterface $csrfTokenManager, UserPasswordEncoderInterface $passwordEncoder)
+    public function __construct(EntityManagerInterface $entityManager, UrlGeneratorInterface $urlGenerator, CsrfTokenManagerInterface $csrfTokenManager, UserPasswordEncoderInterface $passwordEncoder, UserRepository $userrepository)
     {
         $this->entityManager = $entityManager;
         $this->urlGenerator = $urlGenerator;
         $this->csrfTokenManager = $csrfTokenManager;
         $this->passwordEncoder = $passwordEncoder;
+        $this->userrepository = $userrepository;
     }
 
     public function supports(Request $request)
@@ -70,7 +76,12 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
             // fail authentication with a custom error
             throw new CustomUserMessageAuthenticationException('Username could not be found.');
         }
-
+        
+        $session = new Session();
+        $session->set('username', $credentials['username']);
+        $session->set('user', $user);
+        
+        
         return $user;
     }
 
@@ -84,10 +95,39 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
         if ($targetPath = $this->getTargetPath($request->getSession(), $providerKey)) {
             return new RedirectResponse($targetPath);
         }
-
+        
+        // on recupère le user
+        $session = new Session();
+        $username = $session->get('username');
+        $users = $this->userrepository->findByUsername($username);
+        //dump($users);die();
+        // on recupère le user.role et le user.username
+        foreach ($users as $user)
+        {
+            $username = $user->getUsername();
+            $roles = $user->getRoles();
+            $useId = $user->getId();
+            $role = $roles[0];
+        }
+        
+        // on met le username tel qu'il est écrit dans la base
+        $username = $session->set('username', $username);
+        $userId = $session->set('userid', $useId);
+        
         // For example : return new RedirectResponse($this->urlGenerator->generate('some_route'));
         # throw new \Exception('TODO: provide a valid redirect inside '.__FILE__);
-        return new RedirectResponse($this->urlGenerator->generate('admin.resource.index'));
+        
+        // Si le role est ADMIN ou DOC, on renvoie vers le back sinon vers espace visiteur
+        if($role == 'ROLE_ADMIN' || $role == 'ROLE_DOC')
+        {
+            return new RedirectResponse($this->urlGenerator->generate('admin.resource.index'));
+            
+            //return $controller->('admin/resource/index.html.twig');
+        }
+        else 
+        {
+            return new RedirectResponse($this->urlGenerator->generate('home')); ;
+        }
     }
 
     protected function getLoginUrl()

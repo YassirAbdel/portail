@@ -10,6 +10,13 @@ use Doctrine\Common\Persistence\ObjectManager;
 use App\Form\ResourceType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\Security\Guard\Token\PostAuthenticationGuardToken;
+use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorage;
+use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
+use Symfony\Component\Security\Core\Security;
+use Psr\Container\ContainerInterface;
+use Symfony\Component\HttpFoundation\Session\Session;
+
 
 
 
@@ -17,16 +24,17 @@ class AdminResourceController extends AbstractController {
     
     private $repository;
     private $em;
-    
+    private $token;
+    private $user;
     /**
      * @var ResourceRepository
      */
     
-    public function __construct(ResourceRepository $repository, ObjectManager $em)
+    public function __construct(ResourceRepository $repository, ObjectManager $em, TokenStorageInterface $tokenStorage)
     {
-        
         $this->repository = $repository;
         $this->em = $em;
+        $this->token = $tokenStorage;
     }
     
     
@@ -35,10 +43,23 @@ class AdminResourceController extends AbstractController {
      * @return Response
      */
     
-    public function index() : Response
+    public function index(Request $request, Security $container)
     {
         $resources = $this->repository->findAll();
+        
+            // On récupère le username via la variable globale session
+            $session = new Session();
+            $username = $session->get('username');
+            
+            
+            /** NE FONCTIONNE PAS **/
+            //dump($this->token->getToken()->getUser());
+            //dump($this->token->getToken()->getUsername());
+           
+            
+       
         return $this->render('admin/resource/index.html.twig', compact('resources'));
+        
     }
     
     

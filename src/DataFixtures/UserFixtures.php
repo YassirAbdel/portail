@@ -23,11 +23,11 @@ class UserFixtures extends Fixture
         // $manager->persist($product);
         
         $user = new User();
-        $password = $this->encoder->encodePassword($user, 'abdel');
+        $password = $this->encoder->encodePassword($user, 'laurence');
         
-        $user->setUsername('abdel');
+        $user->setUsername('Laurence Leibrech');
         $user->setPassword($password);
-        $user->setRole('ROLE_ADMIN');
+        $user->setRole('ROLE_DOC');
         
         
         
