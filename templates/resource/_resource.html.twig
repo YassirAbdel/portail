@@ -1,0 +1,8 @@
+<div class="card mb-4">
+	<div class="card-body">
+		<h5 class="card-title"></h5>
+		<a href="{{ path('resource.show', {slug: resource.slug, id: resource.id }) }}">{{ resource.title }}</a>
+		<p class="card-text">{{ resource.auteur }}</p>
+		<div class="text-primary" style="font-size:1em;font-weight:bold;">{{ resource.type }}</div> 
+	</div>
+</div>

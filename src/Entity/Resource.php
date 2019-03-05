@@ -153,11 +153,16 @@ class Resource
      */
     private $collection;
     
+    /**
+     * @ORM\Column(type="string", length=255,  nullable=true)
+     */
+    private $idcadic;
+    
     public function __construct()
     {
         $this->created_at = new \DateTime();
     }
-
+   
     public function getId(): ?int
     {
         return $this->id;
@@ -418,5 +423,15 @@ class Resource
         $this->collection = $collection;
 
         return $this;
+    }
+    
+    public function getIdcadic(): string
+    {
+        return $this->idcadic;
+    }
+    
+    public function setIdcadic(string $idcadic)
+    {
+        $this->idcadic = $idcadic;
     }
 }

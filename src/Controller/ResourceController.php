@@ -8,6 +8,8 @@ use App\Entity\Resource;
 use App\Repository\ResourceRepository;
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\ORM\Mapping\Id;
+use Knp\Component\Pager\PaginatorInterface;
+use Symfony\Component\HttpFoundation\Request;
 
 
 
@@ -32,18 +34,26 @@ class ResourceController extends AbstractController {
      * @route("/ressources" , name="resource.index", options={"utf8": true})
      */
     
-    public function index() : Response
+    public function index(PaginatorInterface $paginator, Request $request) : Response
     {
-        //$resource = $this->repository->find(3);
-        // $resource = $this->repository->findBy(['doc_analyse' => 1, 'doc_oai' => 0]);
+        
+        $query = $this->repository->findAllVisibleQuery();
+
+        $resources = $paginator->paginate(
+                        $query,
+                        $request->query->getInt('page', 1)/*page number*/,
+                        12/*limit per page*/
+                      );
         
         return $this->render('resource/index.html.twig', [
-            'current_page' => 'resources'
+            'current_page' => 'resources',
+            'resources' => $resources
+            
         ]);
     }
     
     /**
-     * @route("/ressources/{slug}-{id}" , name="resource.show", requirements={"slug" : "[a-zA-Z1-9\-_\/]+", "id" : "\d+"})
+     * @route("/ressource/{slug}-{id}" , name="resource.show", requirements={"slug" : "^[a-z0-9]+(?:-[a-z0-9]+)*$", "id" : "\d+"})
      * @return Response
      * @param Resource resource
      * @param string slug

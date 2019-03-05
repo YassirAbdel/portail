@@ -4,8 +4,21 @@
 
 {% block body %}
 	<div class="container mt-4">
-		<h1>Éditer la ressource</h1>
-		
+		<h1>Explorer les ressources</h1>
+			<div class="row">
+
+				{% for resource in resources %}
+					<div class="col-md-4">
+						{% include 'resource/_resource.html.twig' %}
+					</div>
+				{% endfor %}
+				
+
+			</div>
+			{# display navigation #}
+			<div class="navigation">
+    			{{ knp_pagination_render(resources) }}
+			</div>
 	</div>
 	
 {% endblock %}

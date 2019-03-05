@@ -21,17 +21,40 @@ class UserFixtures extends Fixture
     {
         // $product = new Product();
         // $manager->persist($product);
-        
+        /**
         $user = new User();
-        $password = $this->encoder->encodePassword($user, 'laurence');
+        $password = $this->encoder->encodePassword($user, 'demo');
         
-        $user->setUsername('Laurence Leibrech');
-        $user->setPassword($password);
-        $user->setRole('ROLE_DOC');
-        
-        
+        $user->setUsername('visiteur')
+               ->setPassword($password)
+                ->setRole('ROLE_VISI')
+        ;
         
         $manager->persist($user);
+        
+        $user = new User();
+        $password = $this->encoder->encodePassword($user, 'demo');
+        
+        $user->setUsername('laurence')
+        ->setPassword($password)
+        ->setRole('ROLE_DOC')
+        ;
+        
+        $manager->persist($user);
+        
+        $user = new User();
+        $password = $this->encoder->encodePassword($user, 'demo');
+        
+        $user->setUsername('abdel')
+        ->setPassword($password)
+        ->setRole('ROLE_ADMIN')
+        ;
+        
+        $manager->persist($user);
+        
+        
         $manager->flush();
+        $manager->clear();
+        **/
     }
 }

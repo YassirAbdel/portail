@@ -22,6 +22,9 @@ Autowirable Types
  EntityManager interface
  Doctrine\ORM\EntityManagerInterface (doctrine.orm.default_entity_manager)
  
+ PaginatorInterface
+ Knp\Component\Pager\PaginatorInterface (knp_paginator)
+ 
  CacheItemPoolInterface generates CacheItemInterface objects.
  Psr\Cache\CacheItemPoolInterface (cache.app)
  
@@ -165,7 +168,7 @@ Autowirable Types
  Symfony\Component\Security\Core\User\UserCheckerInterface (security.user_checker)
  
  Represents a class that loads UserInterface objects from some source for the authentication system.
- Symfony\Component\Security\Core\User\UserProviderInterface (security.user.provider.concrete.in_memory)
+ Symfony\Component\Security\Core\User\UserProviderInterface (security.user.provider.concrete.user_db_provider)
  
  Manages CSRF tokens.
  Symfony\Component\Security\Csrf\CsrfTokenManagerInterface (security.csrf.token_manager)

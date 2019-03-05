@@ -1,0 +1,3 @@
+id;comment;oai;type;title;lang;person;oeuvre;organisme;geo;tag;analyse;rights;auteur;resp1;editeur;editeurlieu;anneedit;isbn;pagination;collection
+1;comment;0;type;title;lang;person;oeuvre;organisme;geo;tag;1;1;auteur;resp1;editeur;editeurlieu;anneedit;isbn;pagination;collection
+2;comment;0;type;title;lang;person;oeuvre;organisme;geo;tag;1;1;auteur;resp1;editeur;editeurlieu;anneedit;isbn;pagination;collection
