@@ -8,6 +8,7 @@ use Symfony\Bridge\Doctrine\RegistryInterface;
 use Doctrine\ORM\QueryBuilder;
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\ORM\Query;
+use App\Entity\ResourceSearch;
 
 
 /**
@@ -52,9 +53,28 @@ class ResourceRepository extends ServiceEntityRepository
     /**
      * @return Query
      */
-    public function findAllVisibleQuery(): Query
+    public function findAllVisibleQuery(ResourceSearch $search): Query
     {
         $query =  $this->findVisibleQuery();
+        
+        if ($search->getTitre()) {
+            $query
+                ->where('r.title like :title')
+                ->setParameter('title', '%'.$search->getTitre(). '%');
+        }
+        
+        if ($search->getAuteur()) {
+            $query
+                ->andWhere('r.auteur like :auteur')
+                ->setParameter('auteur', '%'.$search->getAuteur().'%');
+        }
+        
+        if ($search->getType()) {
+            $query
+                 ->andWhere('r.type like :type')
+                 ->setParameter('type', '%'.$search->getType().'%');
+        }
+            
         return $query->getQuery()
         ;
     }

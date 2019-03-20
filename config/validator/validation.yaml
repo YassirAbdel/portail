@@ -1,0 +1,8 @@
+App\Entity\ResourceSearch:
+   properties:
+      titre:
+         - Length:
+            min: 2
+            max: 50
+            minMessage: 'Veuillez saisir {{ limit }} cacartères au minimum'
+            maxMessage: 'Chaîne trop long, {{ limit }} cacartères au maximum'

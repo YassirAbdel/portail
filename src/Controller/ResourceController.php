@@ -10,6 +10,8 @@ use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\ORM\Mapping\Id;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Component\HttpFoundation\Request;
+use App\Entity\ResourceSearch;
+use App\Form\ResourceSearchType;
 
 
 
@@ -36,8 +38,16 @@ class ResourceController extends AbstractController {
     
     public function index(PaginatorInterface $paginator, Request $request) : Response
     {
+        // 1. Gestion du traitement et affichage du formulaire
+        // 1.1. On crée une nouvelle recherche
+        $search = new ResourceSearch();
+        // 1.2. on crée le formulaire, en second paraméter entity ResourceSearch
+        $form = $this->createForm(ResourceSearchType::class, $search);
+        // 1.3. Gestion de la requete : on passe en paramètre la requête
+        $form->handleRequest($request);
         
-        $query = $this->repository->findAllVisibleQuery();
+        // 1.4. On passe en paramétre la searchdata $search = ResourceSearch
+        $query = $this->repository->findAllVisibleQuery($search);
 
         $resources = $paginator->paginate(
                         $query,
@@ -47,7 +57,10 @@ class ResourceController extends AbstractController {
         
         return $this->render('resource/index.html.twig', [
             'current_page' => 'resources',
-            'resources' => $resources
+            'resources' => $resources,
+            // 1.4. on envoie le formulaire à la vue
+            'form' => $form->createView()
+            
             
         ]);
     }
