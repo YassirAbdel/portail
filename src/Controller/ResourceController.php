@@ -82,7 +82,7 @@ class ResourceController extends AbstractController {
                 'slug' => $resource_slug
             ], 301);
         }
-        
+        dump($resource);
         return $this->render('resource/show.html.twig', [
             'resource' => $resource
         ]);

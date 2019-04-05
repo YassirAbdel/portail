@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Administration du portail' %}
+
+{% block body %}
+	<div class="container mt-4">
+		<h1>Éditer une notice autorité personne</h1>
+	{{  include ('admin/person/_form.html.twig', { button: 'Valider'}) }}
+	</div>
+{% endblock %}

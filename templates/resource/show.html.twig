@@ -35,32 +35,7 @@
         </div>
 
     </div>
-    <!-- 
-	<div class="container mt-4">
-		<div class="col-md-12">
-    		<nav aria-label="Page navigation example">
-          		<ul class="pagination">
-                    <li class="page-item">
-                      <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                        <span class="sr-only">Previous</span>
-                      </a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item">
-                      <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                        <span class="sr-only">Next</span>
-                      </a>
-                    </li>
-          	  </ul>			
-           </nav>
-	   </div>
-   </div>
-    -->
-    <div class="container mt-4">
+   <div class="container mt-4">
 		
         <p>
             
@@ -124,6 +99,18 @@
                         <td>Note sur le contenu</td>
                         <td>{{ resource.comment | nl2br }}</td>
                     </tr>
+                    {% endif %}
+                    
+                    {% if resource.persons|length > 0 %}
+                   
+                        {% for person in resource.persons %}
+                        {% set counter = ( counter | default(0) ) + 1 %}
+                         <tr>
+                        	<td>Fiche personne {{ counter}}</td>
+                    		<td>{{ person.name }}</td>
+                    	</tr>
+                        {% endfor %}
+                    
                     {% endif %}
                     
                   </table>

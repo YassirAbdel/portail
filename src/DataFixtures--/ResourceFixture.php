@@ -28,7 +28,7 @@ class ResourceFixture extends Fixture
     
     public function load(ObjectManager $manager)
     {
-        $stream = fopen('/Applications/MAMP/htdocs/portail/tests/import-cadic_02.csv', 'r');
+        $stream = fopen('/Applications/MAMP/htdocs/portail/tests/import-cadic.csv', 'r');
         $cvs = Reader::createFromStream($stream);
         $cvs->setDelimiter(';');
         $cvs->setHeaderOffset(0);

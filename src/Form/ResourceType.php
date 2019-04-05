@@ -8,19 +8,29 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Doctrine\Common\Annotations\Annotation\Required;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use App\Entity\Person;
 
 class ResourceType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('type', ChoiceType::class, [
-                 'choices' => $this->getChoises()
-              ])
+            //->add('type', ChoiceType::class, [
+                 //'choices' => $this->getChoises()
+              //])
+            ->add('type')
             ->add('title')
             ->add('lang')
             ->add('comment')
             ->add('person')
+            ->add('persons', EntityType::class, [
+                'class' => Person::class,
+                'required' => false,
+                'choice_label' => 'name',
+                'multiple' => true
+                
+            ])
             ->add('oeuvre')
             ->add('organisme')
             ->add('geo')

@@ -10,29 +10,29 @@
 		</div>
 	{% endfor %}
 	{% if is_granted('ROLE_DOC')  %}
-	<h1>Gérer les ressources</h1>
+	<h1>Gérer les autotrités personnes</h1>
 		
 	<table class="table table-striped">
 		<thead>
 			<tr>
-				<th>Titre</th>
+				<th>Personne</th>
 				<th>Actions</th>
 			</tr>
 		</thead>
 		<tbody>
 		
-    		{% for resource in resources %}
+    		{% for person in persons %}
     			<tr>
-    				<td>{{ resource.title }}</td>
+    				<td>{{ person.name }}</td>
     				<td>
     					
-    					<a href="{{ path('admin.resource.edit', {id: resource.id}) }}" class="btn btn-secondary">Éditer</a>
+    					<a href="{{ path('admin.person.edit', {id: person.id}) }}" class="btn btn-secondary">Éditer</a>
     				</td>
     				<td>	
     					
-    					<form method="post" action="{{ path('admin.resource.delete', {id: resource.id}) }}" onsubmit="return confirm('Etes-vopus vraiment sûr ?')">
+    					<form method="post" action="{{ path('admin.person.delete', {id: person.id}) }}" onsubmit="return confirm('Etes-vopus vraiment sûr ?')">
     						<input type="hidden" name="_method" value="DELETE">
-    						<input type="hidden" name="_token" value="{{ csrf_token('delete' ~ resource.id) }}">
+    						<input type="hidden" name="_token" value="{{ csrf_token('delete' ~ person.id) }}">
     						<button class="btn btn-danger">Supprimer</button>
     					</form>
     					
@@ -45,7 +45,7 @@
 	</table>
 		
 	<div class="text-right">
-		<a href="{{ path('admin.resource.add') }}" class="btn btn-primary">Nouvelle notice</a>
+		<a href="{{ path('admin.person.new') }}" class="btn btn-primary">Nouvelle notice</a>
 	</div>		
 	{% endif %}	
 	{% if is_granted('ROLE_ADMIN')  %}

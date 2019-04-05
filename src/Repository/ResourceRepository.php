@@ -74,6 +74,18 @@ class ResourceRepository extends ServiceEntityRepository
                  ->andWhere('r.type like :type')
                  ->setParameter('type', '%'.$search->getType().'%');
         }
+        
+        if ($search->getPersons()->count() > 0) {
+            $k = 0;
+            foreach ($search->getPersons() as $k => $person) {
+                $k++;
+                $query = $query
+                    ->andWhere(":person$k MEMBER OF r.persons")
+                    ->setParameter("person$k", $person)
+                    ;
+            }
+            
+        }
             
         return $query->getQuery()
         ;

@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use phpDocumentor\Reflection\DocBlock\Tags\Return_;
 use Symfony\Component\Validator\Constraint as Assert;
+use Doctrine\Common\Collections\ArrayCollection;
 
 class ResourceSearch 
 {
@@ -21,6 +22,17 @@ class ResourceSearch
      * @var string|null
      */
     private $auteur;
+    
+    /**
+     * @var ArrayCollection
+     */
+    private $persons;
+    
+    
+    function __construct()
+    {
+        $this->persons = new ArrayCollection();
+    }
     /**
      * @return string|NULL
      */
@@ -28,7 +40,8 @@ class ResourceSearch
     {
         return $this->type;
     }
-
+    
+    
     /**
      * @return string|NULL
      */
@@ -68,6 +81,23 @@ class ResourceSearch
     {
         $this->auteur = $auteur;
     }
+    
+    /**
+     * @return \Doctrine\Common\Collections\ArrayCollection
+     */
+    public function getPersons()
+    {
+        return $this->persons;
+    }
+    
+    /**
+     * @param \Doctrine\Common\Collections\ArrayCollection $persons
+     */
+    public function setPersons($persons)
+    {
+        $this->persons = $persons;
+    }
+    
             
 }
 

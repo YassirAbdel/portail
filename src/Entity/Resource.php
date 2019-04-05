@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Cocur\Slugify\Slugify;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -49,7 +51,7 @@ class Resource
 
     /**
      * @Assert\Length(min=2)
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="text")
      */
     private $title;
 
@@ -65,19 +67,19 @@ class Resource
     private $comment;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="text", nullable=true)
      */
     private $person;
 
     /**
      * @Assert\Length(min=2)
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="text", nullable=true)
      */
     private $oeuvre;
 
     /**
      * @Assert\Length(min=2)
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="text", nullable=true)
      */
     private $organisme;
 
@@ -89,7 +91,7 @@ class Resource
 
     /**
      * @Assert\Length(min=2)
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="text", nullable=true)
      */
     private $tag;
 
@@ -114,7 +116,7 @@ class Resource
     private $oai;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="text")
      */
     private $auteur;
 
@@ -157,10 +159,16 @@ class Resource
      * @ORM\Column(type="string", length=255,  nullable=true)
      */
     private $idcadic;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Person", inversedBy="resources")
+     */
+    private $persons;
     
     public function __construct()
     {
         $this->created_at = new \DateTime();
+        $this->persons = new ArrayCollection();
     }
    
     public function getId(): ?int
@@ -433,5 +441,33 @@ class Resource
     public function setIdcadic(string $idcadic)
     {
         $this->idcadic = $idcadic;
+    }
+    
+    /**
+     * @return Collection|Person[]
+     */
+    public function getPersons(): Collection
+    {
+        return $this->persons;
+    }
+
+    public function addPerson(Person $person): self
+    {
+        if (!$this->persons->contains($person)) {
+            $this->persons[] = $person;
+            $person->addResource($this);
+        }
+
+        return $this;
+    }
+
+    public function removePerson(Person $person): self
+    {
+        if ($this->persons->contains($person)) {
+            $this->persons->removeElement($person);
+            $person->removeResource($this);
+        }
+
+        return $this;
     }
 }
