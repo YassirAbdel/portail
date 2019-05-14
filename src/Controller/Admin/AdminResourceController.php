@@ -9,15 +9,12 @@ use Symfony\Component\HttpFoundation\Response;
 use Doctrine\Common\Persistence\ObjectManager;
 use App\Form\ResourceType;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\RedirectResponse;
-use Symfony\Component\Security\Guard\Token\PostAuthenticationGuardToken;
-use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorage;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Symfony\Component\Security\Core\Security;
-use Psr\Container\ContainerInterface;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Session\Session;
-
-
+use Liip\ImagineBundle\Imagine\Cache\CacheManager;
+use Vich\UploaderBundle\Templating\Helper\UploaderHelper;
 
 
 class AdminResourceController extends AbstractController {
@@ -68,11 +65,10 @@ class AdminResourceController extends AbstractController {
      * @param  Resource $resource
      */
     
-    public function edit(Resource $resource, Request $request)
+    public function edit(Resource $resource, Request $request, CacheManager $caheManager, UploaderHelper $helper)
     { 
         $form = $this->createForm(ResourceType::class, $resource);
         $form->handleRequest($request);
-        
         if ($form->isSubmitted() && $form->isValid()){
            $this->em->flush();
            $this->addFlash('success', 'Notice mise à jour avec succès');
@@ -115,9 +111,13 @@ class AdminResourceController extends AbstractController {
      * @param  Resource $resource
      */
     
-    public function delete(Resource $resource, Request $request) {
+    public function delete(Resource $resource, Request $request)
+    {
         if ($this->isCsrfTokenValid('delete' . $resource->getId(), $request->get('_token')))
         {
+           // Supprimer le fichier dans le cache
+           
+            //$caheManager->remove($helper->asset($resource, 'imageFile'));
             $this->em->remove($resource);
             $this->em->flush();
             $this->addFlash('success', 'Notice supprimée avec succès');

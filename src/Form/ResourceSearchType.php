@@ -54,7 +54,7 @@ class ResourceSearchType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => ResourceSearch::class,
-            'method' => 'get',
+            'method' => 'post',
             'csrf_protection' => false
 
         ]);

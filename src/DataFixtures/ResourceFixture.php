@@ -1,7 +1,5 @@
 <?php
-
 namespace App\DataFixtures;
-
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
 use Faker\Factory;
@@ -12,8 +10,6 @@ use App\Repository\ResourceRepository;
 use Symfony\Flex\Unpack\Result;
 use Symfony\Component\Console\Helper\ProgressBar;
 use Symfony\Component\Console\Output\OutputInterface;
-
-
 class ResourceFixture extends Fixture
 {
     private $repository;
@@ -28,7 +24,7 @@ class ResourceFixture extends Fixture
     
     public function load(ObjectManager $manager)
     {
-        $stream = fopen('/Applications/MAMP/htdocs/portail/tests/import-cadic_02.csv', 'r');
+        $stream = fopen('/Applications/MAMP/htdocs/portail/tests/import-cadic-03.csv', 'r');
         $cvs = Reader::createFromStream($stream);
         $cvs->setDelimiter(';');
         $cvs->setHeaderOffset(0);
@@ -63,8 +59,10 @@ class ResourceFixture extends Fixture
             else 
             {
                 foreach ($results as $result)  {
-                    $manager->remove($result);
-                    $resource = new Resource();
+                    //$manager->remove($result);
+                    //$resource = new Resource();
+                    $resource = $this->repository->findByDocRef($record['DOC_REF']);
+                    
                 }
             }
                 $resource->setType($record['DOC_TYPE'])
@@ -89,6 +87,7 @@ class ResourceFixture extends Fixture
                         ->setOai(1)
                         ->setIdcadic($record['DOC_REF'])
                         ;
+                
                 $manager->persist($resource);
                 
                 // Each 20 resources persisted we flush everything

@@ -1,0 +1,3000 @@
+EXP_REF;EXP_DAT_PRET;EXP_DAT_PRET;EXP_AUTORIS_PRET;EXP_DISPO_STATUS;EXP_LOCAL
+DOC00000006;-;-;PR;Disponible;Salle de lecture
+DOC00000009;-;-;PR;Disponible;Salle de lecture
+DOC00000011;-;-;NP;Disponible;Salle de lecture
+DOC00000017;-;-;PR;Disponible;Salle de lecture
+DOC00000018;-;-;PR;Disponible;Salle de lecture
+DOC00000019;-;-;NP;Disponible;Magasin 1
+DOC00000020;-;-;PR;Disponible;Salle de lecture
+DOC00000021;-;-;PR;Disponible;Salle de lecture
+DOC00000026;-;-;PR;Disponible;Salle de lecture
+DOC00000027;-;-;PR;Disponible;Salle de lecture
+DOC00000029;-;-;NP;Disponible;Magasin 1
+DOC00000034;-;-;PR;Disponible;Salle de lecture
+DOC00000037;-;-;PR;Disponible;Salle de lecture
+DOC00000066;-;-;NP;Disponible;Salle de lecture
+DOC00000070;-;-;PR;Disponible;Salle de lecture
+DOC00000071;-;-;PR;Disponible;Salle de lecture
+DOC00000072;-;-;PR;Disponible;Salle de lecture
+DOC00000074;-;-;NP;Disponible;Magasin 1
+DOC00000084;-;-;NP;Disponible;Magasin 1
+DOC00000086;-;-;PR;Disponible;Salle de lecture
+DOC00000088;-;-;NP;Disponible;Salle de lecture
+DOC00000090;-;-;PR;Disponible;Salle de lecture
+DOC00000092;-;-;PR;Disponible;Salle de lecture
+DOC00000095;-;-;NP;Disponible;Magasin 1
+DOC00000096;-;-;NP;Disponible;Salle de lecture
+DOC00000099;-;-;PR;Disponible;Salle de lecture
+DOC00000100;-;-;PR;Disponible;Salle de lecture
+DOC00000105;-;-;NP;Disponible;Salle de lecture
+DOC00000108;-;-;NP;Disponible;Salle de lecture
+DOC00000110;-;-;PR;Disponible;Salle de lecture
+DOC00000115;-;-;NP;Disponible;Salle de lecture
+DOC00000116;-;-;NP;Disponible;Magasin 1
+DOC00000119;-;-;PR;Disponible;Salle de lecture
+DOC00000120;-;-;NP;Disponible;Magasin 1
+DOC00000123;-;-;NP;Disponible;Salle de lecture
+DOC00000134;-;-;NP;Disponible;Magasin 1
+DOC00000138;2019-03-29;2019-03-29;PR;Indisponible;Salle de lecture
+DOC00000139;-;-;NP;Disponible;Salle de lecture
+DOC00000140;-;-;NP;Disponible;Salle de lecture
+DOC00000141;-;-;NP;Disponible;Salle de lecture
+DOC00000145;-;-;PR;Disponible;Salle de lecture
+DOC00000150;-;-;PR;Disponible;Magasin 1
+DOC00000152;-;-;PR;Disponible;Magasin1
+DOC00000154;-;-;NP;Disponible;Salle de lecture
+DOC00000155;-;-;NP;Disponible;Magasin 1
+DOC00000156;-;-;NP;Disponible;Magasin 1
+DOC00000157;-;-;NP;Disponible;Magasin 1
+DOC00000161;-;-;NP;Disponible;Magasin1
+DOC00000167;-;-;NP;Disponible;Magasin 1
+DOC00000173;-;-;NP;Disponible;Magasin 1
+DOC00000174;-;-;NP;Disponible;Magasin 1
+DOC00000177;-;-;NP;Disponible;Salle de lecture
+DOC00000179;-;-;PR;Disponible;Salle de lecture
+DOC00000180;-;-;NP;Disponible;Salle de lecture
+DOC00000190;-;-;PR;Disponible;Salle de lecture
+DOC00000191;-;-;NP;Disponible;Salle de lecture
+DOC00000199;-;-;NP;Disponible;Magasin 1
+DOC00000201;-;-;NP;Disponible;Salle de lecture
+DOC00000202;-;-;NP;Disponible;Magasin 1
+DOC00000203;-;-;NP;Disponible;Magasin 1
+DOC00000205;-;-;NP;Disponible;Salle de lecture
+DOC00000206;-;-;NP;Disponible;Magasin 1
+DOC00000216;-;-;NP;Disponible;Magasin 1
+DOC00000222;-;-;NP;Disponible;Magasin 1
+DOC00000232;-;-;PR;Disponible;Salle de lecture
+DOC00000233;-;-;PR;Disponible;Salle de lecture
+DOC00000237;-;-;PR;Disponible;Salle de lecture
+DOC00000240;-;-;NP;Disponible;Salle de lecture
+DOC00000247;-;-;NP;Disponible;Magasin 1
+DOC00000249;-;-;NP;Disponible;Magasin 1
+DOC00000253;-;-;PR;Disponible;Salle de lecture
+DOC00000255;-;-;PR;Disponible;Salle de lecture
+DOC00000259;-;-;PR;Disponible;Salle de lecture
+DOC00000260;-;-;NP;Disponible;Magasin 1
+DOC00000261;-;-;NP;Disponible;Salle de lecture
+DOC00000265;-;-;PR;Disponible;Salle de lecture
+DOC00000274;-;-;NP;Disponible;Magasin 1
+DOC00000278;-;-;PR;Disponible;Salle de lecture
+DOC00000283;-;-;PR;Disponible;Salle de lecture
+DOC00000285;-;-;PR;Disponible;Magasin 1
+DOC00000286;-;-;NP;Disponible;Magasin 1
+DOC00000291;-;-;NP;Disponible;Magasin 1
+DOC00000292;-;-;PR;Disponible;Salle de lecture
+DOC00000293;-;-;NP;Disponible;Magasin 1
+DOC00000294;-;-;PR;Disponible;Salle de lecture
+DOC00000297;-;-;NP;Disponible;Salle de lecture
+DOC00000299;-;-;NP;Disponible;Salle de lecture
+DOC00000311;-;-;NP;Disponible;Salle de lecture
+DOC00000313;-;-;NP;Disponible;Magasin 1
+DOC00000316;-;-;NP;Disponible;Magasin 1
+DOC00000317;-;-;NP;Disponible;Magasin 1
+DOC00000318;-;-;NP;Disponible;Magasin 1
+DOC00000320;-;-;NP;Disponible;Salle de lecture
+DOC00000323;-;-;NP;Disponible;Magasin 1
+DOC00000327;-;-;NP;Disponible;Salle de lecture
+DOC00000328;-;-;PR;Disponible;Salle de lecture
+DOC00000329;-;-;NP;Disponible;Salle de lecture
+DOC00000332;-;-;NP;Disponible;Salle de lecture
+DOC00000337;-;-;PR;Disponible;Salle de lecture
+DOC00000349;-;-;PR;Disponible;Salle de lecture
+DOC00000355;-;-;NP;Disponible;Magasin 1
+DOC00000356;-;-;PR;Disponible;Salle de lecture
+DOC00000357;-;-;PR;Disponible;Magasin 1
+DOC00000359;-;-;NP;Disponible;Salle de lecture
+DOC00000362;-;-;NP;Disponible;Salle de lecture
+DOC00000363;-;-;PR;Disponible;Salle de lecture
+DOC00000367;-;-;NP;Disponible;Salle de lecture
+DOC00000368;-;-;NP;Disponible;Magasin 1
+DOC00000371;-;-;NP;Disponible;Magasin 1
+DOC00000373;-;-;NP;Disponible;Salle de lecture
+DOC00000377;-;-;PR;Disponible;Salle de lecture
+DOC00000379;-;-;NP;Disponible;Salle de lecture
+DOC00000381;-;-;NP;Disponible;Magasin 1
+DOC00000383;-;-;PR;Disponible;Salle de lecture
+DOC00000387;-;-;PR;Disponible;Salle de lecture
+DOC00000389;-;-;PR;Disponible;Salle de lecture
+DOC00000390;-;-;NP;Disponible;Salle de lecture
+DOC00000392;-;-;PR;Disponible;Salle de lecture
+DOC00000397;-;-;PR;Disponible;Salle de lecture
+DOC00000398;-;-;NP;Disponible;Magasin 1
+DOC00000406;-;-;PR;Disponible;Salle de lecture
+DOC00000407;-;-;NP;Disponible;Magasin 1
+DOC00000409;-;-;NP;Disponible;Salle de lecture
+DOC00000413;-;-;PR;Disponible;Salle de lecture
+DOC00000419;-;-;NP;Disponible;Magasin 1
+DOC00000424;-;-;NP;Disponible;Magasin 1
+DOC00000427;-;-;PR;Disponible;Salle de lecture
+DOC00000430;-;-;NP;Disponible;Magasin 1
+DOC00000432;-;-;NP;Disponible;Magasin 1
+DOC00000433;-;-;NP;Disponible;Salle de lecture
+DOC00000434;-;-;NP;Disponible;Magasin 1
+DOC00000438;-;-;NP;Disponible;Magasin 1
+DOC00000441;-;-;NP;Disponible;Magasin 1
+DOC00000446;-;-;PR;Disponible;Salle de lecture
+DOC00000447;-;-;NP;Disponible;Magasin 1
+DOC00000448;-;-;PR;Disponible;Salle de lecture
+DOC00000449;2019-02-14;2019-02-14;PR;Indisponible;Salle de lecture
+DOC00000450;-;-;PR;Disponible;Salle de lecture
+DOC00000452;-;-;NP;Disponible;Réserve
+DOC00000454;-;-;PR;Disponible;Salle de lecture
+DOC00000459;-;-;NP;Disponible;Magasin 1
+DOC00000460;-;-;NP;Disponible;Magasin 1
+DOC00000468;-;-;PR;Disponible;Salle de lecture
+DOC00000473;-;-;PR;Disponible;Salle de lecture
+DOC00000474;-;-;PR;Disponible;Salle de lecture
+DOC00000476;-;-;PR;Disponible;Salle de lecture
+DOC00000478;-;-;NP;Disponible;Magasin 1
+DOC00000479;-;-;PR;Disponible;Salle de lecture
+DOC00000480;-;-;PR;Disponible;Salle de lecture
+DOC00000481;-;-;PR;Disponible;Salle de lecture
+DOC00000482;-;-;PR;Disponible;Salle de lecture
+DOC00000483;-;-;NP;Disponible;Salle de lecture
+DOC00000488;-;-;PR;Disponible;Salle de lecture
+DOC00000493;-;-;NP;Disponible;Magasin 1
+DOC00000494;-;-;NP;Disponible;Salle de lecture
+DOC00000495;-;-;NP;Disponible;Magasin 1
+DOC00000496;-;-;NP;Disponible;Magasin 1
+DOC00000497;-;-;NP;Disponible;Magasin 1
+DOC00000498;-;-;NP;Disponible;Magasin 1
+DOC00000499;-;-;NP;Disponible;Magasin 1
+DOC00000501;-;-;PR;Disponible;Salle de lecture
+DOC00000502;-;-;PR;Disponible;Salle de lecture
+DOC00000504;-;-;PR;Disponible;Salle de lecture
+DOC00000505;-;-;NP;Disponible;Magasin 1
+DOC00000508;-;-;NP;Disponible;Magasin 1
+DOC00000512;-;-;NP;Disponible;Magasin 1
+DOC00000513;-;-;PR;Disponible;Salle de lecture
+DOC00000518;-;-;NP;Disponible;Salle de lecture
+DOC00000520;-;-;NP;Disponible;Salle de lecture
+DOC00000524;-;-;NP;Disponible;Magasin 1
+DOC00000525;-;-;NP;Disponible;Salle de lecture
+DOC00000526;-;-;NP;Disponible;Magasin 1
+DOC00000527;-;-;NP;Disponible;Salle de lecture
+DOC00000529;-;-;NP;Disponible;Salle de lecture
+DOC00000530;-;-;NP;Disponible;Magasin 1
+DOC00000531;-;-;NP;Disponible;Magasin 1
+DOC00000538;-;-;PR;Disponible;Salle de lecture
+DOC00000541;-;-;NP;Disponible;Magasin 2B
+DOC00000545;-;-;NP;Disponible;Magasin 1
+DOC00000546;-;-;NP;Disponible;Magasin 2B
+DOC00000548;-;-;NP;Disponible;Magasin 1
+DOC00000549;-;-;NP;Disponible;Magasin 1
+DOC00000550;-;-;NP;Disponible;Salle de lecture
+DOC00000551;-;-;PR;Disponible;Salle de lecture
+DOC00000553;-;-;NP;Disponible;Magasin 1
+DOC00000554;-;-;NP;Disponible;Salle de lecture
+DOC00000555;-;-;NP;Disponible;Magasin 1
+DOC00000556;-;-;NP;Disponible;Magasin 1
+DOC00000559;-;-;NP;Disponible;Magasin 1
+DOC00000560;-;-;PR;Disponible;Salle de lecture
+DOC00000561;-;-;NP;Disponible;Magasin 1
+DOC00000562;-;-;NP;Disponible;Magasin 1
+DOC00000563;-;-;NP;Disponible;Magasin 1
+DOC00000565;-;-;NP;Disponible;Magasin 1
+DOC00000569;-;-;NP;Disponible;Magasin 1
+DOC00000573;-;-;PR;Disponible;Salle de lecture
+DOC00000574;-;-;PR;Disponible;Salle de lecture
+DOC00000575;-;-;PR;Disponible;Salle de lecture
+DOC00000577;-;-;PR;Disponible;Salle de lecture
+DOC00000579;-;-;PR;Disponible;Salle de lecture
+DOC00000580;-;-;PR;Disponible;Salle de lecture
+DOC00000585;2019-04-05;2019-04-05;PR;Indisponible;Salle de lecture
+DOC00000589;-;-;NP;Disponible;Salle de lecture
+DOC00000591;-;-;PR;Disponible;Salle de lecture
+DOC00000592;-;-;NP;Disponible;Magasin 2B
+DOC00000594;-;-;PR;Disponible;Salle de lecture
+DOC00000595;-;-;PR;Disponible;Salle de lecture
+DOC00000597;-;-;NP;Disponible;Magasin 1
+DOC00000598;-;-;PR;Disponible;Salle de lecture
+DOC00000601;-;-;PR;Disponible;Salle de lecture
+DOC00000602;-;-;NP;Disponible;Salle de lecture
+DOC00000603;-;-;PR;Disponible;Salle de lecture
+DOC00000604;-;-;NP;Disponible;Magasin 1
+DOC00000607;-;-;NP;Disponible;Salle de lecture
+DOC00000609;-;-;NP;Disponible;Magasin 1
+DOC00000616;-;-;NP;Disponible;Magasin 1
+DOC00000619;-;-;PR;Disponible;Salle de lecture
+DOC00000623;-;-;NP;Disponible;Magasin 1
+DOC00000624;-;-;NP;Disponible;Magasin 1
+DOC00000626;-;-;NP;Disponible;Magasin 1
+DOC00000627;-;-;NP;Disponible;Magasin 1
+DOC00000628;-;-;PR;Disponible;Salle de lecture
+DOC00000629;-;-;PR;Disponible;Salle de lecture
+DOC00000632;-;-;NP;Disponible;Magasin 1
+DOC00000634;-;-;NP;Disponible;Magasin 1
+DOC00000636;-;-;NP;Disponible;Magasin 1
+DOC00000637;-;-;NP;Disponible;Magasin 1
+DOC00000638;-;-;NP;Disponible;Magasin 1
+DOC00000640;-;-;NP;Disponible;Magasin 1
+DOC00000643;-;-;NP;Disponible;Salle de lecture
+DOC00000644;-;-;PR;Disponible;Magasin 1
+DOC00000645;-;-;NP;Disponible;Magasin 1
+DOC00000646;-;-;NP;Disponible;Magasin 1
+DOC00000647;-;-;NP;Disponible;Magasin 1
+DOC00000649;-;-;NP;Disponible;Magasin 1
+DOC00000651;-;-;NP;Disponible;Magasin 1
+DOC00000652;-;-;NP;Disponible;Magasin1
+DOC00000654;-;-;PR;Disponible;Salle de lecture
+DOC00000655;-;-;NP;Disponible;Magasin 1
+DOC00000656;-;-;PR;Disponible;Salle de lecture
+DOC00000661;-;-;NP;Disponible;Magasin 1
+DOC00000662;-;-;NP;Disponible;Magasin 1
+DOC00000663;-;-;NP;Disponible;Magasin 1
+DOC00000669;-;-;NP;Disponible;Magasin 1
+DOC00000670;-;-;NP;Disponible;Salle de lecture
+DOC00000673;-;-;NP;Disponible;Salle de lecture
+DOC00000674;-;-;NP;Disponible;Salle de lecture
+DOC00000677;-;-;NP;Disponible;Magasin 1
+DOC00000679;-;-;NP;Disponible;Salle de lecture
+DOC00000681;-;-;NP;Disponible;Magasin 1
+DOC00000684;-;-;NP;Disponible;Salle de lecture
+DOC00000689;-;-;NP;Disponible;Magasin 1
+DOC00000690;-;-;NP;Disponible;Magasin 1
+DOC00000694;2019-04-02;2019-04-02;PR;Indisponible;Salle de lecture
+DOC00000695;-;-;PR;Disponible;Salle de lecture
+DOC00000699;-;-;NP;Disponible;Magasin 1
+DOC00000701;-;-;PR;Disponible;Salle de lecture
+DOC00000703;-;-;NP;Disponible;Magasin 2B
+DOC00000704;-;-;PR;Disponible;Salle de lecture
+DOC00000708;-;-;NP;Disponible;Magasin 1
+DOC00000709;-;-;NP;Disponible;Magasin 1
+DOC00000713;-;-;NP;Disponible;Magasin 1
+DOC00000714;-;-;NP;Disponible;Magasin 1
+DOC00000715;-;-;NP;Disponible;Magasin 2B
+DOC00000716;-;-;NP;Disponible;Magasin 2B
+DOC00000721;-;-;PR;Disponible;Salle de lecture
+DOC00000725;-;-;NP;Disponible;Magasin 1
+DOC00000727;-;-;NP;Disponible;Magasin 1
+DOC00000729;-;-;NP;Disponible;Magasin 1
+DOC00000731;-;-;NP;Disponible;Magasin 1
+DOC00000735;-;-;NP;Disponible;Magasin 1
+DOC00000738;-;-;NP;Disponible;Magasin 1
+DOC00000740;-;-;NP;Disponible;Salle de lecture
+DOC00000743;-;-;NP;Disponible;Magasin 1
+DOC00000744;-;-;NP;Disponible;Magasin 1
+DOC00000753;-;-;NP;Disponible;Magasin 1
+DOC00000754;-;-;NP;Disponible;Magasin 1
+DOC00000755;-;-;PR;Disponible;Salle de lecture
+DOC00000757;-;-;NP;Disponible;Salle de lecture
+DOC00000759;-;-;PR;Disponible;Salle de lecture
+DOC00000760;-;-;PR;Disponible;Salle de lecture
+DOC00000761;-;-;PR;Disponible;Salle de lecture
+DOC00000766;-;-;PR;Disponible;Salle de lecture
+DOC00000767;-;-;PR;Disponible;Salle de lecture
+DOC00000768;-;-;PR;Disponible;Salle de lecture
+DOC00000770;-;-;NP;Disponible;Salle de lecture
+DOC00000774;-;-;NP;Disponible;Salle de lecture
+DOC00000777;-;-;NP;Disponible;Salle de lecture
+DOC00000778;-;-;PR;Disponible;Salle de lecture
+DOC00000779;-;-;PR;Disponible;Salle de lecture
+DOC00000781;-;-;NP;Disponible;Salle de lecture
+DOC00000790;-;-;NP;Disponible;Salle de lecture
+DOC00000792;-;-;NP;Disponible;Magasin 1
+DOC00000795;-;-;PR;Disponible;Salle de lecture
+DOC00000797;-;-;NP;Disponible;Magasin 1
+DOC00000798;-;-;PR;Disponible;Salle de lecture
+DOC00000802;-;-;NP;Disponible;Salle de lecture
+DOC00000803;-;-;NP;Disponible;Salle de lecture
+DOC00000805;-;-;PR;Disponible;Salle de lecture
+DOC00000808;-;-;PR;Disponible;Salle de lecture
+DOC00000809;-;-;NP;Disponible;Magasin 1
+DOC00000812;-;-;PR;Disponible;Salle de lecture
+DOC00000817;-;-;NP;Disponible;Salle de lecture
+DOC00000818;-;-;NP;Disponible;Magasin 1
+DOC00000821;-;-;NP;Disponible;Magasin 1
+DOC00000824;-;-;PR;Disponible;Salle de lecture
+DOC00000827;-;-;NP;Disponible;Salle de lecture
+DOC00000828;-;-;NP;Disponible;Salle de lecture
+DOC00000829;-;-;NP;Disponible;Salle de lecture
+DOC00000830;-;-;NP;Disponible;Salle de lecture
+DOC00000832;-;-;NP;Disponible;Salle de lecture
+DOC00000833;-;-;PR;Disponible;Salle de lecture
+DOC00000836;-;-;PR;Disponible;Salle de lecture
+DOC00000838;-;-;NP;Disponible;Magasin 1
+DOC00000842;-;-;NP;Disponible;Magasin 1
+DOC00000845;-;-;PR;Disponible;Salle de lecture
+DOC00000846;-;-;PR;Disponible;Salle de lecture
+DOC00000847;-;-;PR;Disponible;Salle de lecture
+DOC00000851;-;-;NP;Disponible;Magasin 2B
+DOC00000852;-;-;PR;Disponible;Salle de lecture
+DOC00000853;-;-;NP;Disponible;Salle de lecture
+DOC00000854;-;-;NP;Disponible;Salle de lecture
+DOC00000855;-;-;NP;Disponible;Salle de lecture
+DOC00000856;-;-;NP;Disponible;Salle de lecture
+DOC00000857;-;-;NP;Disponible;Salle de lecture
+DOC00000858;-;-;PR;Disponible;Salle de lecture
+DOC00000859;-;-;PR;Disponible;Salle de lecture
+DOC00000860;-;-;NP;Disponible;Salle de lecture
+DOC00000863;-;-;NP;Disponible;Magasin 1
+DOC00000864;-;-;NP;Disponible;Magasin 1
+DOC00000865;-;-;NP;Disponible;Magasin 1
+DOC00000866;-;-;PR;Disponible;Salle de lecture
+DOC00000867;-;-;NP;Disponible;Magasin 2B
+DOC00000868;-;-;NP;Disponible;Magasin 2B
+DOC00000877;-;-;PR;Disponible;Salle de lecture
+DOC00000878;-;-;NP;Disponible;Magasin 1
+DOC00000888;-;-;NP;Disponible;Magasin 1
+DOC00000891;-;-;NP;Disponible;Salle de lecture
+DOC00000892;-;-;NP;Disponible;Salle de lecture
+DOC00000895;-;-;NP;Disponible;Salle de lecture
+DOC00000896;-;-;NP;Disponible;Salle de lecture
+DOC00000897;-;-;NP;Disponible;Salle de lecture
+DOC00000898;-;-;NP;Disponible;Magasin 1
+DOC00000902;-;-;NP;Disponible;Salle de lecture
+DOC00000903;-;-;PR;Disponible;Salle de lecture
+DOC00000912;-;-;NP;Disponible;Magasin 1
+DOC00000914;-;-;NP;Disponible;Salle de lecture
+DOC00000917;-;-;NP;Disponible;Magasin 2B
+DOC00000918;-;-;NP;Disponible;Salle de lecture
+DOC00000919;-;-;NP;Disponible;Magasin 1
+DOC00000920;-;-;NP;Disponible;Magasin 1
+DOC00000921;-;-;NP;Disponible;Salle de lecture
+DOC00000923;-;-;NP;Disponible;Magasin 1
+DOC00000927;-;-;PR;Disponible;Salle de lecture
+DOC00000928;-;-;NP;Disponible;Magasin 1
+DOC00000933;-;-;PR;Disponible;Salle de lecture
+DOC00000934;-;-;NP;Disponible;Magasin 1
+DOC00000935;-;-;PR;Disponible;Salle de lecture
+DOC00000936;-;-;NP;Disponible;Magasin 1
+DOC00000944;-;-;PR;Disponible;Salle de lecture
+DOC00000948;-;-;PR;Disponible;Salle de lecture
+DOC00000955;-;-;NP;Disponible;Magasin 1
+DOC00000961;-;-;NP;Disponible;Magasin 1
+DOC00000962;-;-;PR;Disponible;Salle de lecture
+DOC00000965;-;-;NP;Disponible;Magasin 1
+DOC00000966;-;-;NP;Disponible;Salle de lecture
+DOC00000970;-;-;PR;Disponible;Salle de lecture
+DOC00000972;-;-;PR;Disponible;Salle de lecture
+DOC00000974;-;-;NP;Disponible;Salle de lecture
+DOC00000975;-;-;NP;Disponible;Salle de lecture
+DOC00000977;-;-;PR;Disponible;Salle de lecture
+DOC00000978;-;-;PR;Disponible;Salle de lecture
+DOC00000981;-;-;PR;Disponible;Salle de lecture
+DOC00000985;-;-;NP;Disponible;Salle de lecture
+DOC00000987;-;-;NP;Disponible;Magasin 1
+DOC00000988;-;-;NP;Disponible;Magasin 1
+DOC00000990;-;-;NP;Disponible;Magasin 1
+DOC00000991;-;-;NP;Disponible;Magasin 1
+DOC00000996;-;-;NP;Disponible;Magasin 1
+DOC00001000;-;-;NP;Disponible;Magasin 1
+DOC00001004;-;-;NP;Disponible;Salle de lecture
+DOC00001005;-;-;NP;Disponible;Salle de lecture
+DOC00001010;-;-;PR;Disponible;Salle de lecture
+DOC00001014;-;-;NP;Disponible;Magasin 1
+DOC00001016;-;-;NP;Disponible;Salle de lecture
+DOC00001017;-;-;NP;Disponible;Magasin 1
+DOC00001020;-;-;PR;Disponible;Salle de lecture
+DOC00001021;-;-;PR;Disponible;Salle de lecture
+DOC00001023;-;-;NP;Disponible;Magasin 1
+DOC00001024;-;-;NP;Disponible;Salle de lecture
+DOC00001025;-;-;NP;Disponible;Salle de lecture
+DOC00001029;-;-;NP;Disponible;Magasin 1
+DOC00001042;-;-;NP;Disponible;Magasin 1
+DOC00001045;-;-;NP;Disponible;Magasin 1
+DOC00001055;-;-;PR;Disponible;Salle de lecture
+DOC00001056;-;-;PR;Disponible;Salle de lecture
+DOC00001057;-;-;NP;Disponible;Salle de lecture
+DOC00001058;-;-;PR;Disponible;Salle de lecture
+DOC00001059;-;-;NP;Disponible;Salle de lecture
+DOC00001061;-;-;NP;Disponible;Magasin 1
+DOC00001063;-;-;PR;Disponible;Salle de lecture
+DOC00001065;-;-;NP;Disponible;Magasin 2B
+DOC00001066;-;-;NP;Disponible;Salle de lecture
+DOC00001067;-;-;NP;Disponible;Salle de lecture
+DOC00001068;-;-;NP;Disponible;Salle de lecture
+DOC00001070;-;-;NP;Disponible;Magasin 1
+DOC00001072;-;-;NP;Disponible;Salle de lecture
+DOC00001073;-;-;NP;Disponible;Magasin 1
+DOC00001075;-;-;NP;Disponible;Magasin 1
+DOC00001076;-;-;NP;Disponible;Salle de lecture
+DOC00001077;-;-;PR;Disponible;Salle de lecture
+DOC00001079;-;-;PR;Disponible;Salle de lecture
+DOC00001080;-;-;PR;Disponible;Salle de lecture
+DOC00001082;-;-;PR;Disponible;Salle de lecture
+DOC00001083;-;-;NP;Disponible;Magasin 1
+DOC00001084;-;-;NP;Disponible;Magasin 1
+DOC00001085;-;-;PR;Disponible;Salle de lecture
+DOC00001086;-;-;PR;Disponible;Salle de lecture
+DOC00001092;-;-;NP;Disponible;Magasin 1
+DOC00001096;-;-;PR;Disponible;Salle de lecture
+DOC00001098;-;-;NP;Disponible;Salle de lecture
+DOC00001106;-;-;PR;Disponible;Salle de lecture
+DOC00001107;-;-;NP;Disponible;Magasin 1
+DOC00001110;-;-;NP;Disponible;Magasin 1
+DOC00001111;-;-;NP;Disponible;Magasin 1
+DOC00001112;-;-;NP;Disponible;Salle de lecture
+DOC00001113;-;-;PR;Disponible;Salle de lecture
+DOC00001115;-;-;PR;Disponible;Salle de lecture
+DOC00001116;-;-;NP;Disponible;Magasin 2B
+DOC00001119;-;-;PR;Disponible;Salle de lecture
+DOC00001121;-;-;NP;Disponible;Salle de lecture
+DOC00001122;-;-;NP;Disponible;Salle de lecture
+DOC00001125;-;-;PR;Disponible;Salle de lecture
+DOC00001132;-;-;NP;Disponible;Magasin 1
+DOC00001133;-;-;PR;Disponible;Salle de lecture
+DOC00001136;-;-;NP;Disponible;Magasin 1
+DOC00001137;-;-;NP;Disponible;Salle de lecture
+DOC00001141;-;-;PR;Disponible;Salle de lecture
+DOC00001143;-;-;NP;Disponible;Salle de lecture
+DOC00001147;-;-;NP;Disponible;Salle de lecture
+DOC00001152;-;-;PR;Disponible;Salle de lecture
+DOC00001154;-;-;NP;Disponible;Salle de lecture
+DOC00001155;-;-;NP;Disponible;Salle de lecture
+DOC00001159;-;-;NP;Disponible;Magasin 1
+DOC00001162;-;-;NP;Disponible;Magasin 1
+DOC00001163;-;-;NP;Disponible;Magasin 1
+DOC00001165;-;-;NP;Disponible;Magasin 1
+DOC00001168;-;-;NP;Disponible;Salle de lecture
+DOC00001170;-;-;NP;Disponible;Magasin 1
+DOC00001172;-;-;PR;Disponible;Salle de lecture
+DOC00001176;-;-;PR;Disponible;Salle de lecture
+DOC00001178;-;-;NP;Disponible;Salle de lecture
+DOC00001181;-;-;NP;Disponible;Salle de lecture
+DOC00001182;-;-;PR;Disponible;Salle de lecture
+DOC00001183;-;-;NP;Disponible;Salle de lecture
+DOC00001184;-;-;NP;Disponible;Salle de lecture
+DOC00001189;-;-;PR;Disponible;Salle de lecture
+DOC00001190;-;-;PR;Disponible;Salle de lecture
+DOC00001197;-;-;PR;Disponible;Salle de lecture
+DOC00001199;-;-;NP;Disponible;Magasin 1
+DOC00001203;-;-;PR;Disponible;Salle de lecture
+DOC00001205;-;-;PR;Disponible;Salle de lecture
+DOC00001206;-;-;NP;Disponible;Magasin 1
+DOC00001208;-;-;PR;Disponible;Salle de lecture
+DOC00001212;-;-;NP;Disponible;Magasin 1
+DOC00001214;-;-;NP;Disponible;Magasin 1
+DOC00001215;-;-;NP;Disponible;Salle de lecture
+DOC00001216;-;-;NP;Disponible;Magasin 1
+DOC00001218;-;-;NP;Disponible;Magasin 1
+DOC00001220;-;-;NP;Disponible;Magasin 1
+DOC00001222;-;-;NP;Disponible;Magasin 1
+DOC00001224;-;-;NP;Disponible;Salle de lecture
+DOC00001229;-;-;NP;Disponible;Salle de lecture
+DOC00001232;-;-;PR;Disponible;Salle de lecture
+DOC00001233;-;-;NP;Disponible;Salle de lecture
+DOC00001237;-;-;NP;Disponible;Salle de lecture
+DOC00001239;-;-;NP;Disponible;Salle de lecture
+DOC00001241;-;-;NP;Disponible;Salle de lecture
+DOC00001257;-;-;PR;Disponible;Salle de lecture
+DOC00001258;-;-;PR;Disponible;Salle de lecture
+DOC00001263;-;-;NP;Disponible;Magasin 1
+DOC00001265;-;-;NP;Disponible;Salle de lecture
+DOC00001270;-;-;NP;Disponible;Magasin 1
+DOC00001277;-;-;NP;Disponible;Magasin 1
+DOC00001285;-;-;NP;Disponible;Salle de lecture
+DOC00001294;-;-;NP;Disponible;Magasin 1
+DOC00001301;-;-;NP;Disponible;Magasin 2B
+DOC00001302;-;-;NP;Disponible;Magasin 2B
+DOC00001303;-;-;NP;Disponible;Magasin 2B
+DOC00001304;-;-;NP;Disponible;Magasin 2B
+DOC00001305;-;-;NP;Disponible;Magasin 1
+DOC00001306;-;-;NP;Disponible;Magasin 1
+DOC00001308;-;-;NP;Disponible;Magasin 1
+DOC00001309;-;-;PR;Disponible;Salle de lecture
+DOC00001310;-;-;NP;Disponible;Salle de lecture
+DOC00001313;-;-;PR;Disponible;Salle de lecture
+DOC00001315;-;-;PR;Disponible;Salle de lecture
+DOC00001318;-;-;NP;Disponible;Salle de lecture
+DOC00001319;-;-;NP;Disponible;Salle de lecture
+DOC00001320;-;-;NP;Disponible;Salle de lecture
+DOC00001322;-;-;NP;Disponible;Magasin 1
+DOC00001337;-;-;NP;Disponible;Salle de lecture
+DOC00001342;-;-;NP;Disponible;Salle de lecture
+DOC00001343;-;-;NP;Disponible;Salle de lecture
+DOC00001344;-;-;NP;Disponible;Salle de lecture
+DOC00001347;-;-;PR;Disponible;Salle de lecture
+DOC00001349;-;-;PR;Disponible;Salle de lecture
+DOC00001356;-;-;NP;Disponible;Magasin 1
+DOC00001357;-;-;PR;Disponible;Salle de lecture
+DOC00001358;-;-;NP;Disponible;Salle de lecture
+DOC00001359;-;-;PR;Disponible;Salle de lecture
+DOC00001364;-;-;PR;Disponible;Salle de lecture
+DOC00001366;-;-;NP;Disponible;Magasin 1
+DOC00001370;-;-;PR;Disponible;Salle de lecture
+DOC00001371;-;-;PR;Disponible;Salle de lecture
+DOC00001378;-;-;NP;Disponible;Magasin 1
+DOC00001381;-;-;NP;Disponible;Magasin 1
+DOC00001382;-;-;PR;Disponible;Salle de lecture
+DOC00001383;-;-;NP;Disponible;Salle de lecture
+DOC00001389;-;-;PR;Disponible;Salle de lecture
+DOC00001390;-;-;NP;Disponible;Salle de lecture
+DOC00001392;-;-;PR;Disponible;Salle de lecture
+DOC00001397;-;-;PR;Disponible;Salle de lecture
+DOC00001400;-;-;NP;Disponible;Magasin 1
+DOC00001401;-;-;PR;Disponible;Salle de lecture
+DOC00001403;-;-;NP;Disponible;Salle de lecture
+DOC00001404;-;-;NP;Disponible;Magasin 1
+DOC00001406;-;-;NP;Disponible;Salle de lecture
+DOC00001407;-;-;NP;Disponible;Salle de lecture
+DOC00001410;-;-;PR;Disponible;Salle de lecture
+DOC00001411;-;-;NP;Disponible;Salle de lecture
+DOC00001413;-;-;NP;Disponible;Salle de lecture
+DOC00001414;-;-;PR;Disponible;Salle de lecture
+DOC00001416;-;-;NP;Disponible;Salle de lecture
+DOC00001417;-;-;NP;Disponible;Magasin 1
+DOC00001419;-;-;NP;Disponible;Magasin 1
+DOC00001422;-;-;NP;Disponible;Salle de lecture
+DOC00001425;-;-;NP;Disponible;Magasin 1
+DOC00001426;-;-;NP;Disponible;Magasin 1
+DOC00001427;-;-;NP;Disponible;Salle de lecture
+DOC00001428;-;-;NP;Disponible;Magasin 1
+DOC00001430;-;-;NP;Disponible;Magasin 1
+DOC00001432;-;-;PR;Disponible;Magasin 1
+DOC00001434;-;-;NP;Disponible;Magasin 1
+DOC00001436;-;-;NP;Disponible;Salle de lecture
+DOC00001437;-;-;PR;Disponible;Salle de lecture
+DOC00001440;-;-;PR;Disponible;Salle de lecture
+DOC00001443;-;-;NP;Disponible;Magasin 1
+DOC00001444;-;-;NP;Disponible;Salle de lecture
+DOC00001446;-;-;NP;Disponible;Salle de lecture
+DOC00001447;-;-;NP;Disponible;Salle de lecture
+DOC00001448;-;-;NP;Disponible;Magasin 1
+DOC00001449;-;-;NP;Disponible;Salle de lecture
+DOC00001451;-;-;PR;Disponible;Salle de lecture
+DOC00001455;-;-;PR;Disponible;Salle de lecture
+DOC00001456;-;-;PR;Disponible;Salle de lecture
+DOC00001457;-;-;NP;Disponible;Salle de lecture
+DOC00001458;-;-;NP;Disponible;Salle de lecture
+DOC00001459;-;-;NP;Disponible;Salle de lecture
+DOC00001462;-;-;PR;Disponible;Salle de lecture
+DOC00001465;-;-;PR;Disponible;Salle de lecture
+DOC00001468;-;-;PR;Disponible;Salle de lecture
+DOC00001469;-;-;NP;Disponible;Salle de lecture
+DOC00001470;-;-;NP;Disponible;Salle de lecture
+DOC00001471;-;-;NP;Disponible;Magasin 1
+DOC00001473;-;-;PR;Disponible;Salle de lecture
+DOC00001474;-;-;PR;Disponible;Salle de lecture
+DOC00001477;-;-;NP;Disponible;Magasin 1
+DOC00001480;-;-;NP;Disponible;Magasin 1
+DOC00001482;-;-;NP;Disponible;Salle de lecture
+DOC00001484;-;-;NP;Disponible;Magasin 1
+DOC00001490;-;-;NP;Disponible;Magasin 1
+DOC00001493;-;-;NP;Disponible;Magasin 1
+DOC00001496;-;-;NP;Disponible;Salle de lecture
+DOC00001498;-;-;NP;Disponible;Salle de lecture
+DOC00001499;-;-;NP;Disponible;Magasin 1
+DOC00001501;-;-;PR;Disponible;Salle de lecture
+DOC00001502;-;-;PR;Disponible;Magasin 1
+DOC00001504;2019-03-25;2019-03-25;PR;Indisponible;Salle de lecture
+DOC00001505;-;-;PR;Disponible;Salle de lecture
+DOC00001508;-;-;NP;Disponible;Salle de lecture
+DOC00001510;-;-;PR;Disponible;Salle de lecture
+DOC00001512;-;-;NP;Disponible;Salle de lecture
+DOC00001516;-;-;NP;Disponible;Magasin 1
+DOC00001517;2019-01-17;2019-01-17;PR;Indisponible;Salle de lecture
+DOC00001519;-;-;PR;Disponible;Salle de lecture
+DOC00001521;-;-;PR;Disponible;Salle de lecture
+DOC00001522;-;-;PR;Disponible;Salle de lecture
+DOC00001523;-;-;NP;Disponible;Salle de lecture
+DOC00001524;-;-;PR;Disponible;Salle de lecture
+DOC00001535;-;-;PR;Disponible;Salle de lecture
+DOC00001538;-;-;PR;Disponible;Salle de lecture
+DOC00001541;-;-;PR;Disponible;Salle de lecture
+DOC00001543;-;-;PR;Disponible;Salle de lecture
+DOC00001544;-;-;PR;Disponible;Salle de lecture
+DOC00001545;-;-;PR;Disponible;Salle de lecture
+DOC00001548;-;-;PR;Disponible;Salle de lecture
+DOC00001549;-;-;NP;Disponible;Magasin 1
+DOC00001551;-;-;NP;Disponible;Magasin 1
+DOC00001552;-;-;NP;Disponible;Salle de lecture
+DOC00001556;-;-;NP;Disponible;Magasin 1
+DOC00001558;-;-;NP;Disponible;Magasin 1
+DOC00001560;-;-;NP;Disponible;Magasin 1
+DOC00001562;-;-;PR;Disponible;Salle de lecture
+DOC00001564;-;-;PR;Disponible;Salle de lecture
+DOC00001570;-;-;PR;Disponible;Salle de lecture
+DOC00001576;-;-;NP;Disponible;Salle de lecture
+DOC00001577;-;-;NP;Disponible;Salle de lecture
+DOC00001578;-;-;NP;Disponible;Salle de lecture
+DOC00001579;-;-;NP;Disponible;Salle de lecture
+DOC00001581;-;-;NP;Disponible;Salle de lecture
+DOC00001587;-;-;PR;Disponible;Salle de lecture
+DOC00001588;-;-;PR;Disponible;Salle de lecture
+DOC00001591;-;-;NP;Disponible;Salle de lecture
+DOC00001592;-;-;PR;Disponible;Salle de lecture
+DOC00001596;-;-;PR;Disponible;Salle de lecture
+DOC00001597;-;-;PR;Disponible;Salle de lecture
+DOC00001607;-;-;PR;Disponible;Salle de lecture
+DOC00001608;-;-;PR;Disponible;Salle de lecture
+DOC00001611;-;-;NP;Disponible;Magasin 1
+DOC00001612;-;-;NP;Disponible;Salle de lecture
+DOC00001615;-;-;NP;Disponible;Magasin 1
+DOC00001616;-;-;NP;Disponible;Salle de lecture
+DOC00001617;-;-;PR;Disponible;Salle de lecture
+DOC00001621;-;-;PR;Disponible;Salle de lecture
+DOC00001622;-;-;NP;Disponible;Magasin 1
+DOC00001623;-;-;NP;Disponible;Salle de lecture
+DOC00001626;-;-;NP;Disponible;Magasin 1
+DOC00001627;-;-;PR;Disponible;Salle de lecture
+DOC00001629;-;-;NP;Disponible;Magasin 1
+DOC00001630;-;-;NP;Disponible;Magasin 1
+DOC00001631;-;-;NP;Disponible;Salle de lecture
+DOC00001635;-;-;NP;Disponible;Salle de lecture
+DOC00001636;-;-;NP;Disponible;Salle de lecture
+DOC00001637;-;-;NP;Disponible;Salle de lecture
+DOC00001638;-;-;NP;Disponible;Salle de lecture
+DOC00001639;-;-;NP;Disponible;Salle de lecture
+DOC00001640;-;-;NP;Disponible;Magasin 1
+DOC00001646;-;-;NP;Disponible;Salle de lecture
+DOC00001648;-;-;NP;Disponible;Magasin 1
+DOC00001650;-;-;PR;Disponible;Magasin 1
+DOC00001652;-;-;NP;Disponible;Magasin 1
+DOC00001653;-;-;PR;Disponible;Salle de lecture
+DOC00001662;-;-;NP;Disponible;Salle de lecture
+DOC00001667;-;-;NP;Disponible;Magasin 1
+DOC00001671;-;-;PR;Disponible;Salle de lecture
+DOC00001676;-;-;NP;Disponible;Magasin 1
+DOC00001677;-;-;NP;Disponible;Magasin 1
+DOC00001679;-;-;NP;Disponible;Magasin 1
+DOC00001680;-;-;NP;Disponible;Magasin 1
+DOC00001685;-;-;NP;Disponible;Magasin 1
+DOC00001686;-;-;NP;Disponible;Salle de lecture
+DOC00001687;-;-;PR;Disponible;Salle de lecture
+DOC00001692;-;-;NP;Disponible;Magasin 1
+DOC00001693;-;-;NP;Disponible;Magasin 1
+DOC00001696;-;-;NP;Disponible;Magasin 1
+DOC00001698;-;-;NP;Disponible;Magasin 1
+DOC00001700;-;-;NP;Disponible;Salle de lecture
+DOC00001701;-;-;NP;Disponible;Salle de lecture
+DOC00001702;-;-;NP;Disponible;Salle de lecture
+DOC00001704;-;-;NP;Disponible;Magasin 1
+DOC00001706;-;-;NP;Disponible;Salle de lecture
+DOC00001707;-;-;NP;Disponible;Magasin 1
+DOC00001709;-;-;NP;Disponible;Salle de lecture
+DOC00001711;-;-;NP;Disponible;Magasin 1
+DOC00001712;-;-;NP;Disponible;Magasin 1
+DOC00001714;-;-;NP;Disponible;Magasin 1
+DOC00001715;-;-;NP;Disponible;Salle de lecture
+DOC00001716;-;-;NP;Disponible;Salle de lecture
+DOC00001719;-;-;NP;Disponible;Salle de lecture
+DOC00001720;-;-;NP;Disponible;Salle de lecture
+DOC00001721;-;-;NP;Disponible;Salle de lecture
+DOC00001722;-;-;NP;Disponible;Salle de lecture
+DOC00001724;-;-;NP;Disponible;Magasin 1
+DOC00001725;-;-;NP;Disponible;Salle de lecture
+DOC00001726;-;-;NP;Disponible;Magasin 1
+DOC00001729;-;-;NP;Disponible;Magasin 1
+DOC00001735;-;-;NP;Disponible;Salle de lecture
+DOC00001745;-;-;NP;Disponible;Salle de lecture
+DOC00001747;-;-;NP;Disponible;Salle de lecture
+DOC00001749;-;-;NP;Disponible;Magasin 1
+DOC00001750;-;-;NP;Disponible;Salle de lecture
+DOC00001751;-;-;NP;Disponible;Salle de lecture
+DOC00001752;-;-;NP;Disponible;Salle de lecture
+DOC00001753;-;-;NP;Disponible;Magasin 1
+DOC00001754;-;-;PR;Disponible;Salle de lecture
+DOC00001755;-;-;NP;Disponible;Salle de lecture
+DOC00001762;-;-;NP;Disponible;Salle de lecture
+DOC00001764;-;-;NP;Disponible;Magasin 1
+DOC00001766;-;-;NP;Disponible;Magasin 1
+DOC00001767;-;-;PR;Disponible;Salle de lecture
+DOC00001769;-;-;PR;Disponible;Salle de lecture
+DOC00001771;-;-;NP;Disponible;Magasin 1
+DOC00001772;-;-;NP;Disponible;Magasin 1
+DOC00001773;-;-;NP;Disponible;Magasin 1
+DOC00001774;-;-;NP;Disponible;Magasin 1
+DOC00001779;-;-;NP;Disponible;Magasin 1
+DOC00001782;-;-;NP;Disponible;Salle de lecture
+DOC00001786;-;-;NP;Disponible;Magasin 1
+DOC00001789;-;-;NP;Disponible;Magasin 1
+DOC00001790;-;-;NP;Disponible;Magasin 1
+DOC00001791;-;-;NP;Disponible;Magasin 1
+DOC00001792;-;-;NP;Disponible;Magasin 1
+DOC00001795;-;-;NP;Disponible;Magasin 1
+DOC00001797;-;-;NP;Disponible;Salle de lecture
+DOC00001798;-;-;NP;Disponible;Salle de lecture
+DOC00001799;-;-;NP;Disponible;Magasin 1
+DOC00001801;-;-;PR;Disponible;Salle de lecture
+DOC00001803;-;-;NP;Disponible;Magasin 1
+DOC00001805;-;-;NP;Disponible;Magasin 1
+DOC00001807;-;-;PR;Disponible;Salle de lecture
+DOC00001809;-;-;NP;Disponible;Salle de lecture
+DOC00001810;-;-;NP;Disponible;Salle de lecture
+DOC00001812;-;-;NP;Disponible;Magasin 1
+DOC00001813;-;-;NP;Disponible;Magasin 1
+DOC00001814;-;-;NP;Disponible;Magasin 1
+DOC00001815;-;-;NP;Disponible;Magasin 1
+DOC00001817;-;-;NP;Disponible;Magasin 1
+DOC00001818;-;-;NP;Disponible;Magasin 1
+DOC00001822;-;-;NP;Disponible;Salle de lecture
+DOC00001825;-;-;NP;Disponible;Salle de lecture
+DOC00001826;-;-;NP;Disponible;Magasin 1
+DOC00001827;-;-;NP;Disponible;Salle de lecture
+DOC00001829;-;-;NP;Disponible;Salle de lecture
+DOC00001830;-;-;NP;Disponible;Salle de lecture
+DOC00001831;-;-;PR;Disponible;Magasin 1
+DOC00001833;-;-;NP;Disponible;Salle de lecture
+DOC00001834;-;-;PR;Disponible;Salle de lecture
+DOC00001836;-;-;NP;Disponible;Salle de lecture
+DOC00001837;-;-;NP;Disponible;Magasin 1
+DOC00001838;-;-;NP;Disponible;Salle de lecture
+DOC00001839;-;-;NP;Disponible;Magasin 1
+DOC00001840;-;-;NP;Disponible;Salle de lecture
+DOC00001841;-;-;NP;Disponible;Salle de lecture
+DOC00001842;-;-;NP;Disponible;Salle de lecture
+DOC00001847;-;-;PR;Disponible;Salle de lecture
+DOC00001851;-;-;NP;Disponible;Magasin 1
+DOC00001852;-;-;NP;Disponible;Magasin 1
+DOC00001853;-;-;NP;Disponible;Magasin 1
+DOC00001856;-;-;NP;Disponible;Magasin 1
+DOC00001857;-;-;PR;Disponible;Salle de lecture
+DOC00001862;-;-;NP;Disponible;Magasin 1
+DOC00001866;-;-;NP;Disponible;Salle de lecture
+DOC00001867;-;-;PR;Disponible;Salle de lecture
+DOC00001868;-;-;NP;Disponible;Salle de lecture
+DOC00001871;-;-;NP;Disponible;Salle de lecture
+DOC00001872;-;-;PR;Disponible;Salle de lecture
+DOC00001874;-;-;PR;Disponible;Salle de lecture
+DOC00001875;-;-;NP;Disponible;Magasin 1
+DOC00001876;-;-;NP;Disponible;Magasin 1
+DOC00001877;-;-;NP;Disponible;Salle de lecture
+DOC00001882;-;-;PR;Disponible;Salle de lecture
+DOC00001883;-;-;NP;Disponible;Salle de lecture
+DOC00001884;-;-;NP;Disponible;Magasin 1
+DOC00001885;-;-;NP;Disponible;Magasin 1
+DOC00001886;-;-;NP;Disponible;Magasin 1
+DOC00001887;-;-;NP;Disponible;Magasin 1
+DOC00001888;-;-;NP;Disponible;Magasin 1
+DOC00001889;-;-;PR;Disponible;Salle de lecture
+DOC00001890;-;-;NP;Disponible;Magasin 1
+DOC00001892;-;-;NP;Disponible;Magasin 1
+DOC00001893;-;-;NP;Disponible;Magasin 1
+DOC00001897;-;-;NP;Disponible;Salle de lecture
+DOC00001905;-;-;PR;Disponible;Salle de lecture
+DOC00001906;-;-;NP;Disponible;Magasin 1
+DOC00001908;-;-;PR;Disponible;Salle de lecture
+DOC00001916;-;-;PR;Disponible;Salle de lecture
+DOC00001917;-;-;NP;Disponible;Salle de lecture
+DOC00001920;-;-;NP;Disponible;Magasin 1
+DOC00001921;-;-;PR;Disponible;Salle de lecture
+DOC00001922;-;-;NP;Disponible;Magasin 1
+DOC00001923;-;-;NP;Disponible;Magasin 1
+DOC00001926;-;-;NP;Disponible;Magasin 1
+DOC00001927;-;-;NP;Disponible;Magasin 1
+DOC00001931;-;-;NP;Disponible;Salle de lecture
+DOC00001932;-;-;PR;Disponible;Salle de lecture
+DOC00001934;-;-;NP;Disponible;Magasin 1
+DOC00001938;-;-;NP;Disponible;Salle de lecture
+DOC00001940;-;-;NP;Disponible;Salle de lecture
+DOC00001941;-;-;NP;Disponible;Salle de lecture
+DOC00001943;-;-;NP;Disponible;Salle de lecture
+DOC00001944;-;-;PR;Disponible;Salle de lecture
+DOC00001946;-;-;NP;Disponible;Magasin 1
+DOC00001950;-;-;NP;Disponible;Salle de lecture
+DOC00001953;-;-;NP;Disponible;Salle de lecture
+DOC00001958;-;-;NP;Disponible;Salle de lecture
+DOC00001962;-;-;NP;Disponible;Salle de lecture
+DOC00001963;-;-;NP;Disponible;Salle de lecture
+DOC00001964;-;-;NP;Disponible;Salle de lecture
+DOC00001966;-;-;NP;Disponible;Salle de lecture
+DOC00001967;-;-;NP;Disponible;Magasin 1
+DOC00001969;-;-;NP;Disponible;Salle de lecture
+DOC00001970;-;-;PR;Disponible;Salle de lecture
+DOC00001971;-;-;PR;Disponible;Salle de lecture
+DOC00001978;-;-;NP;Disponible;Salle de lecture
+DOC00001979;-;-;NP;Disponible;Magasin 1
+DOC00001981;-;-;NP;Disponible;Magasin 1
+DOC00001982;-;-;NP;Disponible;Salle de lecture
+DOC00001984;-;-;NP;Disponible;Salle de lecture
+DOC00001986;-;-;NP;Disponible;Salle de lecture
+DOC00001989;-;-;NP;Disponible;Salle de lecture
+DOC00001990;-;-;NP;Disponible;Salle de lecture
+DOC00001991;-;-;NP;Disponible;Salle de lecture
+DOC00001992;2019-03-15;2019-03-15;PR;Indisponible;Salle de lecture
+DOC00001993;-;-;PR;Disponible;Salle de lecture
+DOC00001994;-;-;NP;Disponible;Magasin 1
+DOC00001995;-;-;NP;Disponible;Salle de lecture
+DOC00001996;-;-;NP;Disponible;Magasin 1
+DOC00001997;-;-;NP;Disponible;Magasin 1
+DOC00001998;-;-;NP;Disponible;Magasin 1
+DOC00001999;-;-;NP;Disponible;Magasin 1
+DOC00002000;-;-;NP;Disponible;Magasin 1
+DOC00002001;-;-;NP;Disponible;Salle de lecture
+DOC00002003;-;-;NP;Disponible;Magasin 1
+DOC00002004;-;-;NP;Disponible;Magasin 1
+DOC00002006;-;-;NP;Disponible;Magasin 1
+DOC00002007;-;-;NP;Disponible;Magasin 1
+DOC00002010;-;-;NP;Disponible;Magasin 1
+DOC00002012;-;-;NP;Disponible;Magasin 2B
+DOC00002013;-;-;NP;Disponible;Magasin 2B
+DOC00002015;-;-;NP;Disponible;Magasin 2B
+DOC00002016;-;-;NP;Disponible;Magasin 1
+DOC00002017;-;-;NP;Disponible;Salle de lecture
+DOC00002018;-;-;NP;Disponible;Salle de lecture
+DOC00002020;-;-;NP;Disponible;Magasin 1
+DOC00002021;-;-;NP;Disponible;Magasin 2B
+DOC00002024;-;-;NP;Disponible;Magasin 1
+DOC00002026;-;-;NP;Disponible;Magasin 1
+DOC00002042;-;-;PR;Disponible;Salle de lecture
+DOC00002045;-;-;NP;Disponible;Magasin 1
+DOC00002048;-;-;PR;Disponible;Salle de lecture
+DOC00002051;-;-;NP;Disponible;Magasin 1
+DOC00002052;-;-;NP;Disponible;Magasin 1
+DOC00002053;-;-;NP;Disponible;Magasin 2B
+DOC00002054;-;-;NP;Disponible;Magasin 2B
+DOC00002058;-;-;NP;Disponible;Magasin 2B
+DOC00002059;-;-;NP;Disponible;Magasin 2B
+DOC00002060;-;-;NP;Disponible;Magasin 2B
+DOC00002061;-;-;NP;Disponible;Magasin 2B
+DOC00002062;-;-;NP;Disponible;Magasin 2B
+DOC00002063;-;-;NP;Disponible;Magasin 2B
+DOC00002064;-;-;NP;Disponible;Magasin 2B
+DOC00002065;-;-;NP;Disponible;Magasin 2B
+DOC00002066;-;-;NP;Disponible;Magasin 2B
+DOC00002067;-;-;NP;Disponible;Magasin 1
+DOC00002068;-;-;NP;Disponible;Magasin 1
+DOC00002069;-;-;NP;Disponible;Magasin 1
+DOC00002072;-;-;NP;Disponible;Magasin 1
+DOC00002073;-;-;NP;Disponible;Magasin 1
+DOC00002074;-;-;NP;Disponible;Magasin 1
+DOC00002077;-;-;PR;Disponible;Salle de lecture
+DOC00002078;-;-;NP;Disponible;Magasin 1
+DOC00002080;-;-;NP;Disponible;Magasin 1
+DOC00002083;-;-;NP;Disponible;Salle de lecture
+DOC00002084;-;-;NP;Disponible;Salle de lecture
+DOC00002085;-;-;NP;Disponible;Salle de lecture
+DOC00002086;-;-;PR;Disponible;Salle de lecture
+DOC00002087;-;-;NP;Disponible;Magasin 1
+DOC00002088;-;-;NP;Disponible;Salle de lecture
+DOC00002090;-;-;PR;Disponible;Salle de lecture
+DOC00002093;-;-;NP;Disponible;Salle de lecture
+DOC00002115;-;-;NP;Disponible;Salle de lecture
+DOC00002118;-;-;NP;Disponible;Salle de lecture
+DOC00002121;-;-;NP;Disponible;Salle de lecture
+DOC00002122;-;-;NP;Disponible;Magasin 1
+DOC00002123;-;-;NP;Disponible;Magasin 1
+DOC00002133;-;-;PR;Disponible;Salle de lecture
+DOC00002134;-;-;NP;Disponible;Salle de lecture
+DOC00002135;-;-;NP;Disponible;Magasin 1
+DOC00002141;-;-;NP;Disponible;Salle de lecture
+DOC00002143;-;-;NP;Disponible;Salle de lecture
+DOC00002144;-;-;NP;Disponible;Magasin 1
+DOC00002145;-;-;NP;Disponible;Magasin 1
+DOC00002148;-;-;NP;Disponible;Magasin 1
+DOC00002149;-;-;NP;Disponible;Salle de lecture
+DOC00002150;-;-;NP;Disponible;Magasin 1
+DOC00002152;-;-;NP;Disponible;Magasin 1
+DOC00002156;-;-;NP;Disponible;Magasin 1
+DOC00002157;-;-;NP;Disponible;Magasin 1
+DOC00002160;-;-;NP;Disponible;Magasin 1
+DOC00002163;-;-;NP;Disponible;Magasin 1
+DOC00002165;-;-;NP;Disponible;Magasin 1
+DOC00002166;-;-;NP;Disponible;Salle de lecture
+DOC00002167;-;-;NP;Disponible;Magasin 1
+DOC00002169;-;-;NP;Disponible;Salle de lecture
+DOC00002170;-;-;NP;Disponible;Salle de lecture
+DOC00002172;-;-;NP;Disponible;Magasin 2B
+DOC00002179;-;-;NP;Disponible;Magasin 1
+DOC00002181;-;-;PR;Disponible;Salle de lecture
+DOC00002182;-;-;NP;Disponible;Magasin 1
+DOC00002183;-;-;NP;Disponible;Salle de lecture
+DOC00002185;-;-;NP;Disponible;Salle de lecture
+DOC00002186;-;-;PR;Disponible;Salle de lecture
+DOC00002188;-;-;NP;Disponible;Salle de lecture
+DOC00002190;-;-;NP;Disponible;Salle de lecture
+DOC00002192;-;-;NP;Disponible;Salle de lecture
+DOC00002193;-;-;NP;Disponible;Salle de lecture
+DOC00002194;-;-;NP;Disponible;Salle de lecture
+DOC00002198;-;-;PR;Disponible;Salle de lecture
+DOC00002200;-;-;NP;Disponible;Magasin 1
+DOC00002201;-;-;NP;Disponible;Magasin 1
+DOC00002203;-;-;NP;Disponible;Magasin 1
+DOC00002204;-;-;NP;Disponible;Salle de lecture
+DOC00002207;-;-;NP;Disponible;Salle de lecture
+DOC00002210;-;-;PR;Disponible;Salle de lecture
+DOC00002211;-;-;PR;Disponible;Salle de lecture
+DOC00002212;-;-;PR;Disponible;Salle de lecture
+DOC00002220;-;-;NP;Disponible;Magasin 1
+DOC00002221;-;-;NP;Disponible;Salle de lecture
+DOC00002223;-;-;NP;Disponible;Magasin 1
+DOC00002224;-;-;NP;Disponible;Magasin 1
+DOC00002225;-;-;NP;Disponible;Magasin 1
+DOC00002226;-;-;NP;Disponible;Salle de lecture
+DOC00002227;-;-;NP;Disponible;Magasin 1
+DOC00002229;-;-;NP;Disponible;Magasin 1
+DOC00002230;-;-;NP;Disponible;Salle de lecture
+DOC00002235;-;-;NP;Disponible;Magasin 1
+DOC00002236;-;-;NP;Disponible;Salle de lecture
+DOC00002237;-;-;NP;Disponible;Magasin 1
+DOC00002238;-;-;NP;Disponible;Magasin 1
+DOC00002239;-;-;NP;Disponible;Salle de lecture
+DOC00002241;-;-;NP;Disponible;Magasin 1
+DOC00002242;-;-;NP;Disponible;Magasin 1
+DOC00002243;-;-;NP;Disponible;Salle de lecture
+DOC00002245;-;-;NP;Disponible;Magasin 1
+DOC00002247;-;-;NP;Disponible;Magasin 1
+DOC00002248;-;-;NP;Disponible;Salle de lecture
+DOC00002249;-;-;PR;Disponible;Salle de lecture
+DOC00002250;-;-;NP;Disponible;Salle de lecture
+DOC00002251;-;-;NP;Disponible;Salle de lecture
+DOC00002252;-;-;NP;Disponible;Salle de lecture
+DOC00002254;-;-;NP;Disponible;Salle de lecture
+DOC00002255;-;-;NP;Disponible;Salle de lecture
+DOC00002256;-;-;NP;Disponible;Salle de lecture
+DOC00002257;-;-;NP;Disponible;Salle de lecture
+DOC00002258;-;-;NP;Disponible;Magasin 1
+DOC00002259;-;-;NP;Disponible;Salle de lecture
+DOC00002260;-;-;NP;Disponible;Magasin 1
+DOC00002261;-;-;NP;Disponible;Magasin 1
+DOC00002263;-;-;NP;Disponible;Magasin 1
+DOC00002264;-;-;NP;Disponible;Salle de lecture
+DOC00002265;-;-;NP;Disponible;Salle de lecture
+DOC00002266;-;-;NP;Disponible;Salle de lecture
+DOC00002267;-;-;NP;Disponible;Salle de lecture
+DOC00002270;-;-;NP;Disponible;Magasin 1
+DOC00002281;-;-;NP;Disponible;Salle de lecture
+DOC00002282;-;-;NP;Disponible;Salle de lecture
+DOC00002296;-;-;NP;Disponible;Salle de lecture
+DOC00002303;-;-;NP;Disponible;Salle de lecture
+DOC00002306;-;-;NP;Disponible;Salle de lecture
+DOC00002308;-;-;PR;Disponible;Salle de lecture
+DOC00002309;-;-;PR;Disponible;Salle de lecture
+DOC00002310;-;-;NP;Disponible;Salle de lecture
+DOC00002311;-;-;NP;Disponible;Salle de lecture
+DOC00002313;-;-;NP;Disponible;Magasin 1
+DOC00002314;-;-;PR;Disponible;Salle de lecture
+DOC00002315;-;-;NP;Disponible;Magasin 1
+DOC00002316;-;-;NP;Disponible;Salle de lecture
+DOC00002317;-;-;NP;Disponible;Salle de lecture
+DOC00002318;-;-;NP;Disponible;Salle de lecture
+DOC00002319;-;-;PR;Disponible;Salle de lecture
+DOC00002321;-;-;NP;Disponible;Salle de lecture
+DOC00002323;-;-;NP;Disponible;Salle de lecture
+DOC00002324;-;-;NP;Disponible;Magasin 1
+DOC00002327;-;-;NP;Disponible;Salle de lecture
+DOC00002328;-;-;NP;Disponible;Magasin 1
+DOC00002329;-;-;NP;Disponible;Salle de lecture
+DOC00002330;-;-;NP;Disponible;Salle de lecture
+DOC00002331;-;-;NP;Disponible;Salle de lecture
+DOC00002332;-;-;NP;Disponible;Magasin 1
+DOC00002334;-;-;NP;Disponible;Salle de lecture
+DOC00002337;-;-;NP;Disponible;Magasin 1
+DOC00002338;-;-;PR;Disponible;Salle de lecture
+DOC00002340;-;-;NP;Disponible;Salle de lecture
+DOC00002341;-;-;NP;Disponible;Magasin 1
+DOC00002342;-;-;NP;Disponible;Salle de lecture
+DOC00002343;-;-;NP;Disponible;Salle de lecture
+DOC00002344;-;-;NP;Disponible;Salle de lecture
+DOC00002347;-;-;NP;Disponible;Salle de lecture
+DOC00002354;-;-;PR;Disponible;Salle de lecture
+DOC00002359;-;-;NP;Disponible;Magasin 1
+DOC00002360;-;-;NP;Disponible;Magasin 1
+DOC00002365;-;-;NP;Disponible;Magasin 1
+DOC00002366;-;-;NP;Disponible;Magasin 1
+DOC00002367;-;-;NP;Disponible;Magasin 1
+DOC00002368;-;-;NP;Disponible;Magasin 1
+DOC00002370;-;-;NP;Disponible;Magasin 1
+DOC00002372;-;-;NP;Disponible;Magasin 1
+DOC00002373;-;-;NP;Disponible;Magasin 1
+DOC00002377;-;-;NP;Disponible;Magasin 1
+DOC00002378;-;-;NP;Disponible;Magasin 1
+DOC00002379;-;-;NP;Disponible;Magasin 1
+DOC00002380;-;-;NP;Disponible;Salle de lecture
+DOC00002381;-;-;NP;Disponible;Magasin 1
+DOC00002383;-;-;NP;Disponible;Magasin 1
+DOC00002384;-;-;NP;Disponible;Magasin 1
+DOC00002385;-;-;NP;Disponible;Salle de lecture
+DOC00002386;-;-;NP;Disponible;Salle de lecture
+DOC00002391;-;-;NP;Disponible;Salle de lecture
+DOC00002396;-;-;NP;Disponible;Salle de lecture
+DOC00002397;-;-;NP;Disponible;Magasin 1
+DOC00002400;-;-;NP;Disponible;Magasin 1
+DOC00002402;-;-;NP;Disponible;Salle de lecture
+DOC00002404;-;-;NP;Disponible;Magasin 1
+DOC00002405;-;-;PR;Disponible;Magasin 1
+DOC00002406;-;-;NP;Disponible;Magasin 1
+DOC00002408;-;-;NP;Disponible;Magasin 1
+DOC00002409;-;-;NP;Disponible;Magasin 1
+DOC00002410;-;-;NP;Disponible;Magasin 1
+DOC00002413;-;-;NP;Disponible;Magasin 1
+DOC00002415;-;-;NP;Disponible;Magasin 2B
+DOC00002416;-;-;NP;Disponible;Magasin 2B
+DOC00002417;-;-;NP;Disponible;Magasin 1
+DOC00002419;-;-;NP;Disponible;Magasin 1
+DOC00002420;-;-;NP;Disponible;Magasin 1
+DOC00002421;-;-;NP;Disponible;Salle de lecture
+DOC00002423;-;-;NP;Disponible;Magasin 1
+DOC00002427;-;-;NP;Disponible;Magasin 1
+DOC00002428;-;-;NP;Disponible;Magasin 1
+DOC00002429;-;-;NP;Disponible;Magasin 1
+DOC00002431;-;-;NP;Disponible;Magasin 1
+DOC00002438;-;-;PR;Disponible;Magasin 1
+DOC00002441;-;-;NP;Disponible;Magasin 1
+DOC00002442;-;-;PR;Disponible;Magasin 1
+DOC00002445;-;-;PR;Disponible;Salle de lecture
+DOC00002449;-;-;PR;Disponible;Salle de lecture
+DOC00002450;-;-;PR;Disponible;Salle de lecture
+DOC00002459;-;-;PR;Disponible;Salle de lecture
+DOC00002460;-;-;PR;Disponible;Magasin 1
+DOC00002462;-;-;PR;Disponible;Magasin 1
+DOC00002470;-;-;NP;Disponible;Magasin 1
+DOC00002471;-;-;NP;Disponible;Magasin 1
+DOC00002472;-;-;NP;Disponible;Magasin 1
+DOC00002475;-;-;NP;Disponible;Magasin 1
+DOC00002476;-;-;NP;Disponible;Magasin 1
+DOC00002482;-;-;NP;Disponible;Magasin 1
+DOC00002484;-;-;NP;Disponible;Magasin 1
+DOC00002489;-;-;NP;Disponible;Magasin 1
+DOC00002490;-;-;NP;Disponible;Magasin 1
+DOC00002491;-;-;NP;Disponible;Magasin 1
+DOC00002493;-;-;NP;Disponible;Salle de lecture
+DOC00002494;-;-;NP;Disponible;Salle de lecture
+DOC00002495;-;-;NP;Disponible;Salle de lecture
+DOC00002496;-;-;NP;Disponible;magasin 1
+DOC00002499;-;-;NP;Disponible;Salle de lecture
+DOC00002500;-;-;NP;Disponible;Magasin 1
+DOC00002502;-;-;NP;Disponible;Magasin 1
+DOC00002503;-;-;NP;Disponible;Magasin 1
+DOC00002504;-;-;NP;Disponible;Magasin 1
+DOC00002505;-;-;NP;Disponible;Magasin 1
+DOC00002506;-;-;NP;Disponible;Magasin 1
+DOC00002507;-;-;NP;Disponible;Magasin 1
+DOC00002509;-;-;PR;Disponible;Magasin 1
+DOC00002511;-;-;NP;Disponible;Magasin 1
+DOC00002512;-;-;NP;Disponible;Magasin 2B
+DOC00002514;-;-;NP;Disponible;Magasin 1
+DOC00002515;-;-;NP;Disponible;Magasin 1
+DOC00002522;-;-;NP;Disponible;Magasin 1
+DOC00002524;-;-;PR;Disponible;Salle de lecture
+DOC00002526;-;-;PR;Disponible;Magasin 1
+DOC00002527;-;-;NP;Disponible;Magasin 1
+DOC00002529;-;-;NP;Disponible;Magasin 1
+DOC00002530;-;-;NP;Disponible;Magasin 1
+DOC00002531;-;-;NP;Disponible;Magasin 1
+DOC00002532;-;-;NP;Disponible;Magasin 1
+DOC00002533;-;-;NP;Disponible;Magasin 1
+DOC00002535;-;-;NP;Disponible;Salle de lecture
+DOC00002536;-;-;NP;Disponible;Magasin 1
+DOC00002537;-;-;NP;Disponible;Magasin 1
+DOC00002539;-;-;NP;Disponible;Magasin 2B
+DOC00002540;-;-;NP;Disponible;Magasin 1
+DOC00002541;-;-;NP;Disponible;Magasin 1
+DOC00002545;-;-;NP;Disponible;Salle de lecture
+DOC00002549;-;-;NP;Disponible;Magasin 1
+DOC00002551;-;-;NP;Disponible;Magasin 1
+DOC00002552;-;-;NP;Disponible;Salle de lecture
+DOC00002553;-;-;NP;Disponible;Réserve
+DOC00002555;-;-;NP;Disponible;Magasin 1
+DOC00002556;-;-;NP;Disponible;Magasin 1
+DOC00002557;-;-;NP;Disponible;Magasin 1
+DOC00002560;-;-;NP;Disponible;Magasin 1
+DOC00002562;-;-;NP;Disponible;Salle de lecture
+DOC00002563;-;-;NP;Disponible;Magasin 1
+DOC00002565;-;-;NP;Disponible;Salle de lecture
+DOC00002566;-;-;NP;Disponible;Magasin 1
+DOC00002567;-;-;NP;Disponible;Salle de lecture
+DOC00002568;-;-;NP;Disponible;Salle de lecture
+DOC00002569;-;-;NP;Disponible;Salle de lecture
+DOC00002572;-;-;NP;Disponible;Magasin 1
+DOC00002573;-;-;NP;Disponible;Magasin 1
+DOC00002574;-;-;PR;Disponible;Salle de lecture
+DOC00002581;-;-;NP;Disponible;Magasin 1
+DOC00002593;-;-;NP;Disponible;Magasin 1
+DOC00002595;-;-;PR;Disponible;Salle de lecture
+DOC00002596;-;-;PR;Disponible;Salle de lecture
+DOC00002597;-;-;NP;Disponible;Magasin 1
+DOC00002598;-;-;NP;Disponible;Magasin 1
+DOC00002599;-;-;NP;Disponible;Magasin 1
+DOC00002600;-;-;NP;Disponible;Magasin 1
+DOC00002601;-;-;NP;Disponible;Magasin 1
+DOC00002606;-;-;NP;Disponible;Salle de lecture
+DOC00002609;-;-;NP;Disponible;Magasin 1
+DOC00002610;-;-;NP;Disponible;Magasin 1
+DOC00002611;-;-;PR;Disponible;Salle de lecture
+DOC00002616;-;-;NP;Disponible;Magasin 1
+DOC00002619;-;-;NP;Disponible;Magasin 1
+DOC00002620;-;-;NP;Disponible;Magasin 1
+DOC00002622;-;-;NP;Disponible;Magasin 1
+DOC00002623;-;-;NP;Disponible;Magasin 1
+DOC00002624;-;-;NP;Disponible;Magasin 1
+DOC00002625;-;-;NP;Disponible;Magasin 1
+DOC00002626;-;-;NP;Disponible;Magasin 1
+DOC00002627;-;-;NP;Disponible;Magasin 1
+DOC00002635;-;-;NP;Disponible;Salle de lecture
+DOC00002637;-;-;NP;Disponible;Magasin 1
+DOC00002640;-;-;NP;Disponible;Magasin 1
+DOC00002641;-;-;NP;Disponible;Magasin 1
+DOC00002642;-;-;NP;Disponible;Salle de lecture
+DOC00002643;-;-;NP;Disponible;Salle de lecture
+DOC00002644;-;-;NP;Disponible;Magasin 1
+DOC00002645;-;-;NP;Disponible;Magasin 1
+DOC00002646;-;-;NP;Disponible;Magasin 1
+DOC00002647;-;-;NP;Disponible;Magasin 1
+DOC00002649;-;-;NP;Disponible;Magasin 1
+DOC00002652;-;-;NP;Disponible;Magasin 1
+DOC00002656;-;-;NP;Disponible;Magasin 1
+DOC00002662;-;-;NP;Disponible;Magasin 1
+DOC00002670;-;-;NP;Disponible;Magasin 1
+DOC00002671;-;-;NP;Disponible;Magasin 1
+DOC00002672;-;-;NP;Disponible;Magasin 1
+DOC00002673;-;-;NP;Disponible;Magasin 1
+DOC00002674;-;-;NP;Disponible;Magasin 1
+DOC00002675;-;-;NP;Disponible;Magasin 1
+DOC00002677;-;-;NP;Disponible;Magasin 1
+DOC00002679;-;-;NP;Disponible;Magasin 1
+DOC00002681;-;-;NP;Disponible;Magasin 1
+DOC00002686;-;-;NP;Disponible;Magasin 1
+DOC00002687;-;-;NP;Disponible;Magasin 1
+DOC00002688;-;-;NP;Disponible;Magasin 1
+DOC00002689;-;-;NP;Disponible;Magasin 2B
+DOC00002690;-;-;NP;Disponible;Magasin 1
+DOC00002696;-;-;NP;Disponible;Magasin 1
+DOC00002698;-;-;NP;Disponible;Magasin 1
+DOC00002700;-;-;NP;Disponible;Magasin 1
+DOC00002702;-;-;PR;Disponible;Magasin 1
+DOC00002703;-;-;NP;Disponible;Magasin 1
+DOC00002704;-;-;NP;Disponible;Magasin 1
+DOC00002707;-;-;PR;Disponible;Salle de lecture
+DOC00002710;-;-;NP;Disponible;Magasin 1
+DOC00002718;-;-;NP;Disponible;Magasin 1
+DOC00002726;-;-;NP;Disponible;Magasin 1
+DOC00002730;-;-;NP;Disponible;Magasin1
+DOC00002731;-;-;NP;Disponible;Magasin 1
+DOC00002732;-;-;NP;Disponible;Magasin 1
+DOC00002735;-;-;NP;Disponible;Magasin 1
+DOC00002736;-;-;NP;Disponible;Salle de lecture
+DOC00002737;-;-;NP;Disponible;Magasin 1
+DOC00002739;-;-;NP;Disponible;Magasin 1
+DOC00002741;-;-;NP;Disponible;Magasin 1
+DOC00002743;-;-;NP;Disponible;Magasin 1
+DOC00002744;-;-;NP;Disponible;Magasin 1
+DOC00002745;-;-;NP;Disponible;Magasin 1
+DOC00002748;-;-;NP;Disponible;Magasin 1
+DOC00002750;-;-;NP;Disponible;Magasin 1
+DOC00002752;-;-;NP;Disponible;Magasin 1
+DOC00002753;-;-;NP;Disponible;Magasin 1
+DOC00002754;-;-;NP;Disponible;Magasin 1
+DOC00002756;-;-;NP;Disponible;Salle de lecture
+DOC00002757;-;-;NP;Disponible;Salle de lecture
+DOC00002760;-;-;NP;Disponible;Magasin 1
+DOC00002761;-;-;NP;Disponible;Magasin 1
+DOC00002762;-;-;NP;Disponible;Magasin 1
+DOC00002771;-;-;NP;Disponible;Magasin 1
+DOC00002773;-;-;NP;Disponible;Magasin 1
+DOC00002774;-;-;PR;Disponible;Magasin 1
+DOC00002776;-;-;NP;Disponible;Magasin 1
+DOC00002778;-;-;NP;Disponible;Magasin 1
+DOC00002779;-;-;NP;Disponible;Magasin 1
+DOC00002780;-;-;NP;Disponible;Magasin 1
+DOC00002784;-;-;NP;Disponible;Salle de lecture
+DOC00002787;-;-;NP;Disponible;Salle de lecture
+DOC00002789;-;-;PR;Disponible;Salle de lecture
+DOC00002790;-;-;NP;Disponible;Salle de lecture
+DOC00002791;-;-;NP;Disponible;Magasin 1
+DOC00002792;-;-;NP;Disponible;Magasin 1
+DOC00002793;-;-;PR;Disponible;Salle de lecture
+DOC00002794;-;-;NP;Disponible;Magasin 1
+DOC00002795;-;-;NP;Disponible;Magasin 1
+DOC00002796;-;-;NP;Disponible;Magasin 1
+DOC00002797;-;-;NP;Disponible;Magasin 1
+DOC00002798;-;-;NP;Disponible;Magasin 1
+DOC00002800;-;-;NP;Disponible;Magasin 1
+DOC00002801;-;-;NP;Disponible;Magasin 1
+DOC00002802;-;-;NP;Disponible;Magasin 1
+DOC00002803;-;-;NP;Disponible;Magasin 1
+DOC00002804;-;-;NP;Disponible;Magasin 1
+DOC00002805;-;-;NP;Disponible;Magasin 1
+DOC00002806;-;-;NP;Disponible;Magasin 1
+DOC00002807;-;-;NP;Disponible;Magasin 1
+DOC00002809;-;-;NP;Disponible;Salle de lecture
+DOC00002813;-;-;NP;Disponible;Magasin 1
+DOC00002814;-;-;NP;Disponible;Magasin 1
+DOC00002818;-;-;NP;Disponible;Salle de lecture
+DOC00002823;-;-;NP;Disponible;Salle de lecture
+DOC00002824;-;-;NP;Disponible;Magasin 1
+DOC00002828;-;-;NP;Disponible;Magasin 1
+DOC00002829;-;-;NP;Disponible;Salle de lecture
+DOC00002832;-;-;NP;Disponible;Magasin 1
+DOC00002833;-;-;NP;Disponible;Magasin 1
+DOC00002835;-;-;NP;Disponible;Magasin 1
+DOC00002837;-;-;NP;Disponible;Magasin 1
+DOC00002838;-;-;NP;Disponible;Salle de lecture
+DOC00002840;-;-;PR;Disponible;Salle de lecture
+DOC00002841;-;-;NP;Disponible;Magasin 1
+DOC00002842;-;-;PR;Disponible;Salle de lecture
+DOC00002843;-;-;NP;Disponible;Magasin 1
+DOC00002844;-;-;NP;Disponible;Magasin 1
+DOC00002849;-;-;NP;Disponible;Magasin 1
+DOC00002851;-;-;NP;Disponible;Magasin 1
+DOC00002858;-;-;NP;Disponible;Magasin 1
+DOC00002859;-;-;PR;Disponible;Salle de lecture
+DOC00002863;-;-;PR;Disponible;Salle de lecture
+DOC00002865;-;-;NP;Disponible;Magasin 1
+DOC00002867;-;-;NP;Disponible;Magasin 1
+DOC00002868;-;-;NP;Disponible;Magasin 1
+DOC00002878;-;-;NP;Disponible;Magasin 1
+DOC00002879;-;-;NP;Disponible;Magasin 1
+DOC00002881;-;-;PR;Disponible;Salle de lecture
+DOC00002882;-;-;PR;Disponible;Salle de lecture
+DOC00002883;-;-;NP;Disponible;Magasin 1
+DOC00002893;-;-;NP;Disponible;Magasin 1
+DOC00002905;-;-;NP;Disponible;Magasin 1
+DOC00002906;-;-;NP;Disponible;Magasin 1
+DOC00002907;-;-;NP;Disponible;Magasin 1
+DOC00002908;-;-;NP;Disponible;Magasin 1
+DOC00002910;-;-;NP;Disponible;Magasin 1
+DOC00002911;-;-;NP;Disponible;Magasin 1
+DOC00002917;-;-;NP;Disponible;Magasin 1
+DOC00002918;-;-;NP;Disponible;Magasin 1
+DOC00002919;-;-;NP;Disponible;Magasin 1
+DOC00002920;-;-;NP;Disponible;Magasin 1
+DOC00002921;-;-;NP;Disponible;-
+DOC00002923;-;-;NP;Disponible;Magasin 2B
+DOC00002924;-;-;NP;Disponible;Salle de lecture
+DOC00002932;-;-;NP;Disponible;Magasin 1
+DOC00002935;-;-;NP;Disponible;Magasin 1
+DOC00002936;-;-;NP;Disponible;Magasin 1
+DOC00002940;-;-;NP;Disponible;Magasin 1
+DOC00002941;-;-;NP;Disponible;Magasin 1
+DOC00002946;-;-;NP;Disponible;Magasin 1
+DOC00002947;-;-;NP;Disponible;Salle de lecture
+DOC00002948;-;-;NP;Disponible;Salle de lecture
+DOC00002954;-;-;NP;Disponible;Salle de lecture
+DOC00002956;-;-;NP;Disponible;Salle de lecture
+DOC00002958;-;-;NP;Disponible;Magasin 1
+DOC00002965;-;-;PR;Disponible;Salle de lecture
+DOC00002967;-;-;NP;Disponible;Magasin 1
+DOC00002969;-;-;NP;Disponible;Salle de lecture
+DOC00002972;-;-;NP;Disponible;Salle de lecture
+DOC00002973;-;-;NP;Disponible;Salle de lecture
+DOC00002975;-;-;NP;Disponible;Magasin 1
+DOC00002976;-;-;PR;Disponible;Magasin 1
+DOC00002979;-;-;NP;Disponible;Magasin 2B
+DOC00002980;-;-;PR;Disponible;Salle de lecture
+DOC00002982;-;-;NP;Disponible;Magasin 1
+DOC00002983;-;-;NP;Disponible;Magasin 1
+DOC00002984;-;-;PR;Disponible;Salle de lecture
+DOC00002985;-;-;PR;Disponible;Salle de lecture
+DOC00002986;-;-;NP;Disponible;Magasin 1
+DOC00002987;-;-;NP;Disponible;Salle de lecture
+DOC00002993;-;-;PR;Disponible;Salle de lecture
+DOC00002997;-;-;NP;Disponible;Salle de lecture
+DOC00003004;-;-;PR;Disponible;Magasin 1
+DOC00003005;-;-;NP;Disponible;Magasin 1
+DOC00003006;-;-;NP;Disponible;Magasin 1
+DOC00003008;-;-;NP;Disponible;Salle de lecture
+DOC00003017;-;-;NP;Disponible;Salle de lecture
+DOC00003021;-;-;NP;Disponible;Magasin 1
+DOC00003023;-;-;PR;Disponible;Salle de lecture
+DOC00003028;-;-;PR;Disponible;Salle de lecture
+DOC00003029;-;-;PR;Disponible;Salle de lecture
+DOC00003031;-;-;PR;Disponible;Magasin 1
+DOC00003039;-;-;PR;Disponible;Magasin 1
+DOC00003043;-;-;PR;Disponible;Salle de lecture
+DOC00003044;-;-;NP;Disponible;Magasin 1
+DOC00003047;-;-;PR;Disponible;Salle de lecture
+DOC00003049;-;-;PR;Disponible;Salle de lecture
+DOC00003051;-;-;NP;Disponible;Magasin 1
+DOC00003055;-;-;NP;Disponible;Salle de lecture
+DOC00003064;-;-;PR;Disponible;Salle de lecture
+DOC00003066;-;-;PR;Disponible;Salle de lecture
+DOC00003068;-;-;PR;Disponible;Salle de lecture
+DOC00003070;-;-;NP;Disponible;Salle de lecture
+DOC00003076;-;-;NP;Disponible;Magasin 1
+DOC00003081;-;-;NP;Disponible;Magasin 1
+DOC00003082;-;-;PR;Disponible;Salle de lecture
+DOC00003085;-;-;PR;Disponible;Salle de lecture
+DOC00003087;-;-;NP;Disponible;Magasin 1
+DOC00003089;-;-;NP;Disponible;Salle de lecture
+DOC00003090;-;-;NP;Disponible;Magasin 1
+DOC00003092;-;-;NP;Disponible;Magasin 1
+DOC00003094;-;-;NP;Disponible;Magasin 1
+DOC00003098;-;-;PR;Disponible;Salle de lecture
+DOC00003101;-;-;PR;Disponible;Salle de lecture
+DOC00003103;-;-;PR;Disponible;Salle de lecture
+DOC00003105;-;-;NP;Disponible;Magasin 1
+DOC00003106;-;-;PR;Disponible;Salle de lecture
+DOC00003107;-;-;PR;Disponible;Salle de lecture
+DOC00003108;-;-;NP;Disponible;Magasin 1
+DOC00003109;-;-;PR;Disponible;Salle de lecture
+DOC00003110;-;-;NP;Disponible;Magasin 1
+DOC00003111;-;-;NP;Disponible;Magasin 1
+DOC00003114;-;-;NP;Disponible;Magasin 1
+DOC00003117;-;-;NP;Disponible;Magasin 1
+DOC00003121;-;-;NP;Disponible;Magasin 1
+DOC00003122;-;-;NP;Disponible;Magasin 1
+DOC00003125;-;-;NP;Disponible;Magasin 1
+DOC00003128;-;-;NP;Disponible;Salle de lecture
+DOC00003130;-;-;PR;Disponible;Salle de lecture
+DOC00003131;-;-;PR;Disponible;Salle de lecture
+DOC00003132;-;-;PR;Disponible;Salle de lecture
+DOC00003140;-;-;PR;Disponible;Salle de lecture
+DOC00003141;-;-;PR;Disponible;Salle de lecture
+DOC00003142;-;-;NP;Disponible;Magasin 1
+DOC00003158;-;-;NP;Disponible;Magasin 1
+DOC00003159;-;-;NP;Disponible;Magasin 1
+DOC00003162;-;-;NP;Disponible;Salle de lecture
+DOC00003172;-;-;PR;Disponible;Salle de lecture
+DOC00003173;-;-;NP;Disponible;Magasin 1
+DOC00003175;-;-;NP;Disponible;Salle de lecture
+DOC00003179;-;-;PR;Disponible;Salle de lecture
+DOC00003186;2019-03-27;2019-03-27;PR;Indisponible;Salle de lecture
+DOC00003187;-;-;PR;Disponible;Salle de lecture
+DOC00003188;-;-;PR;Disponible;Salle de lecture
+DOC00003191;-;-;PR;Disponible;Salle de lecture
+DOC00003193;-;-;NP;Disponible;Salle de lecture
+DOC00003195;-;-;PR;Disponible;Salle de lecture
+DOC00003197;-;-;PR;Disponible;Salle de lecture
+DOC00003202;-;-;PR;Disponible;Salle de lecture
+DOC00003204;-;-;PR;Disponible;Salle de lecture
+DOC00003207;-;-;PR;Disponible;Salle de lecture
+DOC00003208;-;-;PR;Disponible;Salle de lecture
+DOC00003209;-;-;PR;Disponible;Salle de lecture
+DOC00003210;2019-03-26;2019-03-26;PR;Indisponible;Salle de lecture
+DOC00003211;-;-;NP;Disponible;Salle de lecture
+DOC00003215;-;-;PR;Disponible;Salle de lecture
+DOC00003218;-;-;PR;Disponible;Salle de lecture
+DOC00003219;-;-;PR;Disponible;Salle de lecture
+DOC00003225;-;-;NP;Disponible;Magasin 1
+DOC00003229;-;-;PR;Disponible;Salle de lecture
+DOC00003230;-;-;PR;Disponible;Salle de lecture
+DOC00003232;-;-;NP;Disponible;Salle de lecture
+DOC00003233;-;-;NP;Disponible;Magasin 1
+DOC00003235;-;-;NP;Disponible;Salle de lecture
+DOC00003236;-;-;NP;Disponible;Magasin 1
+DOC00003238;-;-;NP;Disponible;Magasin 1
+DOC00003244;-;-;NP;Disponible;Salle de lecture
+DOC00003245;-;-;NP;Disponible;Magasin 1
+DOC00003250;-;-;NP;Disponible;Magasin 1
+DOC00003260;-;-;NP;Disponible;Magasin 1
+DOC00003264;-;-;NP;Disponible;Salle de lecture
+DOC00003265;-;-;NP;Disponible;Salle de lecture
+DOC00003266;-;-;NP;Disponible;Magasin 1
+DOC00003267;-;-;NP;Disponible;Magasin 1
+DOC00003272;-;-;NP;Disponible;Magasin 1
+DOC00003273;-;-;NP;Disponible;Magasin 1
+DOC00003274;-;-;NP;Disponible;Magasin 1
+DOC00003276;-;-;PR;Disponible;Magasin 1
+DOC00003278;-;-;NP;Disponible;Magasin 1
+DOC00003280;-;-;NP;Disponible;Salle de lecture
+DOC00003284;-;-;NP;Disponible;Magasin 1
+DOC00003287;-;-;NP;Disponible;Magasin 1
+DOC00003288;-;-;NP;Disponible;Magasin 1
+DOC00003289;-;-;NP;Disponible;Magasin 1
+DOC00003291;-;-;NP;Disponible;Salle de lecture
+DOC00003294;-;-;NP;Disponible;Magasin 1
+DOC00003304;-;-;NP;Disponible;Magasin 1
+DOC00003306;-;-;NP;Disponible;Magasin 1
+DOC00003312;-;-;NP;Disponible;Salle de lecture
+DOC00003313;-;-;NP;Disponible;Salle de lecture
+DOC00003317;-;-;NP;Disponible;Salle de lecture
+DOC00003319;-;-;NP;Disponible;Magasin 1
+DOC00003322;-;-;NP;Disponible;Magasin 1
+DOC00003323;-;-;NP;Disponible;Salle de lecture
+DOC00003324;-;-;NP;Disponible;Magasin 1
+DOC00003325;-;-;NP;Disponible;Magasin 1
+DOC00003327;-;-;NP;Disponible;Magasin 1
+DOC00003332;-;-;PR;Disponible;Salle de lecture
+DOC00003336;-;-;NP;Disponible;Salle de lecture
+DOC00003337;-;-;NP;Disponible;Magasin 1
+DOC00003338;-;-;NP;Disponible;Magasin 1
+DOC00003339;-;-;NP;Disponible;Magasin 1
+DOC00003340;-;-;NP;Disponible;Magasin 1
+DOC00003342;-;-;NP;Disponible;Magasin 1
+DOC00003344;-;-;NP;Disponible;Magasin 1
+DOC00003345;-;-;NP;Disponible;Magasin 1
+DOC00003346;-;-;NP;Disponible;Magasin 1
+DOC00003349;-;-;NP;Disponible;Magasin 1
+DOC00003350;-;-;NP;Disponible;Magasin 1
+DOC00003351;-;-;NP;Disponible;Magasin 1
+DOC00003352;-;-;NP;Disponible;Magasin 1
+DOC00003353;-;-;NP;Disponible;Magasin 1
+DOC00003355;-;-;NP;Disponible;Magasin 1
+DOC00003356;-;-;NP;Disponible;Magasin 1
+DOC00003357;-;-;NP;Disponible;Magasin 1
+DOC00003358;-;-;NP;Disponible;Magasin 1
+DOC00003360;-;-;NP;Disponible;Magasin 1
+DOC00003364;-;-;NP;Disponible;Magasin 1
+DOC00003366;-;-;NP;Disponible;Magasin 1
+DOC00000001;-;-;PR;Disponible;Salle de lecture
+DOC00000005;-;-;PR;Disponible;Salle de lecture
+DOC00000048;-;-;NP;Disponible;Magasin 1
+DOC00000104;-;-;PR;Disponible;Salle de lecture
+DOC00000120;-;-;PR;Disponible;Magasin 1
+DOC00000128;-;-;PR;Disponible;Salle de lecture
+DOC00000148;2019-03-07;2019-03-07;PR;Indisponible;Salle de lecture
+DOC00000190;-;-;NP;Disponible;Magasin 1
+DOC00000191;-;-;NP;Disponible;Magasin 1
+DOC00000209;-;-;PR;Disponible;Salle de lecture
+DOC00000210;-;-;NP;Disponible;Magasin 1
+DOC00000220;-;-;NP;Disponible;Magasin 1
+DOC00000228;-;-;NP;Disponible;Magasin 1
+DOC00000229;-;-;PR;Disponible;Salle de lecture
+DOC00000232;-;-;PR;Disponible;Salle de lecture
+DOC00000236;-;-;PR;Disponible;Salle de lecture
+DOC00000242;-;-;NP;Disponible;Magasin 1
+DOC00000248;-;-;NP;Disponible;Magasin 1
+DOC00000271;-;-;PR;Disponible;Salle de lecture
+DOC00000285;-;-;PR;Disponible;Magasin 1
+DOC00000286;-;-;PR;Disponible;Salle de lecture
+DOC00000327;-;-;NP;Disponible;Magasin 1
+DOC00000331;-;-;NP;Disponible;Magasin 1
+DOC00000349;-;-;PR;Disponible;Salle de lecture
+DOC00000412;-;-;PR;Disponible;Salle de lecture
+DOC00000413;-;-;PR;Disponible;Salle de lecture
+DOC00000424;-;-;PR;Disponible;Salle de lecture
+DOC00000478;-;-;PR;Disponible;Salle de lecture
+DOC00000513;-;-;PR;Disponible;Salle de lecture
+DOC00000560;-;-;PR;Disponible;Salle de lecture
+DOC00000565;-;-;PR;Disponible;Salle de lecture
+DOC00000566;-;-;PR;Disponible;Salle de lecture
+DOC00000571;-;-;PR;Disponible;Salle de lecture
+DOC00000572;-;-;PR;Disponible;Salle de lecture
+DOC00000582;-;-;PR;Disponible;Salle de lecture
+DOC00000583;-;-;PR;Disponible;Salle de lecture
+DOC00000584;-;-;PR;Disponible;Salle de lecture
+DOC00000604;-;-;PR;Disponible;Salle de lecture
+DOC00000616;-;-;NP;Disponible;Salle de lecture
+DOC00000679;-;-;NP;Disponible;Magasin 1
+DOC00000699;-;-;PR;Disponible;Salle de lecture
+DOC00000702;-;-;PR;Disponible;Salle de lecture
+DOC00000722;-;-;NP;Disponible;Magasin 1
+DOC00000724;-;-;NP;Disponible;Magasin 1
+DOC00000731;-;-;NP;Disponible;Magasin 1
+DOC00000744;-;-;NP;Disponible;Magasin 1
+DOC00000753;-;-;NP;Disponible;Salle de lecture
+DOC00000798;-;-;NP;Disponible;Magasin 1
+DOC00000809;-;-;NP;Disponible;Magasin 1
+DOC00000857;-;-;NP;Disponible;Magasin 1
+DOC00000968;-;-;PR;Disponible;Salle de lecture
+DOC00000969;-;-;PR;Disponible;Salle de lecture
+DOC00001004;-;-;NP;Disponible;Magasin 1
+DOC00001005;-;-;PR;Disponible;-
+DOC00001061;-;-;NP;Disponible;Magasin 1
+DOC00001112;-;-;NP;Disponible;Magasin 1
+DOC00001278;-;-;PR;Disponible;Salle de lecture
+DOC00001292;-;-;NP;Disponible;Magasin 1
+DOC00001324;-;-;PR;Disponible;Salle de lecture
+DOC00001325;-;-;PR;Disponible;Salle de lecture
+DOC00001326;-;-;PR;Disponible;Salle de lecture
+DOC00001327;-;-;PR;Disponible;Salle de lecture
+DOC00001328;-;-;PR;Disponible;Salle de lecture
+DOC00001329;-;-;PR;Disponible;Salle de lecture
+DOC00001330;-;-;PR;Disponible;Salle de lecture
+DOC00001331;-;-;PR;Disponible;Salle de lecture
+DOC00001332;-;-;PR;Disponible;Salle de lecture
+DOC00001333;-;-;PR;Disponible;Salle de lecture
+DOC00001334;-;-;PR;Disponible;Salle de lecture
+DOC00001441;-;-;PR;Disponible;Salle de lecture
+DOC00001442;-;-;NP;Disponible;Magasin 1
+DOC00001443;-;-;PR;Disponible;Salle de lecture
+DOC00001489;-;-;NP;Disponible;Magasin 1
+DOC00001590;-;-;PR;Disponible;Magasin 1
+DOC00001617;-;-;NP;Disponible;Magasin 1
+DOC00001634;-;-;PR;Disponible;Salle de lecture
+DOC00001786;-;-;NP;Disponible;Magasin 1
+DOC00001801;-;-;NP;Disponible;Magasin 1
+DOC00001831;-;-;NP;Disponible;Magasin 1
+DOC00001993;-;-;PR;Disponible;Salle de lecture
+DOC00001999;-;-;PR;Disponible;Magasin 1
+DOC00002133;-;-;NP;Disponible;Magasin 1
+DOC00002261;-;-;NP;Disponible;Magasin 1
+DOC00002314;-;-;NP;Disponible;Magasin 1
+DOC00002354;-;-;NP;Disponible;Magasin 1
+DOC00002370;-;-;PR;Disponible;Salle de lecture
+DOC00002373;-;-;PR;Disponible;Magasin 1
+DOC00002442;-;-;PR;Disponible;Magasin 1
+DOC00002523;-;-;NP;Disponible;Magasin 1
+DOC00002524;-;-;PR;Disponible;Salle de lecture
+DOC00002534;-;-;NP;Disponible;Magasin 1
+DOC00002634;-;-;NP;Disponible;Magasin 1
+DOC00002635;-;-;NP;Disponible;Magasin 1
+DOC00002637;-;-;NP;Disponible;Magasin 1
+DOC00002680;-;-;NP;Disponible;Magasin 1
+DOC00002707;-;-;NP;Disponible;Magasin 1
+DOC00002746;-;-;NP;Disponible;Magasin 1
+DOC00002759;-;-;NP;Disponible;Magasin 1
+DOC00002766;-;-;NP;Disponible;Magasin 1
+DOC00002774;-;-;NP;Disponible;Magasin 1
+DOC00002826;-;-;PR;Disponible;Salle de lecture
+DOC00002833;-;-;PR;Disponible;Salle de lecture
+DOC00002846;-;-;PR;Disponible;Salle de lecture
+DOC00002847;-;-;PR;Disponible;Salle de lecture
+DOC00002865;-;-;PR;Disponible;Salle de lecture
+DOC00002866;-;-;NP;Disponible;Magasin 1
+DOC00002994;-;-;PR;Disponible;Salle de lecture
+DOC00003001;-;-;PR;Disponible;Salle de lecture
+DOC00003002;-;-;PR;Disponible;Salle de lecture
+DOC00003004;-;-;NP;Disponible;Magasin 1
+DOC00003005;-;-;PR;Disponible;Salle de lecture
+DOC00003024;-;-;PR;Disponible;Salle de lecture
+DOC00003032;-;-;PR;Disponible;Salle de lecture
+DOC00003038;-;-;PR;Disponible;Salle de lecture
+DOC00003052;-;-;PR;Disponible;Salle de lecture
+DOC00003061;-;-;PR;Disponible;Salle de lecture
+DOC00003085;-;-;NP;Disponible;Magasin 1
+DOC00003094;-;-;NP;Disponible;Magasin 1
+DOC00003102;-;-;NP;Disponible;Magasin 1
+DOC00003110;-;-;NP;Disponible;Salle de lecture
+DOC00003123;-;-;PR;Disponible;Salle de lecture
+DOC00003136;-;-;NP;Disponible;Magasin 1
+DOC00003171;-;-;PR;Disponible;Salle de lecture
+DOC00003173;-;-;PR;Disponible;Magasin 1
+DOC00003183;-;-;PR;Disponible;Salle de lecture
+DOC00003186;-;-;PR;Disponible;Salle de lecture
+DOC00003210;-;-;NP;Disponible;Magasin 1
+DOC00003215;-;-;NP;Disponible;Magasin 1
+DOC00003218;-;-;PR;Disponible;Salle de lecture
+DOC00003219;-;-;NP;Disponible;Magasin 1
+DOC00003225;-;-;NP;Disponible;Magasin 1
+DOC00003230;-;-;NP;Disponible;Magasin 1
+DOC00003238;-;-;NP;Disponible;Magasin 1
+DOC00003259;-;-;PR;Disponible;Salle de lecture
+DOC00003273;-;-;NP;Disponible;Salle de lecture
+DOC00003317;-;-;NP;Disponible;Magasin 1
+DOC00000034;-;-;NP;Disponible;Magasin 1
+DOC00000104;-;-;NP;Disponible;Magasin 1
+DOC00000285;-;-;NP;Disponible;Magasin 1
+DOC00000331;-;-;PR;Disponible;Salle de lecture
+DOC00000368;-;-;PR;Disponible;Salle de lecture
+DOC00000551;-;-;NP;Disponible;Magasin 1
+DOC00001112;2019-03-11;2019-03-11;PR;Indisponible;Salle de lecture
+DOC00001397;-;-;NP;Disponible;Magasin 1
+DOC00001590;-;-;NP;Disponible;Magasin 1
+DOC00002042;-;-;NP;Disponible;Magasin 1
+DOC00002261;-;-;PR;Disponible;Salle de lecture
+DOC00002524;-;-;PR;Disponible;Salle de lecture
+DOC00002526;-;-;NP;Disponible;Magasin 1
+DOC00003184;-;-;NP;Disponible;Magasin 1
+DOC00003230;-;-;PR;Disponible;Salle de lecture
+DOC00003238;-;-;PR;Disponible;Salle de lecture
+DOC00003259;-;-;PR;Disponible;Salle de lecture
+DOC00000116;-;-;PR;Disponible;Salle de lecture
+DOC00000232;-;-;NP;Disponible;Magasin 1
+DOC00002524;-;-;NP;Disponible;Salle de lecture
+DOC00003259;-;-;NP;Disponible;Magasin 1
+DOC00002524;-;-;NP;Disponible;Magasin 1
+DOC00003367;-;-;NP;Disponible;Magasin 1
+DOC00003369;-;-;NP;Disponible;Magasin 2B
+DOC00003370;-;-;NP;Disponible;Magasin 2B
+DOC00003371;-;-;NP;Disponible;Magasin 2B
+DOC00003372;-;-;NP;Disponible;Magasin 2B
+DOC00003373;-;-;NP;Disponible;Magasin 1
+DOC00003374;-;-;NP;Disponible;Magasin 2B
+DOC00003375;-;-;NP;Disponible;Magasin 2B
+DOC00003376;-;-;NP;Disponible;Magasin 1
+DOC00003377;-;-;NP;Disponible;Magasin 1
+DOC00003379;-;-;NP;Disponible;Magasin 1
+DOC00003380;-;-;NP;Disponible;Magasin 1
+DOC00003382;-;-;NP;Disponible;Magasin 1
+DOC00003383;-;-;NP;Disponible;Magasin 2B
+DOC00003384;-;-;NP;Disponible;Magasin 2B
+DOC00003385;-;-;NP;Disponible;Magasin 1
+DOC00003386;-;-;NP;Disponible;Magasin 1
+DOC00003387;-;-;NP;Disponible;Magasin 1
+DOC00003388;-;-;NP;Disponible;Magasin 1
+DOC00003389;-;-;NP;Disponible;Magasin 1
+DOC00003393;-;-;NP;Disponible;Magasin 2B
+DOC00003394;-;-;NP;Disponible;Magasin 2B
+DOC00003395;-;-;NP;Disponible;Magasin 2B
+DOC00003396;-;-;NP;Disponible;Magasin 2B
+DOC00003397;-;-;NP;Disponible;Magasin 2B
+DOC00003398;-;-;NP;Disponible;Magasin 1
+DOC00003399;-;-;NP;Disponible;Magasin 1
+DOC00003400;-;-;NP;Disponible;Magasin 1
+DOC00003401;-;-;PR;Disponible;Magasin 1
+DOC00003402;-;-;NP;Disponible;Magasin 1
+DOC00003406;-;-;NP;Disponible;Magasin 1
+DOC00003407;-;-;NP;Disponible;Magasin 2B
+DOC00003408;-;-;NP;Disponible;Magasin 1
+DOC00003409;-;-;NP;Disponible;Magasin 1
+DOC00003411;-;-;NP;Disponible;Magasin 1
+DOC00003413;-;-;NP;Disponible;Salle de lecture
+DOC00003414;-;-;NP;Disponible;Magasin 1
+DOC00003419;-;-;NP;Disponible;Magasin 1
+DOC00003420;-;-;NP;Disponible;Magasin 1
+DOC00003425;-;-;NP;Disponible;Magasin 1
+DOC00003426;-;-;NP;Disponible;Magasin 1
+DOC00003427;-;-;NP;Disponible;Magasin 1
+DOC00003428;-;-;NP;Disponible;Magasin 1
+DOC00003430;-;-;NP;Disponible;Magasin 1
+DOC00003431;-;-;NP;Disponible;Magasin 1
+DOC00003433;-;-;NP;Disponible;Magasin 1
+DOC00003434;-;-;NP;Disponible;Magasin 1
+DOC00003435;-;-;NP;Disponible;Magasin 1
+DOC00003436;-;-;NP;Disponible;Magasin 1
+DOC00003437;-;-;NP;Disponible;Magasin 1
+DOC00003438;-;-;NP;Disponible;Magasin 1
+DOC00003439;-;-;NP;Disponible;Magasin 1
+DOC00003441;-;-;NP;Disponible;Magasin 1
+DOC00003442;-;-;NP;Disponible;Magasin 1
+DOC00003443;-;-;NP;Disponible;Magasin 1
+DOC00003444;-;-;NP;Disponible;Magasin 1
+DOC00003445;-;-;NP;Disponible;Magasin 1
+DOC00003446;-;-;NP;Disponible;Magasin 1
+DOC00003449;-;-;NP;Disponible;Magasin1
+DOC00003450;-;-;NP;Disponible;Magasin 1
+DOC00003451;-;-;NP;Disponible;Réserve
+DOC00003454;-;-;NP;Disponible;Magasin 1
+DOC00003455;-;-;NP;Disponible;Magasin 1
+DOC00003456;-;-;NP;Disponible;Magasin 2B
+DOC00003457;-;-;NP;Disponible;Magasin 1
+DOC00003458;-;-;NP;Disponible;Magasin 1
+DOC00003461;-;-;PR;Disponible;Magasin 1
+DOC00003462;-;-;NP;Disponible;Magasin 1
+DOC00003463;-;-;NP;Disponible;Magasin 1
+DOC00003465;-;-;NP;Disponible;Magasin 1
+DOC00003467;-;-;NP;Disponible;Magasin 2B
+DOC00003468;-;-;NP;Disponible;Magasin 1
+DOC00003469;-;-;NP;Disponible;Magasin 1
+DOC00003470;-;-;NP;Disponible;Magasin 2B
+DOC00003471;-;-;NP;Disponible;Magasin 1
+DOC00003472;-;-;NP;Disponible;Magasin 1
+DOC00003473;-;-;NP;Disponible;Magasin 1
+DOC00003474;-;-;NP;Disponible;Magasin 1
+DOC00003477;-;-;NP;Disponible;Magasin 1
+DOC00003479;-;-;NP;Disponible;Magasin 1
+DOC00003481;-;-;NP;Disponible;Magasin 1
+DOC00003483;-;-;NP;Disponible;Magasin 1
+DOC00003484;-;-;NP;Disponible;Magasin 1
+DOC00003485;-;-;NP;Disponible;Magasin 1
+DOC00003486;-;-;NP;Disponible;Magasin 1
+DOC00003489;-;-;NP;Disponible;Magasin 1
+DOC00003490;-;-;NP;Disponible;Magasin 1
+DOC00003491;-;-;NP;Disponible;Magasin 1
+DOC00003492;-;-;NP;Disponible;Magasin 1
+DOC00003493;-;-;NP;Disponible;Magasin 1
+DOC00003494;-;-;NP;Disponible;Magasin 1
+DOC00003496;-;-;NP;Disponible;Magasin 1
+DOC00003497;-;-;NP;Disponible;Magasin 1
+DOC00003499;-;-;NP;Disponible;Magasin 2B
+DOC00003500;-;-;NP;Disponible;Magasin 1
+DOC00003501;-;-;NP;Disponible;Magasin 1
+DOC00003502;-;-;NP;Disponible;Magasin 1
+DOC00003503;-;-;NP;Disponible;Magasin 1
+DOC00003505;-;-;NP;Disponible;Magasin 1
+DOC00003507;-;-;NP;Disponible;Magasin 1
+DOC00003508;-;-;PR;Disponible;Magasin 1
+DOC00003510;-;-;NP;Disponible;Magasin 1
+DOC00003511;-;-;NP;Disponible;Magasin 1
+DOC00003512;-;-;NP;Disponible;Magasin 1
+DOC00003515;-;-;NP;Disponible;Magasin 1
+DOC00003516;-;-;PR;Disponible;Magasin 1
+DOC00003517;-;-;NP;Disponible;Magasin 1
+DOC00003519;-;-;NP;Disponible;Magasin 1
+DOC00003523;-;-;NP;Disponible;Magasin 1
+DOC00003525;-;-;NP;Disponible;Magasin 1
+DOC00003527;-;-;NP;Disponible;Magasin 1
+DOC00003528;-;-;NP;Disponible;Magasin 2B
+DOC00003531;-;-;NP;Disponible;Magasin 1
+DOC00003532;-;-;NP;Disponible;Magasin 1
+DOC00003533;-;-;NP;Disponible;Magasin 1
+DOC00003534;-;-;NP;Disponible;Magasin 1
+DOC00003535;-;-;PR;Disponible;Magasin 1
+DOC00003536;-;-;NP;Disponible;Magasin 1
+DOC00003537;-;-;NP;Disponible;Magasin 2B
+DOC00003539;-;-;NP;Disponible;Magasin 1
+DOC00003540;-;-;NP;Disponible;Magasin 1
+DOC00003541;-;-;NP;Disponible;Magasin 1
+DOC00003542;-;-;NP;Disponible;Magasin 2B
+DOC00003543;-;-;NP;Disponible;Magasin 1
+DOC00003545;-;-;NP;Disponible;Magasin 1
+DOC00003546;-;-;NP;Disponible;Magasin 2B
+DOC00003547;-;-;NP;Disponible;Magasin 1
+DOC00003548;-;-;NP;Disponible;Magasin 1
+DOC00003549;-;-;NP;Disponible;Magasin 1
+DOC00003550;-;-;NP;Disponible;Magasin 2B
+DOC00003552;-;-;NP;Disponible;Magasin 1
+DOC00003553;-;-;NP;Disponible;Magasin 2B
+DOC00003554;-;-;NP;Disponible;Magasin 1
+DOC00003555;-;-;NP;Disponible;Magasin 2B
+DOC00003557;-;-;NP;Disponible;Magasin 1
+DOC00003558;-;-;NP;Disponible;Magasin 1
+DOC00003559;-;-;NP;Disponible;Magasin 1
+DOC00003560;-;-;NP;Disponible;Magasin 1
+DOC00003561;-;-;NP;Disponible;Magasin 1
+DOC00003562;-;-;NP;Disponible;Magasin 1
+DOC00003563;-;-;NP;Disponible;Magasin 1
+DOC00003565;-;-;NP;Disponible;Magasin 1
+DOC00003566;-;-;NP;Disponible;Magasin 1
+DOC00003568;-;-;NP;Disponible;Magasin 1
+DOC00003569;-;-;NP;Disponible;Magasin 1
+DOC00003570;-;-;NP;Disponible;Magasin 2B
+DOC00003571;-;-;NP;Disponible;Magasin 1
+DOC00003572;-;-;NP;Disponible;Magasin 2B
+DOC00003573;-;-;NP;Disponible;Magasin 1
+DOC00003575;-;-;NP;Disponible;Magasin 1
+DOC00003576;-;-;NP;Disponible;Magasin 1
+DOC00003577;-;-;NP;Disponible;Magasin 1
+DOC00003578;-;-;NP;Disponible;Magasin 1
+DOC00003579;-;-;NP;Disponible;Magasin 1
+DOC00003581;-;-;NP;Disponible;Magasin 1
+DOC00003583;-;-;NP;Disponible;Magasin 1
+DOC00003585;-;-;NP;Disponible;Magasin 1
+DOC00003586;-;-;NP;Disponible;Magasin 1
+DOC00003587;-;-;NP;Disponible;Magasin 1
+DOC00003588;-;-;NP;Disponible;Magasin 1
+DOC00003589;-;-;NP;Disponible;Magasin 1
+DOC00003590;-;-;NP;Disponible;Magasin 1
+DOC00003591;-;-;NP;Disponible;Magasin 1
+DOC00003592;-;-;NP;Disponible;Magasin 1
+DOC00003593;-;-;NP;Disponible;Magasin 1
+DOC00003594;-;-;NP;Disponible;Magasin 1
+DOC00003595;-;-;NP;Disponible;Magasin 1
+DOC00003596;-;-;NP;Disponible;Magasin 1
+DOC00003597;-;-;NP;Disponible;Magasin 1
+DOC00003598;-;-;NP;Disponible;Magasin 1
+DOC00003599;-;-;NP;Disponible;Magasin 1
+DOC00003600;-;-;NP;Disponible;Magasin 1
+DOC00003601;-;-;NP;Disponible;Magasin 1
+DOC00003602;-;-;NP;Disponible;Magasin 1
+DOC00003603;-;-;NP;Disponible;Magasin 1
+DOC00003604;-;-;NP;Disponible;Magasin 1
+DOC00003607;-;-;NP;Disponible;Magasin 1
+DOC00003608;-;-;NP;Disponible;Magasin 1
+DOC00003609;-;-;NP;Disponible;Magasin 1
+DOC00003610;-;-;PR;Disponible;Magasin 1
+DOC00003611;-;-;NP;Disponible;Magasin 1
+DOC00003613;-;-;NP;Disponible;Magasin 1
+DOC00003614;-;-;NP;Disponible;Magasin 1
+DOC00003617;-;-;NP;Disponible;Magasin 1
+DOC00003618;-;-;NP;Disponible;Magasin 1
+DOC00003619;-;-;NP;Disponible;Magasin 1
+DOC00003620;-;-;NP;Disponible;Magasin 1
+DOC00003622;-;-;NP;Disponible;Magasin 2B
+DOC00003623;-;-;NP;Disponible;Magasin 1
+DOC00003625;-;-;NP;Disponible;Magasin 1
+DOC00003627;-;-;NP;Disponible;Magasin 1
+DOC00003629;-;-;NP;Disponible;Magasin 1
+DOC00003630;-;-;NP;Disponible;Magasin 1
+DOC00003632;-;-;NP;Disponible;Magasin 1
+DOC00003633;-;-;NP;Disponible;Magasin 1
+DOC00003634;-;-;PR;Disponible;Magasin 1
+DOC00003635;-;-;NP;Disponible;Magasin 1
+DOC00003638;-;-;PR;Disponible;Magasin 1
+DOC00003639;-;-;PR;Disponible;Magasin 1
+DOC00003641;-;-;NP;Disponible;Magasin 1
+DOC00003642;-;-;NP;Disponible;Magasin 1
+DOC00003643;-;-;NP;Disponible;Magasin 1
+DOC00003645;-;-;NP;Disponible;Magasin 1
+DOC00003646;-;-;NP;Disponible;Magasin 1
+DOC00003647;-;-;NP;Disponible;Magasin 1
+DOC00003648;-;-;NP;Disponible;Magasin 1
+DOC00003649;-;-;NP;Disponible;Magasin 1
+DOC00003650;-;-;NP;Disponible;Magasin 2B
+DOC00003651;-;-;NP;Disponible;Magasin 1
+DOC00003652;-;-;NP;Disponible;Magasin 1
+DOC00003655;-;-;NP;Disponible;Magasin 1
+DOC00003656;-;-;NP;Disponible;Magasin 1
+DOC00003657;-;-;NP;Disponible;Magasin 1
+DOC00003658;-;-;NP;Disponible;Magasin 1
+DOC00003659;-;-;NP;Disponible;Magasin 1
+DOC00003660;-;-;NP;Disponible;Magasin 1
+DOC00003661;-;-;NP;Disponible;Magasin 1
+DOC00003662;-;-;NP;Disponible;Magasin 1
+DOC00003663;-;-;NP;Disponible;Magasin 1
+DOC00003664;-;-;NP;Disponible;Magasin 1
+DOC00003665;-;-;NP;Disponible;Magasin 1
+DOC00003666;-;-;NP;Disponible;Magasin 1
+DOC00003667;-;-;NP;Disponible;Magasin 1
+DOC00003669;-;-;NP;Disponible;Magasin 1
+DOC00003670;-;-;NP;Disponible;Magasin 1
+DOC00003671;-;-;NP;Disponible;Magasin 1
+DOC00003672;-;-;NP;Disponible;Magasin 1
+DOC00003673;-;-;NP;Disponible;Magasin 1
+DOC00003674;-;-;NP;Disponible;Magasin 1
+DOC00003675;-;-;NP;Disponible;Magasin 1
+DOC00003676;-;-;NP;Disponible;Magasin 1
+DOC00003677;-;-;NP;Disponible;Magasin 1
+DOC00003678;-;-;NP;Disponible;Magasin 1
+DOC00003679;-;-;NP;Disponible;Magasin 1
+DOC00003681;-;-;NP;Disponible;Magasin 1
+DOC00003682;-;-;NP;Disponible;Magasin 1
+DOC00003683;-;-;NP;Disponible;Magasin 1
+DOC00003684;-;-;NP;Disponible;Magasin 1
+DOC00003685;-;-;NP;Disponible;Magasin 1
+DOC00003686;-;-;NP;Disponible;Magasin 1
+DOC00003687;-;-;NP;Disponible;Magasin 1
+DOC00003688;-;-;NP;Disponible;Magasin 1
+DOC00003689;-;-;NP;Disponible;Magasin 1
+DOC00003690;-;-;NP;Disponible;Magasin 1
+DOC00003691;-;-;NP;Disponible;Magasin 1
+DOC00003692;-;-;NP;Disponible;Magasin 1
+DOC00003693;-;-;NP;Disponible;Magasin 1
+DOC00003694;-;-;NP;Disponible;Magasin 1
+DOC00003696;-;-;NP;Disponible;Magasin 1
+DOC00003698;-;-;NP;Disponible;Magasin 1
+DOC00003699;-;-;NP;Disponible;Magasin 1
+DOC00003700;-;-;NP;Disponible;Magasin 1
+DOC00003701;-;-;NP;Disponible;Magasin 1
+DOC00003702;-;-;NP;Disponible;Magasin 1
+DOC00003703;-;-;NP;Disponible;Magasin 1
+DOC00003704;-;-;NP;Disponible;Magasin 1
+DOC00003707;-;-;NP;Disponible;Magasin 1
+DOC00003708;-;-;NP;Disponible;Magasin 1
+DOC00003709;-;-;NP;Disponible;Magasin 1
+DOC00003713;-;-;NP;Disponible;Magasin 1
+DOC00003714;-;-;NP;Disponible;Magasin 1
+DOC00003715;-;-;NP;Disponible;Magasin 1
+DOC00003716;-;-;NP;Disponible;Magasin 1
+DOC00003717;-;-;NP;Disponible;Magasin 1
+DOC00003720;-;-;NP;Disponible;Magasin 1
+DOC00003721;-;-;NP;Disponible;Magasin 1
+DOC00003722;-;-;NP;Disponible;Magasin 1
+DOC00003723;-;-;NP;Disponible;Magasin 1
+DOC00003724;-;-;NP;Disponible;Magasin 1
+DOC00003725;-;-;NP;Disponible;Magasin 1
+DOC00003726;-;-;NP;Disponible;Magasin 1
+DOC00003727;-;-;NP;Disponible;Magasin 1
+DOC00003728;-;-;NP;Disponible;Magasin 1
+DOC00003729;-;-;NP;Disponible;Magasin 1
+DOC00003730;-;-;NP;Disponible;Magasin 1
+DOC00003732;-;-;NP;Disponible;Magasin 1
+DOC00003733;-;-;NP;Disponible;Magasin 1
+DOC00003734;-;-;NP;Disponible;Magasin 1
+DOC00003736;-;-;NP;Disponible;Magasin 1
+DOC00003738;-;-;NP;Disponible;Magasin 1
+DOC00003739;-;-;NP;Disponible;Magasin 1
+DOC00003740;-;-;NP;Disponible;Magasin 1
+DOC00003742;-;-;NP;Disponible;Magasin 1
+DOC00003745;-;-;NP;Disponible;Magasin 1
+DOC00003746;-;-;NP;Disponible;Magasin 1
+DOC00003747;-;-;NP;Disponible;Magasin 1
+DOC00003748;-;-;NP;Disponible;Magasin 1
+DOC00003750;-;-;NP;Disponible;Magasin 1
+DOC00003752;-;-;NP;Disponible;Magasin 1
+DOC00003753;-;-;NP;Disponible;Magasin 1
+DOC00003755;-;-;NP;Disponible;Magasin 1
+DOC00003757;-;-;NP;Disponible;Magasin 1
+DOC00003758;-;-;NP;Disponible;Magasin 1
+DOC00003759;-;-;NP;Disponible;Magasin 1
+DOC00003760;-;-;NP;Disponible;Magasin 1
+DOC00003761;-;-;PR;Disponible;Magasin 1
+DOC00003762;-;-;NP;Disponible;Magasin 1
+DOC00003765;-;-;NP;Disponible;Magasin 1
+DOC00003766;-;-;PR;Disponible;Magasin 1
+DOC00003768;-;-;NP;Disponible;Magasin 1
+DOC00003769;-;-;PR;Disponible;Magasin 1
+DOC00003770;-;-;NP;Disponible;Magasin 1
+DOC00003771;-;-;NP;Disponible;Magasin 1
+DOC00003772;-;-;NP;Disponible;Magasin 2B
+DOC00003775;-;-;PR;Disponible;Salle de lecture
+DOC00003776;-;-;NP;Disponible;Magasin 1
+DOC00003777;-;-;NP;Disponible;Magasin 1
+DOC00003780;-;-;NP;Disponible;Magasin 1
+DOC00003781;-;-;NP;Disponible;Magasin 1
+DOC00003782;-;-;PR;Disponible;Magasin 1
+DOC00003783;-;-;NP;Disponible;Magasin 1
+DOC00003784;-;-;NP;Disponible;Magasin 1
+DOC00003786;-;-;NP;Disponible;Magasin 1
+DOC00003787;-;-;NP;Disponible;Magasin 1
+DOC00003788;-;-;NP;Disponible;Magasin 1
+DOC00003789;-;-;NP;Disponible;Magasin 1
+DOC00003790;-;-;NP;Disponible;Magasin 1
+DOC00003791;-;-;NP;Disponible;Magasin 1
+DOC00003792;-;-;NP;Disponible;Magasin 1
+DOC00003794;-;-;NP;Disponible;Magasin 1
+DOC00003795;-;-;NP;Disponible;Magasin 1
+DOC00003796;-;-;NP;Disponible;Magasin 1
+DOC00003800;-;-;NP;Disponible;Magasin 1
+DOC00003801;-;-;NP;Disponible;Magasin 1
+DOC00003802;-;-;NP;Disponible;Magasin 1
+DOC00003804;-;-;NP;Disponible;Magasin 1
+DOC00003805;-;-;NP;Disponible;Magasin 1
+DOC00003807;-;-;NP;Disponible;Magasin 1
+DOC00003809;-;-;NP;Disponible;Magasin 1
+DOC00003810;-;-;NP;Disponible;Magasin1
+DOC00003811;-;-;NP;Disponible;Magasin 1
+DOC00003812;-;-;NP;Disponible;Magasin 2B
+DOC00003813;-;-;NP;Disponible;Magasin 1
+DOC00003815;-;-;NP;Disponible;Magasin 1
+DOC00003816;-;-;NP;Disponible;Magasin1
+DOC00003817;-;-;NP;Disponible;Magasin 1
+DOC00003818;-;-;NP;Disponible;Magasin 1
+DOC00003819;-;-;NP;Disponible;Magasin 1
+DOC00003820;-;-;PR;Disponible;Magasin1
+DOC00003821;-;-;NP;Disponible;Magasin 1
+DOC00003823;-;-;NP;Disponible;Magasin 1
+DOC00003824;-;-;NP;Disponible;Salle de lecture
+DOC00003827;-;-;NP;Disponible;Magasin 1
+DOC00003828;-;-;NP;Disponible;Magasin 1
+DOC00003829;-;-;NP;Disponible;Magasin 1
+DOC00003831;-;-;NP;Disponible;Magasin 1
+DOC00003832;-;-;PR;Disponible;Magasin 1
+DOC00003833;-;-;NP;Disponible;Magasin 1
+DOC00003834;-;-;PR;Disponible;Magasin 1
+DOC00003835;-;-;PR;Disponible;Salle de lecture
+DOC00003836;-;-;NP;Disponible;Magasin 1
+DOC00003837;-;-;NP;Disponible;Magasin 1
+DOC00003839;-;-;PR;Disponible;Magasin 1
+DOC00003841;-;-;NP;Disponible;Magasin 1
+DOC00003843;-;-;NP;Disponible;Magasin 1
+DOC00003844;-;-;NP;Disponible;Magasin 1
+DOC00003845;-;-;PR;Disponible;Magasin 1
+DOC00003846;-;-;PR;Disponible;Magasin 1
+DOC00003848;-;-;NP;Disponible;Magasin 1
+DOC00003849;-;-;NP;Disponible;Magasin 1
+DOC00003851;-;-;NP;Disponible;Magasin 1
+DOC00003852;-;-;NP;Disponible;Magasin 1
+DOC00003853;-;-;NP;Disponible;Magasin 1
+DOC00003856;-;-;NP;Disponible;Magasin 1
+DOC00003857;-;-;NP;Disponible;Magasin 1
+DOC00003858;-;-;NP;Disponible;Magasin 1
+DOC00003859;-;-;NP;Disponible;Magasin 1
+DOC00003860;-;-;NP;Disponible;Magasin 1
+DOC00003861;-;-;NP;Disponible;Magasin 1
+DOC00003864;-;-;NP;Disponible;Magasin 1
+DOC00003865;-;-;NP;Disponible;Magasin 1
+DOC00003868;-;-;NP;Disponible;Magasin 1
+DOC00003869;-;-;NP;Disponible;Magasin 1
+DOC00003870;-;-;NP;Disponible;Magasin 1
+DOC00003873;-;-;NP;Disponible;Magasin 1
+DOC00003875;-;-;NP;Disponible;Magasin 1
+DOC00003876;-;-;NP;Disponible;Magasin 1
+DOC00003878;-;-;NP;Disponible;Magasin 1
+DOC00003879;-;-;NP;Disponible;Magasin 1
+DOC00003880;-;-;NP;Disponible;Magasin 1
+DOC00003881;-;-;NP;Disponible;Magasin 1
+DOC00003882;-;-;NP;Disponible;Magasin 1
+DOC00003883;-;-;NP;Disponible;Magasin 1
+DOC00003887;-;-;NP;Disponible;Magasin 1
+DOC00003889;-;-;NP;Disponible;Magasin 1
+DOC00003892;-;-;NP;Disponible;Magasin 1
+DOC00003893;-;-;NP;Disponible;Magasin 1
+DOC00003895;-;-;NP;Disponible;Magasin 1
+DOC00003898;-;-;NP;Disponible;Magasin 1
+DOC00003899;-;-;NP;Disponible;Magasin 1
+DOC00003900;-;-;NP;Disponible;Magasin 1
+DOC00003901;-;-;NP;Disponible;Magasin 2B
+DOC00003903;-;-;NP;Disponible;Magasin 1
+DOC00003904;-;-;NP;Disponible;Magasin 1
+DOC00003905;-;-;NP;Disponible;Magasin 1
+DOC00003906;-;-;NP;Disponible;Magasin 1
+DOC00003907;-;-;NP;Disponible;Magasin 1
+DOC00003909;-;-;NP;Disponible;Magasin 1
+DOC00003913;-;-;NP;Disponible;Magasin 1
+DOC00003914;-;-;NP;Disponible;Magasin 1
+DOC00003915;-;-;NP;Disponible;Magasin 1
+DOC00003916;-;-;NP;Disponible;Magasin 1
+DOC00003917;-;-;NP;Disponible;Magasin 1
+DOC00003918;-;-;NP;Disponible;Magasin 1
+DOC00003919;-;-;NP;Disponible;Magasin 1
+DOC00003920;-;-;NP;Disponible;Magasin 1
+DOC00003921;-;-;NP;Disponible;Magasin 1
+DOC00003922;-;-;NP;Disponible;Magasin 1
+DOC00003923;-;-;NP;Disponible;Magasin 1
+DOC00003924;-;-;NP;Disponible;Magasin 1
+DOC00003926;-;-;NP;Disponible;Magasin 1
+DOC00003927;-;-;NP;Disponible;Magasin 1
+DOC00003928;-;-;NP;Disponible;Magasin 1
+DOC00003929;-;-;NP;Disponible;Magasin 1
+DOC00003930;-;-;NP;Disponible;Magasin 2B
+DOC00003931;-;-;NP;Disponible;Magasin 1
+DOC00003932;-;-;NP;Disponible;Magasin 1
+DOC00003933;-;-;NP;Disponible;Magasin 1
+DOC00003934;-;-;NP;Disponible;Magasin 1
+DOC00003935;-;-;NP;Disponible;Magasin 1
+DOC00003937;-;-;NP;Disponible;Magasin 1
+DOC00003938;-;-;NP;Disponible;Magasin 1
+DOC00003939;-;-;NP;Disponible;Magasin 1
+DOC00003940;-;-;PR;Disponible;Magasin 1
+DOC00003941;-;-;NP;Disponible;Magasin 1
+DOC00003942;-;-;NP;Disponible;Magasin 1
+DOC00003944;-;-;NP;Disponible;Magasin 1
+DOC00003946;-;-;NP;Disponible;Magasin 1
+DOC00003949;-;-;NP;Disponible;Magasin 1
+DOC00003950;-;-;NP;Disponible;Magasin 1
+DOC00003951;-;-;NP;Disponible;Magasin 1
+DOC00003952;-;-;NP;Disponible;Magasin 1
+DOC00003954;-;-;NP;Disponible;Magasin 1
+DOC00003955;-;-;NP;Disponible;Magasin 1
+DOC00003956;-;-;NP;Disponible;Magasin 1
+DOC00003957;-;-;NP;Disponible;Magasin 1
+DOC00003959;-;-;NP;Disponible;Magasin 1
+DOC00003960;-;-;PR;Disponible;Magasin1
+DOC00003961;-;-;NP;Disponible;Magasin 1
+DOC00003963;-;-;NP;Disponible;Magasin 1
+DOC00003964;-;-;NP;Disponible;Magasin 1
+DOC00003965;-;-;NP;Disponible;Magasin 1
+DOC00003967;-;-;NP;Disponible;Magasin 1
+DOC00003968;-;-;NP;Disponible;Magasin 1
+DOC00003969;-;-;NP;Disponible;Magasin 1
+DOC00003970;-;-;PR;Disponible;Magasin 1
+DOC00003971;-;-;NP;Disponible;Magasin 1
+DOC00003972;-;-;NP;Disponible;Magasin 1
+DOC00003973;-;-;NP;Disponible;Magasin 1
+DOC00003976;-;-;NP;Disponible;Magasin 1
+DOC00003980;-;-;NP;Disponible;Magasin 1
+DOC00003982;-;-;NP;Disponible;Magasin 1
+DOC00003983;-;-;NP;Disponible;Magasin 1
+DOC00003984;-;-;NP;Disponible;Magasin 1
+DOC00003985;-;-;NP;Disponible;Magasin 1
+DOC00003987;-;-;NP;Disponible;Magasin 1
+DOC00003988;-;-;NP;Disponible;Magasin 1
+DOC00003989;-;-;NP;Disponible;Magasin 1
+DOC00003991;-;-;NP;Disponible;Magasin 1
+DOC00003992;-;-;NP;Disponible;Magasin 1
+DOC00003993;-;-;NP;Disponible;Magasin 1
+DOC00003994;-;-;NP;Disponible;Magasin 1
+DOC00003995;-;-;PR;Disponible;Magasin 1
+DOC00003996;-;-;NP;Disponible;Magasin 1
+DOC00003997;-;-;NP;Disponible;Magasin 1
+DOC00003998;-;-;NP;Disponible;Magasin 2B
+DOC00003999;-;-;NP;Disponible;Magasin 1
+DOC00004000;-;-;NP;Disponible;Magasin 1
+DOC00004001;-;-;NP;Disponible;Magasin 1
+DOC00004003;-;-;NP;Disponible;Magasin 1
+DOC00004005;-;-;NP;Disponible;Magasin 1
+DOC00004006;-;-;NP;Disponible;Magasin 1
+DOC00004007;-;-;NP;Disponible;Magasin 1
+DOC00004008;-;-;NP;Disponible;Magasin 1
+DOC00004009;-;-;NP;Disponible;Magasin 1
+DOC00004010;-;-;NP;Disponible;Magasin 1
+DOC00004011;-;-;PR;Disponible;Magasin 1
+DOC00004012;-;-;NP;Disponible;Magasin 1
+DOC00004013;-;-;NP;Disponible;Magasin 1
+DOC00004014;-;-;NP;Disponible;Magasin 1
+DOC00004016;-;-;NP;Disponible;Magasin 1
+DOC00004017;-;-;NP;Disponible;Magasin 1
+DOC00004018;-;-;NP;Disponible;Magasin 1
+DOC00004019;-;-;NP;Disponible;Magasin 1
+DOC00004020;-;-;NP;Disponible;Magasin 1
+DOC00004021;-;-;NP;Disponible;Magasin 1
+DOC00004022;-;-;NP;Disponible;Magasin 1
+DOC00004024;-;-;NP;Disponible;Magasin 1
+DOC00004027;-;-;NP;Disponible;Magasin 1
+DOC00004029;-;-;NP;Disponible;Magasin 1
+DOC00004031;-;-;NP;Disponible;Magasin 1
+DOC00004032;-;-;NP;Disponible;Magasin 1
+DOC00004033;-;-;NP;Disponible;Magasin 1
+DOC00004034;-;-;NP;Disponible;Magasin 1
+DOC00004036;-;-;NP;Disponible;Magasin 1
+DOC00004037;-;-;NP;Disponible;Magasin 1
+DOC00004038;-;-;NP;Disponible;Magasin 1
+DOC00004039;-;-;NP;Disponible;Magasin 1
+DOC00004040;-;-;NP;Disponible;Magasin 1
+DOC00004041;-;-;NP;Disponible;Magasin 1
+DOC00004042;-;-;NP;Disponible;Magasin 1
+DOC00004043;-;-;NP;Disponible;Magasin 1
+DOC00004044;-;-;NP;Disponible;Magasin 1
+DOC00004045;-;-;PR;Disponible;Magasin 1
+DOC00004046;-;-;NP;Disponible;Magasin 1
+DOC00004047;-;-;NP;Disponible;Magasin 1
+DOC00004048;-;-;NP;Disponible;Magasin 1
+DOC00004049;-;-;NP;Disponible;Magasin 1
+DOC00004050;-;-;NP;Disponible;Magasin 1
+DOC00004051;-;-;NP;Disponible;Magasin 1
+DOC00004052;-;-;NP;Disponible;Magasin 1
+DOC00004053;-;-;NP;Disponible;Magasin 1
+DOC00004054;-;-;NP;Disponible;Magasin 1
+DOC00004055;-;-;NP;Disponible;Magasin 1
+DOC00004056;-;-;NP;Disponible;Magasin 1
+DOC00004057;-;-;NP;Disponible;Magasin 1
+DOC00004058;-;-;NP;Disponible;Magasin 1
+DOC00004059;-;-;NP;Disponible;Magasin 1
+DOC00004060;-;-;NP;Disponible;Magasin 1
+DOC00004061;-;-;NP;Disponible;Magasin 1
+DOC00004062;-;-;NP;Disponible;Magasin 1
+DOC00004063;-;-;NP;Disponible;Magasin 1
+DOC00004064;-;-;NP;Disponible;Magasin 1
+DOC00004065;-;-;NP;Disponible;Magasin 1
+DOC00004066;-;-;NP;Disponible;Magasin 1
+DOC00004067;-;-;NP;Disponible;Magasin 1
+DOC00004068;-;-;NP;Disponible;Magasin 1
+DOC00004069;-;-;NP;Disponible;Magasin 1
+DOC00004070;-;-;NP;Disponible;Magasin 1
+DOC00004071;-;-;NP;Disponible;Magasin 1
+DOC00004072;-;-;NP;Disponible;Magasin 1
+DOC00004073;-;-;NP;Disponible;Magasin 1
+DOC00004074;-;-;NP;Disponible;Magasin 1
+DOC00004075;-;-;NP;Disponible;Magasin 1
+DOC00004078;-;-;NP;Disponible;Magasin 1
+DOC00004079;-;-;NP;Disponible;Magasin 1
+DOC00004080;-;-;NP;Disponible;Magasin 1
+DOC00004081;-;-;NP;Disponible;Magasin 1
+DOC00004083;-;-;NP;Disponible;Magasin 1
+DOC00004084;-;-;NP;Disponible;Magasin 1
+DOC00004085;-;-;NP;Disponible;Magasin 1
+DOC00004086;-;-;NP;Disponible;Magasin 1
+DOC00004088;-;-;NP;Disponible;Magasin 1
+DOC00004089;-;-;NP;Disponible;Magasin 1
+DOC00004091;-;-;NP;Disponible;Magasin 1
+DOC00004093;-;-;NP;Disponible;Magasin 1
+DOC00004095;-;-;NP;Disponible;Magasin 1
+DOC00004096;-;-;NP;Disponible;Magasin 1
+DOC00004097;-;-;NP;Disponible;Magasin 1
+DOC00004098;-;-;NP;Disponible;Magasin 1
+DOC00004099;-;-;NP;Disponible;Magasin 1
+DOC00004101;-;-;PR;Disponible;Salle de lecture
+DOC00004103;-;-;NP;Disponible;Magasin 1
+DOC00004104;-;-;NP;Disponible;Magasin 1
+DOC00004106;-;-;NP;Disponible;Magasin 1
+DOC00004107;-;-;NP;Disponible;Magasin 1
+DOC00004108;-;-;NP;Disponible;Magasin 2B
+DOC00004110;-;-;NP;Disponible;Magasin 1
+DOC00004111;-;-;NP;Disponible;Magasin 1
+DOC00004112;-;-;NP;Disponible;Magasin 1
+DOC00004114;-;-;NP;Disponible;Magasin 1
+DOC00004115;-;-;NP;Disponible;Magasin 1
+DOC00004116;-;-;NP;Disponible;Magasin 1
+DOC00004119;-;-;NP;Disponible;Magasin 1
+DOC00004121;-;-;NP;Disponible;Magasin 1
+DOC00004122;-;-;NP;Disponible;Magasin 1
+DOC00004123;-;-;NP;Disponible;Magasin 2B
+DOC00004124;-;-;PR;Disponible;Magasin 1
+DOC00004125;-;-;NP;Disponible;Magasin 1
+DOC00004127;-;-;NP;Disponible;Magasin 2B
+DOC00004128;-;-;NP;Disponible;Magasin 1
+DOC00004129;-;-;NP;Disponible;Magasin 1
+DOC00004130;-;-;NP;Disponible;Magasin 1
+DOC00004131;-;-;NP;Disponible;Magasin 1
+DOC00004132;-;-;NP;Disponible;Magasin 1
+DOC00004139;-;-;NP;Disponible;Magasin 1
+DOC00004140;-;-;NP;Disponible;Magasin 1
+DOC00004149;-;-;NP;Disponible;Magasin 1
+DOC00004150;-;-;NP;Disponible;Magasin 2B
+DOC00004156;-;-;NP;Disponible;Magasin 1
+DOC00004157;-;-;NP;Disponible;Magasin 1
+DOC00004158;-;-;NP;Disponible;Magasin 1
+DOC00004159;-;-;NP;Disponible;Magasin 1
+DOC00004161;-;-;NP;Disponible;Magasin 1
+DOC00004162;-;-;NP;Disponible;Magasin 2B
+DOC00004163;-;-;NP;Disponible;Magasin 2B
+DOC00004164;-;-;NP;Disponible;Magasin 1
+DOC00004165;-;-;NP;Disponible;Magasin 1
+DOC00004166;-;-;NP;Disponible;Magasin 1
+DOC00004168;-;-;NP;Disponible;Magasin 1
+DOC00004171;-;-;NP;Disponible;Magasin 1
+DOC00004172;-;-;NP;Disponible;Magasin 1
+DOC00004173;-;-;NP;Disponible;Magasin 1
+DOC00004174;-;-;NP;Disponible;Magasin 2B
+DOC00004178;-;-;NP;Disponible;Magasin 1
+DOC00004187;-;-;NP;Disponible;Magasin 1
+DOC00004188;-;-;NP;Disponible;Magasin 1
+DOC00004190;-;-;NP;Disponible;Magasin 1
+DOC00004192;-;-;NP;Disponible;Magasin 1
+DOC00004193;-;-;NP;Disponible;Magasin 1
+DOC00004195;-;-;NP;Disponible;Magasin 1
+DOC00004200;-;-;NP;Disponible;Magasin 1
+DOC00004203;-;-;NP;Disponible;Magasin 1
+DOC00004204;-;-;NP;Disponible;Magasin 2B
+DOC00004205;-;-;NP;Disponible;Magasin 2B
+DOC00004208;-;-;NP;Disponible;Magasin 1
+DOC00004212;-;-;NP;Disponible;Magasin 1
+DOC00004213;-;-;NP;Disponible;Magasin 2B
+DOC00004215;-;-;NP;Disponible;Magasin 1
+DOC00004217;-;-;NP;Disponible;Magasin 1
+DOC00004225;-;-;NP;Disponible;Magasin 1
+DOC00004226;-;-;NP;Disponible;Magasin 2B
+DOC00004227;-;-;NP;Disponible;Magasin 1
+DOC00004230;-;-;NP;Disponible;Magasin 1
+DOC00004234;-;-;NP;Disponible;Magasin 1
+DOC00004235;-;-;NP;Disponible;Magasin 2B
+DOC00004236;-;-;NP;Disponible;Magasin 1
+DOC00004237;-;-;NP;Disponible;Magasin 1
+DOC00004238;-;-;PR;Disponible;Magasin 1
+DOC00004239;-;-;NP;Disponible;Magasin 1
+DOC00004240;-;-;NP;Disponible;Magasin 1
+DOC00004242;-;-;NP;Disponible;Magasin 1
+DOC00004244;-;-;NP;Disponible;Magasin 1
+DOC00004245;-;-;NP;Disponible;Magasin 1
+DOC00004247;-;-;NP;Disponible;Magasin 1
+DOC00004248;-;-;PR;Disponible;Magasin 1
+DOC00004249;-;-;NP;Disponible;Magasin 1
+DOC00004250;-;-;NP;Disponible;Magasin 1
+DOC00004251;-;-;NP;Disponible;Magasin 1
+DOC00004252;-;-;NP;Disponible;Magasin 1
+DOC00004253;-;-;NP;Disponible;Magasin 1
+DOC00004254;-;-;NP;Disponible;Magasin 1
+DOC00004255;-;-;NP;Disponible;Magasin 1
+DOC00004256;-;-;NP;Disponible;Magasin 1
+DOC00004257;-;-;NP;Disponible;Magasin 1
+DOC00004258;-;-;PR;Disponible;Magasin 1
+DOC00004259;-;-;NP;Disponible;Magasin 1
+DOC00004260;-;-;NP;Disponible;Magasin 1
+DOC00004261;-;-;PR;Disponible;Magasin 1
+DOC00004263;-;-;NP;Disponible;Magasin 1
+DOC00004264;-;-;NP;Disponible;Magasin 1
+DOC00004266;-;-;NP;Disponible;Magasin 1
+DOC00004267;-;-;NP;Disponible;Magasin 1
+DOC00004268;-;-;NP;Disponible;Magasin 1
+DOC00004269;-;-;NP;Disponible;Magasin 1
+DOC00004270;-;-;PR;Disponible;Magasin 1
+DOC00004272;-;-;NP;Disponible;Magasin 1
+DOC00004273;-;-;NP;Disponible;Magasin 1
+DOC00004274;-;-;PR;Disponible;Magasin 1
+DOC00004275;-;-;NP;Disponible;Magasin 1
+DOC00004276;-;-;NP;Disponible;Magasin 1
+DOC00004279;-;-;NP;Disponible;Magasin 1
+DOC00004281;-;-;NP;Disponible;Magasin 1
+DOC00004282;-;-;NP;Disponible;Magasin 1
+DOC00004283;-;-;NP;Disponible;Magasin 1
+DOC00004286;-;-;NP;Disponible;Magasin 1
+DOC00004287;-;-;NP;Disponible;Magasin 1
+DOC00004288;-;-;NP;Disponible;Magasin 1
+DOC00004289;-;-;NP;Disponible;Magasin 1
+DOC00004290;-;-;NP;Disponible;Magasin 1
+DOC00004292;-;-;NP;Disponible;Magasin 1
+DOC00004293;-;-;NP;Disponible;Magasin 1
+DOC00004294;-;-;NP;Disponible;Magasin 1
+DOC00004295;-;-;NP;Disponible;Magasin 1
+DOC00004297;-;-;NP;Disponible;Magasin 1
+DOC00004300;-;-;NP;Disponible;Magasin 1
+DOC00004301;-;-;NP;Disponible;Magasin 1
+DOC00004302;-;-;NP;Disponible;Magasin 1
+DOC00004303;-;-;NP;Disponible;Magasin 1
+DOC00004304;-;-;NP;Disponible;Magasin 1
+DOC00004305;-;-;NP;Disponible;Magasin 1
+DOC00004307;-;-;NP;Disponible;Magasin 1
+DOC00004308;-;-;NP;Disponible;Magasin 1
+DOC00004310;-;-;NP;Disponible;Magasin 1
+DOC00004312;-;-;NP;Disponible;Magasin 1
+DOC00004313;-;-;NP;Disponible;Magasin 1
+DOC00004314;-;-;NP;Disponible;Magasin 1
+DOC00004316;-;-;NP;Disponible;Magasin 1
+DOC00004317;-;-;NP;Disponible;Magasin 1
+DOC00004318;-;-;NP;Disponible;Magasin 1
+DOC00004319;-;-;NP;Disponible;Magasin 1
+DOC00004320;-;-;NP;Disponible;Magasin 1
+DOC00004321;-;-;NP;Disponible;Magasin 1
+DOC00004322;-;-;NP;Disponible;Magasin 1
+DOC00004323;-;-;NP;Disponible;Magasin 1
+DOC00004324;-;-;NP;Disponible;Magasin 1
+DOC00004326;-;-;NP;Disponible;Magasin 1
+DOC00004327;-;-;NP;Disponible;Magasin 1
+DOC00004328;-;-;NP;Disponible;Magasin 1
+DOC00004329;-;-;NP;Disponible;Magasin 1
+DOC00004330;-;-;NP;Disponible;Magasin 1
+DOC00004331;-;-;NP;Disponible;Magasin 1
+DOC00004332;-;-;NP;Disponible;Magasin 1
+DOC00004333;-;-;NP;Disponible;Magasin 2B
+DOC00004335;-;-;NP;Disponible;Magasin 1
+DOC00004336;-;-;NP;Disponible;Magasin 1
+DOC00004338;-;-;NP;Disponible;Magasin 1
+DOC00004339;-;-;NP;Disponible;Magasin 1
+DOC00004340;-;-;NP;Disponible;Magasin 1
+DOC00004341;-;-;PR;Disponible;-
+DOC00004342;-;-;NP;Disponible;Magasin 1
+DOC00004344;-;-;NP;Disponible;Magasin 1
+DOC00004345;-;-;NP;Disponible;Magasin 1
+DOC00004346;-;-;NP;Disponible;Magasin 1
+DOC00004347;-;-;NP;Disponible;Magasin 1
+DOC00004350;-;-;NP;Disponible;Magasin 1
+DOC00004351;-;-;NP;Disponible;Magasin 1
+DOC00004352;-;-;NP;Disponible;Magasin 1
+DOC00004353;-;-;NP;Disponible;Magasin 1
+DOC00004355;-;-;NP;Disponible;Magasin 1
+DOC00004356;-;-;NP;Disponible;Magasin 1
+DOC00004357;-;-;NP;Disponible;Magasin 1
+DOC00004358;-;-;NP;Disponible;Magasin 1
+DOC00004359;-;-;NP;Disponible;Magasin 1
+DOC00004360;-;-;NP;Disponible;Magasin 1
+DOC00004361;-;-;NP;Disponible;Magasin 1
+DOC00004363;-;-;NP;Disponible;Magasin 1
+DOC00004367;-;-;NP;Disponible;Magasin 1
+DOC00004369;-;-;NP;Disponible;Magasin 1
+DOC00004371;-;-;NP;Disponible;Magasin 1
+DOC00004372;-;-;NP;Disponible;Magasin 1
+DOC00004373;-;-;NP;Disponible;Magasin 1
+DOC00004374;-;-;NP;Disponible;Magasin 1
+DOC00004375;-;-;NP;Disponible;Magasin 1
+DOC00004376;-;-;NP;Disponible;Magasin 1
+DOC00004377;-;-;NP;Disponible;Magasin 1
+DOC00004378;-;-;NP;Disponible;Magasin 1
+DOC00004380;-;-;NP;Disponible;Magasin 1
+DOC00004381;-;-;PR;Disponible;Magasin 1
+DOC00004383;-;-;PR;Disponible;Salle de lecture
+DOC00004384;-;-;NP;Disponible;Magasin 1
+DOC00004385;-;-;NP;Disponible;Magasin 1
+DOC00004386;-;-;NP;Disponible;Magasin 2B
+DOC00004388;-;-;NP;Disponible;Magasin 1
+DOC00004389;-;-;NP;Disponible;Magasin 1
+DOC00004390;-;-;NP;Disponible;Magasin 1
+DOC00004391;-;-;PR;Disponible;Salle de lecture
+DOC00004392;-;-;NP;Disponible;Magasin 1
+DOC00004393;-;-;NP;Disponible;Magasin 1
+DOC00004394;-;-;NP;Disponible;Magasin 1
+DOC00004395;-;-;NP;Disponible;Magasin 1
+DOC00004396;-;-;NP;Disponible;Magasin 1
+DOC00004397;-;-;PR;Disponible;Salle de lecture
+DOC00004399;-;-;NP;Disponible;Magasin 1
+DOC00004400;-;-;PR;Disponible;Salle de lecture
+DOC00004401;-;-;NP;Disponible;Magasin 1
+DOC00004402;-;-;NP;Disponible;Magasin 1
+DOC00004405;-;-;NP;Disponible;Magasin 2B
+DOC00004406;-;-;NP;Disponible;Magasin 2B
+DOC00004407;-;-;NP;Disponible;Magasin 2B
+DOC00004408;-;-;NP;Disponible;Magasin 2B
+DOC00004409;-;-;NP;Disponible;Magasin 2B
+DOC00004410;-;-;NP;Disponible;Magasin 2B
+DOC00004411;-;-;NP;Disponible;Magasin 2B
+DOC00004412;-;-;NP;Disponible;Magasin 2B
+DOC00004413;-;-;NP;Disponible;Magasin 2B
+DOC00004414;-;-;NP;Disponible;Magasin 2B
+DOC00004415;-;-;NP;Disponible;Magasin 2B
+DOC00004416;-;-;NP;Disponible;Magasin 2B
+DOC00004417;-;-;NP;Disponible;Magasin 2B
+DOC00004418;-;-;NP;Disponible;Magasin 2B
+DOC00004419;-;-;NP;Disponible;Magasin 2B
+DOC00004420;-;-;NP;Disponible;Magasin 2B
+DOC00004421;-;-;NP;Disponible;Magasin 2B
+DOC00004422;-;-;NP;Disponible;Magasin 2B
+DOC00004423;-;-;NP;Disponible;Magasin 2B
+DOC00004424;-;-;NP;Disponible;Magasin 2B
+DOC00004425;-;-;NP;Disponible;Magasin 2B
+DOC00004426;-;-;NP;Disponible;Magasin 2B
+DOC00004427;-;-;NP;Disponible;Magasin 2B
+DOC00004429;-;-;NP;Disponible;Magasin 2B
+DOC00004430;-;-;NP;Disponible;Magasin 2B
+DOC00004431;-;-;NP;Disponible;Magasin 2B
+DOC00004432;-;-;NP;Disponible;Magasin 2B
+DOC00004433;-;-;NP;Disponible;Magasin 2B
+DOC00004434;-;-;NP;Disponible;Magasin 2B
+DOC00004435;-;-;NP;Disponible;Magasin 2B
+DOC00004436;-;-;NP;Disponible;Magasin 2B
+DOC00004437;-;-;NP;Disponible;Magasin 2B
+DOC00004438;-;-;NP;Disponible;Magasin 2B
+DOC00004439;-;-;NP;Disponible;Magasin 2B
+DOC00004440;-;-;NP;Disponible;Magasin 2B
+DOC00004441;-;-;NP;Disponible;Magasin 2B
+DOC00004442;-;-;NP;Disponible;Magasin 2B
+DOC00004443;-;-;NP;Disponible;Magasin 2B
+DOC00004444;-;-;NP;Disponible;Magasin 2B
+DOC00004445;-;-;NP;Disponible;Magasin 2B
+DOC00004446;-;-;NP;Disponible;Magasin 2B
+DOC00004447;-;-;NP;Disponible;Magasin 2B
+DOC00004448;-;-;NP;Disponible;Magasin 2B
+DOC00004449;-;-;NP;Disponible;Magasin 2B
+DOC00004450;-;-;NP;Disponible;Magasin 2B
+DOC00004451;-;-;NP;Disponible;Magasin 1
+DOC00004452;-;-;NP;Disponible;Magasin 1
+DOC00004453;-;-;NP;Disponible;Magasin 2B
+DOC00004454;-;-;NP;Disponible;Magasin 2B
+DOC00004455;-;-;NP;Disponible;Magasin 2B
+DOC00004457;-;-;NP;Disponible;Magasin 2B
+DOC00004459;-;-;NP;Disponible;Magasin 2B
+DOC00004460;-;-;NP;Disponible;Magasin 2B
+DOC00004462;-;-;NP;Disponible;Magasin 2B
+DOC00004463;-;-;NP;Disponible;Magasin 2B
+DOC00004464;-;-;NP;Disponible;Magasin 2B
+DOC00004465;-;-;NP;Disponible;Magasin 2B
+DOC00004466;-;-;NP;Disponible;Magasin 2B
+DOC00004467;-;-;NP;Disponible;Magasin 2B
+DOC00004468;-;-;NP;Disponible;Magasin 2B
+DOC00004469;-;-;NP;Disponible;Magasin 2B
+DOC00004470;-;-;NP;Disponible;Magasin 2B
+DOC00004471;-;-;NP;Disponible;Magasin 1
+DOC00004472;-;-;NP;Disponible;Magasin 1
+DOC00004473;-;-;NP;Disponible;Magasin 2B
+DOC00004474;-;-;NP;Disponible;Magasin 1
+DOC00004475;-;-;NP;Disponible;Magasin 1
+DOC00004476;-;-;NP;Disponible;Magasin 1
+DOC00004477;-;-;NP;Disponible;Magasin 1
+DOC00004478;-;-;NP;Disponible;Magasin 1
+DOC00004479;-;-;NP;Disponible;Magasin 1
+DOC00004480;-;-;NP;Disponible;Magasin 1
+DOC00004481;-;-;NP;Disponible;Magasin 1
+DOC00004483;-;-;NP;Disponible;Magasin 1
+DOC00004484;-;-;NP;Disponible;Magasin 1
+DOC00004485;-;-;NP;Disponible;Magasin 1
+DOC00004486;-;-;NP;Disponible;Magasin 1
+DOC00004487;-;-;NP;Disponible;Magasin 1
+DOC00004488;-;-;NP;Disponible;Magasin 1
+DOC00004489;-;-;NP;Disponible;Magasin 1
+DOC00004490;-;-;NP;Disponible;Magasin 1
+DOC00004491;-;-;NP;Disponible;Magasin 1
+DOC00004492;-;-;NP;Disponible;Magasin 1
+DOC00004493;-;-;NP;Disponible;Magasin 1
+DOC00004495;-;-;NP;Disponible;Magasin 1
+DOC00004496;-;-;NP;Disponible;Magasin 1
+DOC00004497;-;-;NP;Disponible;Magasin 1
+DOC00004498;-;-;NP;Disponible;Magasin 1
+DOC00004499;-;-;NP;Disponible;Magasin 1
+DOC00004500;-;-;NP;Disponible;Magasin 1
+DOC00004501;-;-;NP;Disponible;Magasin 1
+DOC00004502;-;-;NP;Disponible;Magasin 1
+DOC00004504;-;-;NP;Disponible;Magasin 1
+DOC00004505;-;-;NP;Disponible;Magasin 1
+DOC00004507;-;-;NP;Disponible;Magasin 1
+DOC00004508;-;-;NP;Disponible;Magasin 1
+DOC00004510;-;-;NP;Disponible;Magasin 1
+DOC00004511;-;-;NP;Disponible;Magasin 1
+DOC00004512;-;-;NP;Disponible;Magasin 1
+DOC00004513;-;-;NP;Disponible;Magasin 1
+DOC00004516;-;-;NP;Disponible;Magasin 1
+DOC00004517;-;-;NP;Disponible;Magasin 1
+DOC00004519;-;-;PR;Disponible;Salle de lecture
+DOC00004520;-;-;PR;Disponible;Salle de lecture
+DOC00004521;-;-;NP;Disponible;Magasin 1
+DOC00004522;-;-;NP;Disponible;Magasin 1
+DOC00004523;-;-;NP;Disponible;Magasin 1
+DOC00004524;-;-;NP;Disponible;Magasin 1
+DOC00004525;-;-;NP;Disponible;Magasin 1
+DOC00004526;-;-;PR;Disponible;Salle de lecture
+DOC00004528;-;-;NP;Disponible;Magasin 1
+DOC00004530;-;-;NP;Disponible;Magasin 1
+DOC00004531;-;-;NP;Disponible;Magasin 1
+DOC00004533;-;-;NP;Disponible;Magasin 1
+DOC00004534;-;-;NP;Disponible;Magasin 1
+DOC00004535;-;-;NP;Disponible;Magasin 1
+DOC00004536;-;-;NP;Disponible;Magasin 1
+DOC00004537;-;-;NP;Disponible;Magasin 1
+DOC00004539;-;-;NP;Disponible;Magasin 1
+DOC00004540;-;-;NP;Disponible;Magasin 1
+DOC00004541;-;-;PR;Disponible;Salle de lecture
+DOC00004543;-;-;NP;Disponible;Magasin 2B
+DOC00004544;-;-;NP;Disponible;Magasin 1
+DOC00004545;-;-;NP;Disponible;Magasin 1
+DOC00004546;-;-;NP;Disponible;Magasin 1
+DOC00004547;-;-;NP;Disponible;Magasin 1
+DOC00004548;-;-;NP;Disponible;Magasin 1
+DOC00004549;-;-;NP;Disponible;Magasin 1
+DOC00004550;-;-;NP;Disponible;Magasin 1
+DOC00004551;-;-;NP;Disponible;Magasin 1
+DOC00004552;-;-;NP;Disponible;Magasin 1
+DOC00004555;-;-;PR;Disponible;Salle de lecture
+DOC00004556;-;-;NP;Disponible;Magasin 1
+DOC00004557;-;-;NP;Disponible;Magasin 1
+DOC00004558;-;-;NP;Disponible;Magasin 1
+DOC00004560;-;-;NP;Disponible;Magasin 1
+DOC00004562;-;-;NP;Disponible;Magasin 1
+DOC00004563;-;-;NP;Disponible;Magasin 1
+DOC00004565;-;-;NP;Disponible;Magasin 1
+DOC00004567;-;-;NP;Disponible;Magasin 1
+DOC00004568;-;-;NP;Disponible;Magasin 1
+DOC00004570;-;-;NP;Disponible;Magasin 1
+DOC00004571;-;-;NP;Disponible;Magasin 1
+DOC00004572;-;-;NP;Disponible;Magasin 1
+DOC00004573;-;-;NP;Disponible;Magasin 1
+DOC00004574;-;-;NP;Disponible;Magasin 1
+DOC00004575;-;-;NP;Disponible;Magasin 1
+DOC00004576;-;-;NP;Disponible;Magasin 1
+DOC00004578;-;-;NP;Disponible;Magasin 1
+DOC00004579;-;-;NP;Disponible;Magasin 2B
+DOC00004580;-;-;NP;Disponible;Magasin 1
+DOC00004581;-;-;NP;Disponible;Magasin 1
+DOC00004582;-;-;NP;Disponible;Magasin 1
+DOC00004583;-;-;NP;Disponible;Magasin 1
+DOC00004586;-;-;NP;Disponible;Magasin 1
+DOC00004587;-;-;NP;Disponible;Magasin 1
+DOC00004588;-;-;NP;Disponible;Magasin 1
+DOC00004589;-;-;NP;Disponible;Magasin 1
+DOC00004590;-;-;NP;Disponible;Magasin 1
+DOC00004591;-;-;NP;Disponible;Magasin 1
+DOC00004592;-;-;NP;Disponible;Magasin 1
+DOC00004593;-;-;NP;Disponible;Magasin 1
+DOC00004594;-;-;NP;Disponible;Magasin 1
+DOC00004595;-;-;NP;Disponible;Magasin 1
+DOC00004596;-;-;NP;Disponible;Magasin 1
+DOC00004597;-;-;NP;Disponible;Magasin 1
+DOC00004598;-;-;NP;Disponible;Magasin 1
+DOC00004599;-;-;NP;Disponible;Magasin 1
+DOC00004600;-;-;NP;Disponible;Magasin 1
+DOC00004602;-;-;NP;Disponible;Magasin 1
+DOC00004606;-;-;NP;Disponible;Magasin 2B
+DOC00004607;-;-;NP;Disponible;Magasin 2B
+DOC00004610;-;-;NP;Disponible;Magasin 1
+DOC00004611;-;-;NP;Disponible;Magasin 1
+DOC00004612;-;-;NP;Disponible;Magasin 1
+DOC00004613;-;-;NP;Disponible;Magasin 1
+DOC00004614;-;-;NP;Disponible;Magasin 1
+DOC00004619;-;-;NP;Disponible;Magasin 1
+DOC00004620;-;-;NP;Disponible;Magasin 1
+DOC00004626;-;-;NP;Disponible;Magasin 1
+DOC00004627;-;-;NP;Disponible;Magasin 2B
+DOC00004629;-;-;PR;Disponible;Magasin 1
+DOC00004632;-;-;NP;Disponible;Magasin 1
+DOC00004633;-;-;NP;Disponible;Magasin 1
+DOC00004634;-;-;NP;Disponible;Magasin 1
+DOC00004636;-;-;NP;Disponible;Magasin 1
+DOC00004637;-;-;NP;Disponible;Magasin 1
+DOC00004640;-;-;NP;Disponible;Magasin 1
+DOC00004641;-;-;NP;Disponible;Magasin 1
+DOC00004642;-;-;NP;Disponible;Magasin 1
+DOC00004645;-;-;NP;Disponible;Magasin 1
+DOC00004648;-;-;NP;Disponible;Magasin 1
+DOC00004650;-;-;NP;Disponible;Magasin 1
+DOC00004654;-;-;NP;Disponible;Magasin 1
+DOC00004655;-;-;NP;Disponible;Magasin 1
+DOC00004656;-;-;NP;Disponible;Magasin 2B
+DOC00004662;-;-;NP;Disponible;Magasin 1
+DOC00004664;-;-;NP;Disponible;Magasin 2B
+DOC00004665;-;-;NP;Disponible;Magasin 1
+DOC00004666;-;-;NP;Disponible;Magasin 2B
+DOC00004667;-;-;NP;Disponible;Magasin 1
+DOC00004673;-;-;NP;Disponible;Magasin 1
+DOC00004674;-;-;NP;Disponible;Magasin 1
+DOC00004675;-;-;NP;Disponible;Magasin 1
+DOC00004676;-;-;NP;Disponible;Magasin 2B
+DOC00004678;-;-;NP;Disponible;Magasin 1
+DOC00004679;-;-;NP;Disponible;Magasin 1
+DOC00004680;-;-;NP;Disponible;Magasin 1
+DOC00004681;-;-;NP;Disponible;Magasin 2B
+DOC00004682;-;-;NP;Disponible;Magasin 1
+DOC00004684;-;-;NP;Disponible;Magasin 1
+DOC00004686;-;-;NP;Disponible;Magasin 1
+DOC00004687;-;-;NP;Disponible;Magasin 1
+DOC00004688;-;-;NP;Disponible;Magasin 1
+DOC00004691;-;-;NP;Disponible;Magasin 1
+DOC00004693;-;-;NP;Disponible;Magasin 1
+DOC00004694;-;-;NP;Disponible;Magasin 1
+DOC00004695;-;-;NP;Disponible;Magasin 1
+DOC00004696;-;-;PR;Disponible;Magasin 1
+DOC00004697;-;-;NP;Disponible;Magasin 1
+DOC00004698;-;-;NP;Disponible;Magasin 1
+DOC00004699;-;-;NP;Disponible;Magasin 1
+DOC00004700;-;-;NP;Disponible;Magasin 1
+DOC00004701;-;-;NP;Disponible;Magasin 1
+DOC00004702;-;-;NP;Disponible;Magasin 1
+DOC00004703;-;-;NP;Disponible;Magasin 1
+DOC00004706;-;-;NP;Disponible;Magasin 1
+DOC00004708;-;-;NP;Disponible;Magasin 1
+DOC00004709;-;-;NP;Disponible;Magasin 1
+DOC00004710;-;-;NP;Disponible;Magasin 1
+DOC00004711;-;-;NP;Disponible;Magasin 1
+DOC00004713;-;-;NP;Disponible;Magasin 2B
+DOC00004714;-;-;NP;Disponible;Magasin 1
+DOC00004715;-;-;NP;Disponible;Magasin 1
+DOC00004716;-;-;NP;Disponible;Magasin 1
+DOC00004717;-;-;NP;Disponible;Magasin 1
+DOC00004719;-;-;NP;Disponible;Magasin 1
+DOC00004720;-;-;NP;Disponible;Magasin 1
+DOC00004721;-;-;NP;Disponible;Magasin 2B
+DOC00004723;-;-;NP;Disponible;Magasin 1
+DOC00004724;-;-;NP;Disponible;Magasin 1
+DOC00004725;-;-;NP;Disponible;Magasin 1
+DOC00004726;-;-;NP;Disponible;Magasin 1
+DOC00004727;-;-;NP;Disponible;Magasin 1
+DOC00004728;-;-;NP;Disponible;Magasin 1
+DOC00004729;-;-;NP;Disponible;Magasin 1
+DOC00004732;-;-;NP;Disponible;Magasin 1
+DOC00004733;-;-;NP;Disponible;Magasin 1
+DOC00004734;-;-;NP;Disponible;Magasin 1
+DOC00004736;-;-;NP;Disponible;Magasin 1
+DOC00004737;-;-;NP;Disponible;Magasin 1
+DOC00004741;-;-;NP;Disponible;Magasin 1
+DOC00004742;-;-;NP;Disponible;Magasin 1
+DOC00004743;-;-;NP;Disponible;Magasin 1
+DOC00004744;-;-;NP;Disponible;Magasin 1
+DOC00004745;-;-;NP;Disponible;Magasin 1
+DOC00004746;-;-;NP;Disponible;Magasin 1
+DOC00004747;-;-;NP;Disponible;Magasin 1
+DOC00004748;-;-;NP;Disponible;Magasin 1
+DOC00004749;-;-;NP;Disponible;Magasin 1
+DOC00004751;-;-;NP;Disponible;Magasin 2B
+DOC00004753;-;-;NP;Disponible;Magasin 1
+DOC00004754;-;-;NP;Disponible;Magasin 2B
+DOC00004755;-;-;NP;Disponible;Magasin 1
+DOC00004756;-;-;NP;Disponible;Magasin 1
+DOC00004758;-;-;NP;Disponible;Magasin 1
+DOC00004759;-;-;NP;Disponible;Magasin 1
+DOC00004760;-;-;NP;Disponible;Magasin 2B
+DOC00004761;-;-;NP;Disponible;Magasin 1
+DOC00004762;-;-;NP;Disponible;Magasin 1
+DOC00004763;-;-;NP;Disponible;Magasin 1
+DOC00004764;-;-;NP;Disponible;Magasin 1
+DOC00004765;-;-;NP;Disponible;Magasin 2B
+DOC00004766;-;-;NP;Disponible;Magasin 2B
+DOC00004767;-;-;NP;Disponible;Magasin 2B
+DOC00004768;-;-;NP;Disponible;Magasin 1
+DOC00004769;-;-;NP;Disponible;Magasin 1
+DOC00004771;-;-;NP;Disponible;Magasin 1
+DOC00004772;-;-;NP;Disponible;Magasin 2B
+DOC00004773;-;-;NP;Disponible;Magasin 1
+DOC00004774;-;-;NP;Disponible;Magasin 1
+DOC00004775;-;-;NP;Disponible;Magasin 1
+DOC00004776;-;-;NP;Disponible;Magasin 1
+DOC00004777;-;-;NP;Disponible;Magasin 1
+DOC00004779;-;-;NP;Disponible;Magasin 1
+DOC00004781;-;-;NP;Disponible;Magasin 1
+DOC00004783;-;-;NP;Disponible;Magasin 1
+DOC00004784;-;-;NP;Disponible;Magasin 1
+DOC00004788;-;-;NP;Disponible;Magasin 1
+DOC00004790;-;-;PR;Disponible;Magasin 1
+DOC00004793;-;-;NP;Disponible;Magasin 1
+DOC00004794;-;-;NP;Disponible;Magasin 1
+DOC00004797;-;-;NP;Disponible;Magasin 1
+DOC00004798;-;-;NP;Disponible;Magasin 1
+DOC00004800;-;-;NP;Disponible;Magasin 1
+DOC00004801;-;-;NP;Disponible;Magasin 1
+DOC00004802;-;-;NP;Disponible;Magasin 1
+DOC00004804;-;-;NP;Disponible;Magasin 1
+DOC00004805;-;-;NP;Disponible;Magasin 1
+DOC00004806;-;-;PR;Disponible;Magasin 1
+DOC00004807;-;-;NP;Disponible;Magasin 1
+DOC00004808;-;-;NP;Disponible;Magasin 1
+DOC00004809;-;-;PR;Disponible;Magasin 1
+DOC00004810;-;-;NP;Disponible;Magasin 1
+DOC00004811;-;-;NP;Disponible;Magasin 1
+DOC00004813;-;-;NP;Disponible;Magasin 1
+DOC00004814;-;-;NP;Disponible;Magasin 1
+DOC00004815;-;-;NP;Disponible;Magasin 1
+DOC00004816;-;-;NP;Disponible;Magasin 2B
+DOC00004817;-;-;NP;Disponible;Magasin 2B
+DOC00004818;-;-;NP;Disponible;Magasin 2B
+DOC00004819;-;-;NP;Disponible;Magasin 1
+DOC00004820;-;-;NP;Disponible;Magasin 2B
+DOC00004821;-;-;NP;Disponible;Magasin 1
+DOC00004822;-;-;NP;Disponible;Magasin 1
+DOC00004823;-;-;NP;Disponible;Magasin 2B
+DOC00004824;-;-;NP;Disponible;Magasin 1
+DOC00004825;-;-;NP;Disponible;Magasin 1
+DOC00004826;-;-;NP;Disponible;Magasin 1
+DOC00004827;-;-;NP;Disponible;Magasin 1
+DOC00004828;-;-;NP;Disponible;Magasin 1
+DOC00004829;-;-;NP;Disponible;Salle de lecture
+DOC00004833;-;-;NP;Disponible;Magasin 1
+DOC00004834;-;-;NP;Disponible;Magasin 1
+DOC00004835;-;-;NP;Disponible;Magasin 1
+DOC00004836;-;-;NP;Disponible;Magasin1
+DOC00004837;-;-;NP;Disponible;Magasin 1
+DOC00004838;-;-;NP;Disponible;Magasin 2B
+DOC00004839;-;-;NP;Disponible;Magasin 1
+DOC00004841;-;-;NP;Disponible;Magasin 1
+DOC00004843;-;-;NP;Disponible;Magasin 1
+DOC00004844;-;-;NP;Disponible;Magasin 1
+DOC00004846;-;-;NP;Disponible;Magasin 1
+DOC00004847;-;-;NP;Disponible;Magasin 1
+DOC00004848;-;-;NP;Disponible;Magasin 1
+DOC00004849;-;-;NP;Disponible;Magasin 1
+DOC00004850;-;-;NP;Disponible;Magasin 1
+DOC00004852;-;-;NP;Disponible;Magasin 1
+DOC00004853;-;-;PR;Disponible;Magasin 1
+DOC00004854;-;-;PR;Disponible;Magasin 1
+DOC00004855;-;-;NP;Disponible;Magasin 1
+DOC00004856;-;-;NP;Disponible;Magasin 1
+DOC00004857;-;-;NP;Disponible;Magasin 1
+DOC00004858;-;-;NP;Disponible;Magasin 1
+DOC00004859;-;-;NP;Disponible;Magasin 1
+DOC00004867;-;-;NP;Disponible;Magasin 1
+DOC00004868;-;-;NP;Disponible;Bureau
+DOC00004869;-;-;NP;Disponible;Magasin 1
+DOC00004870;-;-;NP;Disponible;Magasin 1
+DOC00004871;-;-;NP;Disponible;Magasin 1
+DOC00004872;-;-;NP;Disponible;Magasin 1
+DOC00004873;-;-;NP;Disponible;Magasin 1
+DOC00004875;-;-;NP;Disponible;Magasin 1
+DOC00004876;-;-;PR;Disponible;-
+DOC00004877;-;-;NP;Disponible;Magasin 1
+DOC00004878;-;-;NP;Disponible;Magasin 1
+DOC00004879;-;-;NP;Disponible;Magasin 1
+DOC00004880;-;-;NP;Disponible;Magasin 1
+DOC00004881;-;-;NP;Disponible;Magasin 1
+DOC00004882;-;-;PR;Disponible;Salle de lecture
+DOC00004883;-;-;NP;Disponible;Magasin 1
+DOC00004884;-;-;NP;Disponible;Magasin 1
+DOC00004886;-;-;NP;Disponible;Magasin 1
+DOC00004887;-;-;NP;Disponible;Magasin 1
+DOC00004888;-;-;NP;Disponible;Magasin 1
+DOC00004890;-;-;NP;Disponible;Magasin 1
+DOC00004891;-;-;NP;Disponible;Magasin 1
+DOC00004893;-;-;NP;Disponible;Magasin 1
+DOC00004894;-;-;NP;Disponible;Magasin 2B
+DOC00004896;-;-;NP;Disponible;Magasin 1
+DOC00004899;-;-;NP;Disponible;Magasin 1
+DOC00004900;-;-;NP;Disponible;Magasin 1
+DOC00004903;-;-;NP;Disponible;Magasin 1
+DOC00004904;-;-;NP;Disponible;Magasin 1
+DOC00004905;-;-;NP;Disponible;Magasin 1
+DOC00004907;-;-;NP;Disponible;Magasin 1
+DOC00004908;-;-;NP;Disponible;Magasin 1
+DOC00004909;-;-;NP;Disponible;Magasin 1
+DOC00004910;-;-;NP;Disponible;Magasin 1
+DOC00004911;-;-;PR;Disponible;Magasin1
+DOC00004912;-;-;NP;Disponible;Magasin 1
+DOC00004915;-;-;NP;Disponible;Magasin 1
+DOC00004916;-;-;NP;Disponible;Magasin 1
+DOC00004922;-;-;NP;Disponible;Magasin 1
+DOC00004923;-;-;NP;Disponible;Magasin 1
+DOC00004924;-;-;NP;Disponible;Magasin 1
+DOC00004925;-;-;NP;Disponible;Salle de lecture
+DOC00004928;-;-;NP;Disponible;Magasin 1
+DOC00004929;-;-;NP;Disponible;Magasin 1
+DOC00004930;-;-;NP;Disponible;Magasin 1
+DOC00004931;-;-;NP;Disponible;Magasin 1
+DOC00004932;-;-;NP;Disponible;Magasin 1
+DOC00004933;-;-;NP;Disponible;Magasin 1
+DOC00004934;-;-;NP;Disponible;Magasin 1
+DOC00004936;-;-;NP;Disponible;Magasin 1
+DOC00004937;-;-;NP;Disponible;Magasin 1
+DOC00004938;-;-;NP;Disponible;Magasin 1
+DOC00004939;-;-;NP;Disponible;Magasin 1
+DOC00004941;-;-;NP;Disponible;Magasin 1
+DOC00004942;-;-;NP;Disponible;Magasin 1
+DOC00004943;-;-;NP;Disponible;Magasin 1
+DOC00004944;-;-;NP;Disponible;Magasin 1
+DOC00004945;-;-;NP;Disponible;Magasin 1
+DOC00004946;-;-;NP;Disponible;Magasin 1
+DOC00004947;-;-;NP;Disponible;Magasin 1
+DOC00004948;-;-;NP;Disponible;Magasin 1
+DOC00004949;-;-;NP;Disponible;Magasin 1
+DOC00004950;-;-;NP;Disponible;Magasin 1
+DOC00004951;-;-;NP;Disponible;Magasin 1
+DOC00004952;-;-;NP;Disponible;Magasin 1
+DOC00004953;-;-;NP;Disponible;Magasin 1
+DOC00004954;-;-;NP;Disponible;Magasin 1
+DOC00004956;-;-;NP;Disponible;Magasin 1
+DOC00004957;-;-;NP;Disponible;Magasin 1
+DOC00004958;-;-;NP;Disponible;Magasin 1
+DOC00004959;-;-;NP;Disponible;Magasin 1
+DOC00004960;-;-;NP;Disponible;Magasin 1
+DOC00004961;-;-;NP;Disponible;Magasin 1
+DOC00004962;-;-;NP;Disponible;Magasin 1
+DOC00004964;-;-;NP;Disponible;Magasin 1
+DOC00004965;-;-;NP;Disponible;Magasin 1
+DOC00004967;-;-;NP;Disponible;Magasin 1
+DOC00004968;-;-;NP;Disponible;Magasin 1
+DOC00004969;-;-;NP;Disponible;Magasin 1
+DOC00004970;-;-;NP;Disponible;Magasin 1
+DOC00004973;-;-;NP;Disponible;Magasin 1
+DOC00004975;-;-;NP;Disponible;Magasin 1
+DOC00004978;-;-;NP;Disponible;Magasin 1
+DOC00004979;-;-;NP;Disponible;Magasin 1
+DOC00004980;-;-;NP;Disponible;Magasin 1
+DOC00004981;-;-;NP;Disponible;Magasin 1
+DOC00004982;-;-;PR;Disponible;Salle de lecture
+DOC00004983;-;-;NP;Disponible;Magasin 1
+DOC00004984;-;-;NP;Disponible;Magasin 1
+DOC00004985;-;-;NP;Disponible;Magasin 1
+DOC00004986;-;-;NP;Disponible;Magasin 1
+DOC00004987;-;-;NP;Disponible;Magasin 1
+DOC00004989;-;-;NP;Disponible;Magasin 1
+DOC00004990;-;-;NP;Disponible;Magasin 1
+DOC00004996;-;-;NP;Disponible;Magasin 1
+DOC00004997;-;-;NP;Disponible;Magasin 1
+DOC00004999;-;-;NP;Disponible;Magasin 1
+DOC00005000;-;-;NP;Disponible;Magasin 1
+DOC00005003;-;-;NP;Disponible;Magasin 1
+DOC00005004;-;-;NP;Disponible;Magasin 1
+DOC00005005;-;-;NP;Disponible;Magasin 1
+DOC00005006;-;-;NP;Disponible;Magasin 1
+DOC00005007;-;-;NP;Disponible;Magasin 1
+DOC00005010;-;-;NP;Disponible;Magasin 1
+DOC00005012;-;-;NP;Disponible;Magasin 1
+DOC00005013;-;-;NP;Disponible;Magasin 1
+DOC00005014;-;-;NP;Disponible;Magasin 1
+DOC00005015;-;-;NP;Disponible;Magasin 1
+DOC00005016;-;-;NP;Disponible;Magasin 1
+DOC00005017;-;-;NP;Disponible;Magasin 1
+DOC00005018;-;-;NP;Disponible;Magasin 1
+DOC00005019;-;-;NP;Disponible;Magasin 1
+DOC00005020;-;-;NP;Disponible;Magasin 2B
+DOC00005021;-;-;NP;Disponible;Magasin 1
+DOC00005022;-;-;NP;Disponible;Magasin 2B
+DOC00005024;-;-;NP;Disponible;Magasin 1
+DOC00005025;-;-;NP;Disponible;Magasin 1
+DOC00005026;-;-;NP;Disponible;Magasin 1
+DOC00005027;-;-;PR;Disponible;Magasin 1
+DOC00005028;-;-;NP;Disponible;Magasin 1
+DOC00005029;-;-;NP;Disponible;Magasin 1
+DOC00005030;-;-;NP;Disponible;Magasin 1
+DOC00005031;-;-;NP;Disponible;Magasin 1
+DOC00005032;-;-;NP;Disponible;Magasin 1
+DOC00005033;-;-;NP;Disponible;Magasin 1
+DOC00005034;-;-;PR;Disponible;Magasin 1
+DOC00005036;-;-;NP;Disponible;Magasin 1
+DOC00005037;-;-;NP;Disponible;Magasin 1
+DOC00005039;-;-;NP;Disponible;Magasin 1
+DOC00005040;-;-;NP;Disponible;Magasin 1
+DOC00005041;-;-;NP;Disponible;Magasin 1
+DOC00005043;-;-;NP;Disponible;Magasin 1
+DOC00005044;-;-;PR;Disponible;Magasin 1
+DOC00005045;-;-;NP;Disponible;Magasin 1
+DOC00005046;-;-;PR;Disponible;Magasin 1
+DOC00005048;-;-;PR;Disponible;Salle de lecture
+DOC00005049;-;-;PR;Disponible;Magasin 1
+DOC00005050;-;-;NP;Disponible;Magasin 1
+DOC00005052;-;-;NP;Disponible;Magasin 1
+DOC00005054;-;-;NP;Disponible;Magasin 2B
+DOC00005055;-;-;NP;Disponible;Magasin 1
+DOC00005058;-;-;PR;Disponible;Magasin 1
+DOC00005060;-;-;NP;Disponible;Magasin 1
+DOC00005063;-;-;NP;Disponible;Magasin 1
+DOC00005065;-;-;NP;Disponible;Magasin 1
+DOC00005066;-;-;NP;Disponible;Magasin 1
+DOC00005068;-;-;NP;Disponible;Magasin 2B
+DOC00005069;-;-;NP;Disponible;Magasin 1
+DOC00005071;-;-;NP;Disponible;Magasin 1
+DOC00005072;-;-;NP;Disponible;Magasin1
+DOC00005074;-;-;NP;Disponible;Magasin 1
+DOC00005075;-;-;PR;Disponible;Magasin1
+DOC00005077;-;-;PR;Disponible;Magasin1
+DOC00005078;-;-;NP;Disponible;Magasin 1
+DOC00005079;-;-;NP;Disponible;Magasin 1
+DOC00005080;-;-;NP;Disponible;Magasin 1
+DOC00005082;-;-;NP;Disponible;Magasin 1
+DOC00005085;-;-;NP;Disponible;Magasin 1
+DOC00005086;-;-;NP;Disponible;Magasin 1
+DOC00005087;-;-;NP;Disponible;Magasin 1
+DOC00005088;-;-;NP;Disponible;Magasin 1
+DOC00005089;-;-;NP;Disponible;Magasin 1
+DOC00005091;-;-;NP;Disponible;Magasin 1
+DOC00005092;-;-;NP;Disponible;Magasin 1
+DOC00005093;-;-;PR;Disponible;Magasin 1
+DOC00005095;-;-;NP;Disponible;Magasin 1
+DOC00005096;-;-;NP;Disponible;Magasin 1
+DOC00005097;-;-;PR;Disponible;Magasin 1
+DOC00005098;-;-;NP;Disponible;Magasin 1
+DOC00005099;-;-;NP;Disponible;Magasin 1
+DOC00005100;-;-;NP;Disponible;Magasin 1
+DOC00005101;-;-;NP;Disponible;Magasin 1
+DOC00005102;-;-;NP;Disponible;Magasin 1
+DOC00005104;-;-;NP;Disponible;Magasin 2B
+DOC00005105;-;-;NP;Disponible;Magasin 2B
+DOC00005106;-;-;NP;Disponible;Magasin 1
+DOC00005107;-;-;NP;Disponible;Magasin 2B
+DOC00005108;-;-;NP;Disponible;Magasin 2B
+DOC00005109;-;-;NP;Disponible;Magasin 1
+DOC00005110;-;-;NP;Disponible;Magasin 1
+DOC00005111;-;-;NP;Disponible;Magasin 1
+DOC00005112;-;-;NP;Disponible;Magasin 1
+DOC00005113;-;-;NP;Disponible;Magasin 1
+DOC00005114;-;-;NP;Disponible;Magasin 2B
+DOC00005115;-;-;NP;Disponible;Magasin 1
+DOC00005117;-;-;NP;Disponible;Magasin 1
+DOC00005118;-;-;NP;Disponible;Magasin 1
+DOC00005119;-;-;NP;Disponible;Magasin 1
+DOC00005120;-;-;NP;Disponible;Magasin 1
+DOC00005121;-;-;NP;Disponible;Magasin 1
+DOC00005122;-;-;PR;Disponible;Magasin 1
+DOC00005124;-;-;NP;Disponible;Salle de lecture
+DOC00005127;-;-;NP;Disponible;Magasin 1
+DOC00005128;-;-;PR;Disponible;Magasin 1
+DOC00005132;-;-;NP;Disponible;Magasin 1
+DOC00005133;-;-;NP;Disponible;Magasin 1
+DOC00005134;-;-;NP;Disponible;Magasin 1
+DOC00005136;-;-;NP;Disponible;Magasin 1
+DOC00005137;-;-;NP;Disponible;Magasin 1
+DOC00005138;-;-;NP;Disponible;Magasin 1
+DOC00005141;-;-;NP;Disponible;Magasin 1
+DOC00005143;-;-;NP;Disponible;Magasin 1
+DOC00005144;-;-;NP;Disponible;Magasin 1
+DOC00005145;-;-;NP;Disponible;Magasin 1
+DOC00005146;-;-;NP;Disponible;Magasin 1
+DOC00005151;-;-;PR;Disponible;Salle de lecture
+DOC00005153;-;-;NP;Disponible;Magasin 1
+DOC00005154;-;-;NP;Disponible;Magasin 1
+DOC00005159;-;-;NP;Disponible;Magasin 1
+DOC00005160;-;-;NP;Disponible;Magasin 1
+DOC00005161;-;-;PR;Disponible;Magasin 1
+DOC00005163;-;-;NP;Disponible;Magasin 1
+DOC00005164;-;-;NP;Disponible;Magasin 1
+DOC00005165;-;-;NP;Disponible;Magasin 1
+DOC00005166;-;-;PR;Disponible;Magasin 1
+DOC00005167;-;-;NP;Disponible;Magasin 1
+DOC00005168;-;-;NP;Disponible;Magasin 1
+DOC00005177;-;-;NP;Disponible;Magasin 1
+DOC00005180;-;-;NP;Disponible;Magasin 1
+DOC00005181;-;-;NP;Disponible;Magasin 1
+DOC00005182;-;-;NP;Disponible;Magasin 1
+DOC00005187;-;-;NP;Disponible;Magasin 2B
+DOC00005188;-;-;NP;Disponible;Magasin 1
+DOC00005190;-;-;NP;Disponible;Magasin 1
+DOC00005191;-;-;NP;Disponible;Magasin 1
+DOC00005192;-;-;NP;Disponible;Magasin 1
+DOC00005196;-;-;NP;Disponible;Magasin 1
+DOC00005197;-;-;NP;Disponible;Magasin 1
+DOC00005201;-;-;NP;Disponible;Magasin 1
+DOC00005209;-;-;NP;Disponible;Magasin 1
+DOC00005210;-;-;NP;Disponible;Magasin 1
+DOC00005213;-;-;PR;Disponible;Magasin 1
+DOC00005217;-;-;NP;Disponible;Magasin 1
+DOC00005220;-;-;NP;Disponible;Magasin 1
+DOC00005222;-;-;NP;Disponible;Magasin 1
+DOC00005227;-;-;PR;Disponible;Magasin 1
+DOC00005228;-;-;NP;Disponible;Magasin 1
+DOC00005229;-;-;PR;Disponible;Magasin 1
+DOC00005230;-;-;NP;Disponible;Magasin 1
+DOC00005231;-;-;NP;Disponible;Magasin 1
+DOC00005234;-;-;NP;Disponible;Magasin 1
+DOC00005237;-;-;NP;Disponible;Magasin 1
+DOC00005238;-;-;PR;Disponible;Salle de lecture
+DOC00005239;-;-;NP;Disponible;Magasin 1
+DOC00005240;-;-;NP;Disponible;Magasin 1
+DOC00005241;-;-;NP;Disponible;Magasin 1
+DOC00005242;-;-;NP;Disponible;Magasin 1
+DOC00005243;-;-;PR;Disponible;Magasin 1
+DOC00005245;-;-;NP;Disponible;Magasin 2B
+DOC00005247;-;-;PR;Disponible;Magasin 1
+DOC00005249;-;-;NP;Disponible;Magasin 1
+DOC00005251;-;-;NP;Disponible;Magasin 1
+DOC00005254;-;-;NP;Disponible;Salle de lecture
+DOC00005255;-;-;NP;Disponible;Magasin 1
+DOC00005256;-;-;NP;Disponible;Magasin 1
+DOC00005258;-;-;NP;Disponible;Magasin 1
+DOC00005259;-;-;NP;Disponible;Magasin 1
+DOC00005260;-;-;PR;Disponible;Salle de lecture
+DOC00005261;-;-;NP;Disponible;Magasin 1
+DOC00005262;-;-;NP;Disponible;Magasin 1
+DOC00005263;-;-;NP;Disponible;Salle de lecture
+DOC00005264;-;-;NP;Disponible;Magasin 1
+DOC00005265;-;-;NP;Disponible;Magasin 1
+DOC00005266;-;-;NP;Disponible;Magasin 1
+DOC00005267;-;-;NP;Disponible;Magasin 1
+DOC00005268;-;-;NP;Disponible;Magasin 1
+DOC00005269;-;-;NP;Disponible;Magasin 1
+DOC00005270;-;-;NP;Disponible;Magasin 1
+DOC00005271;-;-;NP;Disponible;Magasin 1
+DOC00005272;-;-;NP;Disponible;Magasin 1
+DOC00005273;-;-;NP;Disponible;Magasin 1
+DOC00005274;-;-;NP;Disponible;Magasin 1
+DOC00005277;-;-;NP;Disponible;Magasin 1
+DOC00005278;-;-;NP;Disponible;Magasin 1
+DOC00005279;-;-;NP;Disponible;Magasin 1
+DOC00005281;-;-;NP;Disponible;Magasin 1
+DOC00005284;-;-;NP;Disponible;Salle de lecture
+DOC00005286;-;-;NP;Disponible;Magasin 1
+DOC00005292;-;-;NP;Disponible;Magasin 1
+DOC00005293;-;-;NP;Disponible;Magasin 1
+DOC00005294;-;-;NP;Disponible;Magasin 1
+DOC00005296;-;-;NP;Disponible;Salle de lecture
+DOC00005297;-;-;NP;Disponible;Magasin 1
+DOC00005298;-;-;NP;Disponible;Magasin 1
+DOC00005299;-;-;NP;Disponible;Magasin 1
+DOC00005300;-;-;NP;Disponible;Magasin 1
+DOC00005301;-;-;NP;Disponible;Magasin 1
+DOC00005302;-;-;NP;Disponible;Magasin 1
+DOC00005303;-;-;NP;Disponible;Magasin 2B
+DOC00005311;-;-;NP;Disponible;Magasin 1
+DOC00005315;-;-;NP;Disponible;Magasin 2B
+DOC00005317;-;-;PR;Disponible;Magasin 1
+DOC00005321;-;-;NP;Disponible;Magasin 1
+DOC00005325;-;-;NP;Disponible;Magasin 1
+DOC00005326;-;-;NP;Disponible;Magasin 1
+DOC00005327;-;-;NP;Disponible;Magasin 1
+DOC00005328;-;-;NP;Disponible;Magasin 1
+DOC00005329;-;-;NP;Disponible;Magasin 2B
+DOC00005332;-;-;NP;Disponible;Magasin 1
+DOC00005337;-;-;NP;Disponible;Magasin 1
+DOC00005346;-;-;PR;Disponible;Salle de lecture
+DOC00005349;-;-;PR;Disponible;Salle de lecture
+DOC00005352;-;-;NP;Disponible;Magasin 1
+DOC00005365;-;-;NP;Disponible;Magasin 1
+DOC00005382;-;-;NP;Disponible;Magasin 2B
+DOC00005383;-;-;NP;Disponible;Magasin 1
+DOC00005384;-;-;NP;Disponible;Magasin 1
+DOC00005385;-;-;NP;Disponible;Magasin 1
+DOC00005387;-;-;NP;Disponible;Magasin 1
+DOC00005401;-;-;NP;Disponible;Magasin 2B
+DOC00005403;-;-;NP;Disponible;Magasin 1
+DOC00005404;-;-;NP;Disponible;Magasin 2B
+DOC00005405;-;-;NP;Disponible;Magasin 2B
+DOC00005406;-;-;NP;Disponible;Magasin 1
+DOC00005407;-;-;NP;Disponible;Magasin 2B
+DOC00005408;-;-;NP;Disponible;Magasin 1
+DOC00005410;-;-;NP;Disponible;Magasin 1
+DOC00005411;-;-;NP;Disponible;Magasin 1
+DOC00005412;-;-;NP;Disponible;Magasin 1
+DOC00005413;-;-;NP;Disponible;Magasin 1
+DOC00005414;-;-;NP;Disponible;Magasin 1
+DOC00005415;-;-;NP;Disponible;Magasin 1
+DOC00005416;-;-;NP;Disponible;Magasin 1
+DOC00005417;-;-;NP;Disponible;Magasin 1
+DOC00005418;-;-;NP;Disponible;Magasin 1
+DOC00005420;-;-;NP;Disponible;Magasin 2B
+DOC00005421;-;-;NP;Disponible;Magasin 2B
+DOC00005422;-;-;NP;Disponible;Magasin 1
+DOC00005423;-;-;NP;Disponible;Magasin 1
+DOC00005425;-;-;NP;Disponible;Magasin 2B
+DOC00005426;-;-;NP;Disponible;Magasin 1
+DOC00005431;-;-;NP;Disponible;Magasin 1
+DOC00005433;-;-;NP;Disponible;Magasin 1
+DOC00005434;-;-;NP;Disponible;Magasin 1
+DOC00005436;-;-;NP;Disponible;Magasin 1
+DOC00005437;-;-;NP;Disponible;Magasin 1
+DOC00005438;-;-;NP;Disponible;Magasin 2B
+DOC00005440;-;-;NP;Disponible;Magasin 1
+DOC00005442;-;-;NP;Disponible;Magasin 2B
+DOC00005443;-;-;NP;Disponible;Magasin 1

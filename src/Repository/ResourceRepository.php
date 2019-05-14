@@ -137,6 +137,20 @@ class ResourceRepository extends ServiceEntityRepository
     /**
      * @return Resource[] Returns an array of Resource objects
      */
+    public function findByDocRef($idcadic)
+    {
+        return $this->createQueryBuilder('r')
+        ->select()
+        ->Where('r.idcadic = :val')
+        ->setParameter('val', $idcadic)
+        ->getQuery()
+        //->getResult()
+        ->getOneOrNullResult()
+        ;
+    }
+    /**
+     * @return Resource[] Returns an array of Resource objects
+     */
     public function findByIdcadic($idcadic)
     {
         return $this->createQueryBuilder('r')

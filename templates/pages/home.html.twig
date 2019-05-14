@@ -15,12 +15,17 @@
 		{% for resource in resources %}
 			<div class="col-3">
 				<div class="card">
+				{% if resource.filename %}
+        	<img src="{{ vich_uploader_asset(resource, 'imageFile') | imagine_filter('thumb') }}" class="card-img-top" style="height: 100%; width: auto;">	
+		{% else %}
+        	<img src="{{ '/images/resources/empty.jpg' | imagine_filter('thumb') }}" class="card-img-top" style="height: 100%; width: auto;">
+        {% endif %}
 					<div class="card-body">
 						<h5 class="card-title">
 							<a href="{{ path('resource.show', {id: resource.id, slug: resource.slug}) }}">{{ resource.title }}</a>
 						</h5>
 						<p class="card-text">{{ resource.type }}</p>
-						<div class="text-primary">{{ resource.lang }}</div>
+						<div class="text-primary">{{ resource.auteur }}</div>
 					</div>
 				</div>
 			

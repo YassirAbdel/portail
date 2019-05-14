@@ -8,14 +8,14 @@ use Doctrine\ORM\Mapping as ORM;
 use Cocur\Slugify\Slugify;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ResourceRepository")
- * @UniqueEntity(
- *  fields={"isbn"},
- *  message="Attention ce champs doit être unique"
- * )
+ * @Vich\Uploadable
  */
 class Resource
 {
@@ -43,7 +43,22 @@ class Resource
      * @ORM\Column(type="integer")
      */
     private $id;
-
+    
+    /**
+     * @var String|null
+     * @ORM\Column(type="string", length=255)
+     */
+    private $fileName;
+    
+    /**
+     * @var File|null
+     * @Assert\Image{
+     *      mineTypes="image\jpeg", "image\png",
+     * }
+     * @Vich\UploadableField(mapping="resource_image", fileNameProperty="fileName")
+     */
+    private $imageFile;
+    
     /**
      * @ORM\Column(type="string", length=255)
      */
@@ -164,6 +179,13 @@ class Resource
      * @ORM\ManyToMany(targetEntity="App\Entity\Person", inversedBy="resources")
      */
     private $persons;
+
+    /**
+     * @ORM\Column(type="datetime")
+     * @var \DateTime|null
+     */
+    private $updated_at;
+    
     
     public function __construct()
     {
@@ -470,4 +492,54 @@ class Resource
 
         return $this;
     }
+    
+    /**
+     * @return string|NULL
+     */
+    public function getFileName()
+    {
+        return $this->fileName;
+    }
+    
+    /**
+     * @return \Symfony\Component\HttpFoundation\File\File|NULL
+     */
+    public function getImageFile()
+    {
+        return $this->imageFile;
+    }
+    
+    /**
+     * @param string|NULL $fileName
+     */
+    public function setFileName($fileName)
+    {
+        $this->fileName = $fileName;
+    }
+    
+    /**
+     * @param \Symfony\Component\HttpFoundation\File\File|NULL $imageFile
+     */
+    public function setImageFile($imageFile)
+    {
+        //$today = date("Ym");
+        //$this->imageFile = $today . '/' . $imageFile;
+        $this->imageFile = $imageFile;
+        if ($this->imageFile instanceof UploadedFile) {
+            $this->updated_at = new \DateTime('now');
+        }
+    }
+
+    public function getUpdatedAt(): ?\DateTimeInterface
+    {
+        return $this->updated_at;
+    }
+
+    public function setUpdatedAt(\DateTimeInterface $updated_at): self
+    {
+        $this->updated_at = $updated_at;
+
+        return $this;
+    }
+    
 }
