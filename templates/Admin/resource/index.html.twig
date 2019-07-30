@@ -46,10 +46,29 @@
 		
 	<div class="text-right">
 		<a href="{{ path('admin.resource.add') }}" class="btn btn-primary">Nouvelle notice</a>
-	</div>		
+	</div>
+	<!--  test Popper class 
+	<button id="button-a">button</button>	
+	-->	
 	{% endif %}	
 	{% if is_granted('ROLE_ADMIN')  %}
 	<h1>Administrer l'application</h1>
 	{% endif %}
 	</div>
+{% endblock %}
+{% block javascripts %}
+	<script>
+		var ref = $('#button-a');
+		var popup = $('#new-notice');
+		popup.hide();
+		
+		ref.click(function(){
+			popup.show();
+			var popper = new Popper(ref, popup,{
+		     		placement: 'top' 
+
+			});
+		});
+	   
+	</script>
 {% endblock %}

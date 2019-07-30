@@ -17,12 +17,23 @@
     <div class="jumbotron">
 
         <div class="container">
-
+			{% for message in app.flashes('success') %}
+				<div class="alert alert-success">
+                {{ message }}
+				</div>
+            {% endfor %}
+            
+            {% if not form.vars.valid %}
+            	<div class="alert alert-danger">
+            		Erreur de saisie
+            	</div>
+            {% endif %}
+            
             <div class="row">
 
                 <div class="col-md-8">
                     {% if resource.filename %}
-        				<img src="{{ vich_uploader_asset(resource, 'imageFile') | imagine_filter('medium') }}" class="card-img-top" style="height: 100%; width: auto;">	
+        				<img src="{{ vich_uploader_asset(resource, 'imageFile') | imagine_filter('medium') }}" class="card-img-top" style="height: auto; width: 100%;">	
 		            {% else %}
         					<img src="{{ '/images/resources/empty.jpg' | imagine_filter('medium') }}" class="card-img-top" style="height: 100%; width: auto;">
                     {% endif %}
@@ -33,7 +44,32 @@
                     <h3>{{ resource.type }}</h3>
                     <h3>{% if resource.auteur %}Par {{ resource.auteur }}{% endif %}</h3>
                     {% if 'Ouvrage' in resource.type %}<h2>{{ resource.type }} ({{ resource.lang }})</h2>{% endif %}
-                    <a href="#" class="btn btn-secondary btn-lg active">Ajouter à mes favoris</a>
+                    <div class="mt-2">
+                    	<a href="#" class="btn btn-secondary btn-lg active">Ajouter à mes favoris</a>
+                    </div>
+                    <div class="mt-2">
+                    	<a href="#" class="btn btn-secondary btn-lg active">Demander des infos</a>
+                    </div>
+                    <div id="contactForm"class="mt-4">
+                    	{{ form_start(form) }}
+                    	<div class="row">
+                    		<div class="col">{{ form_row(form.firstname) }}</div>
+                    		<div class="col">{{ form_row(form.lastname) }}</div>
+                    	</div>
+                    	<div class="row">
+                    		<div class="col">{{ form_row(form.phone) }}</div>
+                    		<div class="col">{{ form_row(form.email) }}</div>
+                    	</div>
+                    	<div class="row">
+                    		<div class="col">{{ form_row(form.message) }}</div>
+                    	</div>
+                    	{{ form_rest(form) }}
+                    	<div class="form-group">
+                    		<button class="btn btn-primary">Envoyer</button>
+                    	
+                    	</div>
+                    	{{ form_end(form) }}
+                    </div>
                 </div>
 
             </div>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    </head>
+    <body>
+    	<div class="container">
+          <h2>Demande d'information à propos de "{{ contact.resource.title }}"</h2>
+          <p>Détails du message</p>            
+          <table class="table">
+           
+              <tr>
+               	<th>Ressource</th>
+               	<td><a href='{{ url('resource.show', {id: contact.resource.id, slug: contact.resource.slug}) }}' target="_blank">{{ contact.resource.title }}</a></td>
+              </tr>
+              
+              <tr> 
+                <th>Nom</th>
+                <td>{{ contact.lastname }}</td>
+              </tr>
+              
+              <tr>
+                <th>Prénom</th>
+                <td>{{ contact.firstname }}</td>
+             </tr>
+             
+             <tr>
+                <th>Numéro de téléphone</th>
+                <td>{{ contact.phone }}</td>
+            </tr>
+            
+            <tr>
+                <th>Email</th>
+                <td>{{ contact.email }}</td>
+            </tr>
+            
+            <tr>
+                <th>Message</th>
+                <td>{{ contact.message|nl2br }}</td>
+           </tr>
+        
+          </table>
+        </div>
+    </body>
+</html>
+	

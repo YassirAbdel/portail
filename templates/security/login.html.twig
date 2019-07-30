@@ -22,9 +22,10 @@
 	 	<input type="checkbox" id="remember_me" name="_remember_me" checked />
     	<label for="remember_me">Se souvenir de moi</label>
     </div>
+    <input type="hidden" name="_target_path" 
+           value="{{ app.request.get('redirect_to') }}"/>
     <input type="hidden" name="_csrf_token"
-           value="{{ csrf_token('authenticate') }}"
-    >
+           value="{{ csrf_token('authenticate') }}">
 
     {#
         Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.

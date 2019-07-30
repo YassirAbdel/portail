@@ -53,7 +53,7 @@ class AdminResourceController extends AbstractController {
             //dump($this->token->getToken()->getUser());
             //dump($this->token->getToken()->getUsername());
            
-            
+            dump($resources);
        
         return $this->render('admin/resource/index.html.twig', compact('resources'));
         

@@ -12,6 +12,9 @@ use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Component\HttpFoundation\Request;
 use App\Entity\ResourceSearch;
 use App\Form\ResourceSearchType;
+use App\Entity\Contact;
+use App\Form\ContactType;
+use App\Notification\ContactNotification;
 
 
 
@@ -72,7 +75,7 @@ class ResourceController extends AbstractController {
      * @param string slug
      * @param int $id
      */
-    public function show(Resource $resource, String $slug, Int $id) : Response
+    public function show(Resource $resource, String $slug, Int $id, Request $request, ContactNotification $notification) : Response
     {
         $resource_slug = $resource->getSlug();
         $resource_id = $resource->getId();
@@ -82,9 +85,29 @@ class ResourceController extends AbstractController {
                 'slug' => $resource_slug
             ], 301);
         }
-        dump($resource);
+        
+        $contact = new Contact();
+        $contact->setResource($resource);
+        $form = $this->createForm(ContactType::class, $contact);
+        $form->handleRequest($request);
+        
+        if($form->isSubmitted() && $form->isValid()) {
+            // On traite le l'objet $contact pour l'envoyer
+            $notification->notify($contact);
+            $this->addFlash('success', 'Votre message a été bien envoyé');
+            
+            return $this->redirectToRoute('resource.show', [
+                'id' => $resource_id,
+                'slug' => $resource_slug
+            ]);
+        }
+        
+        
         return $this->render('resource/show.html.twig', [
-            'resource' => $resource
+            'resource' => $resource,
+            'current_menu' => 'ressource',
+            'form' => $form->createView()
+            
         ]);
         
     }

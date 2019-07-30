@@ -73,6 +73,12 @@ class User implements UserInterface, \Serializable
         return [$role];
     }
     
+    public function getRole()
+    {
+        $role = $this->role;
+        
+    }
+    
     public function getSalt()
     {
         return null;
