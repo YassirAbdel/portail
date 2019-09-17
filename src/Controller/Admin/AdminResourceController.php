@@ -65,7 +65,7 @@ class AdminResourceController extends AbstractController {
      * @param  Resource $resource
      */
     
-    public function edit(Resource $resource, Request $request, CacheManager $caheManager, UploaderHelper $helper)
+    public function edit(Resource $resource, Request $request, CacheManager $cacheManager, UploaderHelper $helper)
     { 
         $form = $this->createForm(ResourceType::class, $resource);
         $form->handleRequest($request);
@@ -89,6 +89,7 @@ class AdminResourceController extends AbstractController {
     public function add(Request $request) 
     {
         $resource = new Resource();
+        
         $form = $this->createForm(ResourceType::class, $resource);
         $form->handleRequest($request);
         

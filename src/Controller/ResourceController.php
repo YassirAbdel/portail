@@ -15,6 +15,12 @@ use App\Form\ResourceSearchType;
 use App\Entity\Contact;
 use App\Form\ContactType;
 use App\Notification\ContactNotification;
+use App\Form\ResourceType;
+use App\Form\ResourceBasketType;
+use App\Entity\Basket;
+use App\Form\BasketType;
+use Doctrine\Common\Collections\ArrayCollection;
+use phpDocumentor\Reflection\Types\Resource_;
 
 
 
@@ -69,7 +75,7 @@ class ResourceController extends AbstractController {
     }
     
     /**
-     * @route("/ressource/{slug}-{id}" , name="resource.show", requirements={"slug" : "^[a-z0-9]+(?:-[a-z0-9]+)*$", "id" : "\d+"})
+     * @route("/ressource/{slug}-{id}" , name="resource.show", requirements={"slug" : "^[a-z0-9]+(?:-[a-z0-9]+)*$", "id" : "\d+"},  methods="GET|POST")
      * @return Response
      * @param Resource resource
      * @param string slug
@@ -83,7 +89,7 @@ class ResourceController extends AbstractController {
             return $this->redirectToRoute('resource.show', [
                 'id' => $resource_id,
                 'slug' => $resource_slug
-            ], 301);
+            ],  301);
         }
         
         $contact = new Contact();
@@ -91,24 +97,14 @@ class ResourceController extends AbstractController {
         $form = $this->createForm(ContactType::class, $contact);
         $form->handleRequest($request);
         
-        if($form->isSubmitted() && $form->isValid()) {
-            // On traite le l'objet $contact pour l'envoyer
-            $notification->notify($contact);
-            $this->addFlash('success', 'Votre message a été bien envoyé');
-            
-            return $this->redirectToRoute('resource.show', [
-                'id' => $resource_id,
-                'slug' => $resource_slug
-            ]);
-        }
-        
-        
         return $this->render('resource/show.html.twig', [
             'resource' => $resource,
             'current_menu' => 'ressource',
             'form' => $form->createView()
             
+            
         ]);
-        
     }
+    
+    
 }

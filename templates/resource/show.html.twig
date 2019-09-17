@@ -22,6 +22,11 @@
                 {{ message }}
 				</div>
             {% endfor %}
+            {% for message in app.flashes('basket') %}
+				<div class="alert alert-success">
+                {{ message }}
+				</div>
+            {% endfor %}
             
             {% if not form.vars.valid %}
             	<div class="alert alert-danger">
@@ -45,10 +50,7 @@
                     <h3>{% if resource.auteur %}Par {{ resource.auteur }}{% endif %}</h3>
                     {% if 'Ouvrage' in resource.type %}<h2>{{ resource.type }} ({{ resource.lang }})</h2>{% endif %}
                     <div class="mt-2">
-                    	<a href="#" class="btn btn-secondary btn-lg active">Ajouter à mes favoris</a>
-                    </div>
-                    <div class="mt-2">
-                    	<a href="#" class="btn btn-secondary btn-lg active">Demander des infos</a>
+                    	<a href="{{ path('resource.basketadd', {slug: resource.slug, id: resource.id }) }}" class="btn btn-secondary btn-lg active">Sélectionner</a>
                     </div>
                     <div id="contactForm"class="mt-4">
                     	{{ form_start(form) }}

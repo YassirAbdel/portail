@@ -179,18 +179,24 @@ class Resource
      * @ORM\ManyToMany(targetEntity="App\Entity\Person", inversedBy="resources")
      */
     private $persons;
-
+    
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Basket", mappedBy="resources")
+     */
+    private $baskets;
+    
     /**
      * @ORM\Column(type="datetime")
      * @var \DateTime|null
      */
     private $updated_at;
-    
+
     
     public function __construct()
     {
         $this->created_at = new \DateTime();
         $this->persons = new ArrayCollection();
+        $this->baskets = new ArrayCollection();
     }
    
     public function getId(): ?int
@@ -493,6 +499,36 @@ class Resource
         return $this;
     }
     
+    
+    /**
+     * @return Collection\Basket[]
+     */
+    public function getBaskets(): Collection
+    {
+        return $this->baskets;
+    }
+    
+    public function addBasket(Basket $basket): self
+    {
+        if (!$this->baskets->contains($basket)) {
+            $this->baskets[] = $basket;
+            $basket->addResource($this);
+        }
+        
+        return $this;
+    }
+    
+    public function removeBasket(Basket $basket): self
+    {
+        if ($this->baskets->contains($basket)) {
+            $this->baskets->removeElement($basket);
+            $basket->removeResource($this);
+        }
+        
+        return $this;
+    }
+    
+    
     /**
      * @return string|NULL
      */
@@ -540,6 +576,15 @@ class Resource
         $this->updated_at = $updated_at;
 
         return $this;
+    }
+ 
+    /**
+     * toString
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->title;
     }
     
 }

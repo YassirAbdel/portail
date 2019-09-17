@@ -13,10 +13,10 @@ use App\Entity\Person;
 use Symfony\Component\Form\FormTypeInterface;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
-use Symfony\Component\Form\Extension\Core\Type\CollectionType;
+use App\Entity\Basket;
 
 
-class ResourceType extends AbstractType
+class ResourceBasketType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
@@ -25,18 +25,29 @@ class ResourceType extends AbstractType
                  //'choices' => $this->getChoises()
               //])
             ->add('type', TextType::class, [
-                
+                'attr' => array(
+                    'readonly' => true,
+                ),
             ])
             ->add('title', TextType::class, [
-                            ])
+                'attr' => array(
+                    'readonly' => true,
+                ),
+            ])
             ->add('lang', TextType::class, [
-                
+                'attr' => array(
+                    'readonly' => true,
+                ),
             ])
             ->add('comment', TextType::class, [
-                
+                'attr' => array(
+                    'readonly' => true,
+                ),
             ])
             ->add('person', TextType::class, [
-                
+                'attr' => array(
+                    'readonly' => true,
+                ),
             ])
             ->add('persons', EntityType::class, [
                 'class' => Person::class,
@@ -45,35 +56,62 @@ class ResourceType extends AbstractType
                 'multiple' => true
                 
             ])
-            ->add('oeuvre', TextType::class, [
+            
+            ->add('baskets', EntityType::class, [
+                'class' => Basket::class,
+                'required' => false,
+                'choice_label' => 'title',
+                'multiple' => false
                 
+            ])
+            
+            ->add('oeuvre', TextType::class, [
+                'attr' => array(
+                    'readonly' => true,
+                ),
             ])
             ->add('organisme', TextType::class, [
-                
+                'attr' => array(
+                    'readonly' => true,
+                ),
             ])
             ->add('geo', TextType::class, [
-                
+                'attr' => array(
+                    'readonly' => true,
+                ),
             ])
             ->add('tag', TextType::class, [
-                
+                'attr' => array(
+                    'readonly' => true,
+                ),
             ])
             ->add('analyse')
             ->add('rights')
             ->add('oai')
             ->add('auteur', TextType::class, [
-                
+                'attr' => array(
+                    'readonly' => true,
+                ),
             ])
             ->add('resp1', TextType::class, [
-                
+                'attr' => array(
+                    'readonly' => true,
+                ),
             ])
             ->add('editeur', TextType::class, [
-                
+                'attr' => array(
+                    'readonly' => true,
+                ),
             ])
             ->add('editeurlieu', TextType::class, [
-                
+                'attr' => array(
+                    'readonly' => true,
+                ),
             ])
             ->add('anneedit', TextType::class, [
-                
+                'attr' => array(
+                    'readonly' => true,
+                ),
             ])
             ->add('isbn', TextType::class, [
                 "required" => false,
@@ -104,6 +142,7 @@ class ResourceType extends AbstractType
     public function getChoises()
     {
         $choises = Resource::TypeDoc;
+        
         $output = [];
         foreach ($choises as $k => $v){
             $output[$v] = $k;

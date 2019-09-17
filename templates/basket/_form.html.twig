@@ -1,0 +1,16 @@
+<form action="{{ path('basket.new') }}" method="post">
+        <div id="basket"><div class="form-group"><label for="basket_title" class="required">Titre</label><input type="text" id="basket_title" name="basket[title]" required="required" maxlength="255" class="form-control" /></div>
+        
+        {% set resources = app.session.get('panier') %}
+        
+        {% for resource in resources %}
+        	<input type="hidden" name="basket[resources][]" value="{{ resource.id }}"/>
+        {% endfor %}
+       
+        </div>
+        <input type="hidden" id="basket__token" name="basket[_token]" value="{{ csrf_token('basket') }}"/>
+          
+    		
+    		
+   	<button class="btn">Save</button>
+</form>

@@ -6,10 +6,11 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
+
 /**
- * @ORM\Entity(repositoryClass="App\Repository\PersonRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\BasketRepository")
  */
-class Person
+class Basket
 {
     /**
      * @ORM\Id()
@@ -19,18 +20,24 @@ class Person
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255)
      */
-    private $name;
-    
+    private $title;
+
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Resource", mappedBy="persons")
+     * @ORM\Column(type="datetime")
+     */
+    private $creat_at;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Resource", inversedBy="baskets")
      */
     private $resources;
 
     public function __construct()
     {
         $this->resources = new ArrayCollection();
+        $this->creat_at = new \DateTime();
     }
 
     public function getId(): ?int
@@ -38,18 +45,30 @@ class Person
         return $this->id;
     }
 
-    public function getName(): ?string
+    public function getTitle(): ?string
     {
-        return $this->name;
+        return $this->title;
     }
 
-    public function setName(?string $name): self
+    public function setTitle(string $title): self
     {
-        $this->name = $name;
+        $this->title = $title;
 
         return $this;
     }
 
+    public function getCreatAt(): ?\DateTimeInterface
+    {
+        return $this->creat_at;
+    }
+
+    public function setCreatAt(\DateTimeInterface $creat_at): self
+    {
+        $this->creat_at = $creat_at;
+
+        return $this;
+    }
+    
     /**
      * @return Collection|Resource[]
      */
@@ -57,11 +76,13 @@ class Person
     {
         return $this->resources;
     }
+    
 
     public function addResource(Resource $resource): self
     {
         if (!$this->resources->contains($resource)) {
             $this->resources[] = $resource;
+            $resource->addBasket($this);
         }
 
         return $this;
@@ -74,5 +95,14 @@ class Person
         }
 
         return $this;
+    }
+    
+    /**
+     * toString
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->title;
     }
 }
