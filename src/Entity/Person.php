@@ -60,7 +60,7 @@ class Person
 
     public function addResource(Resource $resource): self
     {
-        if (!$this->resources->contains($resource)) {
+        if ($this->resources->contains($resource)) {
             $this->resources[] = $resource;
         }
 

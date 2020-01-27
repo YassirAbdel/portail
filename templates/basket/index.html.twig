@@ -3,15 +3,15 @@
 {% block title %}Basket index{% endblock %}
 
 {% block body %}
-    <h1>Basket index</h1>
+    <h1>Liste des sélections</h1>
 
-    <table class="table">
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Title</th>
-                <th>Creat_at</th>
-                <th>actions</th>
+                <th>Titre</th>
+                <th>Date de création</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -20,18 +20,19 @@
                 <td>{{ basket.id }}</td>
                 <td>{{ basket.title }}</td>
                 <td>{{ basket.creatAt ? basket.creatAt|date('Y-m-d H:i:s') : '' }}</td>
-                <td>
-                    <a href="{{ path('basket.show', {'id': basket.id}) }}">show</a>
-                    <a href="{{ path('basket.edit', {'id': basket.id}) }}">edit</a>
+                <td style="display:inline">
+                    <a href="{{ path('basket.show', {'id': basket.id}) }}" class="btn btn-primary">Consulter</a>
+                    <a href="{{ path('basket.edit', {'id': basket.id}) }}" class="btn btn-primary">Editer</a>
                 </td>
+                <td>
+                 {{ include('basket/_delete_form.html.twig') }}
+                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="4">no records found</td>
+                <td colspan="4">Liste de sélection vide</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
-
-    <a href="{{ path('basket.new') }}">Create new</a>
 {% endblock %}

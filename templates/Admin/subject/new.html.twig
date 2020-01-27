@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Gérer les ressources' %}
+
+{% block body %}
+    <div class="container pt-4">
+        <h1>Ajouter un nouvel ensemble</h1>
+        {{ include ('admin/subject/_form.html.twig', {button: 'Ajouter'}) }}
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+
+{% endblock %}
+
+{% block javascripts %}
+
+<script>
+	$('select').select2();
+</script>
+{% endblock %}

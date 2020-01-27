@@ -1,6 +1,6 @@
 App\Entity\ResourceSearch:
    properties:
-      titre:
+      title:
          - Length:
             min: 2
             max: 50

@@ -1,0 +1,62 @@
+body {
+    background-color: lightgray;
+}
+
+.pagerfanta {
+}
+
+.pagerfanta a,
+.pagerfanta span {
+    display: inline-block;
+    border: 1px solid blue;
+    color: blue;
+    margin-right: .2em;
+    padding: .25em .35em;
+}
+
+.pagerfanta a {
+    text-decoration: none;
+}
+
+.pagerfanta a:hover {
+    background: #ccf;
+}
+
+.pagerfanta .dots {
+    border-width: 0;
+}
+
+.pagerfanta .current {
+    background: #ccf;
+    font-weight: bold;
+}
+
+.pagerfanta .disabled {
+    border-color: #ccf;
+    color: #ccf;
+}
+
+COLORS:
+
+.pagerfanta a,
+.pagerfanta span {
+    border-color: blue;
+    color: blue;
+}
+
+.pagerfanta a:hover {
+    background: #ccf;
+}
+
+.pagerfanta .current {
+    background: #ccf;
+}
+
+.pagerfanta .disabled {
+    border-color: #ccf;
+    color: #cf;
+}
+
+
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vYXBwLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLDJCQUEyQjtBQUMvQiIsImZpbGUiOiJhcHAuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiYm9keSB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogbGlnaHRncmF5O1xufVxuIl0sInNvdXJjZVJvb3QiOiIifQ==*/

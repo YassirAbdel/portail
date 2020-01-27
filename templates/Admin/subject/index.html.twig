@@ -1,0 +1,75 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Administration du portail' %}
+
+{% block body %}
+	<div class="container mt-4">
+	{% for message in app.flashes('success') %}
+		<div class="alert alert-success">
+			{{ message }}
+		</div>
+	{% endfor %}
+	{% if is_granted('ROLE_DOC')  %}
+	<h1>Gérer les ensembles documentaires</h1>
+		
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Titre</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+		
+    		{% for subject in subjects %}
+    			<tr>
+    				<td>{{ subject.title }}</td>
+    				
+    				<td>
+    					
+    					<a href="{{ path('admin.subject.edit', {id: subject.id}) }}" class="btn btn-secondary">Éditer</a>
+    				</td>
+    				<td>	
+    					
+    					<form method="post" action="{{ path('admin.subject.delete', {id: subject.id}) }}" onsubmit="return confirm('Etes-vous vraiment sûr ?')">
+    						<input type="hidden" name="_method" value="DELETE">
+    						<input type="hidden" name="_token" value="{{ csrf_token('delete' ~ subject.id) }}">
+    						<button class="btn btn-danger">Supprimer</button>
+    					</form>
+    					
+    				</td>
+    			</tr>
+    		   {% endfor %}
+		   
+		</tbody>
+	
+	</table>
+		
+	<div class="text-right">
+		<a href="{{ path('admin.subject.add') }}" class="btn btn-primary">Nouvel ensemble</a>
+	</div>
+	<!--  test Popper class 
+	<button id="button-a">button</button>	
+	-->	
+	{% endif %}	
+	{% if is_granted('ROLE_ADMIN')  %}
+	<h1>Administrer l'application</h1>
+	{% endif %}
+	</div>
+{% endblock %}
+{% block javascripts %}
+	<script>
+		var ref = $('#button-a');
+		var popup = $('#new-notice');
+		popup.hide();
+		
+		ref.click(function(){
+			popup.show();
+			var popper = new Popper(ref, popup,{
+		     		placement: 'top' 
+
+			});
+		});
+	   
+	</script>
+{% endblock %}

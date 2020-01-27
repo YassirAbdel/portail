@@ -3,11 +3,32 @@
 {% block title %}Edit Basket{% endblock %}
 
 {% block body %}
-    <h1>Edit Basket</h1>
-
-    {{ include('basket/_form.html.twig', {'button_label': 'Update'}) }}
-
-    <a href="{{ path('basket.index') }}">back to list</a>
-
-    {{ include('basket/_delete_form.html.twig') }}
+    <h2>Détails des ressources de votre sélection</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">Type de ressource</th>
+          <th scope="col">Titre</th>
+          <th scope="col">Auteur</th>
+        </tr>
+      </thead>
+      <tbody>
+       {% for resource in basket.resources %}
+            <tr>
+              <th scope="row">{{ resource.id }}</th>
+              <td>{{ resource.type }}</td>
+              <td>{{ resource.title }}</td>
+              <td>{{ resource.auteur }}</td>
+            </tr>
+       {% endfor %}
+      </tbody>
+    </table>
+    <h2>Modifier votre séletion</h2>
+	<table class="table">
+ 	<tbody>
+    <tr>
+        {{ include('basket/_form_edit.html.twig', {'button_label': 'Update'}) }}
+   		<td><a href="{{ path('basket.index') }}" class="btn btn-primary">Liste des sélections</a></td>
+         <td>{{ include('basket/_delete_form.html.twig') }}</td>
 {% endblock %}

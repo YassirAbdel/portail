@@ -18,36 +18,39 @@ class ResourceSearchType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('type', TextType::class, [
-                'required' => false,
-                'label' => false,
-                'attr' => [
-                    'placeHolder' => 'Type de document'
-                ]
-            ])
-            ->add('titre', TextType::class, [
-                'required' => false,
-                'label' => false,
-                'attr' => [
-                    'placeHolder' => 'Titre'
-                ]
-            ])
-            ->add('auteur', TextType::class, [
-                'required' => false,
-                'label' => false,
-                'attr' => [
-                    'placeHolder' => 'Auteur',
-                ]
-            ])
-            
-            ->add('persons', EntityType::class, [
-                'required' => false,
-                'label' => false,
-                'class' => Person::class,
-                'choice_label' => 'name',
-                'multiple' => true
-            ])
-        ;
+        ->add('type', TextType::class, [
+            'required' => false,
+            'label' => false,
+            'attr' => [
+                'placeHolder' => 'Type de document'
+            ]
+        ])
+        ->add('title', TextType::class, [
+            'required' => false,
+            'label' => false,
+            'attr' => [
+                'placeHolder' => 'Titre'
+            ]
+        ])
+        ->add('auteur', TextType::class, [
+            'required' => false,
+            'label' => false,
+            'attr' => [
+                'placeHolder' => 'Auteur',
+            ]
+        ])
+        
+        ->add('persons', EntityType::class, [
+            'required' => false,
+            'label' => false,
+            'class' => Person::class,
+            'choice_label' => 'name',
+            'multiple' => true,
+            'attr' => [
+                'placeHolder' => 'Persones',
+            ]
+        ])
+     ;
     }
 
     public function configureOptions(OptionsResolver $resolver)

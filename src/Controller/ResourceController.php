@@ -19,7 +19,11 @@ use App\Form\ResourceType;
 use App\Form\ResourceBasketType;
 use App\Entity\Basket;
 use App\Form\BasketType;
+use App\Form\ResourceSearchType1;
+use App\Model\ResourceModel;
+use App\Repository\SearchRepository;
 use Doctrine\Common\Collections\ArrayCollection;
+use FOS\ElasticaBundle\Manager\RepositoryManagerInterface;
 use phpDocumentor\Reflection\Types\Resource_;
 
 
@@ -37,6 +41,8 @@ class ResourceController extends AbstractController {
         
         // On initialise $em
         $this->em = $em;
+
+        #$this->manager = $manager;
     }
     
     /**
@@ -105,6 +111,22 @@ class ResourceController extends AbstractController {
             
         ]);
     }
-    
-    
+
+/**
+ * @Route("/search", name="search_resource")
+ */
+public function searchResource(Request $request)
+{
+    // create Contact model
+      $ResourceSearch = new ResourceModel();
+      // create form
+      $ResourceSearchForm = $this->createForm(ResourceSearchType1::class, $ResourceSearch );
+        // bind data
+      $ResourceSearchForm->handleRequest($request);
+      $ResourceSearch = $ResourceSearchForm->getData();
+      $results = $this->manager->getRepository(SearchRepository::class)->searchFull($ResourceSearch);
+      //searchFull($ResourceSearch);
+      
+
+}
 }

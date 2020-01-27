@@ -1,0 +1,1 @@
+<nav><a href="/search?q=danse%20jazz&amp;page=2" rel="prev">Previous</a><a href="/search?q=danse%20jazz">1</a><a href="/search?q=danse%20jazz&amp;page=2">2</a><span class="current">3</span><a href="/search?q=danse%20jazz&amp;page=4">4</a><a href="/search?q=danse%20jazz&amp;page=5">5</a><a href="/search?q=danse%20jazz&amp;page=4" rel="next">Next</a></nav>

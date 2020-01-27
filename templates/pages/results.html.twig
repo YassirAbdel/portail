@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Portail documentaire - Accueil' %}
+
+{% block body %}
+	<div class="jumbotron text-center">
+		<h1>Portail documentaire de la médiathèque du CND</h1>
+		<p>
+            Quanta autem vis amicitiae sit, ex hoc intellegi maxime potest, quod ex infinita societate generis humani, quam conciliavit ipsa natura, ita contracta res est et adducta in angustum ut omnis caritas aut inter duos aut inter paucos iungeretur.
+        </p>
+	</div>
+	<div class="container">
+		<form method="get" action="{{ path('resources.search') }}">
+			<div class="form-group">
+				<input class="form-control"
+					type="text"
+					name="q"
+					id="search-input"
+					data-suggest="{{ path('resources.fullsearch') }}"
+					placeholder="Saisir votre recherche">
+			</div>
+			<button class="btn btn-primary">Rechercher</button>
+		</form>
+<div class="container mt-4">
+	{# display navigation #}
+		<h3>Nombre de ressources : {{ nbresult }}</h3>
+
+		<div class="row">
+			{% for resource in pagination %}
+			{% set resource = resource.transformed %}
+				<div class="col-md-4">
+					{% include '/resource/_resource.html.twig' %}
+				</div>
+			{% endfor %}
+		</div>
+		</div>
+			{% block pagination %}
+				{% if pagination.haveToPaginate %}
+					{{ pagerfanta(pagination, 'twitter_bootstrap4', {prev_message: '← Précédent', next_message: 'Suivant →'}) }}
+				{% endif %}
+			{% endblock %}
+</div>
+
+{% endblock %}

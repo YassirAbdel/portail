@@ -1,5 +1,11 @@
 <form action="{{ path('basket.new') }}" method="post">
-        <div id="basket"><div class="form-group"><label for="basket_title" class="required">Titre</label><input type="text" id="basket_title" name="basket[title]" required="required" maxlength="255" class="form-control" /></div>
+        <div id="basket">
+        	<div class="form-row">
+    			<div class="form-group col-md-9">
+        			<h4><label for="basket_title" class="required">Titre</label></h5>
+        			<input type="text" id="basket_title" name="basket[title]" required="required" maxlength="255" class="form-control form-control-lg" />
+        		</div>
+        	</div>
         
         {% set resources = app.session.get('panier') %}
         
@@ -10,7 +16,11 @@
         </div>
         <input type="hidden" id="basket__token" name="basket[_token]" value="{{ csrf_token('basket') }}"/>
           
-    		
-    		
-   	<button class="btn">Save</button>
+    <table class="table">		
+    <tr>		
+       	<td><button class="btn btn-primary">Enregistrer</button></td>
+        <td><a href="{{ path('basket.index') }}" class="btn btn-primary">Liste des sélections</a></td>
+        <td><a href="{{ path('basket.vider') }}"  class="btn btn-primary">Vider votre sélection</a></td>
+    </tr>
+    </table>
 </form>

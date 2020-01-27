@@ -17,6 +17,7 @@ use Liip\ImagineBundle\Imagine\Cache\CacheManager;
 use Vich\UploaderBundle\Templating\Helper\UploaderHelper;
 
 
+
 class AdminResourceController extends AbstractController {
     
     private $repository;

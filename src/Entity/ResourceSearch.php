@@ -16,7 +16,7 @@ class ResourceSearch
     /**
      * @var string|null
      */
-    private $titre;
+    private $title;
     
     /**
      * @var string|null
@@ -24,15 +24,21 @@ class ResourceSearch
     private $auteur;
     
     /**
+     * @var string|null
+     */
+    private $texte;
+    
+
+    /**
      * @var ArrayCollection
      */
     private $persons;
-    
     
     function __construct()
     {
         $this->persons = new ArrayCollection();
     }
+    
     /**
      * @return string|NULL
      */
@@ -41,13 +47,12 @@ class ResourceSearch
         return $this->type;
     }
     
-    
     /**
      * @return string|NULL
      */
-    public function getTitre()
+    public function getTitle()
     {
-        return $this->titre;
+        return $this->title;
     }
 
     /**
@@ -59,6 +64,14 @@ class ResourceSearch
     }
 
     /**
+     * @return string|NULL
+     */
+    public function getTexte()
+    {
+        return $this->texte;
+    }
+
+    /**
      * @param string|NULL $type
      */
     public function setType($type)
@@ -67,11 +80,11 @@ class ResourceSearch
     }
 
     /**
-     * @param string|NULL $titre
+     * @param string|NULL $title
      */
-    public function setTitre($titre)
+    public function setTitle($title)
     {
-        $this->titre = $titre;
+        $this->title = $title;
     }
 
     /**
@@ -98,6 +111,13 @@ class ResourceSearch
         $this->persons = $persons;
     }
     
+    /**
+     * @param string|NULL $lang
+     */
+    public function setTexte($texte)
+    {
+        $this->texte = $texte;
+    }
             
 }
 

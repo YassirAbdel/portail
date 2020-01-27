@@ -9,7 +9,13 @@ use Doctrine\ORM\QueryBuilder;
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\ORM\Query;
 use App\Entity\ResourceSearch;
-
+use App\Model\ResourceModel;
+use Elastica\Query\BoolQuery;
+use Elastica\Query\Wildcard;
+use Elastica\QueryBuilder\DSL\Query as ElasticaQuery;
+#use Elastica\Rescore\Query;
+use FOS\ElasticaBundle\Repository;
+use Elastica\Query\MultiMatch;
 
 /**
  * @method Resource|null find($id, $lockMode = null, $lockVersion = null)
@@ -57,18 +63,44 @@ class ResourceRepository extends ServiceEntityRepository
     {
         $query =  $this->findVisibleQuery();
         
-        if ($search->getTitre()) {
+        /**
+        if ($search->getTitle()) {
             $query
                 ->where('r.title like :title')
-                ->setParameter('title', '%'.$search->getTitre(). '%');
+                ->setParameter('title', '%'.$search->getTitle(). '%');
         }
-        
+        **/
+
+        if ($search->getTitle()) {
+            $title = $search->getTitle();
+            if (isset($title)){
+            $motsTitle = $this->extraireMotsDUnePhrase($title);
+            $i=0;
+            foreach ($motsTitle as $i => $title) {
+            $i++;
+            $query = $query
+                ->andWhere("r.title like :title$i")
+                ->setParameter("title$i", '%'.$title.'%')
+                ;
+            }
+            }
+        }
+
         if ($search->getAuteur()) {
-            $query
-                ->andWhere('r.auteur like :auteur')
-                ->setParameter('auteur', '%'.$search->getAuteur().'%');
+            $auteur = $search->getAuteur();
+            if (isset($auteur)){
+            $motsAuteur = $this->extraireMotsDUnePhrase($auteur);
+            $i=0;
+            foreach ($motsAuteur as $i => $auteur) {
+            $i++;
+            $query = $query
+                ->andWhere("r.auteur like :auteur$i")
+                ->setParameter("auteur$i", '%'.$auteur.'%')
+                ;
+            }
         }
-        
+        }
+        //$this->container->get('fos_elastica.finder.app.resource');
         if ($search->getType()) {
             $query
                  ->andWhere('r.type like :type')
@@ -84,9 +116,49 @@ class ResourceRepository extends ServiceEntityRepository
                     ->setParameter("person$k", $person)
                     ;
             }
-            
         }
+        //$queryFirst = $query;
+        if ($search->getTexte()) {
+            $texte = $search->getTexte();
+            if(isset($texte)){
+            dump($texte);
+            $motsTexte = $this->extraireMotsDUnePhrase($texte);
+            $i=0;
+            foreach ($motsTexte as $i => $item) {
+                $i++;
+                $query = $query
+                    ->andWhere("r.title like :title$i")
+                    //->andWhere("r.title like :title$i")
+                    ->setParameter("title$i", '%'.$item.'%')
+                    //->setParameter("title$i", '%'.$item.'%')
+                ;
+                dump($query->getQuery());
+            }
+            $results = $query->getQuery();
+            $nbRsults = count($results->getResult());
             
+            
+                
+                //dump($nbRsults);
+                if ($nbRsults == 0){
+                    //$query = "";
+                    //$query = $this->findVisibleQuery();
+                    $i=0;
+                    foreach ($motsTexte as $i => $item) {
+                    $i++;
+                    $query = $query
+                    //->andWhere("r.auteur like :auteur$i")
+                    ->andWhere("r.auteur like :auteur$i")
+                    //->setParameter("auteur$i", '%'.$item.'%')
+                    ->setParameter("auteur$i", '%'.$item.'%')
+                    
+                ;
+                dump($query->getQuery());
+                    }
+                }
+            }
+        }
+
         return $query->getQuery()
         ;
     }
@@ -171,5 +243,87 @@ class ResourceRepository extends ServiceEntityRepository
         ;
     }
     
+    public function searchFull(ResourceModel $model) {
+        $boolQuery = new BoolQuery();
+        
+        
+        $boolTermQuery = new BoolQuery();
+        $termTitle = new Wildcard();
+        
+        
+        $termTitle->setParams(['title' => '*'.$model->getSearchTerm().'*']);
+        $boolTermQuery->addShould($termTitle);
+        
+        //$query = new \Elastica\Query();
+        $boolQuery->addMust($boolTermQuery);
+        $query = new Query();
+        $query->setQuery($boolQuery);
+        
+         
+         $adapter = $this->finder->createPaginatorAdapter($query);
+                $result = $adapter->getResults($this->getOffset($model->getPage(), $model->getPerPage()), $model->getPerPage())->toArray();
+                $count = $adapter->getTotalHits();
+                return [
+                      'total' => $count,
+                      'result' => $result,
+                      'page' => $model->getPage(),
+                      'perPage' => $model->getPerPage()
+                ];
+      }
+      
+
+    private function extraireMotsDUnePhrase($phrase)
+    {    
+     
+        /* caractères que l'on va remplacer (tout ce qui sépare les mots, en fait) */
+        $aremplacer = array(",",".",";",":","!","?","(",")","[","]","{","}","\"","'"," "," La "," Le "," le "," la "," depuis ");
+ 
+        /* ... on va les remplacer par un espace, il n'y aura donc plus dans $phrase 
+        que des mots et des espaces */
+ 
+        $enremplacement = " ";
+ 
+      
+        /* on fait le remplacement (comme dit ci-avant), puis on supprime les espaces de
+        // début et de fin de chaîne (trim) */
+        $sansponctuation = trim(str_replace($aremplacer, $enremplacement, $phrase));
     
-}
+        /* on coupe la chaîne en fonction d'un séparateur, et chaque élément est une
+        // valeur d'un tableau */
+        $separateur = "#[ ]+#"; // 1 ou plusieurs espaces
+        $mots = preg_split($separateur, $sansponctuation);
+      
+        return $mots;
+    }
+    
+    public function searchAll(ResourceModel $model) {
+        $boolQuery = new BoolQuery();
+        
+        
+        $boolTermQuery = new BoolQuery();
+        $termTitle = new Wildcard();
+        
+        
+        $termTitle->setParams(['title' => '*'.$model->getSearchTerm().'*']);
+        $boolTermQuery->addShould($termTitle);
+        
+        $query = new \Elastica\Query();
+        $boolQuery->addMust($boolTermQuery);
+        //$query = new MultiMatch();
+        //$query->setque
+        
+        $query = new Query();
+        $query->setQuery($boolQuery);
+        $adapter = $this->finder->createPaginatorAdapter($query);
+            $result = $adapter->getResults($this->getOffset($model->getPage(), $model->getPerPage()), $model->getPerPage())->toArray();
+            $count = $adapter->getTotalHits();
+            $boolQuery->addMust($boolTermQuery);
+            return [
+                  'total' => $count,
+                  'result' => $result,
+                  'page' => $model->getPage(),
+                  'perPage' => $model->getPerPage()
+            ];
+      }
+
+    }

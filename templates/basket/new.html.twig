@@ -1,11 +1,32 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Basket{% endblock %}
+{% block title %}Nouvelle sélection{% endblock %}
 
 {% block body %}
-    <h1>Create new Basket</h1>
-
+    <h2>Votre sélection</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">Type de ressource</th>
+          <th scope="col">Titre</th>
+          <th scope="col">Auteur</th>
+        </tr>
+      </thead>
+      <tbody>
+       {% set resources = app.session.get('panier') %}
+            
+       {% for resource in resources %}
+            <tr>
+              <th scope="row">{{ resource.id }}</th>
+              <td>{{ resource.type }}</td>
+              <td>{{ resource.title }}</td>
+              <td>{{ resource.auteur }}</td>
+            </tr>
+       {% endfor %}
+      </tbody>
+    </table>
+    <h2>Enregistrer votre séletion</h2>
     {{ include('basket/_form.html.twig') }}
-
-    <a href="{{ path('basket.index') }}">back to list</a>
+    
 {% endblock %}

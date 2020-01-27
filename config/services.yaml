@@ -11,7 +11,10 @@ services:
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.
         autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
-
+        public: false
+        bind:
+            $resourcesFinder: '@fos_elastica.finder.app.resource'
+            $resourceType: '@fos_elastica.index.app.resource'
     # makes classes in src/ available to be used as services
     # this creates a service per class whose id is the fully-qualified class name
     App\:
@@ -34,3 +37,26 @@ services:
     App\Listener\ImageCacheSubscriber:
        tags:
           - { name: doctrine.event_subscriber }
+    #cette notation ne fonctionne pas :
+    #app.service.resource:
+        #class: App\Service\ResourceService
+    #App\Service\ResourceService:
+        #arguments:
+            #- "@app.factory.model"
+            #- "@fos_elastica.index.app.resources"
+    #app.factory.model:
+        #class: App\Factory\ModelFactory
+    #app.controller.resource:
+        #cette notation ne fonctionne pas :
+        #class: App\Controller\HomeController
+        #class: App\Controller\ResourceHomeController
+        #arguments:
+           # - "@app.service.resource"
+    app.template.view.my_template:
+        class: App\Template\TemplatePaper
+    pagerfanta.view.my_template:
+        class: Pagerfanta\View\DefaultView
+        public: false
+        arguments:
+            - "@app.template.view.my_template"
+        tags: [{ name: pagerfanta.view, alias: my_template }]

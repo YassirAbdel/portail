@@ -1,0 +1,42 @@
+fos_elastica:
+    clients:
+        default: { url: '%env(ELASTICSEARCH_URL)%' }
+    indexes:
+        app:
+            client: default
+            settings:
+                index:
+                    analysis:
+                        analyzer:
+                            keyword_analyzer:
+                                type: custom
+                                tokenizer: standard
+                                filter: [standard, lowercase, asciifolding, trim]
+                                   
+            types:
+                resource:
+                    properties:
+                        id: ~
+                        title:
+                            analyzer: keyword_analyzer
+                            search_analyzer: keyword_analyzer
+                            type: text
+                        person: ~
+                        oeuvre: ~
+                        organisme: ~
+                        person:
+                            fielddata: true
+                        geo: ~
+                        tag: ~
+                        auteur: ~
+                        anneedit: ~
+                        collection: ~
+                        type:
+                            fielddata: true
+                    persistence:
+                        driver: orm
+                        model: App\Entity\Resource
+                        repository: App\SearchRepository\SearchRepository
+                        finder: ~
+                        provider: ~
+

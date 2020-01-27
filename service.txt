@@ -5,20 +5,46 @@ Symfony Container Services
  ------------------------------------------------------------------------------------ ------------------------------------------------------------------------------------------------ 
   Service ID                                                                           Class name                                                                                      
  ------------------------------------------------------------------------------------ ------------------------------------------------------------------------------------------------ 
+  App\Controller\Admin\AdminCategoryController                                         App\Controller\Admin\AdminCategoryController                                                    
   App\Controller\Admin\AdminPersonController                                           App\Controller\Admin\AdminPersonController                                                      
   App\Controller\Admin\AdminResourceController                                         App\Controller\Admin\AdminResourceController                                                    
+  App\Controller\Admin\AdminSubjectController                                          App\Controller\Admin\AdminSubjectController                                                     
+  App\Controller\Admin\RegistrationController                                          App\Controller\Admin\RegistrationController                                                     
+  App\Controller\BasketController                                                      App\Controller\BasketController                                                                 
   App\Controller\HomeController                                                        App\Controller\HomeController                                                                   
   App\Controller\ResourceController                                                    App\Controller\ResourceController                                                               
   App\Controller\SecurityController                                                    App\Controller\SecurityController                                                               
+  App\Controller\SuperHeroController                                                   App\Controller\SuperHeroController                                                              
   App\DataFixtures\ResourceFixture                                                     App\DataFixtures\ResourceFixture                                                                
+  App\Factory\ModelFactory                                                             App\Factory\ModelFactory                                                                        
+  App\Form\BasketType                                                                  App\Form\BasketType                                                                             
+  App\Form\CategoryType                                                                App\Form\CategoryType                                                                           
+  App\Form\ContactType                                                                 App\Form\ContactType                                                                            
   App\Form\PersonType                                                                  App\Form\PersonType                                                                             
+  App\Form\RegistrationFormType                                                        App\Form\RegistrationFormType                                                                   
+  App\Form\ResourceBasketType                                                          App\Form\ResourceBasketType                                                                     
   App\Form\ResourceSearchType                                                          App\Form\ResourceSearchType                                                                     
+  App\Form\ResourceSearchType1                                                         App\Form\ResourceSearchType1                                                                    
   App\Form\ResourceType                                                                App\Form\ResourceType                                                                           
+  App\Form\SubjectType                                                                 App\Form\SubjectType                                                                            
   App\Listener\ImageCacheSubscriber                                                    App\Listener\ImageCacheSubscriber                                                               
+  App\Model\BaseModel                                                                  App\Model\BaseModel                                                                             
+  App\Model\ResourceModel                                                              App\Model\ResourceModel                                                                         
+  App\Model\Search\Resource                                                            App\Model\Search\Resource                                                                       
+  App\Model\Search\Result                                                              App\Model\Search\Result                                                                         
+  App\Notification\ContactNotification                                                 App\Notification\ContactNotification                                                            
+  App\Repository\BasketRepository                                                      App\Repository\BasketRepository                                                                 
+  App\Repository\CategoryRepository                                                    App\Repository\CategoryRepository                                                               
   App\Repository\PersonRepository                                                      App\Repository\PersonRepository                                                                 
   App\Repository\ResourceRepository                                                    App\Repository\ResourceRepository                                                               
+  App\Repository\SubjectRepository                                                     App\Repository\SubjectRepository                                                                
+  App\Repository\SuperHeroRepository                                                   App\Repository\SuperHeroRepository                                                              
   App\Repository\UserRepository                                                        App\Repository\UserRepository                                                                   
+  App\SearchRepository\SearchRepository                                                App\SearchRepository\SearchRepository                                                           
+  App\SearchRepository\SuperHeroRepository                                             App\SearchRepository\SuperHeroRepository                                                        
+  App\Security\FormLoginAuthenticator                                                  App\Security\FormLoginAuthenticator                                                             
   App\Security\LoginFormAuthenticator                                                  App\Security\LoginFormAuthenticator                                                             
+  App\Service\ResourceService                                                          App\Service\ResourceService                                                                     
   Doctrine\Common\Annotations\Reader                                                   alias for "annotations.cached_reader"                                                           
   Doctrine\Common\Persistence\ManagerRegistry                                          alias for "doctrine"                                                                            
   Doctrine\Common\Persistence\ObjectManager                                            alias for "doctrine.orm.default_entity_manager"                                                 
@@ -26,6 +52,14 @@ Symfony Container Services
   Doctrine\DBAL\Driver\Connection                                                      alias for "doctrine.dbal.default_connection"                                                    
   Doctrine\ORM\EntityManagerInterface                                                  alias for "doctrine.orm.default_entity_manager"                                                 
   EasyCorp\EasyLog\EasyLogHandler                                                      EasyCorp\EasyLog\EasyLogHandler                                                                 
+  Elastica\Client                                                                      alias for "fos_elastica.client.default"                                                         
+  FOS\ElasticaBundle\Configuration\ConfigManager                                       alias for "fos_elastica.config_manager"                                                         
+  FOS\ElasticaBundle\Elastica\Client                                                   alias for "fos_elastica.client.default"                                                         
+  FOS\ElasticaBundle\Index\IndexManager                                                alias for "fos_elastica.index_manager"                                                          
+  FOS\ElasticaBundle\Index\IndexTemplateManager                                        alias for "fos_elastica.index_template_manager"                                                 
+  FOS\ElasticaBundle\Index\Resetter                                                    alias for "fos_elastica.resetter"                                                               
+  FOS\ElasticaBundle\Index\TemplateResetter                                            alias for "fos_elastica.resetter"                                                               
+  FOS\ElasticaBundle\Manager\RepositoryManagerInterface                                alias for "fos_elastica.manager.orm"                                                            
   Knp\Component\Pager\PaginatorInterface                                               alias for "knp_paginator"                                                                       
   Liip\ImagineBundle\Config\FilterFactoryCollection                                    alias for "liip_imagine.config.filter_factory_collection"                                       
   Liip\ImagineBundle\Config\StackBuilder                                               alias for "liip_imagine.config.stack_builder"                                                   
@@ -109,6 +143,8 @@ Symfony Container Services
   Symfony\Contracts\Cache\CacheInterface                                               alias for "cache.app"                                                                           
   Symfony\Contracts\Cache\TagAwareCacheInterface                                       alias for "cache.app.taggable"                                                                  
   Symfony\Contracts\Translation\TranslatorInterface                                    alias for "translator.data_collector"                                                           
+  Symfony\WebpackEncoreBundle\Asset\EntrypointLookupCollectionInterface                alias for "webpack_encore.entrypoint_lookup_collection"                                         
+  Symfony\WebpackEncoreBundle\Asset\EntrypointLookupInterface                          alias for "webpack_encore.entrypoint_lookup[_default]"                                          
   Twig\Environment                                                                     alias for "twig"                                                                                
   Twig_Environment                                                                     alias for "twig"                                                                                
   Vich\UploaderBundle\Form\Type\VichFileType                                           alias for "vich_uploader.form.type.file"                                                        
@@ -138,7 +174,7 @@ Symfony Container Services
   annotations.reader                                                                   Doctrine\Common\Annotations\AnnotationReader                                                    
   argument_metadata_factory                                                            Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadataFactory                         
   argument_resolver                                                                    alias for "debug.argument_resolver"                                                             
-  argument_resolver.controller_locator                                                 alias for ".service_locator.RBr8vc9"                                                            
+  argument_resolver.controller_locator                                                 alias for ".service_locator.9_12q5M"                                                            
   argument_resolver.default                                                            alias for "debug.argument_resolver.default"                                                     
   argument_resolver.request                                                            alias for "debug.argument_resolver.request"                                                     
   argument_resolver.request_attribute                                                  alias for "debug.argument_resolver.request_attribute"                                           
@@ -146,6 +182,7 @@ Symfony Container Services
   argument_resolver.session                                                            alias for "debug.argument_resolver.session"                                                     
   argument_resolver.variadic                                                           alias for "debug.argument_resolver.variadic"                                                    
   assets._default_package                                                              Symfony\Component\Asset\PathPackage                                                             
+  assets._version__default                                                             Symfony\Component\Asset\VersionStrategy\JsonManifestVersionStrategy                             
   assets.context                                                                       Symfony\Component\Asset\Context\RequestStackContext                                             
   assets.empty_package                                                                 Symfony\Component\Asset\Package                                                                 
   assets.empty_version_strategy                                                        Symfony\Component\Asset\VersionStrategy\EmptyVersionStrategy                                    
@@ -186,6 +223,8 @@ Symfony Container Services
   cache.system_clearer                                                                 Symfony\Component\HttpKernel\CacheClearer\Psr6CacheClearer                                      
   cache.validator                                                                      Symfony\Component\Cache\Adapter\TraceableAdapter                                                
   cache.validator.recorder_inner                                                       Symfony\Component\Cache\Adapter\AdapterInterface                                                
+  cache.webpack_encore                                                                 Symfony\Component\Cache\Adapter\TraceableAdapter                                                
+  cache.webpack_encore.recorder_inner                                                  Symfony\Component\Cache\Adapter\AdapterInterface                                                
   cache_clearer                                                                        Symfony\Component\HttpKernel\CacheClearer\ChainCacheClearer                                     
   cache_warmer                                                                         Symfony\Component\HttpKernel\CacheWarmer\CacheWarmerAggregate                                   
   config.resource.self_checking_resource_checker                                       Symfony\Component\Config\Resource\SelfCheckingResourceChecker                                   
@@ -408,6 +447,60 @@ Symfony Container Services
   form.type_extension.upload.validator                                                 Symfony\Component\Form\Extension\Validator\Type\UploadValidatorExtension                        
   form.type_guesser.doctrine                                                           Symfony\Bridge\Doctrine\Form\DoctrineOrmTypeGuesser                                             
   form.type_guesser.validator                                                          Symfony\Component\Form\Extension\Validator\ValidatorTypeGuesser                                 
+  fos_elastica.alias_processor                                                         FOS\ElasticaBundle\Index\AliasProcessor                                                         
+  fos_elastica.client                                                                  alias for "fos_elastica.client.default"                                                         
+  fos_elastica.client.default                                                          FOS\ElasticaBundle\Elastica\Client                                                              
+  fos_elastica.client_prototype                                                        FOS\ElasticaBundle\Elastica\Client                                                              
+  fos_elastica.command.create                                                          FOS\ElasticaBundle\Command\CreateCommand                                                        
+  fos_elastica.command.populate                                                        FOS\ElasticaBundle\Command\PopulateCommand                                                      
+  fos_elastica.command.reset                                                           FOS\ElasticaBundle\Command\ResetCommand                                                         
+  fos_elastica.command.search                                                          FOS\ElasticaBundle\Command\SearchCommand                                                        
+  fos_elastica.command.templates_reset                                                 FOS\ElasticaBundle\Command\ResetTemplatesCommand                                                
+  fos_elastica.config_manager                                                          FOS\ElasticaBundle\Configuration\ConfigManager                                                  
+  fos_elastica.config_manager.index_templates                                          FOS\ElasticaBundle\Configuration\ConfigManager                                                  
+  fos_elastica.config_source.container                                                 FOS\ElasticaBundle\Configuration\Source\ContainerSource                                         
+  fos_elastica.config_source.template_container                                        FOS\ElasticaBundle\Configuration\Source\TemplateContainerSource                                 
+  fos_elastica.data_collector                                                          FOS\ElasticaBundle\DataCollector\ElasticaDataCollector                                          
+  fos_elastica.doctrine.register_listeners                                             FOS\ElasticaBundle\Doctrine\RegisterListenersService                                            
+  fos_elastica.elastica_to_model_transformer.app.resource                              FOS\ElasticaBundle\Doctrine\ORM\ElasticaToModelTransformer                                      
+  fos_elastica.elastica_to_model_transformer.collection                                FOS\ElasticaBundle\Transformer\ElasticaToModelTransformerCollection                             
+  fos_elastica.elastica_to_model_transformer.prototype.orm                             FOS\ElasticaBundle\Doctrine\ORM\ElasticaToModelTransformer                                      
+  fos_elastica.filter_objects_listener                                                 FOS\ElasticaBundle\Persister\Listener\FilterObjectsListener                                     
+  fos_elastica.finder                                                                  FOS\ElasticaBundle\Finder\TransformedFinder                                                     
+  fos_elastica.finder.app.resource                                                     FOS\ElasticaBundle\Finder\TransformedFinder                                                     
+  fos_elastica.in_place_pager_persister                                                FOS\ElasticaBundle\Persister\InPlacePagerPersister                                              
+  fos_elastica.index                                                                   alias for "fos_elastica.index.app"                                                              
+  fos_elastica.index.app                                                               FOS\ElasticaBundle\Elastica\Index                                                               
+  fos_elastica.index.app.resource                                                      Elastica\Type                                                                                   
+  fos_elastica.index_manager                                                           FOS\ElasticaBundle\Index\IndexManager                                                           
+  fos_elastica.index_prototype                                                         FOS\ElasticaBundle\Elastica\Index                                                               
+  fos_elastica.index_template_manager                                                  FOS\ElasticaBundle\Index\IndexTemplateManager                                                   
+  fos_elastica.index_template_prototype                                                FOS\ElasticaBundle\Elastica\IndexTemplate                                                       
+  fos_elastica.indexable                                                               FOS\ElasticaBundle\Provider\Indexable                                                           
+  fos_elastica.listener.app.resource                                                   FOS\ElasticaBundle\Doctrine\Listener                                                            
+  fos_elastica.listener.prototype.orm                                                  FOS\ElasticaBundle\Doctrine\Listener                                                            
+  fos_elastica.logger                                                                  FOS\ElasticaBundle\Logger\ElasticaLogger                                                        
+  fos_elastica.manager                                                                 alias for "fos_elastica.manager.orm"                                                            
+  fos_elastica.manager.orm                                                             FOS\ElasticaBundle\Doctrine\RepositoryManager                                                   
+  fos_elastica.mapping_builder                                                         FOS\ElasticaBundle\Index\MappingBuilder                                                         
+  fos_elastica.model_to_elastica_identifier_transformer                                FOS\ElasticaBundle\Transformer\ModelToElasticaIdentifierTransformer                             
+  fos_elastica.model_to_elastica_transformer                                           FOS\ElasticaBundle\Transformer\ModelToElasticaAutoTransformer                                   
+  fos_elastica.model_to_elastica_transformer.app.resource                              FOS\ElasticaBundle\Transformer\ModelToElasticaAutoTransformer                                   
+  fos_elastica.object_persister                                                        FOS\ElasticaBundle\Persister\ObjectPersister                                                    
+  fos_elastica.object_persister.app.resource                                           FOS\ElasticaBundle\Persister\ObjectPersister                                                    
+  fos_elastica.object_serializer_persister                                             FOS\ElasticaBundle\Persister\ObjectSerializerPersister                                          
+  fos_elastica.pager_persister_registry                                                FOS\ElasticaBundle\Persister\PagerPersisterRegistry                                             
+  fos_elastica.pager_provider.app.resource                                             FOS\ElasticaBundle\Doctrine\ORMPagerProvider                                                    
+  fos_elastica.pager_provider.prototype.orm                                            FOS\ElasticaBundle\Doctrine\ORMPagerProvider                                                    
+  fos_elastica.pager_provider_registry                                                 FOS\ElasticaBundle\Provider\PagerProviderRegistry                                               
+  fos_elastica.paginator.subscriber                                                    FOS\ElasticaBundle\Subscriber\PaginateElasticaQuerySubscriber                                   
+  fos_elastica.persister_registry                                                      FOS\ElasticaBundle\Persister\PersisterRegistry                                                  
+  fos_elastica.populate_listener                                                       FOS\ElasticaBundle\EventListener\PopulateListener                                               
+  fos_elastica.property_accessor                                                       Symfony\Component\PropertyAccess\PropertyAccessor                                               
+  fos_elastica.repository_manager                                                      FOS\ElasticaBundle\Manager\RepositoryManager                                                    
+  fos_elastica.resetter                                                                FOS\ElasticaBundle\Index\Resetter                                                               
+  fos_elastica.template_resetter                                                       FOS\ElasticaBundle\Index\TemplateResetter                                                       
+  fos_elastica.type_prototype                                                          Elastica\Type                                                                                   
   fragment.handler                                                                     Symfony\Component\HttpKernel\DependencyInjection\LazyLoadingFragmentHandler                     
   fragment.renderer.inline                                                             Symfony\Component\HttpKernel\Fragment\InlineFragmentRenderer                                    
   framework_extra_bundle.argument_name_convertor                                       Sensio\Bundle\FrameworkExtraBundle\Request\ArgumentNameConverter                                
@@ -571,6 +664,7 @@ Symfony Container Services
   monolog.logger.console                                                               Symfony\Bridge\Monolog\Logger                                                                   
   monolog.logger.debug                                                                 Symfony\Bridge\Monolog\Logger                                                                   
   monolog.logger.doctrine                                                              Symfony\Bridge\Monolog\Logger                                                                   
+  monolog.logger.elastica                                                              Symfony\Bridge\Monolog\Logger                                                                   
   monolog.logger.event                                                                 Symfony\Bridge\Monolog\Logger                                                                   
   monolog.logger.php                                                                   Symfony\Bridge\Monolog\Logger                                                                   
   monolog.logger.profiler                                                              Symfony\Bridge\Monolog\Logger                                                                   
@@ -955,5 +1049,11 @@ Symfony Container Services
   web_server.command.server_start                                                      Symfony\Bundle\WebServerBundle\Command\ServerStartCommand                                       
   web_server.command.server_status                                                     Symfony\Bundle\WebServerBundle\Command\ServerStatusCommand                                      
   web_server.command.server_stop                                                       Symfony\Bundle\WebServerBundle\Command\ServerStopCommand                                        
+  webpack_encore.cache                                                                 Symfony\Component\Cache\Adapter\PhpArrayAdapter                                                 
+  webpack_encore.entrypoint_lookup.cache_warmer                                        Symfony\WebpackEncoreBundle\CacheWarmer\EntrypointCacheWarmer                                   
+  webpack_encore.entrypoint_lookup[_default]                                           Symfony\WebpackEncoreBundle\Asset\EntrypointLookup                                              
+  webpack_encore.entrypoint_lookup_collection                                          Symfony\WebpackEncoreBundle\Asset\EntrypointLookupCollection                                    
+  webpack_encore.tag_renderer                                                          Symfony\WebpackEncoreBundle\Asset\TagRenderer                                                   
+  webpack_encore.twig_entry_files_extension                                            Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension                                        
  ------------------------------------------------------------------------------------ ------------------------------------------------------------------------------------------------ 
 

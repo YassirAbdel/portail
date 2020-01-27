@@ -10,27 +10,31 @@
         </p>
 	</div>
 	<div class="container">
-	<h2>Les dernières ressources</h2>
-	<div class="row flex">
-		{% for resource in resources %}
-			<div class="col-3">
-				<div class="card">
-				{% if resource.filename %}
-        	<img src="{{ vich_uploader_asset(resource, 'imageFile') | imagine_filter('thumb') }}" class="card-img-top" style="height: 100%; width: auto;">	
-		{% else %}
-        	<img src="{{ '/images/resources/empty.jpg' | imagine_filter('thumb') }}" class="card-img-top" style="height: 100%; width: auto;">
-        {% endif %}
-					<div class="card-body">
-						<h5 class="card-title">
-							<a href="{{ path('resource.show', {id: resource.id, slug: resource.slug}) }}">{{ resource.title }}</a>
-						</h5>
-						<p class="card-text">{{ resource.type }}</p>
-						<div class="text-primary">{{ resource.auteur }}</div>
-					</div>
-				</div>
-			
+		<form method="get" action="{{ path('resources.search') }}">
+			<div class="form-group">
+				<input class="form-control"
+					type="text"
+					name="q"
+					id="search-input"
+					suggest="{{ path('resources.fullsearch') }}"
+					placeholder="Saisir votre recherche">
 			</div>
-		{% endfor %}
-	</div>
-	</div>
+			<button class="btn btn-primary">Rechercher</button>
+		</form>
+		
+<div class="container mt-4">
+	{# display navigation #}
+		
+		<h2>Les dernières ressources</h2>
+		<div class="row">
+			{% for resource in resources %}
+				<div class="col-md-4">
+					{% include '/resource/_resource.html.twig' %}
+				</div>
+			{% endfor %}
+		</div>
+		</div>
+	
+</div>
+
 {% endblock %}

@@ -29,6 +29,9 @@ class BasketController extends AbstractController
             'baskets' => $basketRepository->findAll(),
         ]);
     }
+    
+    
+    
 
     /**
      * @Route("/new", name="basket.new", methods={"GET","POST"})
@@ -40,7 +43,6 @@ class BasketController extends AbstractController
         $basket->setCreatAt( new \DateTime());
        
         $form = $this->createForm(BasketType::class, $basket);
-        $resources = $session->get('panier');
         $form->handleRequest($request);
         
         if ($form->isSubmitted() && $form->isValid()) {
@@ -48,39 +50,66 @@ class BasketController extends AbstractController
             
             $entityManager->persist($basket);
             $entityManager->flush();
+            $session->remove('panier');
             
             return $this->redirectToRoute('basket.index');
+            //return $this->render('')
         }
         
         return $this->render('basket/new.html.twig', [
             'basket' => $basket,
             'form' => $form->createView(),
-            'csrf_protection' => false
         ]);
+        //return $this->redirectToRoute('resource.index');
     }
+    
+    /**
+     * @Route("/vider", name="basket.vider", methods={"GET","POST"})
+     */
+    
+    public function viderBasket(Request $request): Response
+    {
+        $session = $request->getSession();
+        
+        if($session->has('panier')) {
+            $this->addFlash('basket.message.delete', "Votre sélection a été supprimée !");
+            $session->remove('panier');
+        }
+        
+        
+        return $this->redirectToRoute('resource.index');
+        
+    }
+    
 
     /**
-     * @Route("/{id}", name="basket.show", methods={"GET"})
+     * @Route("/{id}/show", name="basket.show", methods={"GET"})
      */
     public function show(Basket $basket): Response
     {
+        dump($basket);
+        $id_basket = $basket->getId();
+        dump($id_basket);
         return $this->render('basket/show.html.twig', [
-            'basket' => $basket,
+            'basket' => $basket
         ]);
     }
 
     /**
      * @Route("/{id}/edit", name="basket.edit", methods={"GET","POST"})
      */
-    public function edit(Request $request, Basket $basket): Response
+    public function edit(Basket $basket, Request $request): Response
     {
+        
+        dump($basket);
+        
         $form = $this->createForm(BasketType::class, $basket);
         $form->handleRequest($request);
-
+        
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
-
-            return $this->redirectToRoute('basket.index', [
+            
+            return $this->redirectToRoute('basket.edit', [
                 'id' => $basket->getId(),
             ]);
         }
@@ -88,6 +117,7 @@ class BasketController extends AbstractController
         return $this->render('basket/edit.html.twig', [
             'basket' => $basket,
             'form' => $form->createView(),
+            
         ]);
     }
 
@@ -104,6 +134,8 @@ class BasketController extends AbstractController
 
         return $this->redirectToRoute('basket.index');
     }
+    
+    
     
     /**
      * @route("/addressource/{slug}-{id}" , name="resource.basketadd", requirements={"slug" : "^[a-z0-9]+(?:-[a-z0-9]+)*$", "id" : "\d+"},  methods="GET|POST")
@@ -137,14 +169,15 @@ class BasketController extends AbstractController
             
         } else {
             $panier[$resource->getId()] = $resource;
-            dump($panier);
         }
         
         $session->set('panier', $panier);
         
-        return $this->redirectToRoute('basket.new');
+        return $this->redirectToRoute('resource.index');
         
     }
+    
+    
     
     
 }

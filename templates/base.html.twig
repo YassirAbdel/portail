@@ -3,11 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-            <!--
+            
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-            -->
-        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css">
+            
+        <!-- 
+        	<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+         -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css">
+		<link rel="stylesheet" src="{{ asset('css/app.css') }}">
         {% block stylesheets %}{% endblock %}
     </head>
 	<body>
@@ -39,11 +42,15 @@
     					aria-expanded="false"> Gestion des collections </a>
     					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
     						<a class="dropdown-item" href="{{ path('admin.resource.index') }}">Toutes les notices</a>
+    						<!--  
     						<a class="dropdown-item" href="{{ path('admin.resource.add') }}">Nouvelle notice</a>
+    						-->
     						<div class="dropdown-divider"></div>
-    						<a class="dropdown-item" href="#">Les collections</a>
-    						<a class="dropdown-item" href="#">Les thèmes</a>
+    						<a class="dropdown-item" href="{{ path('admin.subject.index') }}">Les ensembles documentaires</a>
+    						<a class="dropdown-item" href="{{ path('admin.category.index') }}">Les rubriques</a>
+    						<!-- 
     						<a class="dropdown-item" href="#">Autres</a>
+    						-->
     					</div>
     				</li>
     				{% endif %}
@@ -68,19 +75,29 @@
     				 -->
     				
     			</ul>
-    			<ul class="navbar-nav"
+    			<ul class="navbar-nav">
     			    {% if app.user %}
     					<li class="nav-item"><a class="nav-link" href={{ path('logout') }}>Déconnexion</a></li>
     				{% endif %}
     				{% if is_granted('ROLE_ADMIN')  or is_granted('ROLE_DOC') or is_granted('ROLE_VISI') %}
     					
-    					<li class="nav-item">Bonjour {{ app.session.get('username') }}</li>
-    					<li class="nav-item"><a class="nav-link" style="display:inline;" href={{ path('logout') }}>Déconnexion</a></li>
     					
+    					<li class="nav-item">Bonjour {{ app.session.get('username') }}</li>
+    					
+    					<li class="nav-item"><a class="nav-link" style="display:inline;" href={{ path('logout') }}>Déconnexion</a></li>
     				{% else %}
     					<li class="nav-item"><a class="nav-link" href={{ path('app_login') }}>Connexion</a></li>	
     				{% endif %}
-    				
+    			<li class="nav-item">
+					<a href="{{ path('basket.new') }}">Votre sélection</a> : 
+					{% set panier = app.session.get('panier') %}
+				    {% set count =  panier|length %}
+				    {% if(count > 0) %}
+				    	{{ count }} document (s)
+				    {% else %}
+				    	0 document (s)
+				    {% endif %}
+    		   </li>
     			</ul>
     			<!-- 
     			<form class="form-inline my-2 my-lg-0">
@@ -92,14 +109,16 @@
     		</div>
     	</nav>
 	{% block body %}{% endblock %}
-        
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
+		<script src="{{ asset('js/app.js') }}"></script>
         <script>
-        	$('select').select2();
-        </script>
-	    {% block javascripts %}{% endblock %}
+			$('select').select2();
+		</script>
+		
+		{% block javascripts %}{% endblock %}
     </body>
 </html>

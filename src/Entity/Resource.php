@@ -45,7 +45,7 @@ class Resource
     private $id;
     
     /**
-     * @var String|null
+     * @var String
      * @ORM\Column(type="string", length=255)
      */
     private $fileName;
@@ -191,12 +191,17 @@ class Resource
      */
     private $updated_at;
 
-    
-    public function __construct()
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Subject", inversedBy="resources")
+     */
+    private $subjects;
+
+   public function __construct()
     {
         $this->created_at = new \DateTime();
         $this->persons = new ArrayCollection();
         $this->baskets = new ArrayCollection();
+        $this->subjects = new ArrayCollection();
     }
    
     public function getId(): ?int
@@ -528,7 +533,6 @@ class Resource
         return $this;
     }
     
-    
     /**
      * @return string|NULL
      */
@@ -577,7 +581,8 @@ class Resource
 
         return $this;
     }
- 
+    
+    
     /**
      * toString
      * @return string
@@ -586,5 +591,62 @@ class Resource
     {
         return $this->title;
     }
-    
+
+    /**
+     * @return Collection|Subject[]
+     */
+    public function getSubjects(): Collection
+    {
+        return $this->subjects;
+    }
+
+    public function addSubject(Subject $subject): self
+    {
+        if (!$this->subjects->contains($subject)) {
+            $this->subjects[] = $subject;
+            $subject->addResource($this);
+        }
+
+        return $this;
+    }
+
+    public function removeSubject(Subject $subject): self
+    {
+        if ($this->subjects->contains($subject)) {
+            $this->subjects->removeElement($subject);
+            $subject->removeResource($this);
+        }
+
+        return $this;
+    }
+
+      /**
+   * @return array
+   */
+  public function getNameSuggest()
+  {
+    return array(
+      'input' => array_merge(
+        array(
+          $this->getTitle(),
+          $this->getEditeur(),
+        ),
+        //$this->getStyles()
+        $this->getType()
+      ),
+      'weight' => $this->calculateWeight(),
+    );
+  }
+  /**
+   * @return int
+   */
+  public function calculateWeight()
+  {
+    $weight = 0;
+    if ($this->isPromoted()) {
+      $weight += 5;
+    }
+    return $weight;
+  }
+     
 }
