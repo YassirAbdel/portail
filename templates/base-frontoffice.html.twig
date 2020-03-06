@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>{% block title %}{% endblock %}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css">
+		<link rel="stylesheet" href="{{ asset('css/cnd.css') }}" />
+		<noscript><link rel="stylesheet" href="{{ asset('css/noscript.css') }}"/></noscript>
+		{% block css %}{% endblock %}
+	</head>
+	<body class="is-preload">
+		<div id='scroll_to_top' class='opacity'>
+    		<img src="https://rafaelalucas91.github.io/assets/icons/gray2/icon-9.svg" alt="Retourner en haut">
+		</div>
+			<header id="header">
+				
+				<div class="row" >
+					<div class="col-12">
+							<h1 class="logo-cnd">CN&nbsp;&nbsp;D</h1><br>
+							<h2 class="logo-cnd-subtitle">Médiathèque du Centre national de la danse</h2>
+					</div>
+				</div>
+			
+				<div class="row">
+					<!-- formulaire -->
+					<div class="col-11">
+						<form method="get" action="{{ path('resources.search') }}">
+							<div class="form-row align-items-end">
+								<div class="col-9">
+									<div class="form-group input-group">
+										<input class="form-control py-2 border-right-0" type="text" name="q" placeholder="Saisir votre recherche" id="search-input" data-suggest="{{ path('resources.fullsearch') }}">
+										<span class="input-group-append">
+                						<button class="btn input-group-text bg-transparent" style="height: 100%;"><i class="fa fa-search" aria-hidden="true"></i></button>
+            							</span>
+            						</div>
+								</div>
+								<div class="col">
+									<div class="form-group">
+								<!--<button class="btn btn-primary">Rechercher</button>-->
+										<div class="dropdown">
+  											<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+    										Recherche avancée
+  											</button>
+  											<div class="dropdown-menu">
+   												<a class="dropdown-item" href="#"><span class="fa fa-life-ring"></span> Catalogue général&nbsp;&nbsp;&nbsp;</a>
+    											<a class="dropdown-item" href="#"><span class="fa fa-wrench"></span> Fonds d'archives&nbsp;&nbsp;&nbsp;</a>
+    											<!--
+    												<a class="dropdown-item" href="#"><span class="fa fa-rocket"></span> Astronautes</a>
+    												<div class="dropdown-divider"></div>
+    												<a class="dropdown-item" href="#"><span class="fa fa-bullhorn"></span> Autres témoignages</a>
+    											-->
+  											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</form>
+					</div>
+				
+					<!-- Menu -->
+					<!-- Nav -->
+					<div col="col-1">
+						<nav>
+							<ul>
+								<li><a href="#collections" class="btn btn-secondary btn-lg" style="text-decoration:none;padding:0;" role="button" aria-disabled="true"><h3><span style="color:#162068;font-weight: 600;letter-spacing: 0.05em;">Collections</span></h3></a></li>
+								<li><a href="#dossiers" class="btn btn-secondary btn-lg" style="text-decoration:none;" role="button" aria-disabled="true"><h3><span style="color:#162068;font-weight: 600;letter-spacing: 0.05em;">Dossiers</span></h3></a></li>
+								
+								<li><i class="icon-second"><img style="fill:#162068;" src="https://rafaelalucas91.github.io/assets/icons/gray1/icon-111.svg"></i></li>
+								<li><i class="icon-second"><img src="https://rafaelalucas91.github.io/assets/icons/gray1/icon-171.svg"></i></li>
+								<li><a href="#menu">Menu</a></li>
+							</ul>
+						</nav>
+						<nav id="menu">
+							<h2>Menu</h2>
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li><a href="generic.html">Ipsum veroeros</a></li>
+								<li><a href="generic.html">Tempus etiam</a></li>
+								<li><a href="generic.html">Consequat dolor</a></li>
+								<li><a href="elements.html">Elements</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</header>	
+			{% block body %}{% endblock %}
+			<!-- Footer -->
+			<footer class="wrapper style1 align-center">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="#" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<p>&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+				</div>
+			</footer>
+			</div>
+			<script src="{{ asset('js/jquery.min.js') }}"></script>
+			<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+        	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+       		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.min.js"></script>
+			<script src="{{ asset('js/jquery.scrollex.min.js') }}"></script>
+			<script src="{{ asset('js/jquery.scrolly.min.js') }}"></script>
+			<script src="{{ asset('js/browser.min.js') }}"></script>
+			<script src="{{ asset('js/breakpoints.min.js') }}"></script>
+			<script src="{{ asset('js/util.js') }}"></script>
+			<script src="{{ asset('js/main.js') }}"></script>
+			
+			<script src="{{ asset('js/top.js') }}"></script>
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
+			<script src="{{ asset('js/app.js') }}"></script>
+			
+			<!--<script src="assets/js/down.js"></script>-->
+			<script>
+            	$('select').select2();
+        	</script>
+			<script>
+       			 $('.carousel').carousel({
+  					interval: 2000
+				 })
+			</script>
+			{% block javascript %}{% endblock %}
+			
+		</body>
+		</html>
+			

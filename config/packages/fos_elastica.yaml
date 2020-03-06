@@ -8,7 +8,11 @@ fos_elastica:
                 index:
                     analysis:
                         analyzer:
-                            keyword_analyzer:
+                            search_analyzer:
+                                type: custom
+                                tokenizer: standard
+                                filter: [standard, lowercase, asciifolding, trim]
+                            index_analyzer:
                                 type: custom
                                 tokenizer: standard
                                 filter: [standard, lowercase, asciifolding, trim]
@@ -18,17 +22,21 @@ fos_elastica:
                     properties:
                         id: ~
                         title:
-                            analyzer: keyword_analyzer
-                            search_analyzer: keyword_analyzer
+                            analyzer: index_analyzer
+                            search_analyzer: search_analyzer
                             type: text
-                        person: ~
+                        person:
+                            analyzer: index_analyzer
+                            search_analyzer: search_analyzer
+                            type: text
                         oeuvre: ~
                         organisme: ~
-                        person:
-                            fielddata: true
                         geo: ~
                         tag: ~
-                        auteur: ~
+                        auteur:
+                            analyzer: index_analyzer
+                            search_analyzer: search_analyzer
+                            type: text
                         anneedit: ~
                         collection: ~
                         type:

@@ -127,7 +127,7 @@ class HomeController  extends AbstractController {
         //dump($pagination);die();
 
         //return $this->render('pages/results.html.twig', compact('pagination', 'q'));
-        return $this->render('pages/results.html.twig',[
+        return $this->render('pages/home.html.twig',[
             'current_page' => 'home',
             'pagination' => $pagination,
             'nbresult' => $nbresult
@@ -194,6 +194,7 @@ public function searchtest(Request $request, Session $session, TransformedFinder
         $q = $request->get('q', null);
         //$pagination = $this->findHybridPaginated($resourcesFinder, Util::escapeTerm($q));
         $pagination = $this->findHybridPaginated($resourcesFinder, Util::escapeTerm($q));
+       
         //$pagination = $resourcesFinder->findHybridPaginated(Util::escapeTerm($q));
         $pagination->setCurrentPage($request->query->getInt('page', 1));
         $pagination->setMaxPerPage(12);
@@ -204,7 +205,7 @@ public function searchtest(Request $request, Session $session, TransformedFinder
 
         #return $this->render('pages/results.html.twig', compact('pagination', 'q'));
         return $this->render('pages/results.html.twig',[
-            'current_page' => 'home',
+            'current_page' => 'results',
             'pagination' => $pagination,
             'nbresult' => $nbresult
             //'form' => $form->createView()
@@ -242,8 +243,12 @@ public function searchtest(Request $request, Session $session, TransformedFinder
     private function findHybridPaginated(TransformedFinder  $resourcesFinder, string $query): Pagerfanta
     {
         $searchQuery = new \Elastica\Query\QueryString();
+        //$query = "histoire AND de AND la AND danse";
+        $query_tab = explode(' ', $query);
+        $query = implode(' AND ', $query_tab);
+        dump($query);
         $searchQuery->setParam('query', $query);
-        $searchQuery->setDefaultOperator('AND');
+        $searchQuery->setDefaultOperator('OR');
         $paginatorAdapter = $resourcesFinder->createHybridPaginatorAdapter($searchQuery);
 
         return new Pagerfanta(new FantaPaginatorAdapter($paginatorAdapter));

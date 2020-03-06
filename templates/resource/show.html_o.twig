@@ -1,0 +1,192 @@
+{% extends 'base.html.twig' %}
+
+{% block title resource.title %}
+{% block stylesheets %}
+    <style type="text/css">
+        .price
+        {
+            font-weight: bold;
+            font-size: 2rem;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+
+    <div class="jumbotron">
+        <div class="container">
+			{% for message in app.flashes('success') %}
+				<div class="alert alert-danger">
+                {{ message }}
+				</div>
+            {% endfor %}
+            {% for message in app.flashes('basket') %}
+				<div class="alert alert-success">
+                {{ message }}
+				</div>
+            {% endfor %}
+            
+            {% if not form.vars.valid %}
+            	<div class="alert alert-danger">
+            		Erreur de saisie
+            	</div>
+            {% endif %}
+            
+            <div class="row">
+
+                <div class="col-md-8">
+                    {% if resource.filename %}
+        				<img src="{{ vich_uploader_asset(resource, 'imageFile') | imagine_filter('medium') }}" class="card-img-top" style="height: auto; width: 100%;">	
+		            {% else %}
+        					<img src="{{ '/images/resources/empty.jpg' | imagine_filter('medium') }}" class="card-img-top" style="height: 100%; width: auto;">
+                    {% endif %}
+                </div>
+
+                <div class="col-md-4">
+                    <h1>{{ resource.title }}</h1>
+                    <h3>{{ resource.type }}</h3>
+                    <h3>{% if resource.auteur %}Par {{ resource.auteur }}{% endif %}</h3>
+                    {% if 'Ouvrage' in resource.type %}<h2>{{ resource.type }} ({{ resource.lang }})</h2>{% endif %}
+                    <div class="mt-2">
+                    	<a href="{{ path('resource.basketadd', {slug: resource.slug, id: resource.id }) }}" class="btn btn-secondary btn-lg active">Sélectionner</a>
+                    </div>
+                    <div id="contactForm"class="mt-4">
+                    	{{ form_start(form) }}
+                    	<div class="row">
+                    		<div class="col">{{ form_row(form.firstname) }}</div>
+                    		<div class="col">{{ form_row(form.lastname) }}</div>
+                    	</div>
+                    	<div class="row">
+                    		<div class="col">{{ form_row(form.phone) }}</div>
+                    		<div class="col">{{ form_row(form.email) }}</div>
+                    	</div>
+                    	<div class="row">
+                    		<div class="col">{{ form_row(form.message) }}</div>
+                    	</div>
+                    	{{ form_rest(form) }}
+                    	<div class="form-group">
+                    		<button class="btn btn-primary">Envoyer</button>
+                    	
+                    	</div>
+                    	{{ form_end(form) }}
+                    </div>
+                </div>
+
+            </div>
+			
+        </div>
+
+    </div>
+   <div class="container mt-4">
+		
+        <p>
+            
+        </p>
+		
+        <div class="row">
+
+            <div class="col-md-7">
+                <h2>Présentation</h2>
+                <table class="table table-striped">
+                    {% if resource.resp1 %}
+                    <tr>
+                        <td>Première mention de responsabilité</td>
+                        <td>{{ resource.resp1 }}</td>
+                    </tr>
+                    {% endif %}
+                    {% if resource.editeur %}
+                    <tr>
+                        <td>Éditeur</td>
+                        <td>{{ resource.editeur }}</td>
+                    </tr>
+                    {% endif %}
+                    {% if resource.editeurlieu %}
+                    <tr>
+                        <td>Lieu d'édition</td>
+                        <td>{{ resource.editeurlieu }}</td>
+                    </tr>
+                    {% endif %}
+                    {% if resource.anneedit %}
+                    <tr>
+                        <td>Année d'édition</td>
+                        <td>{{ resource.anneedit }}</td>
+                    </tr>
+                    {% endif %}
+                    {% if resource.isbn %}
+                    <tr>
+                        <td>ISBN</td>
+                        <td>{{ resource.isbn }}</td>
+                    </tr>
+                    {% endif %}
+                    {% if resource.pagination %}
+                    <tr>
+                        <td>Pagination</td>
+                        <td>{{ resource.pagination }}</td>
+                    </tr>
+                    {% endif %}
+                    {% if resource.collection %}
+                    <tr>
+                        <td>Collection</td>
+                        <td>{{ resource.collection }}</td>
+                    </tr>
+                    {% endif %}
+                    {% if resource.comment %}
+                    <tr>
+                        <td>Note sur le contenu</td>
+                        <td>{{ resource.comment | nl2br }}</td>
+                    </tr>
+                    {% endif %}
+                    {% if resource.lang %}
+                    <tr>
+                        <td>Langue</td>
+                        <td>{{ resource.lang }}</td>
+                    </tr>
+                    {% endif %}
+                    {% if resource.persons|length > 0 %}
+                   
+                        {% for person in resource.persons %}
+                        {% set counter = ( counter | default(0) ) + 1 %}
+                         <tr>
+                        	<td>Fiche personne {{ counter}}</td>
+                    		<td>{{ person.name }}</td>
+                    	</tr>
+                        {% endfor %}
+                    
+                    {% endif %}
+                    
+                  </table>
+            </div>
+
+            <div class="col-md-5" >
+                <h3>Descripteurs</h3>
+                {% if resource.oeuvre %}
+                <h5>Oeuvres</h5>
+                <ul class="list-inline">
+                        <li class="list-inline-item">{{ resource.oeuvre }}</li>
+                </ul>
+                {% endif %}
+                {% if resource.person %}
+                <h5>Personnes</h5>
+                <ul class="list-inline">
+                        <li class="list-inline-item">{{ resource.person }}</li>
+                </ul>
+                {% endif %}
+                {% if resource.geo %}
+                 <h5>Lieux</h5>
+                <ul class="list-inline">
+                        <li class="list-inline-item">{{ resource.geo }}</li>
+                </ul>
+                {% endif %}
+                {% if resource.tag %}
+                <h5>Mots-clès</h5>
+                <ul class="list-inline">
+                        <li class="list-inline-item">{{ resource.tag }}</li>
+                </ul>
+                {% endif %}
+             </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}

@@ -199,6 +199,7 @@ class Resource
    public function __construct()
     {
         $this->created_at = new \DateTime();
+        $this->updated_at = new \DateTime();
         $this->persons = new ArrayCollection();
         $this->baskets = new ArrayCollection();
         $this->subjects = new ArrayCollection();

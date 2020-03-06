@@ -1,16 +1,15 @@
-<div class="card mb-4">
-        {% if resource.filename %}
-        	<img src="{{ vich_uploader_asset(resource, 'imageFile') | imagine_filter('thumb') }}" class="card-img-top" style="height: 100%; width: auto;">	
+<div class="col-md-3">
+	<div class=card mb-4>
+		{% if resource.filename %}
+		<a href="{{ path('resource.show', {slug: resource.slug, id: resource.id }) }}"><img src="{{ vich_uploader_asset(resource, 'imageFile') | imagine_filter('thumb') }}" class="responsive" width="360" height="240"></a>
 		{% else %}
-        	<img src="{{ '/images/resources/empty.jpg' | imagine_filter('thumb') }}" class="card-img-top" style="height: 100%; width: auto;">
-        {% endif %}
-	<div class="card-body">
-		<h5 class="card-title">
-			<a href="{{ path('resource.show', {slug: resource.slug, id: resource.id }) }}">{{ resource.title }}</a>
-		</h5>
-		<p class="card-text">{{ resource.type }}</p>
-		<div class="text-primary" style="font-size:1em;font-weight:bold;">{{ resource.auteur }}</div> 
-		<p
-		<p class="card-text"><a href="{{ path('resource.basketadd', {slug: resource.slug, id: resource.id }) }}" class="btn btn-secondary btn-lg active">Sélectionner</a></p>
-	</div>
+		<a href="{{ path('resource.show', {slug: resource.slug, id: resource.id }) }}"><img src="{{ '/images/resources/empty.jpg' | imagine_filter('thumb') }}" class="responsive" width="360" height="240"></a>
+		{% endif %}
+		<div class="card-body">
+			<h5 class="card-title"><a href="{{ path('resource.show', {slug: resource.slug, id: resource.id }) }}">{{ resource.title }}</a></h5>
+			<p class="card-text"">{{ resource.type }}</p>
+			<div class="text-primary" style="font-size:1em;font-weight:bold">{{ resource.auteur }}</div>
+			<p class="card-text"><a href="{{ path('resource.basketadd', {slug: resource.slug, id: resource.id }) }}">Sélectionner</a></p>
+		</div>
+	 </div>
 </div>

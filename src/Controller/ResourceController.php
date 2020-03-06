@@ -102,13 +102,18 @@ class ResourceController extends AbstractController {
         $contact->setResource($resource);
         $form = $this->createForm(ContactType::class, $contact);
         $form->handleRequest($request);
-        
+        if($form->isSubmitted() && $form->isValid()){
+            $notification->notify($contact);
+            $this->addFlash('success','Votre message a été envoyé');
+            return $this->redirectToRoute('resource.show',[
+                'id' => $resource_id,
+                'slug' => $resource_slug
+            ]);    
+        }
         return $this->render('resource/show.html.twig', [
             'resource' => $resource,
             'current_menu' => 'ressource',
             'form' => $form->createView()
-            
-            
         ]);
     }
 

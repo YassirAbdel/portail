@@ -1,4 +1,5 @@
 //require('../bootstrap-typeahead');
+/*** V1 ***/
 
 $(function() {
     var input = $('#search-input');
