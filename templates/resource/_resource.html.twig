@@ -6,9 +6,9 @@
 		<a href="{{ path('resource.show', {slug: resource.slug, id: resource.id }) }}"><img src="{{ '/images/resources/empty.jpg' | imagine_filter('thumb') }}" class="responsive" width="360" height="240"></a>
 		{% endif %}
 		<div class="card-body">
-			<h5 class="card-title"><a href="{{ path('resource.show', {slug: resource.slug, id: resource.id }) }}">{{ resource.title }}</a></h5>
-			<p class="card-text"">{{ resource.type }}</p>
-			<div class="text-primary" style="font-size:1em;font-weight:bold">{{ resource.auteur }}</div>
+			<h4 class="card-title" style="text-decoration:underline"><a href="{{ path('resource.show', {slug: resource.slug, id: resource.id }) }}">{{ resource.title }}</a></h4>
+			<p class="card-text">{{ resource.type }}</p>
+			<div class="" style="font-size:1.1rem;font-weight:bold">{{ resource.auteur|replace({';':' ; '}) }}</div>
 			<p class="card-text"><a href="{{ path('resource.basketadd', {slug: resource.slug, id: resource.id }) }}">Sélectionner</a></p>
 		</div>
 	 </div>

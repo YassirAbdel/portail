@@ -110,6 +110,7 @@ class ResourceController extends AbstractController {
                 'slug' => $resource_slug
             ]);    
         }
+        dump($resource);
         return $this->render('resource/show.html.twig', [
             'resource' => $resource,
             'current_menu' => 'ressource',

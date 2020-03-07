@@ -74,6 +74,7 @@
 		margin-left: 1em;
 		text-align: left;
 		padding: 0px;
+		height: auto;
 		h1 {
 			font-size: 2rem;
 			margin: 0;
@@ -131,7 +132,18 @@
 	} 
 	.et-hero-tabs-container[data-state="fixed"] {
 		position: fixed;
-	} 
+	}
+	.index {
+		color: #ffffff;
+		font-weight:600;
+		background-color: #bf6f33;
+		padding: 5px;
+		margin-right: 1px;
+		border-radius: 5px;
+	}
+	.card-title {
+		font-size: 1.3rem;
+	}
 	@media screen and (max-width: 414px) {
 		.logo-cnd {
 			margin-top: -5rem;
@@ -279,34 +291,62 @@
 										<p>{% if resource.title %}{{ resource.title }}{% endif %}{% if resource.resp1 %} / {{ resource.resp1 }}{% endif %}{% if resource.editeurlieu %}. - {{ resource.editeurlieu }} : {% endif %} {% if resource.editeur %}{{ resource.editeur }}{% endif %}{% if resource.anneedit %}, {{ resource.anneedit }}{% endif %}{% if resource.pagination %}. - {{ resource.pagination }}{% endif %} : ill., couv. ill. ; 31 cm</p>
 										<table class="table table-striped">
 										    <tbody>
-										    	{% if resource.tag %}
+												{% if resource.collection %}
 												<tr>
-										        	<td>Mots-clés</td>
-										        	<td>{{ resource.tag }}</td>
+										        	<td>Collection</td>
+										        	<td>{{ resource.collection }}</td>
+												</tr>
+												{% endif %}
+												{% if resource.tag %}
+												{% set tags = resource.tag|split(';') %}
+												<tr>
+													<td>Mots-clés</td>
+													<td>
+													{% for tag in tags %}
+													<a href="{{ path('resources.search') }}?q={{ tag }}"><span class="index">{{ tag }}</span></a>
+													{% endfor %}
+													</td>
 												</tr>
 												{% endif %}
 												{% if resource.person %}
+												{% set persons = resource.person|split(';') %}
 												<tr>
-										        	<td>Personne(s)</td>
-										        	<td>{{ resource.person }}</td>
+													<td>Personnes</td>
+													<td>
+													{% for person in persons %}
+													<a href="{{ path('resources.search') }}?q={{ person }}"><span class="index">{{ person }}</span></a>
+													{% endfor %}
+													</td>
 												</tr>
 												{% endif %} 
-										        {% if resource.oeuvre %}
+												{% if resource.oeuvre %}
+												{% set oeuvres = resource.oeuvre|split(';') %}
 												<tr>
-										        	<td>Oeuvre(s)</td>
-										        	<td>{{ resource.oeuvre }}</td>
+													<td>Oeuvres</td>
+													<td>
+													{% for oeuvre in oeuvres %}
+													<a href="{{ path('resources.search') }}?q={{ oeuvre }}"><span class="index">{{ oeuvre }}</span></a>
+													{% endfor %}
+													</td>
 												</tr>
 												{% endif %} 
-										        {% if resource.organisme %}
+												{% if resource.organisme %}
+												{% set organismes = resource.organisme|split(';') %}
 												<tr>
-										        	<td>Organisme(s)</td>
-										        	<td>{{ resource.organisme }}</td>
+													<td>Structures</td>
+													<td>
+													{% for organisme in organismes %}
+													<a href="{{ path('resources.search') }}?q={{ organisme }}"><span class="index">{{ organisme }}</span></a>
+													{% endfor %}
+													</td>
 												</tr>
 												{% endif %}  
-										        {% if resource.geo %}
+												{% if resource.geo %}
 												<tr>
-										        	<td>Lieux(s)</td>
-										        	<td>{{ resource.geo }}</td>
+													<td>Lieux</td>
+													<td>
+													<span class="lieu">{{ resource.geo|replace({';':' ; '}) }}</span>
+													</td>
 												</tr>
 												{% endif %}
 										        {% if resource.comment %}
@@ -356,9 +396,10 @@
 
   <!-- Main -->
   <main class="et-main">
-    <section class="ensavoirplus" id="tab-es6" style="">
+    <section class="ensavoirplus" id="" style="">
       
- 	<h1>Chopinot, Régine</h1>
+	 <h1>Chopinot, Régine</h1>
+	 <div id="tab-es6"></div>
 <!--<h3>something about es6</h3>-->
 <p>Régine Chopinot, née en 1952 à Fort-de-l'Eau en Algérie, est très vite attirée par la danse. Après des cours de danse classique, elle découvre la danse contemporaine avec Marie Zighera en 1974. Devenue lyonnaise, elle y fonde en janvier 1978 sa première compagnie, la Compagnie du Grèbe qui associe danseurs, comédiens et musiciens. Elle signe alors ses premières chorégraphies. Trois ans plus tard, elle reçoit le deuxième prix au Concours chorégraphique international de Bagnolet (Seine-Saint-Denis) pour la pièce « Halley's Comet » (1981) rebaptisée « Appel d'air ». Ses créations suivantes, « Délices » et « Via », ouvrent la chorégraphie aux apports d'autres médias dont le cinéma. C'est avec « Délices » (1983) que Régine Chopinot commence sa longue collaboration avec le couturier Jean Paul Gaultier, qui marquera l'époque, avec des pièces comme « Le Défilé » (1985), « K.O.K. » (1988), « ANA » (1990), « Saint Georges » (1991) ou « Façade » (1993). Nommée en 1986, directrice du Centre chorégraphique national de Poitou-Charentes à La Rochelle (où elle succède au Théâtre du Silence de Jacques Garnier et Brigitte Lefèvre), qui devient en 1993 le Ballet Atlantique-Régine Chopinot (BARC), Régine Chopinot multiplie les rencontres artistiques : avec des plasticiens comme Andy Goldsworthy, Jean Le Gac ou Jean Michel Bruyère, des musiciens comme Tôn-Thât Tiêt ou Bernard Lubat.</p>
 
@@ -372,8 +413,9 @@
 
 
     </section>
-    <section class="ensavoirplus" id="tab-react">
-      <h1>KOK</h1>
+    <section class="ensavoirplus" id="">
+	  <h1>KOK</h1>
+	  <div id="tab-react"></div>
 	  <h3>Chorégraphie Régine Chopinot</h3>
 
 <p>Régine Chopinot crée « K.O.K » en novembre 1988 à la Maison de la culture de La Rochelle, un ballet inspiré de la boxe, sport pour lequel elle se passionne à l'occasion de la diffusion d'émission de vulgarisation par Canal +, jeune chaîne codée à l'image créative. Fascinée tant par la gestuelle de ce sport que par les commentaires qui l'assimilent à la danse, Régine Chopinot entreprend de créer un spectacle à partir de cet univers. Si l'inspiration télévisuelle de cette pièce pourrait paraître anodine, elle n'est pas sans conséquence : la chorégraphie de Régine Chopinot devra beaucoup au mode de réalisation des émissions sportives, toujours à l'avant-garde des progrès techniques en matière audiovisuelle.</p>
@@ -418,8 +460,9 @@
 
 <p>durée 1h10</p>
     </section>
-    <section class="ensavoirplus" id="tab-angular">
-      <h1>Titre</h1>
+    <section class="ensavoirplus" id="">
+	  <h1>Titre</h1>
+	  <div id="tab-angular"></div>
       <h3>something about structure</h3>
   <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>

@@ -19,26 +19,21 @@ fos_elastica:
                                    
             types:
                 resource:
+                    dynamic: false
                     properties:
                         id: ~
-                        title:
+                        title: &ent_text
                             analyzer: index_analyzer
                             search_analyzer: search_analyzer
                             type: text
-                        person:
-                            analyzer: index_analyzer
-                            search_analyzer: search_analyzer
-                            type: text
-                        oeuvre: ~
-                        organisme: ~
-                        geo: ~
-                        tag: ~
-                        auteur:
-                            analyzer: index_analyzer
-                            search_analyzer: search_analyzer
-                            type: text
+                        person: *ent_text
+                        oeuvre: *ent_text
+                        organisme: *ent_text
+                        geo: *ent_text
+                        tag: *ent_text
+                        auteur: *ent_text
                         anneedit: ~
-                        collection: ~
+                        collection: *ent_text
                         type:
                             fielddata: true
                     persistence:

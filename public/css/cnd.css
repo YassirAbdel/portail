@@ -270,6 +270,14 @@ a:hover {
 .nb-resultats {
 	margin-left: 10px;
 }
+.page-item .page-link {
+	text-decoration: none;
+	color: #162068;
+}
+.page-item.active .page-link {
+	background-color: #162068;
+	border-color: #162068;
+}
 /*** Responsive mode ***/
 @media screen and (max-width: 380px) {
 
