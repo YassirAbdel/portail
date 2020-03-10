@@ -144,6 +144,16 @@
 	.card-title {
 		font-size: 1.3rem;
 	}
+	span.index {
+		display: inline-block;
+		width: auto;
+		height: auto;
+		padding: 5px;
+		border: 0px solid blue;  
+		background-color: #bf6f33; 
+		margin: 1px;
+		margin-right:-2px;
+	  }
 	@media screen and (max-width: 414px) {
 		.logo-cnd {
 			margin-top: -5rem;
@@ -302,9 +312,11 @@
 												<tr>
 													<td>Mots-clés</td>
 													<td>
+													<div>
 													{% for tag in tags %}
-													<a href="{{ path('resources.search') }}?q={{ tag }}"><span class="index">{{ tag }}</span></a>
+													<a href="{{ path('resources.search') }}?q={{ tag }}"><span class="index">{{ tag }}</a></span>
 													{% endfor %}
+													</div>
 													</td>
 												</tr>
 												{% endif %}
@@ -313,9 +325,11 @@
 												<tr>
 													<td>Personnes</td>
 													<td>
+													<div>
 													{% for person in persons %}
-													<a href="{{ path('resources.search') }}?q={{ person }}"><span class="index">{{ person }}</span></a>
+														<a href="{{ path('resources.search') }}?q={{ person }}"><span class="index">{{ person }}</a></span>
 													{% endfor %}
+													</div>
 													</td>
 												</tr>
 												{% endif %} 
@@ -324,9 +338,11 @@
 												<tr>
 													<td>Oeuvres</td>
 													<td>
+													<div>
 													{% for oeuvre in oeuvres %}
-													<a href="{{ path('resources.search') }}?q={{ oeuvre }}"><span class="index">{{ oeuvre }}</span></a>
+													<a href="{{ path('resources.search') }}?q={{ oeuvre }}"><span class="index">{{ oeuvre }}</a></span>
 													{% endfor %}
+													</div>
 													</td>
 												</tr>
 												{% endif %} 
@@ -335,9 +351,11 @@
 												<tr>
 													<td>Structures</td>
 													<td>
+													<div>
 													{% for organisme in organismes %}
-													<a href="{{ path('resources.search') }}?q={{ organisme }}"><span class="index">{{ organisme }}</span></a>
+													<a href="{{ path('resources.search') }}?q={{ organisme }}"><span class="index">{{ organisme }}</a></span>
 													{% endfor %}
+													</div>
 													</td>
 												</tr>
 												{% endif %}  

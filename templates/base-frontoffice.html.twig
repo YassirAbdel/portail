@@ -30,7 +30,7 @@
 							<div class="form-row align-items-end">
 								<div class="col-9">
 									<div class="form-group input-group">
-										<input class="form-control py-2 border-right-0" type="text" name="q" placeholder="Saisir votre recherche" id="search-input" data-suggest="{{ path('resources.fullsearch') }}" autocomplete="off">
+										<input class="form-control py-2 border-right-0" type="text" name="q" placeholder="Saisir les mots de votre recherche" id="search-input" data-suggest="{{ path('resources.fullsearch') }}" autocomplete="off">
 										<span class="input-group-append">
                 						<button class="btn input-group-text bg-transparent" style="height: 100%;"><i class="fa fa-search" aria-hidden="true"></i></button>
             							</span>
@@ -65,8 +65,8 @@
 					<div col="col-1">
 						<nav>
 							<ul>
-								<li><a href="#collections" class="btn btn-secondary btn-lg" style="text-decoration:none;padding:0;" role="button" aria-disabled="true"><h3><span style="color:#162068;font-weight: 600;letter-spacing: 0.05em;">Collections</span></h3></a></li>
-								<li><a href="#dossiers" class="btn btn-secondary btn-lg" style="text-decoration:none;" role="button" aria-disabled="true"><h3><span style="color:#162068;font-weight: 600;letter-spacing: 0.05em;">Dossiers</span></h3></a></li>
+								<li><a href="{{ path('home') }}#collections" class="btn btn-secondary btn-lg" style="text-decoration:none;padding:0;" role="button" aria-disabled="true"><h3><span style="color:#162068;font-weight: 600;letter-spacing: 0.05em;">Collections</span></h3></a></li>
+								<li><a href="{{ path('home') }}#dossiers" class="btn btn-secondary btn-lg" style="text-decoration:none;" role="button" aria-disabled="true"><h3><span style="color:#162068;font-weight: 600;letter-spacing: 0.05em;">Dossiers</span></h3></a></li>
 								
 								<li><i class="icon-second"><img style="fill:#162068;" src="https://rafaelalucas91.github.io/assets/icons/gray1/icon-111.svg"></i></li>
 								<li><i class="icon-second"><img src="https://rafaelalucas91.github.io/assets/icons/gray1/icon-171.svg"></i></li>

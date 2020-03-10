@@ -65,7 +65,8 @@ class ResourceFixture extends Fixture
                     
                 }
             }
-                $resource->setType($record['DOC_TYPE'])
+                    
+                    $resource->setType($record['DOC_TYPE'])
                         ->setTitle($record['DOC_TITRE'])
                         ->setAuteur($record['DOC_AUTEUR'])
                         ->setCollection($record['DOC_COLLECTION'])
