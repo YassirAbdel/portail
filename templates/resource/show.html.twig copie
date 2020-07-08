@@ -1,0 +1,542 @@
+{% extends 'base-frontoffice.html.twig' %}
+{% block title 'Portail documentaire - Ressource' %}
+{% block css %}
+<style type="text/css">
+	.banner.style1 {
+		justify-content: flex-start;
+		justify-content: space-evenly;
+	}
+	.banner.style1 .content {
+		padding: 0;
+		margin-right: 10px;
+		/**
+		margin-left:2rem;
+		margin-right: 2rem;
+		**/
+	}
+	.banner.style1.fullscreen {
+		min-height: 10vh;
+	}
+	/***
+	body {
+		font-family: TradeGothic,Helvetica,Arial,sans-serif;
+		font-weight: 200;
+		font-style: normal;
+		line-height: inherit;
+	}
+	html {
+		font-size: 100%;
+		line-height: 1.3333333333em;
+	}
+	h1 {
+		display: block;
+		font-size: 2em;
+		margin-block-start: 0.67em;
+		margin-block-end: 0.67em;
+		margin-inline-start: 0px;
+		margin-inline-end: 0px;
+		font-weight: bold;
+		font-family: TradeGothic,Helvetica,Arial,sans-serif;
+	}
+	***/
+	a {
+		text-decoration: none;
+	}
+	et-hero-tabs {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 5vh;
+		position: relative;
+		background: #fff;
+		text-align: center;
+		padding: 0 2em;
+		h1 {
+			font-size: 2rem;
+			margin: 0;
+			letter-spacing: 1rem;
+		}
+		h3 {
+			font-size: 1rem;
+			letter-spacing: 0.3rem;
+			opacity: 0.6;
+		}
+	}
+	.ensavoirplus {
+		justify-content: left;
+		align-items: left;
+		height: 150vh;
+		position: relative;
+		background: #ffffff;
+		text-align: left;
+		padding: 0 2em;
+		margin-left: 1em;
+		text-align: left;
+		padding: 0px;
+		height: auto;
+		h1 {
+			font-size: 2rem;
+			margin: 0;
+			letter-spacing: 1rem;
+		}
+		h3 {
+			font-size: 1rem;
+			letter-spacing: 0.3rem;
+			opacity: 0.6;
+		}
+	}
+	.et-hero-tabs-container {
+		display: flex;
+		flex-direction: row;
+		position: absolute;
+		bottom: 0.1rem;
+		width: 100%;
+		height: 70px;
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+		background: #fff;
+		z-index: 10;
+		&--top {
+			position: fixed;
+			top: 0;
+		}
+	}	
+	.et-hero-tab {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex: 1;
+		color: #000;
+		letter-spacing: 0.1rem;
+		transition: all 0.5s ease;
+		font-size: 0.8rem;
+		font-weight: 401;
+		letter-spacing: 0.3rem;
+		&:hover {
+			color:white;
+	  		background: rgba(102,177,241,0.8);
+	  		background-color: #162068
+			transition: all 0.5s ease;
+		}
+	}
+	.et-hero-tab-slider {
+		position: absolute;
+		bottom: 0;
+		width: 0;
+		height: 6px;
+		background: #162068;
+		transition: left 0.3s ease;
+	}
+	.et-hero-tabs-container[data-state="fixed"] {
+		left: calc((100% - 1286) / 2);
+	} 
+	.et-hero-tabs-container[data-state="fixed"] {
+		position: fixed;
+	}
+	.index {
+		color: #ffffff;
+		font-weight:600;
+		background-color: #bf6f33;
+		padding: 5px;
+		margin-right: 1px;
+		border-radius: 5px;
+	}
+	.card-title {
+		font-size: 1.3rem;
+	}
+	span.index {
+		display: inline-block;
+		width: auto;
+		height: auto;
+		padding: 5px;
+		border: 0px solid blue;  
+		background-color: #bf6f33; 
+		margin: 1px;
+		margin-right:-2px;
+	  }
+	@media screen and (max-width: 414px) {
+		.logo-cnd {
+			margin-top: -5rem;
+			margin-left: 5px;
+		}
+		.logo-cnd-subtitle {
+			line-height: 21.33rem;
+			margin: auto;
+			margin-top: -10em;
+			margin-left: 7px;
+			line-height: 12.33rem;
+			font-size: 1em;
+		}
+		.banner.style1.fullscreen .content {
+			min-height: 45vh;
+			margin-top: 0rem;
+			margin-left: 1rem;
+			margin-right: 1rem;
+		}
+		.table {
+			text-align: left;
+		}
+		.banner.style1 .content p {
+			text-align: left;
+		}
+		.ensavoirplus {
+			height: auto;
+		}
+	}
+	@media screen and (max-width: 600px) and (min-width: 600px){
+		.logo-cnd {
+			margin-top: -4rem;
+			margin-left: -7rem;
+			margin-left: 7px;
+		}
+		.logo-cnd-subtitle {
+			line-height: 11.33rem;
+			margin-left: 7px;
+			font-size: 1.2rem;
+			margin-top: -9rem;
+		}
+		.banner.style1 .image {
+			width: 100%;
+		}
+		.banner.style1 .content {
+		margin-top: 43px;
+		}
+		.banner.style1.fullscreen .content {
+			min-height: 45vh;
+			margin-top: 2rem;
+		}
+		.table {
+			text-align: left;
+		}
+		.banner.style1 .content p {
+			text-align: left;
+		}
+	}
+	@media  screen and (max-width: 768px) and (min-width: 768px){
+		.banner.style1.fullscreen .content {
+			margin-top: 16rem;
+			margin-right: 2rem;
+			margin-left: 1rem;
+			margin-bottom: -2rem;
+			min-height: 68vh;
+		}
+		.table {
+			text-align: left;
+		}
+		.banner.style1 .content p {
+			text-align: left;
+			margin-left: 1rem;
+		}
+		.et-hero-tabs-container[data-state="fixed"] {
+			display: none;
+		}
+		.logo-cnd-subtitle {
+			font-size: 2rem;
+		}
+	}
+	@media (min-width: 800px) {
+		.et-hero-tabs,
+		.et-slide {
+			h1 {
+			font-size: 3rem;
+		}
+		h3 {
+			font-size: 1rem;
+		}
+		}
+		.et-hero-tab {
+			font-size: 1rem;
+		}
+	}
+
+	@media  screen and (max-width: 1024px) and (min-width: 1024px){
+		.banner.style1.fullscreen .content {
+			margin-top: -10rem;
+			margin-right: 2rem;
+			margin-left: 2rem;
+		}
+		.banner.style1 .image {
+			width: 100%;
+		}
+		.table {
+			text-align: left;
+		}
+		.banner.style1 .content p {
+			text-align: left;
+		}
+	}
+	@media screen and (max-width: 1280px) and (min-width: 1280px) {
+		.banner.style1.fullscreen .content {
+			margin-top: 16rem;
+		}
+		.banner.style1.fullscreen .image {
+			height: 50vh;
+		}
+		.table {
+			text-align: left;
+		}
+		.banner.style1 .content p {
+			text-align: left;
+		}
+	}
+	@media screen and (max-width: 5120px) and (min-width: 5120px) {
+		.banner.style1.fullscreen .content {
+			margin-top: -40rem;
+		}
+		.table {
+			text-align: left;
+		}
+		.banner.style1 .content p {
+			text-align: left;
+		}
+	}
+</style>
+{% endblock %}
+{% block body %}
+				<!-- One -->
+					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+						<div class="content">
+							<h2>{% if resource.title %}{{ resource.title }}{% endif %} ({% if resource.type %}{{ resource.type }}{% endif %})</h2>
+									<h3>{% if resource.auteur %}
+										Par {{ resource.auteur|replace({'|':' ; '}) }}
+										{% endif %}</h3>
+										<p>{% if resource.title %}{{ resource.title }}{% endif %}{% if resource.resp1 %} / {{ resource.resp1 }}{% endif %}{% if resource.editeurlieu %}. - {{ resource.editeurlieu }} : {% endif %} {% if resource.editeur %}{{ resource.editeur }}{% endif %}{% if resource.anneedit %}, {{ resource.anneedit }}{% endif %}{% if resource.pagination %}. - {{ resource.pagination }}{% endif %} : ill., couv. ill. ; 31 cm</p>
+										<table class="table table-striped">
+										    <tbody>
+												{% if resource.collection %}
+												<tr>
+										        	<td>Collection</td>
+										        	<td>{{ resource.collection }}</td>
+												</tr>
+												{% endif %}
+												{% if resource.tag %}
+												{% set tags = resource.tag|split('|') %}
+												<tr>
+													<td>Mots-clés</td>
+													<td>
+													<div>
+													{% for tag in tags %}
+													<a href="{{ path('resources.search') }}?q={{ tag }}"><span class="index">{{ tag }}</a></span>
+													{% endfor %}
+													</div>
+													</td>
+												</tr>
+												{% endif %}
+												{% if resource.person %}
+												{% set persons = resource.person|split('|') %}
+												<tr>
+													<td>Personnes</td>
+													<td>
+													<div>
+													{% for person in persons %}
+														<a href="{{ path('resources.search') }}?q={{ person }}"><span class="index">{{ person }}</a></span>
+													{% endfor %}
+													</div>
+													</td>
+												</tr>
+												{% endif %} 
+												{% if resource.oeuvre %}
+												{% set oeuvres = resource.oeuvre|split('|') %}
+												<tr>
+													<td>Oeuvres</td>
+													<td>
+													<div>
+													{% for oeuvre in oeuvres %}
+													<a href="{{ path('resources.search') }}?q={{ oeuvre }}"><span class="index">{{ oeuvre }}</a></span>
+													{% endfor %}
+													</div>
+													</td>
+												</tr>
+												{% endif %} 
+												{% if resource.organisme %}
+												{% set organismes = resource.organisme|split('|') %}
+												<tr>
+													<td>Structures</td>
+													<td>
+													<div>
+													{% for organisme in organismes %}
+													<a href="{{ path('resources.search') }}?q={{ organisme }}"><span class="index">{{ organisme }}</a></span>
+													{% endfor %}
+													</div>
+													</td>
+												</tr>
+												{% endif %}  
+												{% if resource.geo %}
+												<tr>
+													<td>Lieux</td>
+													<td>
+													<span class="lieu">{{ resource.geo|replace({'|':' ; '}) }}</span>
+													</td>
+												</tr>
+												{% endif %}
+										        {% if resource.comment %}
+												<tr>
+										        	<td>Note</td>
+										        	<td>{{ resource.comment }}</td>
+												</tr>
+												{% endif %}
+										   </tbody>
+										</table>
+						</div>
+						{% if resource.urlDoc is not empty and resource.urlDoc is not null %}
+							{% set vars = {'url': resource.urlDoc} %}
+							{% include 'lecteurs/photographie.html' with vars %}
+						{% endif %}
+
+						{% if resource.video is not empty and resource.video is not null %}
+							{% set vars = {'url': resource.video} %}
+							{% include 'lecteurs/video.html' with vars %}
+						{% endif %}
+
+						{% if resource.audio is not empty and resource.audio is not null %}
+							{% set vars = {'url': resource.audio} %}
+							{% include 'lecteurs/audio.html' with vars %}
+						{% endif %}
+
+						{% if resource.pdf is not empty and resource.pdf is not null %}
+							{% set vars = {'url': resource.pdf} %}
+							{% include 'lecteurs/pdf.html' with vars %}
+						{% endif %}
+						
+						<!-- video -->
+						<!--
+						<div class="image" style="">
+							<div style="padding:60.77% 0 0 0;position:relative;">
+								<iframe title="numeridanse.tv" allow="autoplay; fullscreen" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen" src="https://www.numeridanse.tv/player/" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" ></iframe>
+							</div>
+						</div>
+						-->
+						
+						<!-- images -->
+						
+						
+						
+						<!-- Autres-->
+						<!--<
+						div class="image" style="display:none;">
+						</div>
+						-->
+					</section>
+
+	<section class="et-hero-tabs">
+  	<!--
+    <h1>STICKY SLIDER NAV</h1>
+    <h3>Sliding content with sticky tab nav</h3>
+	-->
+    <div class="et-hero-tabs-container" data-sticky="data-sticky" data-top-tigger="350" data-state="fixed" >
+    	<!-- <h1>En savoir plus</h1> -->
+      <a class="et-hero-tab" href="#tab-es6">Personne</a>
+      <a class="et-hero-tab" href="#tab-react">Oeuvre</a>
+      <a class="et-hero-tab" href="#tab-angular">Lieu</a>
+      <!--<a class="et-hero-tab" href="#tab-voiraussi">Voir aussi</a>-->
+      <span class="et-hero-tab-slider"></span>
+
+    </div>
+  </section>
+
+
+  <!-- Main -->
+  <main class="et-main">
+    <section class="ensavoirplus" id="" style="">
+      
+	 <h1>Chopinot, Régine</h1>
+	 <div id="tab-es6"></div>
+<!--<h3>something about es6</h3>-->
+<p>Régine Chopinot, née en 1952 à Fort-de-l'Eau en Algérie, est très vite attirée par la danse. Après des cours de danse classique, elle découvre la danse contemporaine avec Marie Zighera en 1974. Devenue lyonnaise, elle y fonde en janvier 1978 sa première compagnie, la Compagnie du Grèbe qui associe danseurs, comédiens et musiciens. Elle signe alors ses premières chorégraphies. Trois ans plus tard, elle reçoit le deuxième prix au Concours chorégraphique international de Bagnolet (Seine-Saint-Denis) pour la pièce « Halley's Comet » (1981) rebaptisée « Appel d'air ». Ses créations suivantes, « Délices » et « Via », ouvrent la chorégraphie aux apports d'autres médias dont le cinéma. C'est avec « Délices » (1983) que Régine Chopinot commence sa longue collaboration avec le couturier Jean Paul Gaultier, qui marquera l'époque, avec des pièces comme « Le Défilé » (1985), « K.O.K. » (1988), « ANA » (1990), « Saint Georges » (1991) ou « Façade » (1993). Nommée en 1986, directrice du Centre chorégraphique national de Poitou-Charentes à La Rochelle (où elle succède au Théâtre du Silence de Jacques Garnier et Brigitte Lefèvre), qui devient en 1993 le Ballet Atlantique-Régine Chopinot (BARC), Régine Chopinot multiplie les rencontres artistiques : avec des plasticiens comme Andy Goldsworthy, Jean Le Gac ou Jean Michel Bruyère, des musiciens comme Tôn-Thât Tiêt ou Bernard Lubat.</p>
+
+<p>Au début des années 1990, elle quitte – selon son expression – les « espaces de grande légèreté » où, très jeune, elle s'était fait connaître, notamment dans sa collaboration avec Jean Paul Gaultier. Elle se passionne alors pour des expériences de confrontation de la danse contemporaine aux éléments et aux rythmes naturels et de sa mise à l'épreuve de pratiques et de sciences du corps anciennes et complexes, comme le yoga. En 1999, dans le cadre des « artistes associés », Régine Chopinot invite trois personnalités de la danse contemporaine à collaborer pendant trois ans à son projet artistique : Françoise Dupuy, Dominique Dupuy et Sophie Lessard rejoignent l'équipe de danseurs permanents et d'intervenants-chercheurs du BARC, comme interprètes, pédagogues et chorégraphes.</p>
+
+<p>En 2002, elle ouvre le triptyque de la Fin des Temps, une longue remise en cause de l'écriture et de la création chorégraphique conséquente à une mise en crise volontaire des notions générales de temps, de mémoire et de construction. « Chair-obscur », son premier chapitre, est tourné vers un effacement du passé, de la mémoire, et « WHA » vers la disparition du futur. « O.C.C.C. » se préoccupe du « temps qui reste », de ce qu'il reste à faire, ce qui peut être fait encore, à l'endroit simple et essentiel de la représentation. En 2008, « Cornucopiae », la dernière pièce créée au sein de l'institution, signe la fin d'une forme de représentation et ouvre vers une autre proposition de perception sensorielle.</p>
+
+<p>Parallèlement à son travail de chorégraphe, Régine Chopinot collabore en tant qu'interprète avec des artistes qui lui sont proches : Alain Buffard (« Wall dancin' - Wall fuckin' », 2003 ; « Mauvais Genre », 2004), Steven Cohen (« I wouldn't be seen dead in that ! », 2003). Ou encore, elle forme et dirige des danseurs vietnamiens dans le cadre d'une collaboration avec l'École supérieure de danse du Vietnam et l'Opéra-Ballet de Hanoï (« Anh Mat », 2002 ; « Giap Than », 2004). En 2008, la chorégraphe quitte le CCN de La Rochelle et crée la compagnie Cornucopiae - the independent dance, la nouvelle structure qui porte désormais, création et répertoire, tous les travaux de Régine Chopinot. En 2010, elle choisit le port de Toulon pour y vivre et travailler.</p>
+
+<p>Depuis 2009, Régine Chopinot s'aventure, questionne et approfondit sa recherche du corps en mouvement en lien avec la force de la parole auprès de cultures organisées par et sur la transmission orale, en Nouvelle-Calédonie, en Nouvelle-Zélande, au Japon. De nombreux actes artistiques jalonnent ces trois dernières années : pièces chorégraphiques et films réalisés à partir des expériences artistiques In Situ ont été créés dans le cadre du projet Pacifique Sud. La relation privilégiée initiée depuis 2009 avec le groupe du Wetr (Drehu/Lifou), aboutit à la création de « Very Wetr ! » au Festival d'Avignon en juillet 2012, repris au Centre national de la danse en février 2013.</p>
+
+
+    </section>
+    <section class="ensavoirplus" id="">
+	  <h1>KOK</h1>
+	  <div id="tab-react"></div>
+	  <h3>Chorégraphie Régine Chopinot</h3>
+
+<p>Régine Chopinot crée « K.O.K » en novembre 1988 à la Maison de la culture de La Rochelle, un ballet inspiré de la boxe, sport pour lequel elle se passionne à l'occasion de la diffusion d'émission de vulgarisation par Canal +, jeune chaîne codée à l'image créative. Fascinée tant par la gestuelle de ce sport que par les commentaires qui l'assimilent à la danse, Régine Chopinot entreprend de créer un spectacle à partir de cet univers. Si l'inspiration télévisuelle de cette pièce pourrait paraître anodine, elle n'est pas sans conséquence : la chorégraphie de Régine Chopinot devra beaucoup au mode de réalisation des émissions sportives, toujours à l'avant-garde des progrès techniques en matière audiovisuelle.</p>
+
+<p>Initialement, Régine Chopinot aurait souhaité reconstituer à l'identique un combat de boxe (après avoir aussi imaginé de se servir des gestes de boxe pour pasticher un ballet classique) : la rencontre mythique opposant les boxeurs Sugar Ray Leonard et Marvelous Marvin Hagler à Las Vegas en 1977. Mais elle est rapidement forcée d'y renoncer : « C'était une utopie de croire que nous pourrions y arriver. Un combat n'appartient qu'aux boxeurs. Il est impossible de refaire le match de quelqu'un d'autre. Un combat de boxe n'est pas un ballet que l'on peut transmettre » [1]. Elle prend alors la décision de régler ses propres combats. Pendant deux ans, Chopinot et ses danseurs troquent ainsi les studios de danse pour un gymnase où ils suivent un entraînement soutenu de boxe anglaise auprès d'un entraîneur réputé.</p>
+
+<p>Conçu pour quatre interprètes-boxeurs et un comédien (Jean-Hugues Laleu), les combats de Poids chiche (R. Chopinot), Alonso Plumard (Joseph Lennon), Archie Black (Lee Black) et Boo Bull (Poonie Dudson) se succèdent en douze rounds, sur un ring tournant conçu par Marc Caro et une bande son très soignée signée par André Serré où se greffent bruits de foule (huées, applaudissements...), de match (annonces, sifflets, arbitrages..), air de tango et musique lyrique, interprétée notamment par la soprano Marie Atget. Ces douze rounds farfelus sont déclinés de la façon suivante dans les documents de communication qui accompagnent la pièce  :</p>
+
+<ul>
+<li>1er round : un entraineur irremplaçable : Monsieur Benamou dirige l'entraînement intensif de cinq danseurs</li>
+<li>2ème round : Duo infernal</li>
+<li>4ème round : Décor mythologique d'une arène conçu par Marc Caro : le ring est central</li>
+<li>5ème round : Vive Mohamed Ali, adieu la boxe boucherie</li>
+<li>6ème round : Tout se joue entre six yeux – Le face à face des boxeurs surveillés par l'arbitre</li>
+<li>7ème round : A la recherche du second souffle dans la voix de Marie Atger</li>
+<li>8ème round : Etre nu par Jean Paul Gaultier</li>
+<li>9ème round : Dans les matchs sans K.O., c'est souvent la reprise décisive</li>
+<li>10ème round : La boxe, noble art, tout en dentelles techniques ; impossible d'esquiver l'idée d'un ballet</li>
+<li>11ème round : La complicité du son avec André Serré et de la lumière avec Gérard Boucher</li>
+<li>12ème round : Dernier round : chorégraphie et mise en scène de Régine Chopinot</li>
+</ul>
+
+<p>Subissant de nombreux revers, l'élaboration de « KOK » relèvera de l'épopée et sa date de création se verra différée de cinq mois, l'obligeant à renoncer à sa programmation au festival Montpellier Danse. Mais ses colossales ambitions seront récompensées et la critique sera unanime pour en saluer le succès. Un clip intitulé « K.O.K [clip] » est réalisé simultanément à sa création par Régine Chopinot, instrument de communication à la mode.</p>
+
+<p>Intervenant à une période où Régine Chopinot est devenue un phénomène médiatique très sollicité, cette création a été le moyen de retrouver la voie de son art comme l'évoque Annie Suquet dans le livre qu'elle lui consacre en 2010 : « Plus secrètement peut-être, l'exercice de la boxe rappelle Chopinot à ce qu'elle attend de la danse et dont elle craint, alors, d'avoir perdu le chemin. Dans la boxe, l'exigence de l'entraînement sollicite les ressources mentales et physiques, de l'individu jusqu'à leurs limites. » [2] A l'occasion de sa création suivante, « ANA » (1990), elle dira dans la presse : « Mes ballets étaient des bûchers où je brûlais ma danse. C'est la boxe qui m'a fait redécouvrir mon corps et le plaisir du mouvement... » [3]</p>
+
+<p>[1] R. Chopinot dans un entretien avec Michel Chemin, « Régine Chopinot, la danse qui fait bing ! », voir dossier d'artiste Régine Chopinot, Médiathèque du CND.</p>
+<p>[2] A. Suquet, « Chopinot »,  Le Mans : Ed. Cénomane, 2010, p. 41.</p>
+
+<p>Générique</p>
+
+<p>création le 4 novembre 1988 à la Maison de la culture de La Rochelle</p>
+<p>conception, réalisation, chorégraphie Régine Chopinot</p>
+<p>interprétation Lee Black, Régine Chopinot, Poonie Dodson / Mervyn Francis, Joseph Lennon et Jean-Hugues Laleu</p>
+<p>costumes Jean Paul Gaultier</p>
+<p>décor Marc Caro</p>
+<p>son André Serré</p>
+<p>lumière Gérard Boucher</p>
+<p>chant Marie Atger</p>
+<p>piano Denis Dubois</p>
+<p>entraînement Zoubid Benhamou de l'équipe Jean Bretonnel</p>
+
+<p>durée 1h10</p>
+    </section>
+    <section class="ensavoirplus" id="">
+	  <h1>Titre</h1>
+	  <div id="tab-angular"></div>
+      <h3>something about structure</h3>
+  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+ <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+ <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </section>
+   
+  </main>
+
+				<section class="wrapper style1 align-center">
+						<div class="inner medium">
+							<h2>Vous avez une question</h2>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field half">
+										<label for="name">Nom</label>
+										<input type="text" name="name" id="name" value="" />
+									</div>
+									<div class="field half">
+										<label for="email">Email</label>
+										<input type="email" name="email" id="email" value="" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="6"></textarea>
+									</div>
+								</div>
+								<ul class="actions special">
+									<li><input type="submit" name="submit" id="submit" value="Envoyer" /></li>
+								</ul>
+							</form>
+
+						</div>
+					</section>
+{% endblock %}
+{% block javascript %}<script src="{{ asset('js/navigation.js') }}"></script>{% endblock %}
+		

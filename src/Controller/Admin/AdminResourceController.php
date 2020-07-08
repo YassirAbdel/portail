@@ -5,9 +5,12 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use App\Repository\ResourceRepository;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Resource;
+use App\Entity\ResourceSearch;
+use App\Form\ResourceSearchType;
 use Symfony\Component\HttpFoundation\Response;
 use Doctrine\Common\Persistence\ObjectManager;
 use App\Form\ResourceType;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Symfony\Component\Security\Core\Security;
@@ -41,23 +44,59 @@ class AdminResourceController extends AbstractController {
      * @return Response
      */
     
-    public function index(Request $request, Security $container)
+    public function index(Request $request, Security $container, PaginatorInterface $paginator)
     {
-        $resources = $this->repository->findAll();
-        
+        $query = $this->repository->findAll();
+        $search = new ResourceSearch;
             // On récupère le username via la variable globale session
             $session = new Session();
             $username = $session->get('username');
-            
-            
+        $form = $this->createForm(ResourceSearchType::class, $search);
+        $form->handleRequest($request);
+        //$query = $this->repository->findAllVisibleQuery($search);
+        $resources = $paginator->paginate(
+                        $query,
+                        $request->query->getInt('page', 1)/*page number*/,
+                        20/*limit per page*/
+                      );
+        return $this->render('admin/resource/index.html.twig', [
+            'current_page' => 'resources',
+            'resources' => $resources,
+            'form' => $form->createView()
+        ]);
             /** NE FONCTIONNE PAS **/
             //dump($this->token->getToken()->getUser());
             //dump($this->token->getToken()->getUsername());
-           
-            dump($resources);
-       
-        return $this->render('admin/resource/index.html.twig', compact('resources'));
-        
+    }
+
+    /**
+     * @Route("/adminSearch", name="admin.resource.search")
+     * @return Response
+     */
+    
+    public function adminSearch(Request $request, Security $container, PaginatorInterface $paginator)
+    {
+        //$query = $this->repository->findAll();
+        $search = new ResourceSearch;
+            // On récupère le username via la variable globale session
+            $session = new Session();
+            $username = $session->get('username');
+        $form = $this->createForm(ResourceSearchType::class, $search);
+        $form->handleRequest($request);
+        $query = $this->repository->findAllVisibleQuery($search);
+        $resources = $paginator->paginate(
+                        $query,
+                        $request->query->getInt('page', 1)/*page number*/,
+                        20/*limit per page*/
+                      );
+        return $this->render('admin/resource/index.html.twig', [
+            'current_page' => 'resources',
+            'resources' => $resources,
+            'form' => $form->createView()
+        ]);
+            /** NE FONCTIONNE PAS **/
+            //dump($this->token->getToken()->getUser());
+            //dump($this->token->getToken()->getUsername());
     }
     
     

@@ -1,0 +1,169 @@
+<div class="image" class"left">
+    <div style="padding:0; position:relative;">
+        <div class="container-son">
+            <div>
+                <div style="display:none;>
+                    <img src="{{ '/images/son/show-playlist.svg' }}" class="show-playlist"/>
+                   </div>
+                 <div id="white-player-playlist-container">
+                    <div class="white-player-playlist-top"><div>
+                </div>
+                <div>
+                    <img src="{{ '/images/son/close.svg' }}" class="close-playlist"/>
+                </div>
+            </div>
+            <div class="white-player-up-next"></div>
+            <div class="white-player-playlist-controls">
+                <img data-amplitude-song-info="cover_art_url" data-amplitude-playlist="trip_hop" class="playlist-album-art"/>
+                <div class="playlist-controls">
+                    <div class="playlist-meta-data">
+                        <span data-amplitude-song-info="name" data-amplitude-playlist="trip_hop" class="song-name"></span>
+                        <span data-amplitude-song-info="artist" data-amplitude-playlist="trip_hop" class="song-artist"></span>
+                    </div>
+                    <div class="playlist-control-wrapper">
+                        <div class="amplitude-prev" id="playlist-previous" data-amplitude-playlst="trip_hop"></div>
+                        <div class="amplitude-play-pause" data-amplitude-playlist="trip_hop" id="playlist-play-pause"></div>
+                        <div class="amplitude-next" id="playlist-next" data-amplitude-playlist="trip_hop"></div>
+                    </div>
+                </div>
+             </div>
+            </div>
+            <span class="playlist-title"><!-- Les métamorphoses technologiques de la présence --></span>
+            <div id="black-player">
+              <div id="black-player-playlist">
+                <div class="black-player-song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="0" data-amplitude-playlist="emancipator">
+                  <div class="song-meta-container">
+                    <span class="individual-song-name">Partie 1</span>
+                    <span class="individual-song-artist"></span>
+                  </div>
+                </div>
+                <div class="black-player-song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="1" data-amplitude-playlist="emancipator">
+                  <div class="song-meta-container">
+                    <span class="individual-song-name">Partie 2</span>
+                    <span class="individual-song-artist"></span>
+                  </div>
+                </div>
+                <div class="black-player-song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="2" data-amplitude-playlist="emancipator">
+                  
+                  <div class="song-meta-container">
+                    <span class="individual-song-name">Partie 3</span>
+                    <span class="individual-song-artist"></span>
+                  </div>
+                </div>
+                <div class="black-player-song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="3" data-amplitude-playlist="emancipator">
+                  
+                  <div class="song-meta-container">
+                    <span class="individual-song-name">Partie 4</span>
+                    <span class="individual-song-artist"></span>
+                  </div>
+                </div>
+              </div>
+              <div id="black-player-controls">
+                <img data-amplitude-song-info="cover_art_url" data-amplitude-playlist="emancipator" class="playlist-album-art"/>
+                <div class="black-player-controls-container">
+                  <span data-amplitude-song-info="name" data-amplitude-playlist="emancipator" class="song-name"></span>
+                  <span data-amplitude-song-info="artist" data-amplitude-playlist="emancipator" class="song-artist"></span>
+                  <span class="amplitude-volume-up"></span>
+
+                  <div id="progress-container-black">
+                    <input type="range" class="amplitude-song-slider" data-amplitude-playlist="emancipator"/>
+                    <progress id="song-played-progress-black" class="amplitude-song-played-progress" data-amplitude-playlist="emancipator"></progress>
+                    <progress id="song-buffered-progress-black" class="amplitude-buffered-progress" value="0"></progress>
+                    <div style="float: left;margin-top: 20px;color: white;">
+                      <span class="current-time">
+                        <span class="amplitude-current-minutes" data-amplitude-playlist="emancipator"></span>:<span class="amplitude-current-seconds" data-amplitude-playlist="emancipator"></span>
+                        </span>
+                      </div>
+                      <div style="float: right;margin-top: 20px;color: white;">
+                        <span class="duration">
+                          <span class="amplitude-duration-minutes" data-amplitude-playlist="emancipator"></span>:<span class="amplitude-duration-seconds" data-amplitude-playlist="emancipator"></span>
+                        </span>
+                      </div>
+                      <div style="margin-top: 30px;float: center;" class="amplitude-prev" data-amplitude-playlist="emancipator" id="previous-black"></div>
+                      <div style="margin-top: 30px;float: center;"class="amplitude-play-pause" data-amplitude-playlist="emancipator" id="play-pause-black"></div>
+                      <div style="margin-top: 30px;float: center;"class="amplitude-next" data-amplitude-playlist="emancipator" id="next-black"></div>
+                  </div>
+                  <div style="margin-top: 10px;float: right;margin-left: 20px;">
+                    
+                    <!--
+                    <div class="amplitude-shuffle amplitude-shuffle-off" data-amplitude-playlist="emancipator" id="shuffle-black"></div>
+                    -->
+                    
+                    <!--
+                      <div class="amplitude-repeat" data-amplitude-playlist="emancipator" id="repeat-black"></div>
+                    -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+       
+        <script type="text/javascript">
+        /*
+      Shows the playlist
+    */
+    document.getElementsByClassName('show-playlist')[0].addEventListener('click', function(){
+      document.getElementById('white-player-playlist-container').classList.remove('slide-out-top');
+      document.getElementById('white-player-playlist-container').classList.add('slide-in-top');
+      document.getElementById('white-player-playlist-container').style.display = "block";
+    });
+    
+    /*
+      Hides the playlist
+    */
+    document.getElementsByClassName('close-playlist')[0].addEventListener('click', function(){
+      document.getElementById('white-player-playlist-container').classList.remove('slide-in-top');
+      document.getElementById('white-player-playlist-container').classList.add('slide-out-top');
+      document.getElementById('white-player-playlist-container').style.display = "none";
+    });
+    
+    Amplitude.init({
+      "songs": [
+        {
+          "name": "Partie 1",
+          "artist": "",
+          "album": "",
+          "url": "http://cadic.cnd.fr/exl-audio/201511/01_introduction_par_mathilde_puech.mp3",
+          "cover_art_url": ""
+        }
+      ],
+      "playlists": {
+        "emancipator": {
+          songs: [
+              {
+              "name": "Partie 1",
+              "artist": "Suquet, Annie",
+              "album": "Les métamorphoses technologiques de la présence",
+              "url": "http://cadic.cnd.fr/exl-audio/201511/01_les_premices_de_la_nudite_sur_scene.mp3",
+              "cover_art_url": "http://cadic.cnd.fr/exl-img/201511/multimedia.jpg"
+            },
+            {
+              "name": "Partie 2",
+              "artist":"Suquet, Annie",
+              "album": "Les métamorphoses technologiques de la présencen",
+              "url": "http://cadic.cnd.fr/exl-audio/201511/03_un_personnage_inaugural_loie_fuller.mp3",
+              "cover_art_url": "http://cadic.cnd.fr/exl-img/201511/multimedia.jpg"
+            },
+            {
+              "name": "Partie 3",
+              "artist": "Suquet, Annie",
+              "album": "Les métamorphoses technologiques de la présence",
+              "url": "http://cadic.cnd.fr/exl-audio/201511/04_l_art_action_des_futuristes.mp3",
+              "cover_art_url": "http://cadic.cnd.fr/exl-img/201511/multimedia.jpg"
+            },
+            {
+              "name": "Partie 4",
+              "artist": "Suquet, Annie",
+              "album": "Soon It Will Be Cold Enough",
+              "url": "http://cadic.cnd.fr/exl-audio/201511/04_la_culture_du_corps_libre.mp3",
+              "cover_art_url": "http://cadic.cnd.fr/exl-img/201511/multimedia.jpg"
+            }
+          ]
+        }
+      }
+    });
+    </script>
+    </div>
+</div>

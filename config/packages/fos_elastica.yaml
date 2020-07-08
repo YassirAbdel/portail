@@ -11,12 +11,54 @@ fos_elastica:
                             search_analyzer:
                                 type: custom
                                 tokenizer: standard
-                                filter: [standard, lowercase, asciifolding, trim]
+                                filter: [standard, lowercase, asciifolding, french_stemmer, french_stop]
                             index_analyzer:
                                 type: custom
                                 tokenizer: standard
-                                filter: [standard, lowercase, asciifolding, trim]
-                                   
+                                filter: [standard, lowercase, asciifolding, french_stemmer, french_stop, custom_filter]
+                            facet_analyzer:
+                                type: custom
+                                tokenizer: keyword
+                                filter: [standard, lowercase, asciifolding, trim, french_stemmer, french_stop]
+                            facetMulti_analyzer:
+                                type: custom
+                                filter: [standard, lowercase, asciifolding, trim, french_stemmer, french_stop]
+                                tokenizer: my_tokenizer
+                                  
+                        tokenizer:
+                            my_tokenizer: 
+                                type: simple_pattern_split
+                                pattern: "|"
+                        query:
+                            query_string: 
+                                query: "kimchy\\"
+                                fields  : ["title","type","person","oeuvre","organisme","tag","auteur"]
+                                allow_leading_wildcard: true
+                                default_operator: AND
+                                #fuzzy_max_expansions: 2
+                                #phrase_slop: 2
+                        filter:
+                            french_elision:
+                                type: elision
+                                articles_case: true
+                                articles: ['l', 'm', 't', 'qu', 'n', 's','j', 'd', 'c', 'jusqu', 'quoiqu','lorsqu', 'puisqu']
+                            french_stop:
+                                type: stop
+                                stopwords: _french_
+                            french_keywords:
+                                type: keyword_marker
+                                keywords: []
+                            french_stemmer:
+                                type: stemmer
+                                language: french
+                            custom_filter:
+                                type: edgeNGram
+                                side: front
+                                min_gram: 1
+                                max_gram: 20
+                            
+
+
             types:
                 resource:
                     dynamic: false
@@ -26,20 +68,47 @@ fos_elastica:
                             analyzer: index_analyzer
                             search_analyzer: search_analyzer
                             type: text
-                        person: *ent_text
-                        oeuvre: *ent_text
-                        organisme: *ent_text
+                            #boost: 10
+                        type:
+                            analyzer: facet_analyzer
+                            search_analyzer: search_analyzer
+                            type: text
+                            fielddata: true
+                        person:
+                            analyzer: facetMulti_analyzer
+                            search_analyzer: search_analyzer
+                            type: text
+                            fielddata: true 
+                        oeuvre:
+                            analyzer: facetMulti_analyzer
+                            search_analyzer: search_analyzer
+                            type: text
+                            fielddata: true
+                        organisme:
+                            analyzer: facetMulti_analyzer
+                            search_analyzer: search_analyzer
+                            type: text
+                            fielddata: true
                         geo: *ent_text
-                        tag: *ent_text
-                        auteur: *ent_text
+                        tag: 
+                            analyzer: facetMulti_analyzer
+                            search_analyzer: search_analyzer
+                            type: text
+                            fielddata: true
+                        auteur: 
+                            analyzer: index_analyzer
+                            search_analyzer: search_analyzer
+                            type: text
+                            fielddata: true
                         anneedit: ~
                         collection: *ent_text
-                        type:
-                            fielddata: true
+                        comment: *ent_text
+                        
                     persistence:
                         driver: orm
                         model: App\Entity\Resource
                         repository: App\SearchRepository\SearchRepository
                         finder: ~
                         provider: ~
+                        listener: ~
 

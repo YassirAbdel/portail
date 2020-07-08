@@ -16,6 +16,13 @@ class CategoryType extends AbstractType
         $builder
             ->add('title')
             ->add('Description')
+            ->add('subjects', EntityType::class, [
+                'class' => Subject::class,
+                'required' => false,
+                'choice_label' => 'title',
+                'multiple' => true
+                
+            ])
         ;
     }
 
@@ -23,6 +30,7 @@ class CategoryType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => Category::class,
+            'translation_domain' => 'forms'
         ]);
     }
 }

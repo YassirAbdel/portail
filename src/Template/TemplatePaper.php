@@ -35,7 +35,7 @@ class TemplatePaper extends DefaultTemplate
         return $this->pageWithText($page, $text);
     }
 
-    public function pageWithText($page, $text)
+    public function pageWithText($page, $text, $rel = NULL)
     {
         $class = null;
 

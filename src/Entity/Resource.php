@@ -39,6 +39,7 @@ class Resource
     
     /**
      * @ORM\Id()
+     * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
      */
     private $id;
@@ -135,22 +136,22 @@ class Resource
     private $auteur;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="text", nullable=true)
      */
     private $resp1;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="text", nullable=true)
      */
     private $editeur;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $editeurlieu;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $anneedit;
 
@@ -195,6 +196,131 @@ class Resource
      */
     private $subjects;
 
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $auteurS;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $auteurM;
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $anneeS;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $peHisto;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $origDoc;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $copyR;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $rightsA;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $support;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $couleur;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $format;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $formFile;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $duree;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $nbFiles;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $cote;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $supNum;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $locaSupnum;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $coteNum;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $locaSup;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $img;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $pdf;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $audio;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $video;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $urlDoc;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $resEdit;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $lecteur;
+
    public function __construct()
     {
         $this->created_at = new \DateTime();
@@ -207,13 +333,6 @@ class Resource
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function setId(int $id): self
-    {
-        $this->id = $id;
-
-        return $this;
     }
 
     public function getType(): ?string
@@ -655,5 +774,306 @@ class Resource
     }
     return $weight;
   }
+
+  public function getAuteurS(): ?string
+  {
+      return $this->AuteurS;
+  }
+
+  public function setAuteurS(?string $AuteurS): self
+  {
+      $this->AuteurS = $AuteurS;
+
+      return $this;
+  }
+
+  public function getAuteurM(): ?string
+  {
+      return $this->auteurM;
+  }
+
+  public function setAuteurM(?string $auteurM): self
+  {
+      $this->auteurM = $auteurM;
+
+      return $this;
+  }
+
+  public function getAnneeS(): ?int
+  {
+      return $this->anneeS;
+  }
+
+  public function setAnneeS(?int $anneeS): self
+  {
+      $this->anneeS = $anneeS;
+
+      return $this;
+  }
+
+  public function getPeHisto(): ?string
+  {
+      return $this->peHisto;
+  }
+
+  public function setPeHisto(?string $peHisto): self
+  {
+      $this->peHisto = $peHisto;
+
+      return $this;
+  }
+
+  public function getOrigDoc(): ?string
+  {
+      return $this->origDoc;
+  }
+
+  public function setOrigDoc(?string $origDoc): self
+  {
+      $this->origDoc = $origDoc;
+
+      return $this;
+  }
+
+  public function getCopyR(): ?string
+  {
+      return $this->copyR;
+  }
+
+  public function setCopyR(?string $copyR): self
+  {
+      $this->copyR = $copyR;
+
+      return $this;
+  }
+
+  public function getRightsA(): ?string
+  {
+      return $this->rightsA;
+  }
+
+  public function setRightsA(?string $rightsA): self
+  {
+      $this->rightsA = $rightsA;
+
+      return $this;
+  }
+
+  public function getSupport(): ?string
+  {
+      return $this->support;
+  }
+
+  public function setSupport(?string $support): self
+  {
+      $this->support = $support;
+
+      return $this;
+  }
+
+  public function getCouleur(): ?string
+  {
+      return $this->couleur;
+  }
+
+  public function setCouleur(?string $couleur): self
+  {
+      $this->couleur = $couleur;
+
+      return $this;
+  }
+
+  public function getFormat(): ?string
+  {
+      return $this->format;
+  }
+
+  public function setFormat(?string $format): self
+  {
+      $this->format = $format;
+
+      return $this;
+  }
+
+  public function getFormFile(): ?string
+  {
+      return $this->formFile;
+  }
+
+  public function setFormFile(?string $formFile): self
+  {
+      $this->formFile = $formFile;
+
+      return $this;
+  }
+
+  public function getDuree(): ?string
+  {
+      return $this->duree;
+  }
+
+  public function setDuree(?string $duree): self
+  {
+      $this->duree = $duree;
+
+      return $this;
+  }
+
+  public function getNbFiles(): ?string
+  {
+      return $this->nbFiles;
+  }
+
+  public function setNbFiles(?string $nbFiles): self
+  {
+      $this->nbFiles = $nbFiles;
+
+      return $this;
+  }
+
+  public function getCote(): ?string
+  {
+      return $this->cote;
+  }
+
+  public function setCote(?string $cote): self
+  {
+      $this->cote = $cote;
+
+      return $this;
+  }
+
+  public function getSupNum(): ?string
+  {
+      return $this->supNum;
+  }
+
+  public function setSupNum(?string $supNum): self
+  {
+      $this->supNum = $supNum;
+
+      return $this;
+  }
+
+  public function getLocaSupnum(): ?string
+  {
+      return $this->locaSupnum;
+  }
+
+  public function setLocaSupnum(?string $locaSupnum): self
+  {
+      $this->locaSupnum = $locaSupnum;
+
+      return $this;
+  }
+
+  public function getCoteNum(): ?string
+  {
+      return $this->coteNum;
+  }
+
+  public function setCoteNum(?string $coteNum): self
+  {
+      $this->coteNum = $coteNum;
+
+      return $this;
+  }
+
+  public function getLocaSup(): ?string
+  {
+      return $this->locaSup;
+  }
+
+  public function setLocaSup(?string $locaSup): self
+  {
+      $this->locaSup = $locaSup;
+
+      return $this;
+  }
+
+  public function getImg(): ?string
+  {
+      return $this->img;
+  }
+
+  public function setImg(?string $img): self
+  {
+      $this->img = $img;
+
+      return $this;
+  }
+
+  public function getPdf(): ?string
+  {
+      return $this->pdf;
+  }
+
+  public function setPdf(?string $pdf): self
+  {
+      $this->pdf = $pdf;
+
+      return $this;
+  }
+
+  public function getAudio(): ?string
+  {
+      return $this->audio;
+  }
+
+  public function setAudio(?string $audio): self
+  {
+      $this->audio = $audio;
+
+      return $this;
+  }
+
+  public function getVideo(): ?string
+  {
+      return $this->video;
+  }
+
+  public function setVideo(?string $video): self
+  {
+      $this->video = $video;
+
+      return $this;
+  }
+
+  public function getUrlDoc(): ?string
+  {
+      return $this->urlDoc;
+  }
+
+  public function setUrlDoc(?string $urlDoc): self
+  {
+      $this->urlDoc = $urlDoc;
+
+      return $this;
+  }
+
+  public function getResEdit(): ?string
+  {
+      return $this->resEdit;
+  }
+
+  public function setResEdit(?string $resEdit): self
+  {
+      $this->resEdit = $resEdit;
+
+      return $this;
+  }
+
+  public function getLecteur(): ?int
+  {
+      return $this->lecteur;
+  }
+
+  public function setLecteur(int $lecteur): self
+  {
+      $this->lecteur = $lecteur;
+
+      return $this;
+  }
      
+  
 }

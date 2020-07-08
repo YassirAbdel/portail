@@ -10,13 +10,13 @@
 		</div>
 	{% endfor %}
 	{% if is_granted('ROLE_DOC')  %}
-	<h1>Gérer les ressources</h1>
+	<h1>Gérer les collections</h1>
 		
 	<table class="table table-striped">
 		<thead>
 			<tr>
 				<th>Titre</th>
-				<th>Ensembles documentaires<th>
+				<th>Sous-collections<th>
 				<th>Actions</th>
 			</tr>
 		</thead>
@@ -59,7 +59,7 @@
 	</table>
 		
 	<div class="text-right">
-		<a href="{{ path('admin.category.new') }}" class="btn btn-primary">Nouvelle notice</a>
+		<a href="{{ path('admin.category.new') }}" class="btn btn-primary">Nouvelle collection</a>
 	</div>
 	<!--  test Popper class 
 	<button id="button-a">button</button>	

@@ -18,6 +18,8 @@ class ResourceSearchType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+        ->setAction('adminSearch')
+        ->setMethod('GET')
         ->add('type', TextType::class, [
             'required' => false,
             'label' => false,
@@ -59,12 +61,12 @@ class ResourceSearchType extends AbstractType
             'data_class' => ResourceSearch::class,
             'method' => 'post',
             'csrf_protection' => false
-
         ]);
     }
     
-    public function getBlockPrefix() {
-        
+    public function getBlockPrefix() 
+    {
         return '';
     }
+    
 }

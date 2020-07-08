@@ -4,15 +4,18 @@
 		<title>{% block title %}{% endblock %}</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css">
+		<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">-->
+		<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css">-->
+		<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
+		<link rel="stylesheet" href="{{ asset('css/select2.min.css') }}" />
 		<link rel="stylesheet" href="{{ asset('css/cnd.css') }}" />
 		<noscript><link rel="stylesheet" href="{{ asset('css/noscript.css') }}"/></noscript>
+		{% block js %}{% endblock %}
 		{% block css %}{% endblock %}
 	</head>
 	<body class="is-preload">
 		<div id='scroll_to_top' class='opacity'>
-    		<img src="https://rafaelalucas91.github.io/assets/icons/gray2/icon-9.svg" alt="Retourner en haut">
+    		<img src="{{ asset('images/icones/ic_system_update_alt_black_48dp.png')}}" alt="Retourner en haut">
 		</div>
 			<header id="header">
 				
@@ -25,12 +28,14 @@
 			
 				<div class="row">
 					<!-- formulaire -->
+					{% set nbresultall = app.session.get('nbresultall') %}
 					<div class="col-11">
 						<form method="get" action="{{ path('resources.search') }}">
 							<div class="form-row align-items-end">
 								<div class="col-9">
 									<div class="form-group input-group">
-										<input class="form-control py-2 border-right-0" type="text" name="q" placeholder="Saisir les mots de votre recherche" id="search-input" data-suggest="{{ path('resources.fullsearch') }}" autocomplete="off">
+										<input class="form-control py-2 border-right-0" type="text" name="q" placeholder="{{nbresultall}} resources. Saisir les mots de votre recherche" id="search-input" data-suggest="{{ path('resources.fullsearch') }}" autocomplete="off">
+										<!--<input name="fields" type="hidden" value="_all">-->
 										<span class="input-group-append">
                 						<button class="btn input-group-text bg-transparent" style="height: 100%;"><i class="fa fa-search" aria-hidden="true"></i></button>
             							</span>
@@ -65,11 +70,13 @@
 					<div col="col-1">
 						<nav>
 							<ul>
-								<li><a href="{{ path('home') }}#collections" class="btn btn-secondary btn-lg" style="text-decoration:none;padding:0;" role="button" aria-disabled="true"><h3><span style="color:#162068;font-weight: 600;letter-spacing: 0.05em;">Collections</span></h3></a></li>
-								<li><a href="{{ path('home') }}#dossiers" class="btn btn-secondary btn-lg" style="text-decoration:none;" role="button" aria-disabled="true"><h3><span style="color:#162068;font-weight: 600;letter-spacing: 0.05em;">Dossiers</span></h3></a></li>
+								<li><a href="{{ path('home') }}#collections" class="btn btn-secondary btn-lg" style="text-decoration:none;padding:0;" role="button" aria-disabled="true"><h3><span class="collections" style="color:#162068;font-weight: 600;letter-spacing: 0.05em;">Collections</span></h3></a></li>
+								<li><a href="{{ path('home') }}#dossiers" class="btn btn-secondary btn-lg" style="text-decoration:none;" role="button" aria-disabled="true"><h3><span class="dossiers" style="color:#162068;font-weight: 600;letter-spacing: 0.05em;">Dossiers</span></h3></a></li>
+								<li><a href="#" class="btn btn-secondary btn-lg" style="text-decoration:none;padding-left:0;" role="button" aria-disabled="true"><h3><span class="dossiers" style="color:#162068;font-weight: 600;letter-spacing: 0.05em;">Sélection (0)</span></h3></a></li>
+
 								
-								<li><i class="icon-second"><img style="fill:#162068;" src="https://rafaelalucas91.github.io/assets/icons/gray1/icon-111.svg"></i></li>
-								<li><i class="icon-second"><img src="https://rafaelalucas91.github.io/assets/icons/gray1/icon-171.svg"></i></li>
+								<!-- <li><i class="icon-second basket"><img src="{{ asset('images/icones/ic_shopping_basket_black_48dp.png') }}"></i></li> -->
+								<li><i class="icon-second login"><img style="fill:#162068;" src="{{ asset('images/icones/ic_account_box_black_48dp.png') }}"></i></li>
 								<li><a href="#menu">Menu</a></li>
 							</ul>
 						</nav>
@@ -103,18 +110,21 @@
 			</div>
 			<script src="{{ asset('js/jquery.min.js') }}"></script>
 			<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
-        	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-       		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-        	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.min.js"></script>
+        	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>-->
+			<script src="{{ asset('js/popper.min.js') }}"></script>   
+			<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>-->
+			<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+			<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.min.js"></script>-->
+			<script src="{{ asset('js/select2.min.js') }}"></script>
 			<script src="{{ asset('js/jquery.scrollex.min.js') }}"></script>
 			<script src="{{ asset('js/jquery.scrolly.min.js') }}"></script>
 			<script src="{{ asset('js/browser.min.js') }}"></script>
 			<script src="{{ asset('js/breakpoints.min.js') }}"></script>
 			<script src="{{ asset('js/util.js') }}"></script>
 			<script src="{{ asset('js/main.js') }}"></script>
-			
 			<script src="{{ asset('js/top.js') }}"></script>
-			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
+			<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>-->
+			<script src="{{ asset('js/bootstrap3-typeahead.min.js') }}"></script>
 			<script src="{{ asset('js/app.js') }}"></script>
 			
 			<!--<script src="assets/js/down.js"></script>-->

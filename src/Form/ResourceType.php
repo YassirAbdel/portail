@@ -48,13 +48,6 @@ class ResourceType extends AbstractType
                 'disabled' => true
                 
             ])
-            ->add('persons', EntityType::class, [
-                'class' => Person::class,
-                'required' => false,
-                'choice_label' => 'name',
-                'multiple' => true
-                
-            ])
             ->add('oeuvre', TextareaType::class, [
                 'required' => false,
                 'disabled' => true,
@@ -112,12 +105,18 @@ class ResourceType extends AbstractType
             ->add('imageFile', FileType::class, [
                 'required' => false
             ])
+            ->add('persons', EntityType::class, [
+                'class' => Person::class,
+                'required' => false,
+                'choice_label' => 'name',
+                'multiple' => true
+                
+            ])
             ->add('subjects', EntityType::class, [
                 'class' => Subject::class,
                 'required' => false,
                 'choice_label' => 'title',
                 'multiple' => true
-                
             ])
             ;
     }

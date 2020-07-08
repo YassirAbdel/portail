@@ -8,6 +8,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use App\Entity\Category;
+use App\Entity\Resource;
 
 class SubjectType extends AbstractType
 {
@@ -16,7 +17,7 @@ class SubjectType extends AbstractType
         $builder
             ->add('title')
             ->add('description')
-            ->add('resources')
+            //->add('resources')
             ->add('category', EntityType::class, [
                 'class' => Category::class,
                 'required' => true,
@@ -24,6 +25,16 @@ class SubjectType extends AbstractType
                 'multiple' => false
                 
             ])
+            /*** 
+            ->add('resources', EntityType::class, [
+                'class' => Subject::class,
+                'required' => false,
+                'choice_label' => 'resources',
+                'multiple' => true
+                
+            ])
+            ***/
+            ->add('resources')  
         ;
     }
 
@@ -31,6 +42,7 @@ class SubjectType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => Subject::class,
+            'translation_domain' => 'forms'
         ]);
     }
 }

@@ -10,12 +10,13 @@
 		</div>
 	{% endfor %}
 	{% if is_granted('ROLE_DOC')  %}
-	<h1>Gérer les ensembles documentaires</h1>
+	<h1>Gérer les sous-collections</h1>
 		
 	<table class="table table-striped">
 		<thead>
 			<tr>
 				<th>Titre</th>
+				<th>Collection</th>
 				<th>Actions</th>
 			</tr>
 		</thead>
@@ -23,12 +24,14 @@
 		
     		{% for subject in subjects %}
     			<tr>
-    				<td>{{ subject.title }}</td>
+					<td>{{ subject.title }}</td>
+					<td><a href="{{ path('admin.category.edit', {id: subject.category.id}) }}">{{ subject.category.title }}</a></td>
     				
     				<td>
     					
     					<a href="{{ path('admin.subject.edit', {id: subject.id}) }}" class="btn btn-secondary">Éditer</a>
-    				</td>
+					</td>
+					
     				<td>	
     					
     					<form method="post" action="{{ path('admin.subject.delete', {id: subject.id}) }}" onsubmit="return confirm('Etes-vous vraiment sûr ?')">
@@ -46,7 +49,7 @@
 	</table>
 		
 	<div class="text-right">
-		<a href="{{ path('admin.subject.add') }}" class="btn btn-primary">Nouvel ensemble</a>
+		<a href="{{ path('admin.subject.add') }}" class="btn btn-primary">Nouvelle sous-collection</a>
 	</div>
 	<!--  test Popper class 
 	<button id="button-a">button</button>	

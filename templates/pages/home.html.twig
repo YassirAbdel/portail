@@ -71,7 +71,12 @@
 					  <section>
 				  
 						  <div class="row">
-							  <div class="col-md-3">
+							{% for resource in pagination %}
+							{% set resource = resource.transformed %}
+							{% include '/resource/_resource.html.twig' %}
+							{% endfor %}
+							<!--
+							<div class="col-md-3">
 								  <div class="card mb-4">
 									  <img src="http://mediatheque.cnd.fr/ressources/portail_v1/images/pic01.jpg" class="responsive" width="360" height="240">
 									  <div class="card-body">
@@ -225,7 +230,7 @@
 									  </div>
 								   </div>
 							  </div>
-							  
+							-->
 						  </div>
 					  </section>
 					  <!-- Five -->

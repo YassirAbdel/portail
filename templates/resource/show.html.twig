@@ -1,6 +1,9 @@
 {% extends 'base-frontoffice.html.twig' %}
 {% block title 'Portail documentaire - Ressource' %}
+{% block js %}<script src="{{ asset('js/amplitude.js') }}"></script>{% endblock %}
+
 {% block css %}
+
 <style type="text/css">
 	.banner.style1 {
 		justify-content: flex-start;
@@ -154,6 +157,7 @@
 		margin: 1px;
 		margin-right:-2px;
 	  }
+	 
 	@media screen and (max-width: 414px) {
 		.logo-cnd {
 			margin-top: -5rem;
@@ -181,6 +185,14 @@
 		}
 		.ensavoirplus {
 			height: auto;
+		}
+		div#black-player-playlist {
+			max-height: 140px;
+			overflow-y: scroll;
+			margin-top: 0rem;
+		}
+		div#black-player-playlist {
+			display: none;
 		}
 	}
 	@media screen and (max-width: 600px) and (min-width: 600px){
@@ -211,6 +223,11 @@
 		.banner.style1 .content p {
 			text-align: left;
 		}
+		div#black-player-playlist {
+			max-height: 140px;
+			overflow-y: scroll;
+			margin-top: 0rem;
+		}
 	}
 	@media  screen and (max-width: 768px) and (min-width: 768px){
 		.banner.style1.fullscreen .content {
@@ -232,6 +249,11 @@
 		}
 		.logo-cnd-subtitle {
 			font-size: 2rem;
+		}
+		div#black-player-playlist {
+			max-height: 140px;
+			overflow-y: scroll;
+			margin-top: 0rem;
 		}
 	}
 	@media (min-width: 800px) {
@@ -297,7 +319,9 @@
 					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
 						<div class="content">
 							<h2>{% if resource.title %}{{ resource.title }}{% endif %} ({% if resource.type %}{{ resource.type }}{% endif %})</h2>
-									<h3>{% if resource.auteur %}Par {{ resource.auteur }}{% endif %}</h3>
+									<h3>{% if resource.auteur %}
+										Par {{ resource.auteur|replace({'|':' ; '}) }}
+										{% endif %}</h3>
 										<p>{% if resource.title %}{{ resource.title }}{% endif %}{% if resource.resp1 %} / {{ resource.resp1 }}{% endif %}{% if resource.editeurlieu %}. - {{ resource.editeurlieu }} : {% endif %} {% if resource.editeur %}{{ resource.editeur }}{% endif %}{% if resource.anneedit %}, {{ resource.anneedit }}{% endif %}{% if resource.pagination %}. - {{ resource.pagination }}{% endif %} : ill., couv. ill. ; 31 cm</p>
 										<table class="table table-striped">
 										    <tbody>
@@ -308,52 +332,52 @@
 												</tr>
 												{% endif %}
 												{% if resource.tag %}
-												{% set tags = resource.tag|split(';') %}
+												{% set tags = resource.tag|split('|') %}
 												<tr>
 													<td>Mots-clés</td>
 													<td>
 													<div>
 													{% for tag in tags %}
-													<a href="{{ path('resources.search') }}?q={{ tag }}"><span class="index">{{ tag }}</a></span>
+													<a href="{{ path('resources.searchfacet') }}?q={{ tag }}&fields=tag"><span class="index">{{ tag }}</a></span>
 													{% endfor %}
 													</div>
 													</td>
 												</tr>
 												{% endif %}
 												{% if resource.person %}
-												{% set persons = resource.person|split(';') %}
+												{% set persons = resource.person|split('|') %}
 												<tr>
 													<td>Personnes</td>
 													<td>
 													<div>
 													{% for person in persons %}
-														<a href="{{ path('resources.search') }}?q={{ person }}"><span class="index">{{ person }}</a></span>
+														<a href="{{ path('resources.searchfacet') }}?q={{ person }}&fields=person"><span class="index">{{ person }}</a></span>
 													{% endfor %}
 													</div>
 													</td>
 												</tr>
 												{% endif %} 
 												{% if resource.oeuvre %}
-												{% set oeuvres = resource.oeuvre|split(';') %}
+												{% set oeuvres = resource.oeuvre|split('|') %}
 												<tr>
 													<td>Oeuvres</td>
 													<td>
 													<div>
 													{% for oeuvre in oeuvres %}
-													<a href="{{ path('resources.search') }}?q={{ oeuvre }}"><span class="index">{{ oeuvre }}</a></span>
+													<a href="{{ path('resources.searchfacet') }}?q={{ oeuvre }}&fields=oeuvre"><span class="index">{{ oeuvre }}</a></span>
 													{% endfor %}
 													</div>
 													</td>
 												</tr>
 												{% endif %} 
 												{% if resource.organisme %}
-												{% set organismes = resource.organisme|split(';') %}
+												{% set organismes = resource.organisme|split('|') %}
 												<tr>
 													<td>Structures</td>
 													<td>
 													<div>
 													{% for organisme in organismes %}
-													<a href="{{ path('resources.search') }}?q={{ organisme }}"><span class="index">{{ organisme }}</a></span>
+													<a href="{{ path('resources.searchfacet') }}?q={{ organisme }}&fields=organisme"><span class="index">{{ organisme }}</a></span>
 													{% endfor %}
 													</div>
 													</td>
@@ -363,7 +387,7 @@
 												<tr>
 													<td>Lieux</td>
 													<td>
-													<span class="lieu">{{ resource.geo|replace({';':' ; '}) }}</span>
+													<span class="lieu">{{ resource.geo|replace({'|':' ; '}) }}</span>
 													</td>
 												</tr>
 												{% endif %}
@@ -376,23 +400,42 @@
 										   </tbody>
 										</table>
 						</div>
-						<!--<div class="image">-->
-						<!--<div class="image" style="display:none;">-->
-							<div class="image" style="">
-							<!--<img src="images/banner.jpg" alt="" />-->
-							<!-- video -->
-							
-							<div style="padding:60.77% 0 0 0;position:relative;"><iframe title="numeridanse.tv" allow="autoplay; fullscreen" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen" src="https://www.numeridanse.tv/player/d61ef0d1-b940-4e34-a683-7a0c9cf6207f" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" ></iframe></div>
-							
-							<!-- images -->
-							<!--
-							<div style="padding:100% 0 0 0;position:relative;">
-								<iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" src="http://inventaire.cnd.fr/archives-en-ligne/img-viewer/LAZZ19691015/viewer.html" allow="fullscreen" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen" >
-								</iframe>
+						{% if resource.urlDoc is not empty and resource.urlDoc is not null %}
+							{% set vars = {'url': resource.urlDoc} %}
+							{% include 'lecteurs/photographie.html' with vars %}
+						{% endif %}
+
+						{% if resource.video is not empty and resource.video is not null %}
+							{% set vars = {'url': resource.video} %}
+							{% include 'lecteurs/video.html' with vars %}
+						{% endif %}
+						{% if resource.audio is not empty and resource.audio is not null and resource.pdf is empty %}
+							{% set vars = {'url': resource.audio, 'author': resource.auteur} %}
+							{% include 'lecteurs/audio.html' with vars %}
+						{% endif %}
+						{% if resource.pdf is not empty and resource.pdf is not null and resource.audio is empty %}
+							{% set vars = {'url': resource.pdf} %}
+							{% include 'lecteurs/pdf.html' with vars %}
+						{% endif %}
+						
+						<!-- video -->
+						<!--
+						<div class="image" style="">
+							<div style="padding:60.77% 0 0 0;position:relative;">
+								<iframe title="numeridanse.tv" allow="autoplay; fullscreen" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen" src="https://www.numeridanse.tv/player/" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" ></iframe>
 							</div>
-							-->
-							
 						</div>
+						-->
+						
+						<!-- images -->
+						
+						
+						
+						<!-- Autres-->
+						<!--<
+						div class="image" style="display:none;">
+						</div>
+						-->
 					</section>
 
 	<section class="et-hero-tabs">

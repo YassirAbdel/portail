@@ -74,9 +74,7 @@ class ResourceController extends AbstractController {
             'current_page' => 'resources',
             'resources' => $resources,
             // 1.4. on envoie le formulaire à la vue
-            'form' => $form->createView()
-            
-            
+            'form' => $form->createView()    
         ]);
     }
     

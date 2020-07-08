@@ -6,12 +6,9 @@
 				<div class="col-md-3">{{ form_row(form.resp1) }}</div>
 			</div>
 			<div class="row">
-				
 				<div class="col-md-3">{{ form_row(form.person, {'attr': {'rows': '5'}}) }}</div>
-				<div class="col-md-3">{{ form_row(form.persons) }}</div>
 				<div class="col-md-3">{{ form_row(form.oeuvre, {'attr': {'rows': '5'}}) }}</div>
 				<div class="col-md-3">{{ form_row(form.organisme) }}</div>
-				
 			</div>
 			<div class="row">
 				<div class="col-md-4">{{ form_row(form.tag) }}</div>
@@ -33,10 +30,16 @@
 				<div class="col-md-4">{{ form_row(form.analyse) }}</div>
 				<div class="col-md-4">{{ form_row(form.rights) }}</div>
 				<div class="col-md-4">{{ form_row(form.oai) }}</div>
-				
 			</div>
-			 
-			 	{{ form_row(form.comment) }}
+			<div class="row">
+				<div class="col-md-12">{{ form_row(form.comment) }}
+			</div>
+			<div class="row">
+				<div class="col-md-12">{{ form_row(form.persons) }}</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">{{ form_row(form.subjects) }}</div>
+			</div>
 			
 			{{ form_rest(form) }}
 			

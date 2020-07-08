@@ -1,0 +1,51 @@
+{% extends 'base-frontoffice.html.twig' %}
+{% block title 'Portail documentaire - Résultats' %}
+{% block body %}			
+				<!-- Six -->
+					<section>
+						<h3 class="nb-resultats">Nombre de ressources : {{ nbresult }}</h3>
+						<div class="row">
+							{% for resource in results %}
+							{% set resource = resource.transformed %}
+							{% include '/resource/_resource.html.twig' %}
+							{% endfor %}
+						</div>
+						<div class="row">
+							<div class="col">
+{% block pagination %}
+	
+			{{ pagerfanta(results, 'twitter_bootstrap4', {prev_message: '← Précédent', next_message: 'Suivant →'}) }}
+	
+{% endblock %}
+							</div>
+						</div>
+
+					</section>
+				<!-- Seven -->
+					<section class="wrapper style1 align-center">
+						<div class="inner medium">
+							<h2>Vous avez une question</h2>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field half">
+										<label for="name">Nom</label>
+										<input type="text" name="name" id="name" value="" />
+									</div>
+									<div class="field half">
+										<label for="email">Email</label>
+										<input type="email" name="email" id="email" value="" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="6"></textarea>
+									</div>
+								</div>
+								<ul class="actions special">
+									<li><input type="submit" name="submit" id="submit" value="Envoyer" /></li>
+								</ul>
+							</form>
+
+						</div>
+					</section>
+{% endblock %}
+				

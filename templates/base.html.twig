@@ -33,21 +33,22 @@
     						<span class="sr-only">(current)</span>
     				</a></li>
     				 -->
-    				 <li class="nav-item"><a class="nav-link {% if current_page is defined and current_page == 'home' %}active{% endif %}" href="{{ path('home') }}">Accueil</a></li>
+    				 <li class="nav-item"><a class="nav-link {% if current_page is defined and current_page == 'home' %}active{% endif %}" href="{{ path('admin.resource.index') }}">Accueil</a></li>
     				<li class="nav-item"><a class="nav-link {% if current_page is defined and current_page == 'resources' %}active{% endif %}" href="{{ path('resource.index') }}">Explorer les ressources</a></li>
     				{% if is_granted('ROLE_ADMIN')  or is_granted('ROLE_DOC') %}
     				<li class="nav-item dropdown"><a
     					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
     					role="button" data-toggle="dropdown" aria-haspopup="true"
-    					aria-expanded="false"> Gestion des collections </a>
+    					aria-expanded="false">Gérer les ressources</a>
     					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-    						<a class="dropdown-item" href="{{ path('admin.resource.index') }}">Toutes les notices</a>
+    						<a class="dropdown-item" href="{{ path('admin.resource.index') }}">Toutes les ressources</a>
     						<!--  
     						<a class="dropdown-item" href="{{ path('admin.resource.add') }}">Nouvelle notice</a>
     						-->
-    						<div class="dropdown-divider"></div>
-    						<a class="dropdown-item" href="{{ path('admin.subject.index') }}">Les ensembles documentaires</a>
-    						<a class="dropdown-item" href="{{ path('admin.category.index') }}">Les rubriques</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="{{ path('admin.category.index') }}">Les collections</a>
+    						<a class="dropdown-item" href="{{ path('admin.subject.index') }}">Les sous-collections</a>
+    						
     						<!-- 
     						<a class="dropdown-item" href="#">Autres</a>
     						-->
@@ -80,23 +81,20 @@
     					<li class="nav-item"><a class="nav-link" href={{ path('logout') }}>Déconnexion</a></li>
     				{% endif %}
     				{% if is_granted('ROLE_ADMIN')  or is_granted('ROLE_DOC') or is_granted('ROLE_VISI') %}
-    					
-    					
     					<li class="nav-item">Bonjour {{ app.session.get('username') }}</li>
-    					
     					<li class="nav-item"><a class="nav-link" style="display:inline;" href={{ path('logout') }}>Déconnexion</a></li>
     				{% else %}
     					<li class="nav-item"><a class="nav-link" href={{ path('app_login') }}>Connexion</a></li>	
     				{% endif %}
     			<li class="nav-item">
-					<a href="{{ path('basket.new') }}">Votre sélection</a> : 
+					<a class="nav-link" style="display:inline;" href="{{ path('basket.new') }}">Votre sélection</a>
 					{% set panier = app.session.get('panier') %}
 				    {% set count =  panier|length %}
 				    {% if(count > 0) %}
-				    	{{ count }} document (s)
-				    {% else %}
-				    	0 document (s)
-				    {% endif %}
+				    	({{ count }})
+					{% else %}
+						(0)
+					{% endif %}
     		   </li>
     			</ul>
     			<!-- 

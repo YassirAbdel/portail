@@ -1,0 +1,5 @@
+cd web/util/eximport
+
+/cnd_data/cadic/cadic-test/phpdev/apache/bin/php /cnd_data/cadic/cadic-test/web/util/eximport/eximport.php -config_file=config/export_ils_doc.inc -fic_import=donnees/export/ils_doc.csv -debug=0 -mode_test=0 > test.log
+
+/cnd_data/cadic/cadic-test/phpdev/apache/bin/php /cnd_data/cadic/cadic-test/web/util/eximport/eximport.php -config_file=config/export_pho_doc.inc -fic_import=donnees/export/ils_pho.csv -debug=0 -mode_test=0 > test.log
