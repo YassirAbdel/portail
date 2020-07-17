@@ -37,6 +37,7 @@ use Pagerfanta\Pagerfanta;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Elastica\Aggregation\Terms;
 use Elastica\Client;
+use Elastica\Query\Terms as TermsSearch;
 
 class HomeController  extends AbstractController {
     
@@ -57,6 +58,7 @@ class HomeController  extends AbstractController {
         // $this->manager = $manager;
         
     }
+    
 
     /**
      * @Route("/test", name="hometest")
@@ -240,29 +242,50 @@ public function searchtest(Request $request, Session $session, TransformedFinder
      {
         $q = $request->get('q', null);
         $field = $request->get('fields', null);
-         
+        $q = self::enleverCaracteresSpeciaux($q);
         
-
+        if ($field == '_all') {
+            if (strlen($q) >= 40) {
+                $q = substr($q, 0 , 40);
+            }
+        }
+        
          //$q = '*' . $q . "*";
-         $chacacters = array("/","L'","'",",","0","1","2","3","4","5","6","7","8","9","(",")",".");
-         $chacacters2 = array("-"," ");
+         $chacacters = array("\"","/","L'",",","0","1","2","3","4","5","6","7","8","9","(",")",".","&","quot;","[","]","(Le)","(La)","(L')","»","«",":","?","!");
+         $chacacters2 = array("'","-"," ","'");
          //$chacacters = array(",");
          $q = str_replace($chacacters, "", $q);
          $q = str_replace($chacacters2, "*", $q);
          $q = rtrim($q);
-         //$q = '.' . $q . ".";
-         $q = '*'.$q.'*';
-         
-         dump($field);
+         $q = '*'.$q."*";
          dump($q);
+         
+         
+         
 
          $searchQuery = new \Elastica\Query\QueryString();
-         $searchQuery->setParam('query', $q);
+         $termsSearch = new TermsSearch;
+         //$searchQuery->setParam('query', $q);
          $searchQuery->setDefaultOperator('AND');
+        //$searchQuery->setDefaultField('*');
+        $searchQuery->setAllowLeadingWildcard('true');
+        $searchQuery->setAnalyzeWildcard('true');
+        $searchQuery->setPhraseSlop(0);
+        
+        
+         
+        
+         
          if ($field == '_all') {
-            $field = '_all';
-            $searchQuery->setFields(['person'],['title'],['oeuvre'],['organisme'],['type'],['tag']);
-            
+            //$field = '_all';
+            //$searchQuery->setFields(['person'],['title'],['oeuvre'],['organisme'],['type'],['tag']);
+            $searchQuery->setDefaultField('*');
+            //$termsSearch->setParams([
+
+            //])
+            dump("F : ".$field);
+            dump('Q: ' . $q);
+           
          }
          elseif ($field == 'person'){
             $searchQuery->setFields(['person']);
@@ -280,16 +303,26 @@ public function searchtest(Request $request, Session $session, TransformedFinder
             $searchQuery->setFields(['tag']);
          }
          
-         
+         $searchQuery->setQuery($q);
+
          $paginatorAdapter = $resourcesFinder->createHybridPaginatorAdapter($searchQuery);
          $pagination = new Pagerfanta(new FantaPaginatorAdapter($paginatorAdapter));
-
+        
          /** Facets */
+         if ($field == '_all'){
+            $typesFacet = $this->getSearchFacet('types', 'type', $q);
+            $personsFacet = $this->getSearchFacet('persons', 'person', $q);
+            $oeuvresFacet = $this->getSearchFacet('oeuvres', 'oeuvre', $q);
+            $organismesFacet = $this->getSearchFacet('organismes', 'organisme', $q);
+            $tagsFacet = $this->getSearchFacet('tags', 'tag', $q);
+         }
+         elseif ($field == 'person' || $field == 'oeuvre' || $field == 'organisme' || $field == 'type' || $field == 'tag') {
          $typesFacet = $this->getFacet('types', 'type', $q, $field);
          $personsFacet = $this->getFacet('persons', 'person', $q, $field);
          $oeuvresFacet = $this->getFacet('oeuvres', 'oeuvre', $q, $field);
          $organismesFacet = $this->getFacet('organismes', 'organisme', $q, $field);
          $tagsFacet = $this->getFacet('tags', 'tag', $q, $field);
+        }
          dump($typesFacet);
          dump($personsFacet);
          dump($oeuvresFacet);
@@ -308,8 +341,9 @@ public function searchtest(Request $request, Session $session, TransformedFinder
             //'form' => $form->createView()
         ]);
 
-     }
+     }    
 
+    
 
      /**
      * @route("/search", name="resources.search")
@@ -320,50 +354,133 @@ public function searchtest(Request $request, Session $session, TransformedFinder
         $q = $request->get('q', null);
         $field = $request->get('fields', null);
 
+       
+        //$q = self::convert_from_latin1_to_utf8_recursively($q);
+        $q = self::enleverCaracteresSpeciaux($q);
         $q = htmlspecialchars($q);
-        if (strlen($q) >= 30) {
-            $q = substr($q, 0 , 30);
+        
+        
+        if (strlen($q) >= 40) {
+            $q = substr($q, 0 , 40);
         }
         //dump($q);die();
         //parse_str($q, $result);
        
 
         //$chacacters = array("/","L'","'",",","0","1","2","3","4","5","6","7","8","9","(",")",".","-","\"");
-        //$chacacters2 = array(" ");
-        $chacacters = array("&","quot;");
+        $chacacters2 = array(" ");
+        $chacacters = array("&","quot;","[","]","(Le)","(La)","(L')","»","«",":","?","!","'");
         $q = str_replace($chacacters, "", $q);
-         //$q = str_replace($chacacters2, "*", $q);
+        $q = str_replace($chacacters2, "%", $q);
         $q = rtrim($q);
+        //dump($q);die();
+        //$q = '*%'.$q.'%*';
+       // $q = 'Gopal ram';
+        
         $searchQuery = new \Elastica\Query\QueryString();
         $searchQuery->setDefaultOperator('AND');
-        //$searchQuery->setParam('query', $q);
-        $searchQuery->setQuery($q);
-        if ($field == '_all') {
-            $field = '_all';
-            $searchQuery->setFields(['person'],['title'],['oeuvre'],['organisme'],['type'],['tag']);
-            
-         }
-         elseif ($field == 'person'){
-            $searchQuery->setFields(['person']);
-         }
-         elseif ($field == 'oeuvre'){
-            $searchQuery->setFields(['oeuvre']);
-         }
-         elseif ($field == 'organisme'){
-            $searchQuery->setFields(['organisme']);
-         }
-         elseif ($field == 'type'){
-            $searchQuery->setFields(['type']);
-         }
-         elseif ($field == 'tag'){
-            $searchQuery->setFields(['tag']);
-         }
-        //$q = '.'.$q.'.';
+        $searchQuery->setDefaultField('*');
+        $searchQuery->setAllowLeadingWildcard('true');
+        $searchQuery->setAnalyzeWildcard('true');
+        $searchQuery->setPhraseSlop(0);
+        
+        
+        //$searchQuery->setFields(['auteur','title','person','oeuvre','organisme','type','tag','collection','comment']);
+        //$searchQuery->setFields(["title","person","comment"]);
+        //$searchQuery->setFields(["resource.*"]);
+        //$searchQuery->setParam('query', '.'.$q.'*');
+       
+        $searchQuery->setQuery($q.'*');
+        
+        
         $paginatorAdapter = $resourcesFinder->createHybridPaginatorAdapter($searchQuery);
         $pagination = new Pagerfanta(new FantaPaginatorAdapter($paginatorAdapter));
+        /** Facets */
+        $typesFacet = $this->getSearchFacet('types', 'type', $q);
+        $personsFacet = $this->getSearchFacet('persons', 'person', $q);
+        $oeuvresFacet = $this->getSearchFacet('oeuvres', 'oeuvre', $q);
+        $organismesFacet = $this->getSearchFacet('organismes', 'organisme', $q);
+        $tagsFacet = $this->getSearchFacet('tags', 'tag', $q);
+        //dump($field);
+        dump($q);
+        dump("Type : ");
+        dump($typesFacet);
+        dump("Personnes : ");
+        dump($personsFacet);
+        dump("Oeuvres : ");
+        dump($oeuvresFacet);
+        dump("Organismes ");
+        dump($organismesFacet);
+        dump("Tags ");
+        dump($tagsFacet);
 
+        $pagination->setCurrentPage($request->query->getInt('page', 1));
+        $pagination->setMaxPerPage(12);
+        $session->set('q', $q);
+        $nbresult = $pagination->getNbResults();
+        
+        return $this->render('pages/results.html.twig',[
+           'current_page' => 'results',
+           'pagination' => $pagination,
+           'nbresult' => $nbresult
+           //'form' => $form->createView()
+       ]);
+
+    }
+
+    /**
+     * @route("/searchfitres", name="resources.searchfiltres")
+     */
+
+    public function searchFiltres(SessionInterface $session, Request $request, TransformedFinder  $resourcesFinder)
+    {
+        $q = $request->get('q', null);
+        $field = $request->get('fields', null);
+
+       
+        //$q = self::convert_from_latin1_to_utf8_recursively($q);
+        $q = self::enleverCaracteresSpeciaux($q);
+        $q = htmlspecialchars($q);
         
         
+        if (strlen($q) >= 40) {
+            $q = substr($q, 0 , 40);
+        }
+        //dump($q);die();
+        //parse_str($q, $result);
+       
+
+        //$chacacters = array("/","L'","'",",","0","1","2","3","4","5","6","7","8","9","(",")",".","-","\"");
+        $chacacters2 = array(" ");
+        $chacacters = array("&","quot;","[","]","(Le)","(La)","(L')","»","«",":","?","!");
+        $q = str_replace($chacacters, "", $q);
+        $q = str_replace($chacacters2, "%", $q);
+        $q = rtrim($q);
+        //dump($q);die();
+        //$q = '*%'.$q.'%*';
+       // $q = 'Gopal ram';
+        
+        $searchQuery = new \Elastica\Query\QueryString();
+        $searchQuery->setDefaultOperator('AND');
+        $searchQuery->setDefaultField('*');
+        $searchQuery->setAllowLeadingWildcard('true');
+        $searchQuery->setAnalyzeWildcard('true');
+        $searchQuery->setPhraseSlop(0);
+        $searchQuery->setParams([
+            'type' => $facet,
+            'person' => $q
+        ]);
+        
+        //$searchQuery->setFields(['auteur','title','person','oeuvre','organisme','type','tag','collection','comment']);
+        //$searchQuery->setFields(["title","person","comment"]);
+        //$searchQuery->setFields(["resource.*"]);
+        //$searchQuery->setParam('query', $q);
+
+        //$searchQuery->setQuery($q.'*');
+        
+        
+        $paginatorAdapter = $resourcesFinder->createHybridPaginatorAdapter($searchQuery);
+        $pagination = new Pagerfanta(new FantaPaginatorAdapter($paginatorAdapter));
         /** Facets */
         $typesFacet = $this->getSearchFacet('types', 'type', $q);
         $personsFacet = $this->getSearchFacet('persons', 'person', $q);
@@ -479,7 +596,7 @@ public function searchtest(Request $request, Session $session, TransformedFinder
         $elasticaClient = new Client();
         $index = $elasticaClient->getIndex('app');
         $getFacet = $index->search($query)->getAggregation($facet);
-       
+        
         return $getFacet;
 
         //return new JsonResponse($docTypes);
@@ -491,8 +608,6 @@ public function searchtest(Request $request, Session $session, TransformedFinder
     
     public function getSearchFacet($facet, $index, $queryfacet)
     {
-         
-        //dump($queryfacet);die();
         $termAgg = new Terms($facet);
         $termAgg->setField($index);
         $termAgg->setSize(30);
@@ -501,11 +616,13 @@ public function searchtest(Request $request, Session $session, TransformedFinder
 
         $query = new Query();
         $q = new BoolQuery;
+        //$q = $q . '*';
         
         $query->addAggregation($termAgg);
         $elasticaQuery = new \Elastica\Query\QueryString();
-        $elasticaQuery->setQuery($queryfacet);
+        $elasticaQuery->setQuery($queryfacet.'*');
         $elasticaQuery->setDefaultOperator('AND');
+        $elasticaQuery->setAnalyzeWildcard('true');
         
         //$elasticaQuery->setFields([$field]);
         
@@ -517,13 +634,20 @@ public function searchtest(Request $request, Session $session, TransformedFinder
         
         $elasticaClient = new Client();
         $index = $elasticaClient->getIndex('app');
-        $getFacet = $index->search($query)->getAggregation($facet);
-       
-        return $getFacet;
+    
+        $facets = $index->search($query)->getAggregation($facet);
+        
+        //$results = $index->search($query)->getResults();
+        return $facets;
 
-        //return new JsonResponse($docTypes);
+        //return new JsonResponse($facets);
     }
 
+/**
+ * Encode array from latin1 to utf8 recursively
+ * @param $text
+ * @return array|string
+ */
     public function enleverCaracteresSpeciaux($text) {
         $utf8 = array(
         '/[áàâãªä]/u' => 'a',
@@ -540,13 +664,38 @@ public function searchtest(Request $request, Session $session, TransformedFinder
         '/Ç/' => 'C',
         '/ñ/' => 'n',
         '/Ñ/' => 'N',
-        '//' => '-', // conversion d'un tiret UTF-8 en un tiret simple
-        '/[]/u' => ' ', // guillemet simple
-        '/[«»]/u' => ' ', // guillemet double
-        '/ /' => ' ', // espace insécable (équiv. à 0x160)
+        #'//' => '-', // conversion d'un tiret UTF-8 en un tiret simple
+        #'/[]/u' => ' ', // guillemet simple
+        #'/\[«»]/u' => ' ', // guillemet double
+        #'/ /' => ' ', // espace insécable (équiv. à 0x160)
         );
-        return preg_replace(array_keys($utf8), array_values($utf8), $text);
+        $text = preg_replace(array_keys($utf8), array_values($utf8), $text);
+        return $text;
         }
+
+ /**
+ * Encode array from latin1 to utf8 recursively
+ * @param $dat
+ * @return array|string
+ */
+   public static function convert_from_latin1_to_utf8_recursively($dat)
+   {
+      if (is_string($dat)) {
+         return utf8_encode($dat);
+      } elseif (is_array($dat)) {
+         $ret = [];
+         foreach ($dat as $i => $d) $ret[ $i ] = self::convert_from_latin1_to_utf8_recursively($d);
+
+         return $ret;
+      } elseif (is_object($dat)) {
+         foreach ($dat as $i => $d) $dat->$i = self::convert_from_latin1_to_utf8_recursively($d);
+
+         return $dat;
+      } else {
+         return $dat;
+      }
+   }
+
 }
 
 

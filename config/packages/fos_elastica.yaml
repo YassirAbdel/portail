@@ -19,11 +19,11 @@ fos_elastica:
                             facet_analyzer:
                                 type: custom
                                 tokenizer: keyword
-                                filter: [standard, lowercase, asciifolding, trim, french_stemmer, french_stop]
+                                filter: [standard, lowercase, asciifolding, trim]
                             facetMulti_analyzer:
                                 type: custom
-                                filter: [standard, lowercase, asciifolding, trim, french_stemmer, french_stop]
                                 tokenizer: my_tokenizer
+                                filter: [standard, lowercase, asciifolding, trim]
                                   
                         tokenizer:
                             my_tokenizer: 
@@ -31,12 +31,29 @@ fos_elastica:
                                 pattern: "|"
                         query:
                             query_string: 
-                                query: "kimchy\\"
-                                fields  : ["title","type","person","oeuvre","organisme","tag","auteur"]
+                                #query: "kimchy\\"
+                                fields  : ["resource.*"]
                                 allow_leading_wildcard: true
                                 default_operator: AND
                                 #fuzzy_max_expansions: 2
                                 #phrase_slop: 2
+                                #refix_length: 3
+                                #zero_terms_query: all
+                                #term:
+                                    #auteur: keyword
+                                match:
+                                    auteur:
+                                        operator: and
+                                        zero_terms_query: all
+
+                        stored_fields: ['_none_']
+                        #match_phrase_prefix: 
+                            #auteur:
+                                #zero_terms_query: all
+                        mappings:
+                            properties:
+                                 auteur: keyword
+
                         filter:
                             french_elision:
                                 type: elision
@@ -56,19 +73,16 @@ fos_elastica:
                                 side: front
                                 min_gram: 1
                                 max_gram: 20
-                            
-
-
             types:
                 resource:
                     dynamic: false
                     properties:
                         id: ~
-                        title: &ent_text
-                            analyzer: index_analyzer
+                        title:
+                            analyzer: facetMulti_analyzer
                             search_analyzer: search_analyzer
                             type: text
-                            #boost: 10
+                            boost: 8
                         type:
                             analyzer: facet_analyzer
                             search_analyzer: search_analyzer
@@ -78,28 +92,40 @@ fos_elastica:
                             analyzer: facetMulti_analyzer
                             search_analyzer: search_analyzer
                             type: text
-                            fielddata: true 
+                            fielddata: true
+                            boost: 5 
                         oeuvre:
                             analyzer: facetMulti_analyzer
                             search_analyzer: search_analyzer
                             type: text
                             fielddata: true
+                            boost: 3
                         organisme:
                             analyzer: facetMulti_analyzer
                             search_analyzer: search_analyzer
                             type: text
                             fielddata: true
-                        geo: *ent_text
+                            boost: 3
+                        geo: &ent_text
+                            analyzer: index_analyzer
+                            search_analyzer: search_analyzer
+                            type: text
                         tag: 
                             analyzer: facetMulti_analyzer
                             search_analyzer: search_analyzer
                             type: text
                             fielddata: true
+                            boost: 3
                         auteur: 
-                            analyzer: index_analyzer
+                            analyzer: facetMulti_analyzer
                             search_analyzer: search_analyzer
                             type: text
                             fielddata: true
+                            boost: 3
+                            #index_options: offsets
+                            #position_increment_gap : 2
+                            
+                            
                         anneedit: ~
                         collection: *ent_text
                         comment: *ent_text

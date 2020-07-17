@@ -320,7 +320,7 @@
 						<div class="content">
 							<h2>{% if resource.title %}{{ resource.title }}{% endif %} ({% if resource.type %}{{ resource.type }}{% endif %})</h2>
 									<h3>{% if resource.auteur %}
-										Par {{ resource.auteur|replace({'|':' ; '}) }}
+										{{ resource.auteur|replace({'|':' ; '}) }}
 										{% endif %}</h3>
 										<p>{% if resource.title %}{{ resource.title }}{% endif %}{% if resource.resp1 %} / {{ resource.resp1 }}{% endif %}{% if resource.editeurlieu %}. - {{ resource.editeurlieu }} : {% endif %} {% if resource.editeur %}{{ resource.editeur }}{% endif %}{% if resource.anneedit %}, {{ resource.anneedit }}{% endif %}{% if resource.pagination %}. - {{ resource.pagination }}{% endif %} : ill., couv. ill. ; 31 cm</p>
 										<table class="table table-striped">
