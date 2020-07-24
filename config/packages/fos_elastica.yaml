@@ -30,29 +30,37 @@ fos_elastica:
                                 type: simple_pattern_split
                                 pattern: "|"
                         query:
+                            #span_near:
+                                #slop: 12
+                                #in_order: true
                             query_string: 
-                                #query: "kimchy\\"
-                                fields  : ["resource.*"]
+                                query: "kimchy\\"
+                                fields  : ['auteur','person','title','oeuvre','organisme','type','tag']
                                 allow_leading_wildcard: true
                                 default_operator: AND
+                                #query" : "this AND that OR thus"
                                 #fuzzy_max_expansions: 2
                                 #phrase_slop: 2
                                 #refix_length: 3
                                 #zero_terms_query: all
                                 #term:
                                     #auteur: keyword
-                                match:
-                                    auteur:
-                                        operator: and
-                                        zero_terms_query: all
+                                #match:
+                                    #auteur:
+                                        #operator: OR
+                                        #zero_terms_query: all
+                                        #ordered : false
+                            #match:
+                                #auteur:
+                                    #zero_terms_query: all
 
-                        stored_fields: ['_none_']
+
+                        #stored_fields: ['_none_']
                         #match_phrase_prefix: 
                             #auteur:
                                 #zero_terms_query: all
-                        mappings:
-                            properties:
-                                 auteur: keyword
+                        
+
 
                         filter:
                             french_elision:
@@ -73,9 +81,15 @@ fos_elastica:
                                 side: front
                                 min_gram: 1
                                 max_gram: 20
+                        bool:
+                            must:
+                                term:
+                                    isActive: 1
+                                    isPrivate: 0
+                                    isOwner: 1
             types:
                 resource:
-                    dynamic: false
+                    dynamic: strict
                     properties:
                         id: ~
                         title:
@@ -84,7 +98,7 @@ fos_elastica:
                             type: text
                             boost: 8
                         type:
-                            analyzer: facet_analyzer
+                            analyzer: facetMulti_analyzer
                             search_analyzer: search_analyzer
                             type: text
                             fielddata: true
@@ -106,8 +120,8 @@ fos_elastica:
                             type: text
                             fielddata: true
                             boost: 3
-                        geo: &ent_text
-                            analyzer: index_analyzer
+                        geo: 
+                            analyzer: facetMulti_analyzer
                             search_analyzer: search_analyzer
                             type: text
                         tag: 
@@ -122,13 +136,39 @@ fos_elastica:
                             type: text
                             fielddata: true
                             boost: 3
+                        allIndex: 
+                            analyzer: facetMulti_analyzer
+                            search_analyzer: search_analyzer
+                            type: text
+                            boost: 3
                             #index_options: offsets
                             #position_increment_gap : 2
-                            
-                            
                         anneedit: ~
-                        collection: *ent_text
+                        collection: &ent_text
+                            analyzer: index_analyzer
+                            search_analyzer: search_analyzer
+                            type: text
+
                         comment: *ent_text
+                        resp1: ~
+                    #mappings:
+                        #title: 
+                            #type: text
+                        #auteur: 
+                            #type: text
+                    dynamic_templates:
+                        my_index:
+                            match: "*"
+                            match_mapping_type: "*"
+                            mapping:
+                                type: text
+                        strings:
+                            match_mapping_type: string
+                            mapping:
+                                type": text
+                                fields:
+                                    type: text
+                                    ignore_above: 256
                         
                     persistence:
                         driver: orm

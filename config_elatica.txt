@@ -1,0 +1,296 @@
+# Default configuration for extension with alias: "fos_elastica"
+fos_elastica:
+    clients:
+
+        # Prototype
+        id:
+            connections:
+
+                # Prototype
+                -
+                    url:                  ~
+                    username:             ~
+                    password:             ~
+                    host:                 ~
+                    port:                 ~
+                    proxy:                ~
+                    http_error_codes:
+
+                        # Defaults:
+                        - 400
+                        - 403
+                        - 404
+                    aws_access_key_id:    ~
+                    aws_secret_access_key: ~
+                    aws_region:           ~
+                    aws_session_token:    ~
+                    ssl:                  false
+                    logger:               fos_elastica.logger
+                    compression:          false
+                    headers:
+
+                        # Prototype
+                        name:                 ~
+                    curl:
+
+                        # Prototype
+                        64:                   ~
+                    transport:            ~
+                    timeout:              ~
+                    connectTimeout:       ~
+                    retryOnConflict:      0
+                    persistent:           true
+            timeout:              ~
+            connectTimeout:       ~
+            headers:              ~
+            connectionStrategy:   Simple
+    indexes:
+
+        # Prototype
+        name:
+
+            # Defaults to the name of the index, but can be modified if the index name is different in ElasticSearch
+            index_name:           ~
+            use_alias:            false
+            client:               ~
+            finder:               false
+            type_prototype:
+                analyzer:             ~
+                persistence:
+                    driver:               orm
+                    model:                null
+                    repository:           ~
+                    identifier:           id
+                    provider:
+                        batch_size:           100
+                        clear_object_manager: true
+                        debug_logging:        true
+                        query_builder_method: createQueryBuilder
+                        service:              ~
+                    listener:
+                        enabled:              true
+                        insert:               true
+                        update:               true
+                        delete:               true
+                        flush:                true
+                        defer:                false
+                        logger:               false
+                        service:              ~
+                    finder:
+                        service:              ~
+                    elastica_to_model_transformer:
+                        hints:
+
+                            # Prototype
+                            -
+                                name:                 ~
+                                value:                ~
+                        hydrate:              true
+
+                        # Silently ignore results returned from Elasticsearch without corresponding persistent object.
+                        ignore_missing:       false
+                        query_builder_method: createQueryBuilder
+                        service:              ~
+                    model_to_elastica_transformer:
+                        service:              ~
+                    persister:
+                        refresh:              ~ # One of "true"; "wait_for"; "false"
+                        service:              ~
+                serializer:
+                    groups:               []
+                    version:              ~
+                    serialize_null:       false
+            settings:             []
+            types:
+
+                # Prototype
+                name:
+                    date_detection:       ~
+                    dynamic_date_formats: []
+                    analyzer:             ~
+                    numeric_detection:    ~
+                    dynamic:              ~
+                    indexable_callback:   ~
+                    persistence:
+                        driver:               orm
+                        model:                null
+                        repository:           ~
+                        identifier:           id
+                        provider:
+                            batch_size:           100
+                            clear_object_manager: true
+                            debug_logging:        true
+                            query_builder_method: createQueryBuilder
+                            service:              ~
+                        listener:
+                            enabled:              true
+                            insert:               true
+                            update:               true
+                            delete:               true
+                            flush:                true
+                            defer:                false
+                            logger:               false
+                            service:              ~
+                        finder:
+                            service:              ~
+                        elastica_to_model_transformer:
+                            hints:
+
+                                # Prototype
+                                -
+                                    name:                 ~
+                                    value:                ~
+                            hydrate:              true
+
+                            # Silently ignore results returned from Elasticsearch without corresponding persistent object.
+                            ignore_missing:       false
+                            query_builder_method: createQueryBuilder
+                            service:              ~
+                        model_to_elastica_transformer:
+                            service:              ~
+                        persister:
+                            refresh:              ~ # One of "true"; "wait_for"; "false"
+                            service:              ~
+                    serializer:
+                        groups:               []
+                        version:              ~
+                        serialize_null:       false
+                    _id:
+                        path:                 ~
+                    properties:
+
+                        # Prototype
+                        name:                 ~
+                    dynamic_templates:
+
+                        # Prototype
+                        -                     []
+                    _source:
+                        excludes:
+
+                            # Prototype
+                            name:                 ~
+                        includes:
+
+                            # Prototype
+                            name:                 ~
+                        compress:             ~
+                        compress_threshold:   ~
+                        enabled:              true
+                    _routing:
+                        required:             ~
+                        path:                 ~
+                    _parent:
+                        type:                 ~
+                        property:             null
+                        identifier:           id
+                    _all:
+                        enabled:              true
+                        analyzer:             ~
+    index_templates:
+
+        # Prototype
+        name:
+
+            # Defaults to the name of the index template, but can be modified if the index name is different in ElasticSearch
+            template_name:        ~
+            template:             ~ # Required
+            client:               ~
+            settings:             []
+            types:
+
+                # Prototype
+                name:
+                    date_detection:       ~
+                    dynamic_date_formats: []
+                    analyzer:             ~
+                    numeric_detection:    ~
+                    dynamic:              ~
+                    indexable_callback:   ~
+                    persistence:
+                        driver:               orm
+                        model:                null
+                        repository:           ~
+                        identifier:           id
+                        provider:
+                            batch_size:           100
+                            clear_object_manager: true
+                            debug_logging:        true
+                            query_builder_method: createQueryBuilder
+                            service:              ~
+                        listener:
+                            enabled:              true
+                            insert:               true
+                            update:               true
+                            delete:               true
+                            flush:                true
+                            defer:                false
+                            logger:               false
+                            service:              ~
+                        finder:
+                            service:              ~
+                        elastica_to_model_transformer:
+                            hints:
+
+                                # Prototype
+                                -
+                                    name:                 ~
+                                    value:                ~
+                            hydrate:              true
+
+                            # Silently ignore results returned from Elasticsearch without corresponding persistent object.
+                            ignore_missing:       false
+                            query_builder_method: createQueryBuilder
+                            service:              ~
+                        model_to_elastica_transformer:
+                            service:              ~
+                        persister:
+                            refresh:              ~ # One of "true"; "wait_for"; "false"
+                            service:              ~
+                    serializer:
+                        groups:               []
+                        version:              ~
+                        serialize_null:       false
+                    _id:
+                        path:                 ~
+                    properties:
+
+                        # Prototype
+                        name:                 ~
+                    dynamic_templates:
+
+                        # Prototype
+                        -                     []
+                    _source:
+                        excludes:
+
+                            # Prototype
+                            name:                 ~
+                        includes:
+
+                            # Prototype
+                            name:                 ~
+                        compress:             ~
+                        compress_threshold:   ~
+                        enabled:              true
+                    _routing:
+                        required:             ~
+                        path:                 ~
+                    _parent:
+                        type:                 ~
+                        property:             null
+                        identifier:           id
+                    _all:
+                        enabled:              true
+                        analyzer:             ~
+
+    # Defaults to the first client defined
+    default_client:       ~
+
+    # Defaults to the first index defined
+    default_index:        ~
+    default_manager:      orm
+    serializer:
+        callback_class:       FOS\ElasticaBundle\Serializer\Callback
+        serializer:           serializer
+

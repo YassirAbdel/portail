@@ -36,7 +36,7 @@
                 {% for key,mp3 in urls %}
                   <div style="padding-bottom: 3px;" class="black-player-song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="{{key}}" data-amplitude-playlist="emancipator">
                     <div class="song-meta-container">
-                      <span class="individual-song-name">Partie {{key+1}}/{{count}}</span>
+                      <span class="individual-song-name">Partie&nbsp; {{key+1}}/{{count}}</span>
                       <span class="individual-song-artist"></span>
                     </div>
                   </div>
@@ -118,7 +118,7 @@
           songs: [
             {% for key,mp3 in urls %}
               {
-                "name": "Partie {{key+1}}/{{count}}",
+                "name": "Partie&nbsp; {{key+1}}/{{count}}",
                 "artist": "{{author|replace({'|':' ; '})}}",
                 "album": "",
                 "url": "http://cadic.cnd.fr/exl-audio/{{mp3}}",

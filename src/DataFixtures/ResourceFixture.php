@@ -1,5 +1,6 @@
 <?php
 namespace App\DataFixtures;
+ini_set('memory_limit', '-1');
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
 use Faker\Factory;
@@ -24,7 +25,7 @@ class ResourceFixture extends Fixture
     
     public function load(ObjectManager $manager)
     {
-        $stream = fopen('/Users/abdelmontet/Documents/http/portail/tests/ils_doc.csv', 'r');
+        $stream = fopen('/Users/abdelmontet/Documents/http/portail/tests/PHO_DOC_PHOTOS.csv', 'r');
         $cvs = Reader::createFromStream($stream);
         $cvs->setDelimiter(';');
         $cvs->setHeaderOffset(0);
@@ -65,67 +66,132 @@ class ResourceFixture extends Fixture
                     
                 }
             }
-            if (isset($record['DOC_TYPE'])) {  
+            if (isset($record['DOC_TYPE'])) {       
                 $resource->setType($record['DOC_TYPE']);
             }
-            if (isset($record['DOC_TITRE'])) {  
-                    $resource->setTitle($record['DOC_TITRE']);
+            if (isset($record['DOC_TITRE'])) { 
+                $resource->setTitle($record['DOC_TITRE']);
             }
-            if (isset($record['DOC_AUTEUR'])) {
-                    $resource->setAuteur($record['DOC_AUTEUR']);
+            if (isset($record['DOC_AUTEUR'])) { 
+                $resource->setAuteur($record['DOC_AUTEUR']);
             }
-            if (isset($record['DOC_COLLECTION'])) {
-                    $resource->setCollection($record['DOC_COLLECTION']);
+            if (isset($record['CND_TIT_F'])) { 
+                $resource ->setResp1($record['CND_TIT_F']);
             }
-            if (isset($record['CND_DIVERS'])) {
-                    $resource->setComment($record['CND_DIVERS']);
+            if (isset($record['DOC_LANGUE'])) { 
+                $resource->setLang($record['DOC_LANGUE']);
             }
-            if (isset($record['DOC_EDITEUR'])) {
-                    $resource->setEditeur($record['DOC_EDITEUR']);
+            if (isset($record['DOC_COMMENT'])) { 
+                $resource->setComment($record['DOC_COMMENT']);
             }
-            if (isset($record['DOC_LIEU_EDIT'])) {
-                    $resource->setEditeurlieu($record['DOC_LIEU_EDIT']);
+            //if (isset($record['CND_URL'])) {
+                //$resource->setUrlDoc($record['CND_URL']);
+            //}
+            if (isset($record['CND_OEUVRE'])) {
+                $resource->setOeuvre($record['CND_OEUVRE']);
             }
-            if (isset($record['DOC_GEO'])) {
-                   $resource->setGeo($record['DOC_GEO']);
+            if (isset($record['DOC_AUTEURSEC'])) {
+                $resource->setAuteurS($record['DOC_AUTEURSEC']);
             }
-            if (isset($record['DOC_ISBN'])) {
-                    $resource->setIsbn($record['DOC_ISBN']);
+            if (isset($record['DOC_AUTMORAL'])) {
+                $resource->setAuteurM($record['DOC_AUTMORAL']);
+            }
+            if (isset($record['PHO_RESP_EDIT'])) {
+                $resource->setResEdit($record['PHO_RESP_EDIT']);
             }
             if (isset($record['DOC_DP'])) {
-                    $resource->setAnneedit($record['DOC_DP']);
+                $resource->setAnneedit($record['DOC_DP']);
             }
-            if (isset($record['DOC_LANGUE'])) {
-                    $resource->setLang($record['DOC_LANGUE']);
+            if (isset($record['DOC_DP_STAT'])) {
+                $resource->setAnneeS(intval($record['DOC_DP_STAT']));
             }
-            if (isset($record['CND_OEUVRE'])) {
-                    $resource->setOeuvre($record['CND_OEUVRE']);
+            if (isset($record['DOC_DEE'])) {
+                $resource->setTag($record['DOC_DEE']);
+            }
+            if (isset($record['PHO_PERSON'])) {
+                $resource->setPerson($record['PHO_PERSON']);
+            }
+            if (isset($record['DOC_GEO'])) {
+                $resource->setGeo($record['DOC_GEO']);
+            }
+            if (isset($record['PHO_HISTORI'])) {
+                $resource->setPeHisto($record['PHO_HISTORI']);
             }
             if (isset($record['CND_COLL_AU'])) {
-                    $resource->setOrganisme($record['CND_COLL_AU']);
+                $resource->setOrganisme($record['CND_COLL_AU']);
             }
-            if (isset($record['CND_DESC_MAT'])) {
-                    $resource->setPagination($record['CND_DESC_MAT']);
+            if (isset($record['DOC_COLLECTION'])) {
+                $resource->setCollection($record['DOC_COLLECTION']);
             }
-            if (isset($record['DOC_DE'])) {
-                    $resource->setPerson($record['DOC_DE']);
+            if (isset($record['PHO_ORIGINE'])) {
+                $resource->setOrigDoc($record['PHO_ORIGINE']);
             }
-            if (isset($record['CND_TIT_F'])) {
-                    $resource->setResp1($record['CND_TIT_F']);
+            if (isset($record['PHO_COPYRIGHT'])) {
+                $resource->setCopyR($record['PHO_COPYRIGHT']);
             }
-            
-                    $resource->setRights(1);
-            if (isset($record['DOC_DL'])) {
-                    $resource->setTag($record['DOC_DL']);
+            if (isset($record['PHO_DROIT_IMG'])) {
+                $resource->setRightsA($record['PHO_DROIT_IMG']);
             }
-            if (isset($record['DOC_ANALYSE'])) {
-                    $resource->setAnalyse($record['DOC_ANALYSE']);
+            if (isset($record['DOC_SUP'])) {
+                $resource->setSupport($record['DOC_SUP']);
             }
-             $resource->setIdcadic($record['DOC_REF']);
-             $resource->setOai(1);
-             $resource->setLecteur('0');
-                
-                $manager->persist($resource);
+            if (isset($record['PHO_COULEUR'])) {
+                $resource->setCouleur($record['PHO_COULEUR']);
+            }
+            if (isset($record['PHO_FORMAT'])) {
+                $resource->setFormat($record['PHO_FORMAT']);
+            }
+            if (isset($record['PHO_FORMFILE'])) {
+                $resource->setFormFile($record['PHO_FORMFILE']);
+            }
+            if (isset($record['CND_DUREE'])) {
+                $resource->setDuree($record['CND_DUREE']);
+            }
+            if (isset($record['PHO_NB_DOC'])) {
+                $resource->setNbFiles($record['PHO_NB_DOC']);
+            }
+            if (isset($record['DOC_COTE'])) {
+                $resource->setCote($record['DOC_COTE']);
+            }
+            if (isset($record['PHO_NUMCD'])) {
+                $resource->setSupNum($record['PHO_NUMCD']);
+            }
+            if (isset($record['PHO_LOC_CD'])) {
+                $resource->setLocaSupnum($record['PHO_LOC_CD']);
+            }
+            if (isset($record['CND_COTE_P'])) {
+                $resource->setCoteNum($record['CND_COTE_P']);
+            }
+            if (isset($record['PHO_LOCDIAORI'])) {
+                $resource->setLocaSup($record['PHO_LOCDIAORI']);
+            }
+            if (isset($record['AUD_REF'])) {
+                $resource->setAudio($record['AUD_REF']);
+            }
+            if (isset($record['CND_VIDEO_REF1'])) {
+                $resource->setVideo($record['CND_VIDEO_REF1']);
+            }
+            if (isset($record['CND_URL'])) {
+                $resource->setUrlDoc($record['CND_URL']);
+            }
+            if (isset($record['DOC_ATTACHE'])) {
+               $resource->setPdf($record['DOC_ATTACHE']);
+            }
+            if (isset($record['IMG_REF'])) {
+                $resource->setImg($record['IMG_REF']);
+            }
+            if (isset($record['DOC_REF'])) {
+                $resource->setIdcadic($record['DOC_REF']);
+
+            }
+            $resource->setAllIndex($record['DOC_AUTEUR'].' '.$record['DOC_TITRE'].' '.$record['DOC_TYPE'].' '.$record['DOC_DEE'].' '.$record['CND_TIT_F'].' '.$record['CND_OEUVRE']);
+              
+            $resource->setRights(1);
+            $resource->setOai(1);
+            $resource->setAnalyse(1);
+            $resource->setLecteur('4');
+                    
+            $manager->persist($resource);
                 
                 // Each 20 resources persisted we flush everything
                 if (($i % $batchSize) === 0) {

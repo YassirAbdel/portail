@@ -240,52 +240,45 @@ public function searchtest(Request $request, Session $session, TransformedFinder
 
      public function searchFacet(SessionInterface $session, Request $request, TransformedFinder  $resourcesFinder)
      {
-        $q = $request->get('q', null);
+        $session->remove('q');
+        
+        $q = $request->get('q', null); 
+        $session->set('q', $q);
+        
+         
         $field = $request->get('fields', null);
         $q = self::enleverCaracteresSpeciaux($q);
-        
+        $q = rtrim($q);
         if ($field == '_all') {
-            if (strlen($q) >= 40) {
-                $q = substr($q, 0 , 40);
+            if (strlen($q) >= 100) {
+                $q = substr($q, 0 , 100);
             }
         }
         
-         //$q = '*' . $q . "*";
+
          $chacacters = array("\"","/","L'",",","0","1","2","3","4","5","6","7","8","9","(",")",".","&","quot;","[","]","(Le)","(La)","(L')","»","«",":","?","!");
+         //$chacacters = array("\"","/","L'",",",".","&","quot;","[","]","(Le)","(La)","(L')","»","«",":","?","!");
          $chacacters2 = array("'","-"," ","'");
-         //$chacacters = array(",");
-         $q = str_replace($chacacters, "", $q);
-         $q = str_replace($chacacters2, "*", $q);
-         $q = rtrim($q);
+         //$chacacters2 = array("'"," ","'");
+         $q = str_replace($chacacters, "*", $q);
+         $q = str_replace($chacacters2, "* *", $q);
+         
+       
          $q = '*'.$q."*";
-         dump($q);
-         
-         
          
 
          $searchQuery = new \Elastica\Query\QueryString();
-         $termsSearch = new TermsSearch;
-         //$searchQuery->setParam('query', $q);
+         
          $searchQuery->setDefaultOperator('AND');
-        //$searchQuery->setDefaultField('*');
-        $searchQuery->setAllowLeadingWildcard('true');
-        $searchQuery->setAnalyzeWildcard('true');
-        $searchQuery->setPhraseSlop(0);
-        
-        
-         
-        
-         
+         $searchQuery->setAllowLeadingWildcard('true');
+         $searchQuery->setAnalyzeWildcard('true');
+         #$searchQuery->setPhraseSlop(0);
+         $query = new \Elastica\Query\BoolQuery();
          if ($field == '_all') {
-            //$field = '_all';
-            //$searchQuery->setFields(['person'],['title'],['oeuvre'],['organisme'],['type'],['tag']);
             $searchQuery->setDefaultField('*');
-            //$termsSearch->setParams([
-
-            //])
+            
             dump("F : ".$field);
             dump('Q: ' . $q);
-           
          }
          elseif ($field == 'person'){
             $searchQuery->setFields(['person']);
@@ -302,19 +295,20 @@ public function searchtest(Request $request, Session $session, TransformedFinder
          elseif ($field == 'tag'){
             $searchQuery->setFields(['tag']);
          }
-         
-         $searchQuery->setQuery($q);
+        
+        $searchQuery->setQuery($q);
+    
 
          $paginatorAdapter = $resourcesFinder->createHybridPaginatorAdapter($searchQuery);
          $pagination = new Pagerfanta(new FantaPaginatorAdapter($paginatorAdapter));
         
          /** Facets */
          if ($field == '_all'){
-            $typesFacet = $this->getSearchFacet('types', 'type', $q);
-            $personsFacet = $this->getSearchFacet('persons', 'person', $q);
-            $oeuvresFacet = $this->getSearchFacet('oeuvres', 'oeuvre', $q);
-            $organismesFacet = $this->getSearchFacet('organismes', 'organisme', $q);
-            $tagsFacet = $this->getSearchFacet('tags', 'tag', $q);
+            $typesFacet = $this->getSearchFacet('types', 'type', $q, 10);
+            $personsFacet = $this->getSearchFacet('persons', 'person', $q, 15);
+            $oeuvresFacet = $this->getSearchFacet('oeuvres', 'oeuvre', $q, 15);
+            $organismesFacet = $this->getSearchFacet('organismes', 'organisme', $q, 10);
+            $tagsFacet = $this->getSearchFacet('tags', 'tag', $q, 15);
          }
          elseif ($field == 'person' || $field == 'oeuvre' || $field == 'organisme' || $field == 'type' || $field == 'tag') {
          $typesFacet = $this->getFacet('types', 'type', $q, $field);
@@ -331,13 +325,15 @@ public function searchtest(Request $request, Session $session, TransformedFinder
 
          $pagination->setCurrentPage($request->query->getInt('page', 1));
          $pagination->setMaxPerPage(12);
-         $session->set('q', $q);
+        
          $nbresult = $pagination->getNbResults();
          
          return $this->render('pages/results.html.twig',[
             'current_page' => 'results',
             'pagination' => $pagination,
-            'nbresult' => $nbresult
+            'nbresult' => $nbresult,
+            'typesFacet' => $typesFacet,
+            'personsFacet' => $personsFacet
             //'form' => $form->createView()
         ]);
 
@@ -606,11 +602,11 @@ public function searchtest(Request $request, Session $session, TransformedFinder
      * @route("/searchfacets", name="resources.searchfacets") 
      */
     
-    public function getSearchFacet($facet, $index, $queryfacet)
+    public function getSearchFacet($facet, $index, $queryfacet, $size)
     {
         $termAgg = new Terms($facet);
         $termAgg->setField($index);
-        $termAgg->setSize(30);
+        $termAgg->setSize($size);
         
         //$termAgg->setOrder("height_stats.avg", "desc");
 

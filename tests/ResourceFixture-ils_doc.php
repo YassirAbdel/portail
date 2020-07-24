@@ -1,5 +1,6 @@
 <?php
 namespace App\DataFixtures;
+ini_set('memory_limit', '-1');
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
 use Faker\Factory;
@@ -124,7 +125,11 @@ class ResourceFixture extends Fixture
              $resource->setIdcadic($record['DOC_REF']);
              $resource->setOai(1);
              $resource->setLecteur('0');
-                
+             //$resource->setAllIndex($record['DOC_AUTEUR'].' '.$record['DOC_TITRE'].' '.$record['DOC_DL'].' '.$record['DOC_TYPE'].' '.$record['DOC_DE'].' '.$record['CND_TIT_F'].' '.$record['CND_OEUVRE']);
+             $chacacters = array("|");
+             $allIndex = $record['DOC_AUTEUR'].' '.$record['DOC_TITRE'].' '.$record['CND_TIT_F'].' '.$record['DOC_DL'].' '.$record['DOC_TYPE'].' '.$record['CND_COLL_AU'].' '.$record['DOC_DE'].' '.$record['CND_OEUVRE'];
+             $allIndex = str_replace($chacacters, " ", $allIndex); 
+             $resource->setAllIndex($allIndex);     
                 $manager->persist($resource);
                 
                 // Each 20 resources persisted we flush everything

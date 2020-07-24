@@ -295,6 +295,27 @@ a:hover {
 .form-control {
 	font-size: 1.5em;
 }
+.form-row > .col, .form-row > [class*="col-"] {
+	padding-bottom: Opx;
+}
+.card-author {
+	font-weight: 500;
+	font-size: 1em;
+}
+.card-title {
+	font-weight: 700;
+}
+.badge-primary {
+    color: #fff;
+    background-color: #bf6f33;
+}
+.facets-title {
+
+}
+.btn-outline-secondary {
+	font-size: 0.9em;
+}
+
 /*** Responsive mode ***/
 @media screen and (max-width: 320px) {
 
@@ -567,6 +588,7 @@ a:hover {
 		.row {
 			margin-top: 0rem;
 			padding: 1rem;
+			padding-top: 0rem;
 		}
 
 		.logo-cnd-subtitle {
@@ -669,6 +691,14 @@ a:hover {
 		.carousel-control-next {
     		margin-top: -200px;
 		}
+		.container {
+			/*! max-width:1140px; *//*! width: 100%; */
+			min-width: 700px;
+		}
+		.width-card {
+			/* width: 60%; */
+			max-width: 340px;
+		}
 }
 @media screen and (max-width: 600px) {
 
@@ -720,4 +750,19 @@ a:hover {
 		.carousel-control-next {
     		margin-top: -200px;
 		}		
+}
+@media (min-width:1200px) {
+	.container {
+	 /*! max-width:1140px; *//*! width: 100%; */
+	 max-width: 2000px;
+	}
+	.width-card {
+		max-width: auto;
+	}
+	.card {
+		width: 30%;
+		/* si toute la largeur : width: 100%; */
+		
+	}
+	
 }

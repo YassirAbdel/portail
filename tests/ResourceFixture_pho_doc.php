@@ -1,5 +1,6 @@
 <?php
 namespace App\DataFixtures;
+ini_set('memory_limit', '-1');
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
 use Faker\Factory;
@@ -182,7 +183,9 @@ class ResourceFixture extends Fixture
             if (isset($record['DOC_REF'])) {
                 $resource->setIdcadic($record['DOC_REF']);
 
-            }  
+            }
+            $resource->setAllIndex($record['DOC_AUTEUR'].' '.$record['DOC_TITRE'].' '.$record['DOC_TYPE'].' '.$record['DOC_DEE'].' '.$record['CND_TIT_F'].' '.$record['CND_OEUVRE']);
+              
             $resource->setRights(1);
             $resource->setOai(1);
             $resource->setAnalyse(1);

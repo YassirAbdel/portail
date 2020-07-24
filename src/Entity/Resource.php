@@ -321,6 +321,11 @@ class Resource
      */
     private $lecteur;
 
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $allIndex;
+
    public function __construct()
     {
         $this->created_at = new \DateTime();
@@ -1071,6 +1076,18 @@ class Resource
   public function setLecteur(int $lecteur): self
   {
       $this->lecteur = $lecteur;
+
+      return $this;
+  }
+
+  public function getAllIndex(): ?string
+  {
+      return $this->allIndex;
+  }
+
+  public function setAllIndex(?string $allIndex): self
+  {
+      $this->allIndex = $allIndex;
 
       return $this;
   }
