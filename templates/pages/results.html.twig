@@ -9,23 +9,51 @@
 								<h3 class="">Filtres</h3>
 								<h5 class="facets-title"><button type="button" class="btn btn-outline-secondary">Types de documents</button></h5>
 								<ul class="list-group">
-								{% for type in typesFacet.buckets %}
-								<li class="list-group-item d-flex justify-content-between align-items-center">
-									<a href="/searchfacet?q={{app.session.get('q') ~ ' ' ~ type.key }}&fields=_all">{{ type.key|upper }}</a>
-								   <span class="badge badge-primary badge-pill">{{ type.doc_count }}</span>
-								 </li>
-								{% endfor %}
+									{% for type in typesFacet.buckets %}
+										<li class="list-group-item d-flex justify-content-between align-items-center">
+											<a href="/searchfacet?q={{app.session.get('q') ~ ' ' ~ type.key }}&fields=_all">{{ type.key|upper }}</a>
+								    		<span class="badge badge-primary badge-pill">{{ type.doc_count }}</span>
+								 		</li>
+									{% endfor %}
 								</ul>
+								<h5 class="facets-title"><button type="button" class="btn btn-outline-secondary">Mots clés</button></h5>
+								<ul class="list-group">
+									{% for tag in tagsFacet.buckets %}
+										<li class="list-group-item d-flex justify-content-between align-items-center">
+											<a href="/searchfacet?q={{app.session.get('q') ~ ' ' ~ tag.key }}&fields=_all">{{ tag.key|upper }}</a>
+							   				<span class="badge badge-primary badge-pill">{{ tag.doc_count }}</span>
+							 			</li>
+									{% endfor %}
+							</ul>
 								<h5 class="facets-title"><button type="button" class="btn btn-outline-secondary">Personnes</button></h5>
 								<ul class="list-group">
-								{% for person in personsFacet.buckets %}
-								<li class="list-group-item d-flex justify-content-between align-items-center">
-									<a href="/searchfacet?q={{app.session.get('q') ~ ' ' ~ person.key }}&fields=_all">{{ person.key|upper }}</a>
-								   <span class="badge badge-primary badge-pill">{{ person.doc_count }}</span>
-								 </li>
-								{% endfor %}
+									{% for person in personsFacet.buckets %}
+										<li class="list-group-item d-flex justify-content-between align-items-center">
+											<a href="/searchfacet?q={{app.session.get('q') ~ ' ' ~ person.key }}&fields=_all">{{ person.key|upper }}</a>
+								   			<span class="badge badge-primary badge-pill">{{ person.doc_count }}</span>
+								 		</li>
+									{% endfor %}
 								</ul>
-							</div>
+								<h5 class="facets-title"><button type="button" class="btn btn-outline-secondary">Oeuvres</button></h5>
+								<ul class="list-group">
+									{% for oeuvre in oeuvresFacet.buckets %}
+										<li class="list-group-item d-flex justify-content-between align-items-center">
+											<a href="/searchfacet?q={{app.session.get('q') ~ ' ' ~ oeuvre.key }}&fields=_all">{{ oeuvre.key|upper }}</a>
+								   			<span class="badge badge-primary badge-pill">{{ oeuvre.doc_count }}</span>
+								 		</li>
+									{% endfor %}
+								</ul>
+								<h5 class="facets-title"><button type="button" class="btn btn-outline-secondary">Structures</button></h5>
+								<ul class="list-group">
+									{% for organisme in organismesFacet.buckets %}
+										<li class="list-group-item d-flex justify-content-between align-items-center">
+											<a href="/searchfacet?q={{app.session.get('q') ~ ' ' ~ organisme.key }}&fields=_all">{{ organisme.key|upper }}</a>
+								   			<span class="badge badge-primary badge-pill">{{ organisme.doc_count }}</span>
+								 		</li>
+									{% endfor %}
+								</ul>
+							</ul>
+						 </div>
 						<div class="col-12 col-md-9">
 							<div class="row">
 								<div class="col">

@@ -244,7 +244,6 @@ public function searchtest(Request $request, Session $session, TransformedFinder
         
         $q = $request->get('q', null); 
         $session->set('q', $q);
-        
          
         $field = $request->get('fields', null);
         $q = self::enleverCaracteresSpeciaux($q);
@@ -255,20 +254,15 @@ public function searchtest(Request $request, Session $session, TransformedFinder
             }
         }
         
-
          $chacacters = array("\"","/","L'",",","0","1","2","3","4","5","6","7","8","9","(",")",".","&","quot;","[","]","(Le)","(La)","(L')","»","«",":","?","!");
          //$chacacters = array("\"","/","L'",",",".","&","quot;","[","]","(Le)","(La)","(L')","»","«",":","?","!");
          $chacacters2 = array("'","-"," ","'");
          //$chacacters2 = array("'"," ","'");
          $q = str_replace($chacacters, "*", $q);
          $q = str_replace($chacacters2, "* *", $q);
-         
-       
          $q = '*'.$q."*";
          
-
          $searchQuery = new \Elastica\Query\QueryString();
-         
          $searchQuery->setDefaultOperator('AND');
          $searchQuery->setAllowLeadingWildcard('true');
          $searchQuery->setAnalyzeWildcard('true');
@@ -296,15 +290,13 @@ public function searchtest(Request $request, Session $session, TransformedFinder
             $searchQuery->setFields(['tag']);
          }
         
-        $searchQuery->setQuery($q);
-    
-
+         $searchQuery->setQuery($q);
          $paginatorAdapter = $resourcesFinder->createHybridPaginatorAdapter($searchQuery);
          $pagination = new Pagerfanta(new FantaPaginatorAdapter($paginatorAdapter));
         
          /** Facets */
          if ($field == '_all'){
-            $typesFacet = $this->getSearchFacet('types', 'type', $q, 10);
+            $typesFacet = $this->getSearchFacet('types', 'type', $q, 20);
             $personsFacet = $this->getSearchFacet('persons', 'person', $q, 15);
             $oeuvresFacet = $this->getSearchFacet('oeuvres', 'oeuvre', $q, 15);
             $organismesFacet = $this->getSearchFacet('organismes', 'organisme', $q, 10);
@@ -333,7 +325,11 @@ public function searchtest(Request $request, Session $session, TransformedFinder
             'pagination' => $pagination,
             'nbresult' => $nbresult,
             'typesFacet' => $typesFacet,
-            'personsFacet' => $personsFacet
+            'personsFacet' => $personsFacet,
+            'oeuvresFacet' => $oeuvresFacet,
+            'organismesFacet' => $organismesFacet,
+            'tagsFacet' => $tagsFacet
+
             //'form' => $form->createView()
         ]);
 
