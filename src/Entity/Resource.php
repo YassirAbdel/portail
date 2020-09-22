@@ -326,6 +326,11 @@ class Resource
      */
     private $allIndex;
 
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $front;
+
    public function __construct()
     {
         $this->created_at = new \DateTime();
@@ -1088,6 +1093,18 @@ class Resource
   public function setAllIndex(?string $allIndex): self
   {
       $this->allIndex = $allIndex;
+
+      return $this;
+  }
+
+  public function getFront(): ?bool
+  {
+      return $this->front;
+  }
+
+  public function setFront(?bool $front): self
+  {
+      $this->front = $front;
 
       return $this;
   }

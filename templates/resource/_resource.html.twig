@@ -1,11 +1,10 @@
-<div class="card">
-   
+<div class="card mb-4 img-responsive">
     {% if resource.filename %}
-		<a href="{{ path('resource.show', {slug: resource.slug, id: resource.id }) }}"><img class="card-img-top" alt="Consulter la ressource" title="Consulter la ressource" src="{{ vich_uploader_asset(resource, 'imageFile') | imagine_filter('thumb') }}" class="responsive" width="360" height="240"></a>
+		<a href="{{ path('resource.show', {slug: resource.slug, id: resource.id }) }}"><img class="card-img-top" alt="Consulter la ressource" title="Consulter la ressource" src="{{ vich_uploader_asset(resource, 'imageFile') | imagine_filter('thumb') }}" class="responsive" width="360" height="auto"></a>
 		{% elseif resource.img %}
 		<a href="{{ path('resource.show', {slug: resource.slug, id: resource.id }) }}"><img class="card-img-top" alt="Consulter la ressource" title="Consulter la ressource" src="http://cadic.cnd.fr/exl-img/{{ resource.img|replace({'.jpg': '_cadichd.jpg'}) }}" class="responsive" width="360" height="auto"></a>
 		{% else %}
-		<a href="{{ path('resource.show', {slug: resource.slug, id: resource.id }) }}"><img class="card-img-top" alt="Consulter la ressource" title="Consulter la ressource" src="{{ '/images/resources/empty.jpg' | imagine_filter('thumb') }}" class="responsive" width="360" height="240"></a>
+		<a href="{{ path('resource.show', {slug: resource.slug, id: resource.id }) }}"><img class="card-img-top" alt="Consulter la ressource" title="Consulter la ressource" src="{{ '/images/resources/empty.jpg' | imagine_filter('thumb') }}" class="responsive" width="360" height="auto"></a>
 		{% endif %}
     <div class="card-body">
       <h4 class="card-title"><a href="{{ path('resource.show', {slug: resource.slug, id: resource.id }) }}">{{ resource.title ~ ' (' ~ resource.type ~ ')' }}</a></h4>
@@ -13,4 +12,4 @@
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       <a class="btn btn-primary" href="{{ path('resource.basketadd', {slug: resource.slug, id: resource.id }) }}">Sélectionner</a>
     </div>
-  </div>
+</div>

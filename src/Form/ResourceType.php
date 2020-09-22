@@ -118,6 +118,7 @@ class ResourceType extends AbstractType
                 'choice_label' => 'title',
                 'multiple' => true
             ])
+            ->add('front')
             ;
     }
 

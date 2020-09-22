@@ -12,10 +12,17 @@ use App\Entity\ResourceSearch;
 use App\Model\ResourceModel;
 use Elastica\Query\BoolQuery;
 use Elastica\Query\Wildcard;
-use Elastica\QueryBuilder\DSL\Query as ElasticaQuery;
+//use Elastica\QueryBuilder\DSL\Query as ElasticaQuery;
 #use Elastica\Rescore\Query;
 use FOS\ElasticaBundle\Repository;
 use Elastica\Query\MultiMatch;
+use Elastica\Query as ElasticaQuery;
+use FOS\ElasticaBundle\Finder\TransformedFinder;
+use FOS\ElasticaBundle\Paginator\FantaPaginatorAdapter;
+use Pagerfanta\Pagerfanta;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
+
 
 /**
  * @method Resource|null find($id, $lockMode = null, $lockVersion = null)
@@ -42,6 +49,19 @@ class ResourceRepository extends ServiceEntityRepository
             ->getResult()
             ;
     }
+
+    /**
+     * @return Resource[] Returns an array of Resource objects
+     */
+    
+    public function findFront(): array
+    {
+        return $this->findVisibleQuery()
+            ->Where('r.front = true')
+            ->getQuery()
+            ->getResult()
+            ;
+    }
     
     /**
      * @return Resource[] Returns an array of Resource objects
@@ -49,12 +69,69 @@ class ResourceRepository extends ServiceEntityRepository
     public function findLast(): array
     {
         return $this->findVisibleQuery()
-        ->setMaxResults(12)
+        ->addOrderBy('r.updated_at', 'DESC')
+        ->setMaxResults(18)
         ->getQuery()
         ->getResult()
         ;
-        
     }
+
+    /**
+     * @return Resource[] Returns an array of Resource objects
+     */
+    public function findAdminLast(): array
+    {
+        return $this->findVisibleQuery()
+        ->addOrderBy('r.updated_at', 'DESC')
+        ->setMaxResults(30)
+        ->getQuery()
+        ->getResult()
+        ;
+    }
+
+    /**
+     * @return Resource[] Returns an array of Resource objects
+     */
+
+     public function searchFullElastic ($q, $field, $facet, TransformedFinder  $resourcesFinder, Request $request)
+     {
+         $boolQuery = new BoolQuery();
+         $boolTermQuery = new BoolQuery();
+        
+         
+         
+         $termAllIndex= new Wildcard();
+         $termAllIndex->setParams(['allIndex' => $q]);
+         //$termAllIndex->setParams(['title' => $q]);
+         
+         $boolTermQuery->addMust($termAllIndex);
+
+         dump($q);
+        
+         /**
+         $termTitle = new Wildcard();
+         $termTitle->setParams(['title' => $q]);
+         $boolTermQuery->addShould($termTitle);
+         **/
+        
+         if ($field == 'type' || $field == 'tag' || $field == 'person' || $field == 'oeuvre' || $field == 'organisme' || $field == 'geo') {
+
+            //dump($field);dump($facet);
+            //die();
+            $termFacet = new Wildcard();
+            $termFacet->setParams([$field => '*'.$facet.'*']);
+            $boolTermQuery->addMust($termFacet);
+         }
+         $boolQuery->addMust($boolTermQuery);
+
+         $query = new ElasticaQuery();
+         $query->setQuery($boolQuery);
+         //$query->addSort(array('type' => array('order' => 'desc')));
+         $query->addSort(array('type' => array('order' => 'asc')));
+         
+         return $query;
+     }
+
     
     /**
      * @return Query
@@ -70,6 +147,17 @@ class ResourceRepository extends ServiceEntityRepository
                 ->setParameter('title', '%'.$search->getTitle(). '%');
         }
         **/
+        if ($search->getId()) {
+            $query
+                 ->andWhere('r.id like :id')
+                 ->setParameter('id', '%'.$search->getId().'%');
+        }
+
+        if ($search->getFront()) {
+            $query
+                 ->andWhere('r.front like :front')
+                 ->setParameter('front', '%'.$search->getFront().'%');
+        }
 
         if ($search->getTitle()) {
             $title = $search->getTitle();

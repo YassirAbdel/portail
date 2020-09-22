@@ -338,7 +338,7 @@
 													<td>
 													<div>
 													{% for tag in tags %}
-													<a href="{{ path('resources.searchfacet1') }}?q={{ tag }}&field=tag"><span class="index">{{ tag }}</a></span>
+													<a href="{{ path('resources.searchfacet1') }}?q={{ tag }}&fields=tag"><span class="index">{{ tag }}</a></span>
 													{% endfor %}
 													</div>
 													</td>
@@ -351,7 +351,7 @@
 													<td>
 													<div>
 													{% for person in persons %}
-														<a href="{{ path('resources.searchfacet1') }}?q={{ person }}&field=person"><span class="index">{{ person }}</a></span>
+														<a href="{{ path('resources.searchfacet1') }}?q={{ person }}&fields=person"><span class="index">{{ person }}</a></span>
 													{% endfor %}
 													</div>
 													</td>
@@ -364,7 +364,7 @@
 													<td>
 													<div>
 													{% for oeuvre in oeuvres %}
-													<a href="{{ path('resources.searchfacet1') }}?q={{ oeuvre }}&field=oeuvre"><span class="index">{{ oeuvre }}</a></span>
+													<a href="{{ path('resources.searchfacet1') }}?q={{ oeuvre }}&fields=oeuvre"><span class="index">{{ oeuvre }}</a></span>
 													{% endfor %}
 													</div>
 													</td>
@@ -377,7 +377,7 @@
 													<td>
 													<div>
 													{% for organisme in organismes %}
-													<a href="{{ path('resources.searchfacet') }}?q={{ organisme }}&field=organisme"><span class="index">{{ organisme }}</a></span>
+													<a href="{{ path('resources.searchfacet') }}?q={{ organisme }}&fields=organisme"><span class="index">{{ organisme }}</a></span>
 													{% endfor %}
 													</div>
 													</td>
@@ -390,7 +390,7 @@
 													<td>
 													<div>
 													{% for geo in geos %}
-													<a href="{{ path('resources.searchfacet') }}?q={{ geo }}&field=geo"><span class="index">{{ geo }}</a></span>
+													<a href="{{ path('resources.searchfacet') }}?q={{ geo }}&fields=geo"><span class="index">{{ geo }}</a></span>
 													{% endfor %}
 													</div>
 													</td>

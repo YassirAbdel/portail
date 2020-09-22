@@ -9,9 +9,10 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use App\Entity\Person;
-
+use Doctrine\DBAL\Types\BooleanType;
 
 class ResourceSearchType extends AbstractType
 {
@@ -42,9 +43,23 @@ class ResourceSearchType extends AbstractType
             ]
         ])
         
-        ->add('persons', EntityType::class, [
+        ->add('id', TextType::class, [
             'required' => false,
             'label' => false,
+            'attr' => [
+                'placeHolder' => 'ID',
+            ]
+        ])
+
+        ->add('front', CheckboxType::class, [
+            'label' => 'Ressource à la une',
+            'required' => false,
+
+        ])
+
+        ->add('persons', EntityType::class, [
+            'required' => false,
+            'label' => 'Personnes',
             'class' => Person::class,
             'choice_label' => 'name',
             'multiple' => true,

@@ -9,6 +9,10 @@ use Doctrine\Common\Collections\ArrayCollection;
 class ResourceSearch 
 {
     /**
+     * @var integer|null
+     */
+    private $id;
+    /**
      * @var string|null
      */
     private $type;
@@ -27,6 +31,11 @@ class ResourceSearch
      * @var string|null
      */
     private $texte;
+
+     /**
+     * @var boolean|null
+     */
+    private $front;
     
 
     /**
@@ -39,6 +48,14 @@ class ResourceSearch
         $this->persons = new ArrayCollection();
     }
     
+    /**
+     * @return integer|NULL
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
     /**
      * @return string|NULL
      */
@@ -69,6 +86,22 @@ class ResourceSearch
     public function getTexte()
     {
         return $this->texte;
+    }
+
+    /**
+     * @return boolean|NULL
+     */
+    public function getFront()
+    {
+        return $this->front;
+    }
+
+    /**
+     * @param string|NULL $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
     }
 
     /**
@@ -112,11 +145,19 @@ class ResourceSearch
     }
     
     /**
-     * @param string|NULL $lang
+     * @param string|NULL $texte
      */
     public function setTexte($texte)
     {
         $this->texte = $texte;
+    }
+
+     /**
+     * @param string|NULL $front
+     */
+    public function setFront($front)
+    {
+        $this->front = $front;
     }
             
 }

@@ -1,6 +1,6 @@
 <?php
 namespace App\Controller\Admin;
-
+ini_set('memory_limit', '-1');
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use App\Repository\ResourceRepository;
 use Symfony\Component\Routing\Annotation\Route;
@@ -46,7 +46,8 @@ class AdminResourceController extends AbstractController {
     
     public function index(Request $request, Security $container, PaginatorInterface $paginator)
     {
-        $query = $this->repository->findAll();
+        //$query = $this->repository->findAll();
+        $query = $this->repository->findAdminLast();
         $search = new ResourceSearch;
             // On récupère le username via la variable globale session
             $session = new Session();
@@ -57,7 +58,7 @@ class AdminResourceController extends AbstractController {
         $resources = $paginator->paginate(
                         $query,
                         $request->query->getInt('page', 1)/*page number*/,
-                        20/*limit per page*/
+                        10/*limit per page*/
                       );
         return $this->render('admin/resource/index.html.twig', [
             'current_page' => 'resources',
@@ -110,6 +111,7 @@ class AdminResourceController extends AbstractController {
         $form = $this->createForm(ResourceType::class, $resource);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()){
+           $resource->setUpdatedAt(new \DateTime('now'));
            $this->em->flush();
            $this->addFlash('success', 'Notice mise à jour avec succès');
            return $this->redirectToRoute('admin.resource.index');

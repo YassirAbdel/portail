@@ -13,6 +13,9 @@
 	<h1>Gérer les ressources</h1>
 	{{ form_start(form) }}
     			<div class="form-row align-items-end">
+					<div class="col">
+    					{{ form_row(form.id) }}
+    				</div>
     				<div class="col">
     					{{ form_row(form.title) }}
     				</div>
@@ -27,6 +30,11 @@
     				<div class="col">
     					{{ form_row(form.persons) }}
     				</div>
+				</div>
+				<div class="form-row align-items-end">
+    				<div class="col">
+    					{{ form_row(form.front) }}
+    				</div>
     			</div>
     			<div class="form-row align-items-end">
     				<div class="col">
@@ -40,6 +48,7 @@
 	<table class="table table-striped">
 		<thead>
 			<tr>
+				<th>ID</th>
 				<th>Titre</th>
 				<th>Type de document</th>
 				<th>Actions</th>
@@ -49,6 +58,7 @@
 		
     		{% for resource in resources %}
     			<tr>
+					<td>{{ resource.id }}</td>
 					<td>{{ resource.title }}</td>
 					<td>{{ resource.type }}</td>
 					<td>

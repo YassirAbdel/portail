@@ -9,6 +9,8 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use App\Entity\Category;
 use App\Entity\Resource;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Vich\UploaderBundle\Form\Type\VichImageType;
 
 class SubjectType extends AbstractType
 {
@@ -25,6 +27,11 @@ class SubjectType extends AbstractType
                 'multiple' => false
                 
             ])
+            ->add('imageFile', FileType::class, [
+                'required' => false,
+                'label' => 'Illustration'
+                ])
+            ;
             /*** 
             ->add('resources', EntityType::class, [
                 'class' => Subject::class,
@@ -33,8 +40,9 @@ class SubjectType extends AbstractType
                 'multiple' => true
                 
             ])
-            ***/
-            ->add('resources')  
+            // Ajout de ressources directement
+            ->add('resources') 
+            ***/ 
         ;
     }
 

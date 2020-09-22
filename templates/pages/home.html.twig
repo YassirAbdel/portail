@@ -72,9 +72,14 @@
 				  
 						  <div class="row">
 							{% for resource in pagination %}
-							{% set resource = resource.transformed %}
+							<!-- { set resource = resource.transformed } -->
 							{% include '/resource/_resource.html.twig' %}
 							{% endfor %}
+						  </div>
+						  <div class="navigation">
+							{{ knp_pagination_render(pagination) }}
+						</div>
+						  
 							<!--
 							<div class="col-md-3">
 								  <div class="card mb-4">
@@ -231,7 +236,29 @@
 								   </div>
 							  </div>
 							-->
-						  </div>
+							<!--
+							<table>
+							{% for category in collections %}
+							<tr>
+								<td>{{ category.title }}</td>
+								<td>
+								{% set subjects = [] %}
+								{% for  subject in category.subjects %}
+									{% set url = path('admin.subject.edit', {id: subject.id})  %}
+									{% set title = subject.title %}
+									{% if loop.last %}
+										{% set urlSubject = "<a href='" ~ url ~ "'>" ~ title ~ "</a>" %}
+									{% else %}
+										{% set urlSubject = "<a href='" ~ url ~ "'>" ~ title ~ "</a> ; " %}
+									{% endif %}
+									{{ urlSubject|raw }}
+									
+									
+								{% endfor %}
+								{% endfor %}
+								</tr>
+							</table>
+						-->
 					  </section>
 					  <!-- Five -->
 					  <div id="collections"></div>

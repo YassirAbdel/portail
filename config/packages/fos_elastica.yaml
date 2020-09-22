@@ -124,6 +124,8 @@ fos_elastica:
                             analyzer: facetMulti_analyzer
                             search_analyzer: search_analyzer
                             type: text
+                            fielddata: true
+                            boost: 3
                         tag: 
                             analyzer: facetMulti_analyzer
                             search_analyzer: search_analyzer

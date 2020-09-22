@@ -310,10 +310,39 @@ a:hover {
     background-color: #bf6f33;
 }
 .facets-title {
+	margin-top: 10px;
 
 }
 .btn-outline-secondary {
 	font-size: 0.9em;
+}
+.filtres {
+	color: #162068;
+	font-weight: 600;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+.card img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.card:hover img {
+	-webkit-transform: scale(1);
+	transform: scale(1.02);
+}
+.card img {
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.card:hover img {
+	opacity: .5;
+}
+.img-responsive img {
+	width: 100%;
+  	height: auto;
 }
 
 /*** Responsive mode ***/

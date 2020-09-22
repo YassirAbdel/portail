@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20200312130103 extends AbstractMigration
+final class Version20200909153118 extends AbstractMigration
 {
     public function getDescription() : string
     {
@@ -22,7 +22,8 @@ final class Version20200312130103 extends AbstractMigration
         // this up() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE resource CHANGE resp1 resp1 VARCHAR(255) DEFAULT NULL, CHANGE editeur editeur VARCHAR(255) DEFAULT NULL, CHANGE editeurlieu editeurlieu VARCHAR(255) DEFAULT NULL, CHANGE anneedit anneedit VARCHAR(255) DEFAULT NULL');
+        $this->addSql('ALTER TABLE resource CHANGE file_name file_name VARCHAR(255) NOT NULL DEFAULT \'0000-01-01 00:00:00\'');
+        //$this->addSql('ALTER TABLE subject CHANGE updated_at updated_at DATETIME NOT NULL');
     }
 
     public function down(Schema $schema) : void
@@ -30,6 +31,7 @@ final class Version20200312130103 extends AbstractMigration
         // this down() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE resource CHANGE file_name file_name VARCHAR(255) DEFAULT NULL COLLATE utf8mb4_unicode_ci, CHANGE resp1 resp1 VARCHAR(255) NOT NULL COLLATE utf8mb4_unicode_ci, CHANGE editeur editeur VARCHAR(255) NOT NULL COLLATE utf8mb4_unicode_ci, CHANGE editeurlieu editeurlieu VARCHAR(255) NOT NULL COLLATE utf8mb4_unicode_ci, CHANGE anneedit anneedit VARCHAR(255) NOT NULL COLLATE utf8mb4_unicode_ci');
+        $this->addSql('ALTER TABLE resource CHANGE file_name file_name VARCHAR(255) DEFAULT NULL COLLATE utf8mb4_unicode_ci');
+        $this->addSql('ALTER TABLE subject CHANGE updated_at updated_at DATETIME DEFAULT \'0000-01-01 00:00:00\' NOT NULL');
     }
 }

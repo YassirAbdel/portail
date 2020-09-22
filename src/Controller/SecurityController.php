@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Controller;
-
+ini_set('memory_limit', '-1');
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
