@@ -377,7 +377,7 @@
 													<td>
 													<div>
 													{% for organisme in organismes %}
-													<a href="{{ path('resources.searchfacet') }}?q={{ organisme }}&field=organisme"><span class="index">{{ organisme }}</a></span>
+													<a href="{{ path('resources.searchfacet1') }}?q={{ organisme }}&field=organisme"><span class="index">{{ organisme }}</a></span>
 													{% endfor %}
 													</div>
 													</td>
@@ -390,7 +390,7 @@
 													<td>
 													<div>
 													{% for geo in geos %}
-													<a href="{{ path('resources.searchfacet') }}?q={{ geo }}&field=geo"><span class="index">{{ geo }}</a></span>
+													<a href="{{ path('resources.searchfacet1') }}?q={{ geo }}&field=geo"><span class="index">{{ geo }}</a></span>
 													{% endfor %}
 													</div>
 													</td>

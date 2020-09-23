@@ -18,6 +18,7 @@ class SubjectType extends AbstractType
     {
         $builder
             ->add('title')
+            ->add('subTitle')
             ->add('description')
             //->add('resources')
             ->add('category', EntityType::class, [

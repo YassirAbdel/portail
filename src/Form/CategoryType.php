@@ -15,6 +15,7 @@ class CategoryType extends AbstractType
     {
         $builder
             ->add('title')
+            ->add('subTitle')
             ->add('Description')
             ->add('subjects', EntityType::class, [
                 'class' => Subject::class,

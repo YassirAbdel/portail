@@ -65,6 +65,11 @@ class Subject
      */
     private $updated_at;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $subTitle;
+
     public function __construct()
     {
         $this->resources = new ArrayCollection();
@@ -185,5 +190,17 @@ class Subject
         $this->updated_at = $updated_at;
 
         return $this;
-    }  
+    } 
+    
+    public function getSubTitle(): ?string
+    {
+        return $this->subTitle;
+    }
+
+    public function setSubTitle(string $subTitle): self
+    {
+        $this->subTitle = $subTitle;
+
+        return $this;
+    }
 }

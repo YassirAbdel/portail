@@ -11,6 +11,10 @@
 	{% endfor %}
 	{% if is_granted('ROLE_DOC')  %}
 	<h1>Gérer les sous-collections</h1>
+	<div class="text-right">
+		<a href="{{ path('admin.subject.add') }}" class="btn btn-primary">Nouvelle sous-collection</a>
+	</div>
+	<p></p>
 		
 	<table class="table table-striped">
 		<thead>

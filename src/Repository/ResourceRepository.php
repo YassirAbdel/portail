@@ -12,6 +12,7 @@ use App\Entity\ResourceSearch;
 use App\Model\ResourceModel;
 use Elastica\Query\BoolQuery;
 use Elastica\Query\Wildcard;
+use Elastica\Query\Match;
 //use Elastica\QueryBuilder\DSL\Query as ElasticaQuery;
 #use Elastica\Rescore\Query;
 use FOS\ElasticaBundle\Repository;
@@ -98,22 +99,38 @@ class ResourceRepository extends ServiceEntityRepository
          $boolQuery = new BoolQuery();
          $boolTermQuery = new BoolQuery();
         
-         
-         
          $termAllIndex= new Wildcard();
          $termAllIndex->setParams(['allIndex' => $q]);
-         //$termAllIndex->setParams(['title' => $q]);
-         
          $boolTermQuery->addMust($termAllIndex);
 
-         dump($q);
-        
-         /**
-         $termTitle = new Wildcard();
+         $termTitle= new Wildcard();
          $termTitle->setParams(['title' => $q]);
          $boolTermQuery->addShould($termTitle);
-         **/
-        
+
+         $termAuteur= new Wildcard();
+         $termAuteur->setParams(['title' => $q]);
+         $boolTermQuery->addShould($termAuteur);
+
+         $termTag= new Wildcard();
+         $termTag->setParams(['tag' => $q]);
+         $boolTermQuery->addShould($termTag);
+
+         $termOeuvre= new Wildcard();
+         $termOeuvre->setParams(['oeuvre' => $q]);
+         $boolTermQuery->addShould($termOeuvre);
+
+         $termPerson= new Wildcard();
+         $termPerson->setParams(['person' => $q]);
+         $boolTermQuery->addShould($termPerson);
+
+         $termOrganisme= new Wildcard();
+         $termOrganisme->setParams(['organisme' => $q]);
+         $boolTermQuery->addShould($termOrganisme);
+
+         $termType= new Wildcard();
+         $termType->setParams(['type' => $q]);
+         $boolTermQuery->addShould($termType);
+         
          if ($field == 'type' || $field == 'tag' || $field == 'person' || $field == 'oeuvre' || $field == 'organisme' || $field == 'geo') {
 
             //dump($field);dump($facet);
