@@ -137,7 +137,7 @@ class HomeController  extends AbstractController {
         $session->set('nbresultall', $nbresult);
         $front = $this->repository->findFront();
         dump($front);
-        dump($collections);
+        //dump($collections);
 
         //$session->set('q', $q);
 
@@ -956,6 +956,7 @@ public function searchtest(Request $request, Session $session, TransformedFinder
       }
    }
 
+   
 }
 
 

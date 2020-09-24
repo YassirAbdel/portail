@@ -8,22 +8,29 @@
 	  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
 	  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
 	  <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+	  <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+	  <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
 	</ol>
 	<div class="carousel-inner">
 		<row>
 			<col>
-	  <div class="carousel-item active">
-		<img class="d-block w-100 h-80" src="http://mediatheque.cnd.fr/ressources/portail_v1/images/carousel_01.png" alt="First slide">
-			<div class="carousel-caption d-md-block">
-			  <h5>First slide label</h5>
-			  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-			  <ul class="actions stacked">
-				  <li style="color:#ffffff"><a href="#" class="button">Détails</a></li>
-			  </ul>
+			{% for resource in front %}
+			<div class="carousel-item active">
+			 
+			  {% if resource.filename %}
+					<img class="d-block w-100 h-80" src="{{ vich_uploader_asset(resource, 'imageFile') | imagine_filter('carousel') }}" alt="" />
+		  		{% endif %}
+				  <div class="carousel-caption d-md-block">
+					<h5>{{ resource.title }}</h5>
+					<p>{{ resource.type }}</p>
+					<ul class="actions stacked">
+						<li><a href="{{ path('resource.show', {slug: resource.slug, id: resource.id }) }}" class="button" style="color:#ffffff !important;box-shadow: inset 0 0 0 1px rgb(255, 255, 255);">Détails</a></li>
+					</ul>
+				  </div>
 			</div>
-	  </div>
+			{% endfor %}
 	  <div class="carousel-item">
-		<img class="d-block w-100 h-80" src="http://mediatheque.cnd.fr/ressources/portail_v1/images/carousel_02.jpg" alt="Second slide">
+		<img class="d-block w-100 h-80" src="http://mediatheque.cnd.fr/ressources/portail_v1/images/carousel_02.jpg" alt="slide">
 		<div class="carousel-caption  d-md-block">
 			  <h5>Second slide label</h5>
 			  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -33,7 +40,7 @@
 		  </div>
 	  </div>
 	  <div class="carousel-item">
-		<img class="d-block w-100 h-80" src="http://mediatheque.cnd.fr/ressources/portail_v1/images/carousel_03.png" alt="Third slide">
+		<img class="d-block w-100 h-80" src="http://mediatheque.cnd.fr/ressources/portail_v1/images/carousel_03.png" alt="slide">
 		<div class="carousel-caption d-md-block">
 			  <h5>Third slide label</h5>
 			  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
@@ -43,9 +50,29 @@
 		  </div>
 	  </div>
 	  <div class="carousel-item">
-		<img class="d-block w-100 h-80" src="http://mediatheque.cnd.fr/ressources/portail_v1/images/carousel_04.png" alt="Third slide">
+		<img class="d-block w-100 h-80" src="http://mediatheque.cnd.fr/ressources/portail_v1/images/carousel_04.png" alt="slide">
 		<div class="carousel-caption d-md-block">
 			  <h5>Third slide label</h5>
+			  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+			  <ul class="actions stacked">
+				  <li><a href="#" class="button">Détails</a></li>
+			  </ul>
+		  </div>
+	  </div>
+	  <div class="carousel-item">
+		<img class="d-block w-100 h-80" src="http://mediatheque.cnd.fr/ressources/portail_v1/images/carousel_04.png" alt="slide">
+		<div class="carousel-caption d-md-block">
+			  <h5>Third slide label</h5>
+			  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+			  <ul class="actions stacked">
+				  <li><a href="#" class="button">Détails</a></li>
+			  </ul>
+		  </div>
+	  </div>
+	  <div class="carousel-item">
+		<img class="d-block w-100 h-80" src="http://mediatheque.cnd.fr/ressources/portail_v1/images/carousel_04.png" alt="slide">
+		<div class="carousel-caption d-md-block">
+			  <h5>Third slide label2</h5>
 			  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
 			  <ul class="actions stacked">
 				  <li><a href="#" class="button">Détails</a></li>
@@ -62,6 +89,7 @@
 	  <span class="sr-only">Next</span>
 	</a>
   </div>
+  
   <!-- Six -->
 				  <section class="wrapper style1 align-center">
 						  <div class="inner">

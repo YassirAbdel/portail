@@ -101,14 +101,15 @@ class ResourceController extends AbstractController {
         $form = $this->createForm(ContactType::class, $contact);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
-            $notification->notify($contact);
             $this->addFlash('success','Votre message a été envoyé');
             return $this->redirectToRoute('resource.show',[
                 'id' => $resource_id,
                 'slug' => $resource_slug
             ]);    
         }
-        dump($resource);
+        $ip = $request->getClientIp();
+        $ip2 = $_SERVER['REMOTE_ADDR'];
+        dump($ip2);
         return $this->render('resource/show.html.twig', [
             'resource' => $resource,
             'current_menu' => 'ressource',
@@ -119,18 +120,27 @@ class ResourceController extends AbstractController {
 /**
  * @Route("/search", name="search_resource")
  */
-public function searchResource(Request $request)
-{
-    // create Contact model
-      $ResourceSearch = new ResourceModel();
-      // create form
-      $ResourceSearchForm = $this->createForm(ResourceSearchType1::class, $ResourceSearch );
+    public function searchResource(Request $request)
+    {
+        // create Contact model
+        $ResourceSearch = new ResourceModel();
+        // create form
+        $ResourceSearchForm = $this->createForm(ResourceSearchType1::class, $ResourceSearch );
         // bind data
-      $ResourceSearchForm->handleRequest($request);
-      $ResourceSearch = $ResourceSearchForm->getData();
-      $results = $this->manager->getRepository(SearchRepository::class)->searchFull($ResourceSearch);
-      //searchFull($ResourceSearch);
-      
+        $ResourceSearchForm->handleRequest($request);
+        $ResourceSearch = $ResourceSearchForm->getData();
+        $results = $this->manager->getRepository(SearchRepository::class)->searchFull($ResourceSearch);
+        //searchFull($ResourceSearch);
+    }
 
-}
+    /**
+    * Return IP
+    * @return string
+    */
+   public function getIp(Request $request)
+   {
+        $ip = $request->getClientIp();
+        
+        return $ip;
+   }
 }
