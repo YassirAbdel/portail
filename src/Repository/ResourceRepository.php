@@ -48,7 +48,7 @@ class ResourceRepository extends ServiceEntityRepository
             ->Where('r.analyse = true')
             ->getQuery()
             ->getResult()
-            ;
+        ;
     }
 
     /**
@@ -61,19 +61,35 @@ class ResourceRepository extends ServiceEntityRepository
             ->Where('r.front = true')
             ->getQuery()
             ->getResult()
-            ;
+        ;
     }
     
+    /**
+     * @return Resource[] Returns an array of Resource objects
+     */
+    
+    public function findFolderFront(): array
+    {
+        return $this->findVisibleQuery()
+            ->Where('r.folderFront = true')
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+
     /**
      * @return Resource[] Returns an array of Resource objects
      */
     public function findLast(): array
     {
         return $this->findVisibleQuery()
-        ->addOrderBy('r.updated_at', 'DESC')
-        ->setMaxResults(18)
-        ->getQuery()
-        ->getResult()
+            ->Where('r.front = false')
+            ->Where('r.folderFront = false')
+            //->orWhere('r.folderFront is null')
+            ->addOrderBy('r.updated_at', 'DESC')
+            ->setMaxResults(18)
+            ->getQuery()
+            ->getResult()
         ;
     }
 

@@ -136,20 +136,19 @@ class HomeController  extends AbstractController {
         $nbresult = $pagination->getNbResults();
         $session->set('nbresultall', $nbresult);
         $front = $this->repository->findFront();
-        dump($front);
-        //dump($collections);
-
+        $foldersFront = $this->repository->findFolderFront();
+        
+        dump($foldersFront);
         //$session->set('q', $q);
-
         //dump($pagination);die();
 
-        //return $this->render('pages/results.html.twig', compact('pagination', 'q'));
         return $this->render('pages/home.html.twig',[
             'current_page' => 'home',
             'pagination' => $lastresources,
             'nbresultall' => $nbresult,
             'front' => $front,
-            'collections' => $collections
+            'collections' => $collections,
+            'foldersfront' => $foldersFront
             //'form' => $form->createView()
         ]);
     }

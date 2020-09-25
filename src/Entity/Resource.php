@@ -329,6 +329,12 @@ class Resource
     /**
      * @ORM\Column(type="boolean", nullable=true)
      */
+    private $folderFront;
+
+
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
     private $front;
 
    public function __construct()
@@ -511,7 +517,7 @@ class Resource
         return $this->auteur;
     }
 
-    public function setAuteur(string $auteur): self
+    public function setAuteur(?string $auteur): self
     {
         $this->auteur = $auteur;
 
@@ -523,7 +529,7 @@ class Resource
         return $this->resp1;
     }
 
-    public function setResp1(string $resp1): self
+    public function setResp1(?string $resp1): self
     {
         $this->resp1 = $resp1;
 
@@ -535,7 +541,7 @@ class Resource
         return $this->editeur;
     }
 
-    public function setEditeur(string $editeur): self
+    public function setEditeur(?string $editeur): self
     {
         $this->editeur = $editeur;
 
@@ -547,7 +553,7 @@ class Resource
         return $this->editeurlieu;
     }
 
-    public function setEditeurlieu(string $editeurlieu): self
+    public function setEditeurlieu(?string $editeurlieu): self
     {
         $this->editeurlieu = $editeurlieu;
 
@@ -559,7 +565,7 @@ class Resource
         return $this->anneedit;
     }
 
-    public function setAnneedit(string $anneedit): self
+    public function setAnneedit(?string $anneedit): self
     {
         $this->anneedit = $anneedit;
 
@@ -571,7 +577,7 @@ class Resource
         return $this->isbn;
     }
 
-    public function setIsbn(string $isbn): self
+    public function setIsbn(?string $isbn): self
     {
         $this->isbn = $isbn;
 
@@ -583,7 +589,7 @@ class Resource
         return $this->pagination;
     }
 
-    public function setPagination(string $pagination): self
+    public function setPagination(?string $pagination): self
     {
         $this->pagination = $pagination;
 
@@ -595,7 +601,7 @@ class Resource
         return $this->collection;
     }
 
-    public function setCollection(string $collection): self
+    public function setCollection(?string $collection): self
     {
         $this->collection = $collection;
 
@@ -607,7 +613,7 @@ class Resource
         return $this->idcadic;
     }
     
-    public function setIdcadic(string $idcadic)
+    public function setIdcadic(?string $idcadic)
     {
         $this->idcadic = $idcadic;
     }
@@ -1105,6 +1111,18 @@ class Resource
   public function setFront(?bool $front): self
   {
       $this->front = $front;
+
+      return $this;
+  }
+
+  public function getfolderFront(): ?bool
+  {
+      return $this->folderFront;
+  }
+
+  public function setfolderFront(?bool $folderFront): self
+  {
+      $this->folderFront = $folderFront;
 
       return $this;
   }

@@ -4,22 +4,31 @@
 <div class="bd-example">
 	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 	<ol class="carousel-indicators">
-	  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+	{% set i=-1 %}
+	{% for resource in front %}
+	{% set i = i+1 %}
+	  <li data-target="#carouselExampleIndicators" data-slide-to="{{ i }}" {% if i == 0 %}class="active" {% else %}class=""{% endif %}></li>
+	{% endfor %}
+	<!--
 	  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
 	  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
 	  <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
 	  <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
 	  <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+	  -->
 	</ol>
 	<div class="carousel-inner">
 		<row>
 			<col>
+			{% set j=-1 %}
 			{% for resource in front %}
-			<div class="carousel-item active">
-			 
+			{% set j = j+1 %}
+			<div {% if j == 0 %}class="carousel-item active" {% else %}class="carousel-item"{% endif %}>
 			  {% if resource.filename %}
 					<img class="d-block w-100 h-80" src="{{ vich_uploader_asset(resource, 'imageFile') | imagine_filter('carousel') }}" alt="" />
-		  		{% endif %}
+			  {% elseif resource.img %}
+			  <img class="d-block w-100 h-80" src="http://cadic.cnd.fr/exl-img/{{ resource.img|replace({'.jpg': '_cadichd.jpg'}) }}" alt="" />
+			  {% endif %}
 				  <div class="carousel-caption d-md-block">
 					<h5>{{ resource.title }}</h5>
 					<p>{{ resource.type }}</p>
@@ -29,6 +38,7 @@
 				  </div>
 			</div>
 			{% endfor %}
+	<!--
 	  <div class="carousel-item">
 		<img class="d-block w-100 h-80" src="http://mediatheque.cnd.fr/ressources/portail_v1/images/carousel_02.jpg" alt="slide">
 		<div class="carousel-caption  d-md-block">
@@ -79,6 +89,7 @@
 			  </ul>
 		  </div>
 	  </div>
+	  -->
 	</div>
 	<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
 	  <span class="carousel-control-prev-icon" aria-hidden="false"></span>
@@ -930,66 +941,35 @@
 					  </section>
 					  -->
 				  <!-- One -->
-				  <div id="dossiers"></div>
-					  <section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+				  <div id="dossiers"><p></p></div>
+				  {% set k = -0 %}
+				  {% for resource in foldersfront %}
+					  {% set k = k+1 %}
+					  {% if k is divisible by(2) %}
+						  {% set orient = "orient-left" %}
+					  {% else %}
+					  {% set orient = "orient-right"%}
+					  {% endif %}
+					  <section class="spotlight style1 {{ orient }} content-align-left image-position-center onscroll-image-fade-in">
 						  <div class="content">
-							  <h2>Tempus adipiscing</h2>
-							  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
+							  <h2>{{ resource.title }}</h2>
+							  <p>{{ resource.comment }}</p>
 							  <ul class="actions stacked">
-								  <li><a href="#" class="button">Détails</a></li>
+								  <li><a  href="{{ path('resource.show', {slug: resource.slug, id: resource.id }) }}"" class="button">Détails</a></li>
 							  </ul>
 						  </div>
-						  <div class="image">
-							  <img src="http://mediatheque.cnd.fr/ressources/portail_v1/images/spotlight02.jpg" alt="" />
-						  </div>
+						  {% if resource.filename %}
+						  	<div class="image">
+						  	  	<img src="{{ vich_uploader_asset(resource, 'imageFile') | imagine_filter('carousel') }}" alt="" />
+							</div>
+						  {% elseif resource.img %}
+						  	<div class="image">
+					 		  <img  src="http://cadic.cnd.fr/exl-img/{{ resource.img|replace({'.jpg': '_cadichd.jpg'}) }}" alt="" />
+							</div>
+						  {% endif %}
 					  </section>
-  
-				  <!-- Two -->
-					  <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
-						  <div class="content">
-							  <h2>Magna etiam feugiat</h2>
-							  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
-							  <ul class="actions stacked">
-								  <li><a href="#" class="button">Détails</a></li>
-							  </ul>
-						  </div>
-						  <div class="image">
-							  <img src="http://mediatheque.cnd.fr/ressources/portail_v1/images/spotlight01.jpg" alt="" />
-						  </div>
-					  </section>
-  
-				  <!-- Three -->
-					  <section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
-						  <div class="content">
-							  <h2>Tempus adipiscing</h2>
-							  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
-							  <ul class="actions stacked">
-								  <li><a href="#" class="button">Détails</a></li>
-							  </ul>
-						  </div>
-						  <div class="image">
-							  <img src="http://mediatheque.cnd.fr/ressources/portail_v1/images/spotlight02.jpg" alt="" />
-						  </div>
-					  </section>
-  
-				  <!-- Four -->
-					  <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
-						  <div class="content">
-							  <h2>Pharetra etiam nulla</h2>
-							  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
-							  <ul class="actions stacked">
-								  <li><a href="#" class="button">Détails</a></li>
-							  </ul>
-						  </div>
-						  <div class="image">
-							  <img src="http://mediatheque.cnd.fr/ressources/portail_v1/images/spotlight03.jpg" alt="" />
-						  </div>
-					  </section>
-  
-				  
-  
-				  
-					  <section class="wrapper style1 align-center">
+				  {% endfor %}
+				  	  <section class="wrapper style1 align-center">
 						  <div class="inner medium">
 							  <h2>Vous avez une question</h2>
 							  <form method="post" action="#">

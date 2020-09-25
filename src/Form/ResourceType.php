@@ -28,79 +28,79 @@ class ResourceType extends AbstractType
                  //'choices' => $this->getChoises()
               //])
             ->add('type', TextType::class, [
-                'disabled' => true
+                'disabled' => false
                 
             ])
             ->add('title', TextType::class, [
                 'required' => false,
-                'disabled' => true
+                'disabled' => false
             ])
             ->add('lang', TextType::class, [
                 'required' => false,
-                'disabled' => true
+                'disabled' => false
             ])
             ->add('comment', TextType::class, [
                 'required' => false,
-                'disabled' => true
+                'disabled' => false
             ])
             ->add('person', TextareaType::class, [
                 'required' => false,
-                'disabled' => true
+                'disabled' => false
                 
             ])
             ->add('oeuvre', TextareaType::class, [
                 'required' => false,
-                'disabled' => true,
+                'disabled' => false,
             ])
             ->add('organisme', TextType::class, [
                 'required' => false,
-                'disabled' => true
+                'disabled' => false
             ])
             ->add('geo', TextType::class, [
                 'required' => false,
-                'disabled' => true
+                'disabled' => false
             ])
             ->add('tag', TextType::class, [
                 'required' => false,
-                'disabled' => true
+                'disabled' => false
             ])
             ->add('analyse')
             ->add('rights')
             ->add('oai')
             ->add('auteur', TextType::class, [
                 'required' => false,
-                'disabled' => true
+                'disabled' => false
             ])
             ->add('resp1', TextType::class, [
                 'required' => false,
-                'disabled' => true
+                'disabled' => false
             ])
             ->add('editeur', TextType::class, [
                 'required' => false,
-                'disabled' => true
+                'disabled' => false
             ])
             ->add('editeurlieu', TextType::class, [
                 'required' => false,
-                'disabled' => true
+                'disabled' => false
             ])
             ->add('anneedit', TextType::class, [
                 'required' => false,
-                'disabled' => true
+                'disabled' => false
             ])
             ->add('isbn', TextType::class, [
                 "required" => false,
                 'empty_data' => '',
-                'disabled' => true
+                'disabled' => false
             ])
             ->add('pagination', null, [
                 "required" => false,
                 'empty_data' => '',
-                'disabled' => true
+                'disabled' => false
             ])
             ->add('collection', null, [
                 "required" => false,
                 'empty_data' => '',
-                'disabled' => true
+                'disabled' => false
             ])
             ->add('imageFile', FileType::class, [
                 'required' => false
@@ -119,6 +119,8 @@ class ResourceType extends AbstractType
                 'multiple' => true
             ])
             ->add('front')
+            ->add('folderFront')
+            ->add('lecteur')
             ;
     }
 

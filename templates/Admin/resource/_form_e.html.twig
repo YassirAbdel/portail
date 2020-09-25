@@ -1,15 +1,6 @@
 		{{ form_start(form) }}
 			<div class="row">
 				<div class="col-md-6">{{ form_row(form.imageFile) }}</div>
-				<div class="col-md-6 img-responsive">
-					{% if resource.filename %}
-					<a href="{{ path('resource.show', {slug: resource.slug, id: resource.id }) }}"><img class="card-img-top" alt="Consulter la ressource" title="Consulter la ressource" src="{{ vich_uploader_asset(resource, 'imageFile') | imagine_filter('thumb') }}" class="responsive" width="360" height="240"></a>
-					{% elseif resource.img %}
-					<a href="{{ path('resource.show', {slug: resource.slug, id: resource.id }) }}"><img class="card-img-top" alt="Consulter la ressource" title="Consulter la ressource" src="http://cadic.cnd.fr/exl-img/{{ resource.img|replace({'.jpg': '_cadichd.jpg'}) }}" class="responsive" width="50%" height="auto"></a>
-					{% else %}
-					<a href="{{ path('resource.show', {slug: resource.slug, id: resource.id }) }}"><img class="card-img-top" alt="Consulter la ressource" title="Consulter la ressource" src="{{ '/images/resources/empty.jpg' | imagine_filter('thumb') }}" class="responsive" width="360" height="240"></a>
-					{% endif %}
-				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-12">&nbsp;</div>
