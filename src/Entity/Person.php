@@ -28,6 +28,11 @@ class Person
      */
     private $resources;
 
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $abstract;
+
     public function __construct()
     {
         $this->resources = new ArrayCollection();
@@ -72,6 +77,18 @@ class Person
         if ($this->resources->contains($resource)) {
             $this->resources->removeElement($resource);
         }
+
+        return $this;
+    }
+
+    public function getAbstract(): ?string
+    {
+        return $this->abstract;
+    }
+
+    public function setAbstract(?string $abstract): self
+    {
+        $this->abstract = $abstract;
 
         return $this;
     }

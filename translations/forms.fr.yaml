@@ -19,7 +19,7 @@ Isbn: ISBN
 Pagination: Pagination
 Collection: Collection
 Name: Nom
-Persons: Personne(s)
+Persons: Article personne
 Image file: Vignette
 Firstname: Nom
 Lastname: Prénom
@@ -31,3 +31,5 @@ Front: Ressource à la une
 ImageFile: Illustration
 Sub title: Sous-titre
 Folder front: Dossier à la une
+Abstract: Texte
+Works: Article oeuvre

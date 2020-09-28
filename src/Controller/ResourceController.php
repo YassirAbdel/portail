@@ -107,9 +107,9 @@ class ResourceController extends AbstractController {
                 'slug' => $resource_slug
             ]);    
         }
-        $ip = $request->getClientIp();
-        $ip2 = $_SERVER['REMOTE_ADDR'];
-        dump($ip2);
+        //$ip = $request->getClientIp();
+        //$ip2 = $_SERVER['REMOTE_ADDR'];
+        dump($resource);
         return $this->render('resource/show.html.twig', [
             'resource' => $resource,
             'current_menu' => 'ressource',

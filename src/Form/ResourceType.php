@@ -15,7 +15,10 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use App\Entity\Subject;
+use App\Entity\Work;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Vich\UploaderBundle\Form\Type\VichImageType;
+
 
 
 
@@ -121,6 +124,12 @@ class ResourceType extends AbstractType
             ->add('front')
             ->add('folderFront')
             ->add('lecteur')
+            ->add('works', EntityType::class, [
+                'class' => Work::class,
+                'required' => false,
+                'choice_label' => 'name',
+                'multiple' => true    
+            ])
             ;
     }
 

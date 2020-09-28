@@ -351,6 +351,9 @@ a:hover {
 	background-color: #000;
 	filter:brightness(80%);
 }
+strong, b {
+    font-weight: bold;
+}
 
 /*** Responsive mode ***/
 @media screen and (max-width: 320px) {

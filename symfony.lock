@@ -5,6 +5,15 @@
     "cocur/slugify": {
         "version": "v3.2"
     },
+    "components/elfinder": {
+        "version": "3.1.4"
+    },
+    "components/jquery": {
+        "version": "3.4.1"
+    },
+    "components/jqueryui": {
+        "version": "1.12.1"
+    },
     "doctrine/annotations": {
         "version": "1.0",
         "recipe": {
@@ -104,6 +113,18 @@
     "fig/link-util": {
         "version": "1.0.0"
     },
+    "friendsofsymfony/ckeditor-bundle": {
+        "version": "2.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "2.0",
+            "ref": "8eb1cd0962ded6a6d6e1e5a9b6d3e888f9f94ff6"
+        },
+        "files": [
+            "config/packages/fos_ckeditor.yaml"
+        ]
+    },
     "friendsofsymfony/elastica-bundle": {
         "version": "5.0",
         "recipe": {
@@ -125,6 +146,19 @@
     "guzzlehttp/streams": {
         "version": "3.0.0"
     },
+    "helios-ag/fm-elfinder-bundle": {
+        "version": "7.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "7.0",
+            "ref": "fb9152ee3538f968d9e0f2c763ecbe4ab63eff26"
+        },
+        "files": [
+            "config/packages/fm_elfinder.yaml",
+            "config/routes/fm_elfinder.yaml"
+        ]
+    },
     "imagine/imagine": {
         "version": "v0.7.1"
     },
@@ -139,6 +173,9 @@
     },
     "knplabs/knp-paginator-bundle": {
         "version": "v2.8.0"
+    },
+    "kriswallsmith/assetic": {
+        "version": "v1.0.5"
     },
     "league/csv": {
         "version": "9.1.4"
@@ -195,6 +232,9 @@
     "react/promise": {
         "version": "v2.7.1"
     },
+    "robloach/component-installer": {
+        "version": "0.2.3"
+    },
     "ruflin/elastica": {
         "version": "6.1.1"
     },
@@ -206,6 +246,9 @@
             "version": "5.2",
             "ref": "fb7e19da7f013d0d422fa9bce16f5c510e27609b"
         }
+    },
+    "studio-42/elfinder": {
+        "version": "2.1.57"
     },
     "swiftmailer/swiftmailer": {
         "version": "v6.1.3"

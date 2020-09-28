@@ -179,6 +179,11 @@ class Resource
      * @ORM\ManyToMany(targetEntity="App\Entity\Person", inversedBy="resources")
      */
     private $persons;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Work", inversedBy="resources")
+     */
+    private $works;
     
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Basket", mappedBy="resources")
@@ -344,6 +349,7 @@ class Resource
         $this->persons = new ArrayCollection();
         $this->baskets = new ArrayCollection();
         $this->subjects = new ArrayCollection();
+        $this->works = new ArrayCollection();
     }
    
     public function getId(): ?int
@@ -645,7 +651,33 @@ class Resource
 
         return $this;
     }
-    
+
+     /**
+     * @return Collection|Work[]
+     */
+    public function getWorks(): Collection
+    {
+        return $this->works;
+    }
+
+    public function addWork(Work $work): self
+    {
+        if (!$this->works->contains($work)) {
+            $this->works[] = $work;
+            $work->addResource($this);
+        }
+
+        return $this;
+    }
+
+    public function removeWork(Work $work): self
+    {
+        if ($this->works->contains($work)) {
+            $this->works->removeElement($work);
+            $work->removeResource($this);
+        }
+        return $this;
+    }
     
     /**
      * @return Collection\Basket[]

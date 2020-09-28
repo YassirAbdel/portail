@@ -84,7 +84,7 @@ class ResourceRepository extends ServiceEntityRepository
     {
         return $this->findVisibleQuery()
             ->Where('r.front = false')
-            ->Where('r.folderFront = false')
+            //->OrWhere('r.folderFront = 0')
             //->orWhere('r.folderFront is null')
             ->addOrderBy('r.updated_at', 'DESC')
             ->setMaxResults(18)
@@ -238,6 +238,19 @@ class ResourceRepository extends ServiceEntityRepository
                     ;
             }
         }
+
+        if ($search->getWorks()->count() > 0) {
+            $k = 0;
+            foreach ($search->getWorks() as $k => $work) {
+                $k++;
+                $query = $query
+                    ->andWhere(":work$k MEMBER OF r.works")
+                    ->setParameter("work$k", $work)
+                    ;
+            }
+        }
+        
+        
         //$queryFirst = $query;
         if ($search->getTexte()) {
             $texte = $search->getTexte();

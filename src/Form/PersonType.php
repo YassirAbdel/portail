@@ -6,6 +6,7 @@ use App\Entity\Person;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 
 class PersonType extends AbstractType
 {
@@ -13,7 +14,7 @@ class PersonType extends AbstractType
     {
         $builder
             ->add('name')
-            //->add('resources')
+            ->add('abstract', CKEditorType::class)
         ;
     }
 

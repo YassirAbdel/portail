@@ -449,8 +449,13 @@
     <h3>Sliding content with sticky tab nav</h3>
 	-->
     <div class="et-hero-tabs-container" data-sticky="data-sticky" data-top-tigger="350" data-state="fixed" >
-    	<!-- <h1>En savoir plus</h1> -->
-      <a class="et-hero-tab" href="#tab-es6">Personne</a>
+		<!-- <h1>En savoir plus</h1> -->
+	  
+	  {% for person in  resource.persons %}
+	  {% if person.id %}
+	  <a class="et-hero-tab" href="#tab-es6">Personne</a>
+	  {% endif %}
+	  {% endfor %}
       <a class="et-hero-tab" href="#tab-react">Oeuvre</a>
       <a class="et-hero-tab" href="#tab-angular">Lieu</a>
       <!--<a class="et-hero-tab" href="#tab-voiraussi">Voir aussi</a>-->
@@ -462,22 +467,15 @@
 
   <!-- Main -->
   <main class="et-main">
-    <section class="ensavoirplus" id="" style="">
-      
-	 <h1>Chopinot, Régine</h1>
-	 <div id="tab-es6"></div>
-<!--<h3>something about es6</h3>-->
-<p>Régine Chopinot, née en 1952 à Fort-de-l'Eau en Algérie, est très vite attirée par la danse. Après des cours de danse classique, elle découvre la danse contemporaine avec Marie Zighera en 1974. Devenue lyonnaise, elle y fonde en janvier 1978 sa première compagnie, la Compagnie du Grèbe qui associe danseurs, comédiens et musiciens. Elle signe alors ses premières chorégraphies. Trois ans plus tard, elle reçoit le deuxième prix au Concours chorégraphique international de Bagnolet (Seine-Saint-Denis) pour la pièce « Halley's Comet » (1981) rebaptisée « Appel d'air ». Ses créations suivantes, « Délices » et « Via », ouvrent la chorégraphie aux apports d'autres médias dont le cinéma. C'est avec « Délices » (1983) que Régine Chopinot commence sa longue collaboration avec le couturier Jean Paul Gaultier, qui marquera l'époque, avec des pièces comme « Le Défilé » (1985), « K.O.K. » (1988), « ANA » (1990), « Saint Georges » (1991) ou « Façade » (1993). Nommée en 1986, directrice du Centre chorégraphique national de Poitou-Charentes à La Rochelle (où elle succède au Théâtre du Silence de Jacques Garnier et Brigitte Lefèvre), qui devient en 1993 le Ballet Atlantique-Régine Chopinot (BARC), Régine Chopinot multiplie les rencontres artistiques : avec des plasticiens comme Andy Goldsworthy, Jean Le Gac ou Jean Michel Bruyère, des musiciens comme Tôn-Thât Tiêt ou Bernard Lubat.</p>
-
-<p>Au début des années 1990, elle quitte – selon son expression – les « espaces de grande légèreté » où, très jeune, elle s'était fait connaître, notamment dans sa collaboration avec Jean Paul Gaultier. Elle se passionne alors pour des expériences de confrontation de la danse contemporaine aux éléments et aux rythmes naturels et de sa mise à l'épreuve de pratiques et de sciences du corps anciennes et complexes, comme le yoga. En 1999, dans le cadre des « artistes associés », Régine Chopinot invite trois personnalités de la danse contemporaine à collaborer pendant trois ans à son projet artistique : Françoise Dupuy, Dominique Dupuy et Sophie Lessard rejoignent l'équipe de danseurs permanents et d'intervenants-chercheurs du BARC, comme interprètes, pédagogues et chorégraphes.</p>
-
-<p>En 2002, elle ouvre le triptyque de la Fin des Temps, une longue remise en cause de l'écriture et de la création chorégraphique conséquente à une mise en crise volontaire des notions générales de temps, de mémoire et de construction. « Chair-obscur », son premier chapitre, est tourné vers un effacement du passé, de la mémoire, et « WHA » vers la disparition du futur. « O.C.C.C. » se préoccupe du « temps qui reste », de ce qu'il reste à faire, ce qui peut être fait encore, à l'endroit simple et essentiel de la représentation. En 2008, « Cornucopiae », la dernière pièce créée au sein de l'institution, signe la fin d'une forme de représentation et ouvre vers une autre proposition de perception sensorielle.</p>
-
-<p>Parallèlement à son travail de chorégraphe, Régine Chopinot collabore en tant qu'interprète avec des artistes qui lui sont proches : Alain Buffard (« Wall dancin' - Wall fuckin' », 2003 ; « Mauvais Genre », 2004), Steven Cohen (« I wouldn't be seen dead in that ! », 2003). Ou encore, elle forme et dirige des danseurs vietnamiens dans le cadre d'une collaboration avec l'École supérieure de danse du Vietnam et l'Opéra-Ballet de Hanoï (« Anh Mat », 2002 ; « Giap Than », 2004). En 2008, la chorégraphe quitte le CCN de La Rochelle et crée la compagnie Cornucopiae - the independent dance, la nouvelle structure qui porte désormais, création et répertoire, tous les travaux de Régine Chopinot. En 2010, elle choisit le port de Toulon pour y vivre et travailler.</p>
-
-<p>Depuis 2009, Régine Chopinot s'aventure, questionne et approfondit sa recherche du corps en mouvement en lien avec la force de la parole auprès de cultures organisées par et sur la transmission orale, en Nouvelle-Calédonie, en Nouvelle-Zélande, au Japon. De nombreux actes artistiques jalonnent ces trois dernières années : pièces chorégraphiques et films réalisés à partir des expériences artistiques In Situ ont été créés dans le cadre du projet Pacifique Sud. La relation privilégiée initiée depuis 2009 avec le groupe du Wetr (Drehu/Lifou), aboutit à la création de « Very Wetr ! » au Festival d'Avignon en juillet 2012, repris au Centre national de la danse en février 2013.</p>
-
-
+	<section class="ensavoirplus" id="" style="">
+	{% if resource.persons %}
+	{% for person in  resource.persons %}
+	<h1>{{ person.name }}</h1>
+	<div id="tab-es6"></div>
+		<!--<h3>something about es6</h3>-->
+		{{ person.abstract|raw }}  
+	{% endfor %}
+	{% endif %}   
     </section>
     <section class="ensavoirplus" id="">
 	  <h1>KOK</h1>

@@ -42,12 +42,18 @@ class ResourceSearch
      * @var ArrayCollection
      */
     private $persons;
+
+    /**
+     * @var ArrayCollection
+     */
+    private $works;
     
     function __construct()
     {
         $this->persons = new ArrayCollection();
+        $this->works = new ArrayCollection();
     }
-    
+
     /**
      * @return integer|NULL
      */
@@ -142,6 +148,22 @@ class ResourceSearch
     public function setPersons($persons)
     {
         $this->persons = $persons;
+    }
+    
+    /**
+     * @return \Doctrine\Common\Collections\ArrayCollection
+     */
+    public function getWorks()
+    {
+        return $this->works;
+    }
+    
+    /**
+     * @param \Doctrine\Common\Collections\ArrayCollection $works
+     */
+    public function setWorks($works)
+    {
+        $this->works = $works;
     }
     
     /**

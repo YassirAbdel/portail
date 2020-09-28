@@ -12,6 +12,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use App\Entity\Person;
+use App\Entity\Work;
 use Doctrine\DBAL\Types\BooleanType;
 
 class ResourceSearchType extends AbstractType
@@ -59,12 +60,23 @@ class ResourceSearchType extends AbstractType
 
         ->add('persons', EntityType::class, [
             'required' => false,
-            'label' => 'Personnes',
+            'label' => 'Articles personnes',
             'class' => Person::class,
             'choice_label' => 'name',
             'multiple' => true,
             'attr' => [
                 'placeHolder' => 'Persones',
+            ]
+        ])
+
+        ->add('works', EntityType::class, [
+            'required' => false,
+            'label' => 'Articles oeuvres',
+            'class' => Work::class,
+            'choice_label' => 'name',
+            'multiple' => true,
+            'attr' => [
+                'placeHolder' => 'Oeuvres',
             ]
         ])
      ;
