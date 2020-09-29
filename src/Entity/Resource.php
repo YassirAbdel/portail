@@ -186,6 +186,11 @@ class Resource
     private $works;
     
     /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Structure", inversedBy="resources")
+     */
+    private $structures;
+
+    /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Basket", mappedBy="resources")
      */
     private $baskets;
@@ -342,6 +347,11 @@ class Resource
      */
     private $front;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $urlFolfer;
+
    public function __construct()
     {
         $this->created_at = new \DateTime();
@@ -350,6 +360,7 @@ class Resource
         $this->baskets = new ArrayCollection();
         $this->subjects = new ArrayCollection();
         $this->works = new ArrayCollection();
+        $this->structures = new ArrayCollection();
     }
    
     public function getId(): ?int
@@ -614,7 +625,7 @@ class Resource
         return $this;
     }
     
-    public function getIdcadic(): string
+    public function getIdcadic(): ?string
     {
         return $this->idcadic;
     }
@@ -676,6 +687,34 @@ class Resource
             $this->works->removeElement($work);
             $work->removeResource($this);
         }
+        return $this;
+    }
+
+    /**
+     * @return Collection|Structure[]
+     */
+    public function getStructures(): Collection
+    {
+        return $this->structures;
+    }
+
+    public function addStructure(Person $structure): self
+    {
+        if (!$this->structures->contains($structure)) {
+            $this->structures[] = $structure;
+            $structure->addResource($this);
+        }
+
+        return $this;
+    }
+
+    public function removeStructure(Structure $structure): self
+    {
+        if ($this->structures->contains($structure)) {
+            $this->structures->removeElement($structure);
+            $structure->removeResource($this);
+        }
+
         return $this;
     }
     
@@ -1158,6 +1197,17 @@ class Resource
 
       return $this;
   }
-     
+  
+  public function getUrlFolder(): ?string
+  {
+      return $this->urlFolfer;
+  }
+
+  public function setUrlFolder(?string $urlFolfer): self
+  {
+      $this->urlFolfer = $urlFolfer;
+
+      return $this;
+  }
   
 }

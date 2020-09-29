@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Administration du portail' %}
+
+{% block body %}
+	<div class="container mt-4">
+	{% for message in app.flashes('success') %}
+		<div class="alert alert-success">
+			{{ message }}
+		</div>
+	{% endfor %}
+	{% if is_granted('ROLE_DOC')  %}
+	<h1>Gérer les autorités structurenes</h1>
+		
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Structure</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+		
+    		{% for structure in structures %}
+    			<tr>
+    				<td>{{ structure.name }}</td>
+    				<td>
+    					
+    					<a href="{{ path('admin.structure.edit', {id: structure.id}) }}" class="btn btn-secondary">Éditer</a>
+    				</td>
+    				<td>	
+    					
+    					<form method="post" action="{{ path('admin.structure.delete', {id: structure.id}) }}" onsubmit="return confirm('Etes-vopus vraiment sûr ?')">
+    						<input type="hidden" name="_method" value="DELETE">
+    						<input type="hidden" name="_token" value="{{ csrf_token('delete' ~ structure.id) }}">
+    						<button class="btn btn-danger">Supprimer</button>
+    					</form>
+    					
+    				</td>
+    			</tr>
+    		   {% endfor %}
+		   
+		</tbody>
+	
+	</table>
+		
+	<div class="text-right">
+		<a href="{{ path('admin.structure.new') }}" class="btn btn-primary">Nouvelle notice</a>
+	</div>		
+	{% endif %}	
+	{% if is_granted('ROLE_ADMIN')  %}
+	<h1>Administrer l'application</h1>
+	{% endif %}
+	</div>
+{% endblock %}

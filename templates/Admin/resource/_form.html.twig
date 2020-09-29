@@ -15,17 +15,23 @@
 				<div class="col-md-12">&nbsp;</div>
 			</div>
 			<div class="row">
+				<div class="col-md-3">{{ form_row(form.idcadic) }}</div>
+			</div>
+			<div class="row">
 				<div class="col-md-6">{{ form_row(form.persons) }}</div>
+				<div class="col-md-6">{{ form_row(form.works) }}</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">{{ form_row(form.structures) }}</div>
 				<div class="col-md-6">{{ form_row(form.subjects) }}</div>
 			</div>
 			<div class="row">
-				<div class="col-md-6">{{ form_row(form.works) }}</div>
+				<div class="col-md-6">{{ form_row(form.urlFolder) }}</div>
 			</div>
 			<div class="row">
 				<div class="col-md-6">{{ form_row(form.front) }}</div>
 				<div class="col-md-6">{{ form_row(form.folderFront) }}</div>
 			</div>
-			
 			<div class="row">
 				<div class="col-md-3">{{ form_row(form.type) }}</div>
 				<div class="col-md-3">{{ form_row(form.title) }}</div>
@@ -59,6 +65,9 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12">{{ form_row(form.comment) }}</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">{{ form_row(form.allIndex) }}</div>
 			</div>
 			
 			{{ form_rest(form) }}

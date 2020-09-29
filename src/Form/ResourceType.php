@@ -10,6 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Doctrine\Common\Annotations\Annotation\Required;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use App\Entity\Person;
+use App\Entity\Structure;
 use Symfony\Component\Form\FormTypeInterface;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
@@ -130,7 +131,21 @@ class ResourceType extends AbstractType
                 'choice_label' => 'name',
                 'multiple' => true    
             ])
+            ->add('structures', EntityType::class, [
+                'class' => Structure::class,
+                'required' => false,
+                'choice_label' => 'name',
+                'multiple' => true    
+            ])
+            ->add('urlFolder')
+            ->add('allIndex')
+            ->add('idcadic', null, [
+                "required" => false,
+                'empty_data' => '',
+                'disabled' => true
+            ])
             ;
+            
     }
 
     public function configureOptions(OptionsResolver $resolver)

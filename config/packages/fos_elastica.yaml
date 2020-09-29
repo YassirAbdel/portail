@@ -177,6 +177,7 @@ fos_elastica:
                         model: App\Entity\Resource
                         repository: App\SearchRepository\SearchRepository
                         finder: ~
-                        provider: ~
+                        provider:
+                            batch_size: 100
                         listener: ~
 

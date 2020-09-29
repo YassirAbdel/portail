@@ -47,11 +47,17 @@ class ResourceSearch
      * @var ArrayCollection
      */
     private $works;
+
+    /**
+     * @var ArrayCollection
+     */
+    private $structures;
     
     function __construct()
     {
         $this->persons = new ArrayCollection();
         $this->works = new ArrayCollection();
+        $this->structures = new ArrayCollection();
     }
 
     /**
@@ -164,6 +170,22 @@ class ResourceSearch
     public function setWorks($works)
     {
         $this->works = $works;
+    }
+
+    /**
+     * @return \Doctrine\Common\Collections\ArrayCollection
+     */
+    public function getStructures()
+    {
+        return $this->structures;
+    }
+    
+    /**
+     * @param \Doctrine\Common\Collections\ArrayCollection $structures
+     */
+    public function setStructures($structures)
+    {
+        $this->structures = $structures;
     }
     
     /**

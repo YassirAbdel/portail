@@ -322,7 +322,7 @@
 									<h3>{% if resource.auteur %}
 										{{ resource.auteur|replace({'|':' ; '}) }}
 										{% endif %}</h3>
-										<p>{% if resource.title %}{{ resource.title }}{% endif %}{% if resource.resp1 %} / {{ resource.resp1 }}{% endif %}{% if resource.editeurlieu %}. - {{ resource.editeurlieu }} : {% endif %} {% if resource.editeur %}{{ resource.editeur }}{% endif %}{% if resource.anneedit %}, {{ resource.anneedit }}{% endif %}{% if resource.pagination %}. - {{ resource.pagination }}{% endif %} : ill., couv. ill. ; 31 cm</p>
+										<p>{% if resource.title %}{{ resource.title }}{% endif %}{% if resource.resp1 %} / {{ resource.resp1 }}{% endif %}{% if resource.editeurlieu %}. - {{ resource.editeurlieu }} : {% endif %} {% if resource.editeur %} ; {{ resource.editeur }}{% endif %}{% if resource.anneedit %}, {{ resource.anneedit }}{% endif %}{% if resource.pagination %}. - {{ resource.pagination }}{% endif %} <!--: ill., couv. ill. ; 31 cm --></p>
 										<table class="table table-striped">
 										    <tbody>
 												{% if resource.collection %}
@@ -396,6 +396,12 @@
 													</td>
 												</tr>
 												{% endif %}
+												{% if resource.urlFolder %}
+												<tr>
+										        	<td>Consulter le dossier</td>
+										        	<td><a href="{{ resource.urlFolder }}" target="_blank">{{ resource.urlFolder }}</a></td>
+												</tr>
+												{% endif %}
 										        {% if resource.comment %}
 												<tr>
 										        	<td>Note</td>
@@ -456,8 +462,16 @@
 	  <a class="et-hero-tab" href="#tab-es6">Personne</a>
 	  {% endif %}
 	  {% endfor %}
-      <a class="et-hero-tab" href="#tab-react">Oeuvre</a>
-      <a class="et-hero-tab" href="#tab-angular">Lieu</a>
+	  {% for work in  resource.works %}
+	  {% if work.id %}
+	  <a class="et-hero-tab" href="#tab-react">Oeuvre</a>
+	  {% endif %}
+	  {% endfor %}
+	  {% for structure in  resource.structures %}
+	  {% if structure.id %}
+	  <a class="et-hero-tab" href="#tab-angular">Structure</a>
+	  {% endif %}
+	  {% endfor %}
       <!--<a class="et-hero-tab" href="#tab-voiraussi">Voir aussi</a>-->
       <span class="et-hero-tab-slider"></span>
 
@@ -472,67 +486,28 @@
 	{% for person in  resource.persons %}
 	<h1>{{ person.name }}</h1>
 	<div id="tab-es6"></div>
-		<!--<h3>something about es6</h3>-->
 		{{ person.abstract|raw }}  
 	{% endfor %}
 	{% endif %}   
     </section>
     <section class="ensavoirplus" id="">
-	  <h1>KOK</h1>
-	  <div id="tab-react"></div>
-	  <h3>Chorégraphie Régine Chopinot</h3>
-
-<p>Régine Chopinot crée « K.O.K » en novembre 1988 à la Maison de la culture de La Rochelle, un ballet inspiré de la boxe, sport pour lequel elle se passionne à l'occasion de la diffusion d'émission de vulgarisation par Canal +, jeune chaîne codée à l'image créative. Fascinée tant par la gestuelle de ce sport que par les commentaires qui l'assimilent à la danse, Régine Chopinot entreprend de créer un spectacle à partir de cet univers. Si l'inspiration télévisuelle de cette pièce pourrait paraître anodine, elle n'est pas sans conséquence : la chorégraphie de Régine Chopinot devra beaucoup au mode de réalisation des émissions sportives, toujours à l'avant-garde des progrès techniques en matière audiovisuelle.</p>
-
-<p>Initialement, Régine Chopinot aurait souhaité reconstituer à l'identique un combat de boxe (après avoir aussi imaginé de se servir des gestes de boxe pour pasticher un ballet classique) : la rencontre mythique opposant les boxeurs Sugar Ray Leonard et Marvelous Marvin Hagler à Las Vegas en 1977. Mais elle est rapidement forcée d'y renoncer : « C'était une utopie de croire que nous pourrions y arriver. Un combat n'appartient qu'aux boxeurs. Il est impossible de refaire le match de quelqu'un d'autre. Un combat de boxe n'est pas un ballet que l'on peut transmettre » [1]. Elle prend alors la décision de régler ses propres combats. Pendant deux ans, Chopinot et ses danseurs troquent ainsi les studios de danse pour un gymnase où ils suivent un entraînement soutenu de boxe anglaise auprès d'un entraîneur réputé.</p>
-
-<p>Conçu pour quatre interprètes-boxeurs et un comédien (Jean-Hugues Laleu), les combats de Poids chiche (R. Chopinot), Alonso Plumard (Joseph Lennon), Archie Black (Lee Black) et Boo Bull (Poonie Dudson) se succèdent en douze rounds, sur un ring tournant conçu par Marc Caro et une bande son très soignée signée par André Serré où se greffent bruits de foule (huées, applaudissements...), de match (annonces, sifflets, arbitrages..), air de tango et musique lyrique, interprétée notamment par la soprano Marie Atget. Ces douze rounds farfelus sont déclinés de la façon suivante dans les documents de communication qui accompagnent la pièce  :</p>
-
-<ul>
-<li>1er round : un entraineur irremplaçable : Monsieur Benamou dirige l'entraînement intensif de cinq danseurs</li>
-<li>2ème round : Duo infernal</li>
-<li>4ème round : Décor mythologique d'une arène conçu par Marc Caro : le ring est central</li>
-<li>5ème round : Vive Mohamed Ali, adieu la boxe boucherie</li>
-<li>6ème round : Tout se joue entre six yeux – Le face à face des boxeurs surveillés par l'arbitre</li>
-<li>7ème round : A la recherche du second souffle dans la voix de Marie Atger</li>
-<li>8ème round : Etre nu par Jean Paul Gaultier</li>
-<li>9ème round : Dans les matchs sans K.O., c'est souvent la reprise décisive</li>
-<li>10ème round : La boxe, noble art, tout en dentelles techniques ; impossible d'esquiver l'idée d'un ballet</li>
-<li>11ème round : La complicité du son avec André Serré et de la lumière avec Gérard Boucher</li>
-<li>12ème round : Dernier round : chorégraphie et mise en scène de Régine Chopinot</li>
-</ul>
-
-<p>Subissant de nombreux revers, l'élaboration de « KOK » relèvera de l'épopée et sa date de création se verra différée de cinq mois, l'obligeant à renoncer à sa programmation au festival Montpellier Danse. Mais ses colossales ambitions seront récompensées et la critique sera unanime pour en saluer le succès. Un clip intitulé « K.O.K [clip] » est réalisé simultanément à sa création par Régine Chopinot, instrument de communication à la mode.</p>
-
-<p>Intervenant à une période où Régine Chopinot est devenue un phénomène médiatique très sollicité, cette création a été le moyen de retrouver la voie de son art comme l'évoque Annie Suquet dans le livre qu'elle lui consacre en 2010 : « Plus secrètement peut-être, l'exercice de la boxe rappelle Chopinot à ce qu'elle attend de la danse et dont elle craint, alors, d'avoir perdu le chemin. Dans la boxe, l'exigence de l'entraînement sollicite les ressources mentales et physiques, de l'individu jusqu'à leurs limites. » [2] A l'occasion de sa création suivante, « ANA » (1990), elle dira dans la presse : « Mes ballets étaient des bûchers où je brûlais ma danse. C'est la boxe qui m'a fait redécouvrir mon corps et le plaisir du mouvement... » [3]</p>
-
-<p>[1] R. Chopinot dans un entretien avec Michel Chemin, « Régine Chopinot, la danse qui fait bing ! », voir dossier d'artiste Régine Chopinot, Médiathèque du CND.</p>
-<p>[2] A. Suquet, « Chopinot »,  Le Mans : Ed. Cénomane, 2010, p. 41.</p>
-
-<p>Générique</p>
-
-<p>création le 4 novembre 1988 à la Maison de la culture de La Rochelle</p>
-<p>conception, réalisation, chorégraphie Régine Chopinot</p>
-<p>interprétation Lee Black, Régine Chopinot, Poonie Dodson / Mervyn Francis, Joseph Lennon et Jean-Hugues Laleu</p>
-<p>costumes Jean Paul Gaultier</p>
-<p>décor Marc Caro</p>
-<p>son André Serré</p>
-<p>lumière Gérard Boucher</p>
-<p>chant Marie Atger</p>
-<p>piano Denis Dubois</p>
-<p>entraînement Zoubid Benhamou de l'équipe Jean Bretonnel</p>
-
-<p>durée 1h10</p>
-    </section>
-    <section class="ensavoirplus" id="">
-	  <h1>Titre</h1>
-	  <div id="tab-angular"></div>
-      <h3>something about structure</h3>
-  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
- <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
- <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    </section>
-   
+	{% if resource.works %}
+	{% for work in  resource.works %}
+	<h1>{{ work.name }}</h1>
+	<div id="tab-react"></div>
+		{{ work.abstract|raw }}
+	{% endfor %}
+	{% endif %}    
+	</section>
+	<section class="ensavoirplus" id="">
+		{% if resource.structures %}
+		{% for structure in  resource.structures %}
+		<h1>{{ structure.name }}</h1>
+		<div id="tab-angular"></div>
+			{{ structure.abstract|raw }}
+		{% endfor %}
+		{% endif %}    
+		</section>
   </main>
 
 				<section class="wrapper style1 align-center">

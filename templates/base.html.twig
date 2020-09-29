@@ -61,10 +61,10 @@
     					role="button" data-toggle="dropdown" aria-haspopup="true"
     					aria-expanded="false"> Gestion des articles </a>
     					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-    						<a class="dropdown-item" href="{{ path('admin.person.index') }}">Personnes</a> <a
-    							class="dropdown-item" href="#">Oeuvres</a>
+    						<a class="dropdown-item" href="{{ path('admin.person.index') }}">Personne</a> <a
+    							class="dropdown-item" href="{{ path('admin.work.index') }}">Oeuvre</a>
     						<div class="dropdown-divider"></div>
-    						<a class="dropdown-item" href="#">Structures</a>
+    						<a class="dropdown-item" href="{{ path('admin.structure.index') }}">Structure</a>
     					</div>
     				</li>
     				{% endif %}

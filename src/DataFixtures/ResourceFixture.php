@@ -184,7 +184,7 @@ class ResourceFixture extends Fixture
                 $resource->setIdcadic($record['DOC_REF']);
 
             }
-            $resource->setAllIndex($record['DOC_AUTEUR'].' '.$record['DOC_TITRE'].' '.$record['DOC_TYPE'].' '.$record['DOC_DEE'].' '.$record['CND_TIT_F'].' '.$record['CND_OEUVRE']);
+            $resource->setAllIndex($record['DOC_AUTEUR'].' '.$record['DOC_TITRE'].' '.$record['DOC_TYPE'].' '.$record['DOC_DEE'].' '.$record['CND_TIT_F'].' '.$record['CND_OEUVRE'].''.$record['PHO_PERSON']);
               
             $resource->setRights(1);
             $resource->setOai(1);
