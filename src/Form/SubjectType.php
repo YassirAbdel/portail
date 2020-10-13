@@ -11,6 +11,7 @@ use App\Entity\Category;
 use App\Entity\Resource;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Vich\UploaderBundle\Form\Type\VichImageType;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 
 class SubjectType extends AbstractType
 {
@@ -19,8 +20,17 @@ class SubjectType extends AbstractType
         $builder
             ->add('title')
             ->add('subTitle')
-            ->add('description')
-            //->add('resources')
+            ->add('Description', CKEditorType::class)
+            /**
+            ->add('resources')
+            ->add('resources', EntityType::class, [
+                'class' => Resource::class,
+                'required' => false,
+                'choice_label' => 'title',
+                'multiple' => true
+                
+            ])
+            **/
             ->add('category', EntityType::class, [
                 'class' => Category::class,
                 'required' => true,

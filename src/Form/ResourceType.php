@@ -32,79 +32,79 @@ class ResourceType extends AbstractType
                  //'choices' => $this->getChoises()
               //])
             ->add('type', TextType::class, [
-                'disabled' => false
+                'disabled' => true
                 
             ])
             ->add('title', TextType::class, [
                 'required' => false,
-                'disabled' => false
+                'disabled' => true
             ])
             ->add('lang', TextType::class, [
                 'required' => false,
-                'disabled' => false
+                'disabled' => true
             ])
             ->add('comment', TextType::class, [
                 'required' => false,
-                'disabled' => false
+                'disabled' => true
             ])
             ->add('person', TextareaType::class, [
                 'required' => false,
-                'disabled' => false
+                'disabled' => true
                 
             ])
             ->add('oeuvre', TextareaType::class, [
                 'required' => false,
-                'disabled' => false,
+                'disabled' => true,
             ])
             ->add('organisme', TextType::class, [
                 'required' => false,
-                'disabled' => false
+                'disabled' => true
             ])
             ->add('geo', TextType::class, [
                 'required' => false,
-                'disabled' => false
+                'disabled' => true
             ])
             ->add('tag', TextType::class, [
                 'required' => false,
-                'disabled' => false
+                'disabled' => true
             ])
             ->add('analyse')
             ->add('rights')
             ->add('oai')
             ->add('auteur', TextType::class, [
                 'required' => false,
-                'disabled' => false
+                'disabled' => true
             ])
             ->add('resp1', TextType::class, [
                 'required' => false,
-                'disabled' => false
+                'disabled' => true
             ])
             ->add('editeur', TextType::class, [
                 'required' => false,
-                'disabled' => false
+                'disabled' => true
             ])
             ->add('editeurlieu', TextType::class, [
                 'required' => false,
-                'disabled' => false
+                'disabled' => true
             ])
             ->add('anneedit', TextType::class, [
                 'required' => false,
-                'disabled' => false
+                'disabled' => true
             ])
             ->add('isbn', TextType::class, [
                 "required" => false,
                 'empty_data' => '',
-                'disabled' => false
+                'disabled' => true
             ])
             ->add('pagination', null, [
                 "required" => false,
                 'empty_data' => '',
-                'disabled' => false
+                'disabled' => true
             ])
             ->add('collection', null, [
                 "required" => false,
                 'empty_data' => '',
-                'disabled' => false
+                'disabled' => true
             ])
             ->add('imageFile', FileType::class, [
                 'required' => false
@@ -124,7 +124,9 @@ class ResourceType extends AbstractType
             ])
             ->add('front')
             ->add('folderFront')
-            ->add('lecteur')
+            ->add('lecteur', null, [
+                'disabled' => true
+            ])
             ->add('works', EntityType::class, [
                 'class' => Work::class,
                 'required' => false,
@@ -138,8 +140,15 @@ class ResourceType extends AbstractType
                 'multiple' => true    
             ])
             ->add('urlFolder')
-            ->add('allIndex')
+            ->add('allIndex', null, [
+                'disabled' => true
+            ])
             ->add('idcadic', null, [
+                "required" => false,
+                'empty_data' => '',
+                'disabled' => true
+            ])
+            ->add('id', null, [
                 "required" => false,
                 'empty_data' => '',
                 'disabled' => true

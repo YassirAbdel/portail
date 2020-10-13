@@ -291,7 +291,7 @@ public function searchtest(Request $request, Session $session, TransformedFinder
 
         /** Facets */
         if ($field == '_all'){
-            $typesFacet = $this->getSearchFacet1('types', 'type', $q, 20);
+            $typesFacet = $this->getSearchFacet1('types', 'type', $q, 200);
             $personsFacet = $this->getSearchFacet1('persons', 'person', $q, 15);
             $oeuvresFacet = $this->getSearchFacet1('oeuvres', 'oeuvre', $q, 15);
             $organismesFacet = $this->getSearchFacet1('organismes', 'organisme', $q, 10);

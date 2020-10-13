@@ -305,6 +305,10 @@ a:hover {
 .card-title {
 	font-weight: 700;
 }
+.card-subtitle {
+	font-weight: 100;
+	font-size: 1em;
+}
 .badge-primary {
     color: #fff;
     background-color: #bf6f33;
@@ -354,7 +358,9 @@ a:hover {
 strong, b {
     font-weight: bold;
 }
-
+.button a {
+	text-decoration: none;
+}
 /*** Responsive mode ***/
 @media screen and (max-width: 320px) {
 

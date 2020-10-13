@@ -21,6 +21,7 @@
 			<tr>
 				<th>Titre</th>
 				<th>Collection</th>
+				<th>Ressources</th>
 				<th>Actions</th>
 			</tr>
 		</thead>
@@ -29,14 +30,27 @@
     		{% for subject in subjects %}
     			<tr>
 					<td>{{ subject.title }}</td>
-					<td><a href="{{ path('admin.category.edit', {id: subject.category.id}) }}">{{ subject.category.title }}</a></td>
-    				
+					<td>
+						<a href="{{ path('admin.category.edit', {id: subject.category.id}) }}">{{ subject.category.title }}</a>
+					</td>
+					<td>
+						{% set resources = [] %}
+						{% for  resource in subject.resources %}
+							{% set url = path('admin.resource.edit', {id: resource.id})  %}
+							{% set title = resource.title %}
+							{% if loop.last %}
+								{% set urlResource = "<a href='" ~ url ~ "'>" ~ title ~ "</a>" %}
+							{% else %}
+								{% set urlResource = "<a href='" ~ url ~ "'>" ~ title ~ "</a> ; " %}
+							{% endif %}
+							{{ urlResource|raw }}
+						{% endfor %}
+					</td>
     				<td>
-    					
     					<a href="{{ path('admin.subject.edit', {id: subject.id}) }}" class="btn btn-secondary">Éditer</a>
 					</td>
 					
-    				<td>	
+					<td>	
     					
     					<form method="post" action="{{ path('admin.subject.delete', {id: subject.id}) }}" onsubmit="return confirm('Etes-vous vraiment sûr ?')">
     						<input type="hidden" name="_method" value="DELETE">

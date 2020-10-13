@@ -76,6 +76,7 @@ class AdminSubjectController extends AbstractController
                 'form' => $form->createView(),
             ]);
         }
+        dump($subject);
 
         return $this->render('admin/subject/edit.html.twig', [
             'subject' => $subject,

@@ -8,6 +8,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use App\Entity\Subject;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 
 class CategoryType extends AbstractType
 {
@@ -16,7 +17,8 @@ class CategoryType extends AbstractType
         $builder
             ->add('title')
             ->add('subTitle')
-            ->add('Description')
+            ->add('Description', CKEditorType::class)
+            /**
             ->add('subjects', EntityType::class, [
                 'class' => Subject::class,
                 'required' => false,
@@ -24,6 +26,7 @@ class CategoryType extends AbstractType
                 'multiple' => true
                 
             ])
+            **/
         ;
     }
 

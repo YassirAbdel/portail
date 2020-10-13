@@ -15,15 +15,16 @@
 				<div class="col-md-12">&nbsp;</div>
 			</div>
 			<div class="row">
-				<div class="col-md-3">{{ form_row(form.idcadic) }}</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6">{{ form_row(form.persons) }}</div>
-				<div class="col-md-6">{{ form_row(form.works) }}</div>
+				<div class="col-md-6">{{ form_row(form.type) }}</div>
+				<div class="col-md-6">{{ form_row(form.title) }}</div>
 			</div>
 			<div class="row">
 				<div class="col-md-6">{{ form_row(form.structures) }}</div>
 				<div class="col-md-6">{{ form_row(form.subjects) }}</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">{{ form_row(form.persons) }}</div>
+				<div class="col-md-6">{{ form_row(form.works) }}</div>
 			</div>
 			<div class="row">
 				<div class="col-md-6">{{ form_row(form.urlFolder) }}</div>
@@ -32,11 +33,28 @@
 				<div class="col-md-6">{{ form_row(form.front) }}</div>
 				<div class="col-md-6">{{ form_row(form.folderFront) }}</div>
 			</div>
+			<button class="btn btn-primary">{{ button|default('Enregistrer') }}</button>
 			<div class="row">
-				<div class="col-md-3">{{ form_row(form.type) }}</div>
-				<div class="col-md-3">{{ form_row(form.title) }}</div>
-				<div class="col-md-3">{{ form_row(form.auteur) }}</div>
-				<div class="col-md-3">{{ form_row(form.resp1) }}</div>
+				<div class="col-md-12">&nbsp;</div>
+			</div>
+			<div class="row">
+					<div class="col-md-12"><hr></div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">&nbsp;</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3">{{ form_row(form.idcadic) }}</div>
+				<div class="col-md-3">{{ form_row(form.id) }}</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">{{ form_row(form.analyse) }}</div>
+				<div class="col-md-4">{{ form_row(form.rights) }}</div>
+				<div class="col-md-4">{{ form_row(form.oai) }}</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">{{ form_row(form.auteur) }}</div>
+				<div class="col-md-6">{{ form_row(form.resp1) }}</div>
 			</div>
 			<div class="row">
 				<div class="col-md-3">{{ form_row(form.person, {'attr': {'rows': '5'}}) }}</div>
@@ -57,11 +75,6 @@
 				<div class="col-md-4">{{ form_row(form.isbn) }}</div>
 				<div class="col-md-4">{{ form_row(form.pagination) }}</div>
 				<div class="col-md-4">{{ form_row(form.collection) }}</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4">{{ form_row(form.analyse) }}</div>
-				<div class="col-md-4">{{ form_row(form.rights) }}</div>
-				<div class="col-md-4">{{ form_row(form.oai) }}</div>
 			</div>
 			<div class="row">
 				<div class="col-md-12">{{ form_row(form.comment) }}</div>

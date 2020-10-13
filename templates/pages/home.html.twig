@@ -275,29 +275,6 @@
 								   </div>
 							  </div>
 							-->
-							<!--
-							<table>
-							{% for category in collections %}
-							<tr>
-								<td>{{ category.title }}</td>
-								<td>
-								{% set subjects = [] %}
-								{% for  subject in category.subjects %}
-									{% set url = path('admin.subject.edit', {id: subject.id})  %}
-									{% set title = subject.title %}
-									{% if loop.last %}
-										{% set urlSubject = "<a href='" ~ url ~ "'>" ~ title ~ "</a>" %}
-									{% else %}
-										{% set urlSubject = "<a href='" ~ url ~ "'>" ~ title ~ "</a> ; " %}
-									{% endif %}
-									{{ urlSubject|raw }}
-									
-									
-								{% endfor %}
-								{% endfor %}
-								</tr>
-							</table>
-						-->
 					  </section>
 					  <!-- Five -->
 					  <div id="collections"></div>
@@ -307,7 +284,7 @@
 							  <h2>{{ category.title }}</h2>
 							  <p>{{ category.subTitle }}</p>
 							  <ul class="actions fixed" style="display: block;">
-								<li><span class="button small">Details</span></li>
+								<li><span class="button small"><a href="{{ path('category.show', {slug: category.slug, id: category.id }) }}">Details</a></span></li>
 							 </ul>
 							  
 						  </div>
@@ -316,7 +293,7 @@
 							  <div class="gallery style2 medium lightbox onscroll-fade-in">
 								{% for  subject in category.subjects %}
 								  <article>
-									  <a href="results.html" class="image" target="_blank">
+									  <a href="{{ path('subject.show', {slug: subject.slug, id: subject.id }) }}" class="image" target="_blank">
 											{% if subject.filename %}
 										  		<img src="{{ vich_uploader_asset(subject, 'imageFile') | imagine_filter('thumbv') }}" alt="" />
 											{% endif %}
@@ -325,7 +302,7 @@
 										  <h3>{{ subject.title }}</h3>
 										  <p>{{ subject.subTitle }}</p>
 										  <ul class="actions fixed">
-											  <li><span class="button small">Details</span></li>
+											  <li><span class="button small"><a href="{{ path('subject.show', {slug: subject.slug, id: subject.id }) }}">Details</a></span></li>
 										  </ul>
 									  </div>
 								  </article>
