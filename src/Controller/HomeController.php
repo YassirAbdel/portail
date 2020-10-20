@@ -188,10 +188,10 @@ public function searchtest(Request $request, Session $session, TransformedFinder
         $resources = $repository->fullsearch($search);
         
         /** @var Resource $resource */
-        foreach($resources as $resource) {
+        foreach($resources as $ressource) {
             $data[] = [
-                'title' => $resource->getTitle(),
-                'type' => $resource->gettype(),
+                'title' => $ressource->getTitle(),
+                'type' => $ressource->gettype(),
                 //'person' => $resource->getPerson(),
             ];
         }
@@ -259,7 +259,7 @@ public function searchtest(Request $request, Session $session, TransformedFinder
         
         $facet = $request->get('facet', null);
 
-        $q = self::enleverCaracteresSpeciaux($q);
+        //$q = self::enleverCaracteresSpeciaux($q);
         //$q = rtrim($q);
         if ($field == '_all') {
             if (strlen($q) >= 100) {
@@ -271,14 +271,19 @@ public function searchtest(Request $request, Session $session, TransformedFinder
          //$chacacters = array("\"","/","L'",",",".","&","quot;","[","]","(Le)","(La)","(L')","»","«",":","?","!");
          $chacacters2 = array("'","-"," ","'");
          //$chacacters2 = array("'"," ","'");
-         $q = str_replace($chacacters, "*", $q);
-         $q = str_replace($chacacters2, "*", $q);
+         // $q = self::cleanStr($q);
+         $q = self::enleverCaracteresSpeciaux($q);
+         $q = preg_replace('/[^A-Za-z0-9\-]/', '*', $q);
+         dump($q);
+         //$q = str_replace($chacacters, "*", $q);
+         //$q = str_replace($chacacters2, "*", $q);
          $q = strtolower($q);
          if ($field == '_all'){
             $q = '*'.$q."*";
          }else{
             $q = '*'.$q."*";
          }
+         
         $query = $this->repository->searchFullElastic($q, $field, $facet, $resourcesFinder, $request);
 
         $paginatorAdapter = $resourcesFinder->createHybridPaginatorAdapter($query);
@@ -905,9 +910,9 @@ public function searchtest(Request $request, Session $session, TransformedFinder
 /**
  * Encode array from latin1 to utf8 recursively
  * @param $text
- * @return array|string
+ * @return string
  */
-    public function enleverCaracteresSpeciaux($text) {
+    public static function enleverCaracteresSpeciaux(String $text) {
         $utf8 = array(
         '/[áàâãªä]/u' => 'a',
         '/[ÁÀÂÃÄ]/u' => 'A',
@@ -923,14 +928,35 @@ public function searchtest(Request $request, Session $session, TransformedFinder
         '/Ç/' => 'C',
         '/ñ/' => 'n',
         '/Ñ/' => 'N',
+        '/\s\s+/' => ' ',
+        #'/",/u' => '*',
+        #'/0123456789/u' => '*',
+        #'/().&/u' => '*',
+        #'/quot;/u' => '*',
+        #'/[]/u' => '*',
+        #'/(Le)L(L\')/u' => '*',
+        #'/»«:?!/u' => '*',
         #'//' => '-', // conversion d'un tiret UTF-8 en un tiret simple
         #'/[]/u' => ' ', // guillemet simple
-        #'/\[«»]/u' => ' ', // guillemet double
+        #'/\[«»]/u' => '*', // guillemet double
         #'/ /' => ' ', // espace insécable (équiv. à 0x160)
         );
         $text = preg_replace(array_keys($utf8), array_values($utf8), $text);
         return $text;
         }
+    
+        
+    public static function cleanStr($string){
+        // Replaces all spaces with hyphens.
+        //$string = str_replace(' ', '*', $string);
+    
+        // Removes special chars.
+        $string = preg_replace('/[^A-Za-z0-9\-]/', '*', $string);
+        // Replaces multiple hyphens with single one.
+        //$string = preg_replace('/-+/', '', $string);
+        
+        return $string;
+    }
 
  /**
  * Encode array from latin1 to utf8 recursively

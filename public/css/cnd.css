@@ -258,7 +258,7 @@ input[type="text"]:focus,
 }
 #scroll_to_top {
   position: fixed;
-  width: 80px;
+  width: 45px;
   height: auto;
   bottom: 10rem;
   right: 10px;

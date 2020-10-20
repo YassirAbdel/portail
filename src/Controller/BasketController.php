@@ -144,7 +144,7 @@ class BasketController extends AbstractController
      * @param string slug
      * @param int $id
      */
-    public function addBasket(Resource $resource, String $slug, Int $id, Request $request)
+    public function addBasket(Resource $resource, String $slug, Request $request)
     {
         $resource_slug = $resource->getSlug();
         $resource_id = $resource->getId();
@@ -177,7 +177,45 @@ class BasketController extends AbstractController
         
     }
     
-    
+   /**
+     * @route("/addtoselection/{slug}-{id}" , name="resource.selectionadd", requirements={"slug" : "^[a-z0-9]+(?:-[a-z0-9]+)*$", "id" : "\d+"},  methods="GET|POST")
+     * @return Response
+     * @param Resource resource
+     * @param string slug
+     * @param int $id
+     */
+    public function addtoselection(Resource $resource, String $slug, Request $request)
+    {
+        $resource_slug = $resource->getSlug();
+        $resource_id = $resource->getId();
+        if ($resource_slug !== $slug){
+            return $this->redirectToRoute('resource.show', [
+                'id' => $resource_id,
+                'slug' => $resource_slug
+            ],  301);
+        }
+        
+        $session = $request->getSession();
+        //$session->remove('panier');die();
+        if(!$session->has('panier')) {
+            $panier = new ArrayCollection();
+            
+            $session->set('panier', $panier);
+        }
+        $panier = $session->get('panier');
+        
+        
+        if(\array_key_exists('id', $panier)) {
+            
+        } else {
+            $panier[$resource->getId()] = $resource;
+        }
+        
+        $session->set('panier', $panier);
+        
+        return $this->redirectToRoute('resources.searchfacet1');
+        
+    } 
     
     
 }
