@@ -1,0 +1,131 @@
+{% extends 'base-frontoffice.html.twig' %}
+{% block title 'Portail documentaire - Accueil' %}
+{% block body %}
+<div class="bd-example">
+	
+  
+  <!-- Six -->
+				  <section class="wrapper style1 align-center">
+						  <div class="inner">
+							  <h2>Votre sélection</h2>
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">Type de ressource</th>
+          <th scope="col">Titre</th>
+          <th scope="col">Auteur</th>
+        </tr>
+      </thead>
+      <tbody>
+       {% set resources = app.session.get('panier') %}
+            
+       {% for resource in resources %}
+            <tr>
+              <th scope="row">{{ resource.id }}</th>
+              <td>{{ resource.type }}</td>
+              <td>{{ resource.title }}</td>
+              <td>{{ resource.auteur }}</td>
+            </tr>
+       {% endfor %}
+      </tbody>
+    </table>
+    <h2>Enregistrer votre séletion</h2>
+    {{ include('basket/_form.html.twig') }}
+					  	  </div>
+					  </section>
+					  <section>
+				  
+						  <div class="row">
+							
+						  </div>
+						  <div class="navigation">
+							
+						</div>
+						  
+							
+					  </section>
+					  <!-- Five -->
+					  <div id="collections"></div>
+					  
+					  <section class="wrapper style1 align-center">
+						  <div class="inner">
+							  <h2>category.title </h2>
+							  <p>category.subTitle</p>
+							  <ul class="actions fixed" style="display: block;">
+								<li><span class="button small"><a href="#">Details</a></span></li>
+							 </ul>
+							  
+						  </div>
+  
+						  <!-- Gallery -->
+							  <div class="gallery style2 medium lightbox onscroll-fade-in">
+								
+								  <article>
+									  <a href="#" class="image" target="_blank">
+											
+									  </a>
+									  <div class="caption">
+										  <h3>#</h3>
+										  <p>#</p>
+										  <ul class="actions fixed">
+											  <li><span class="button small"><a href="#">Details</a></span></li>
+										  </ul>
+									  </div>
+								  </article>
+								  
+								  
+							  </div>
+  
+					  </section>
+					  
+					  
+				  <!-- One -->
+				  <div id="dossiers"><p></p></div>
+				  {
+					  <section class="spotlight style1  content-align-left image-position-center onscroll-image-fade-in">
+						  <div class="content">
+							  <h2>resource.title </h2>
+							  <p>resource.comment </p>
+							  <ul class="actions stacked">
+								  <li><a  href="#"" class="button">Détails</a></li>
+							  </ul>
+						  </div>
+						  
+						  	<div class="image">
+						  	  	<img src="#" alt="" />
+							</div>
+						  
+						  	<div class="image">
+					 		  <img  src="#" alt="" />
+							</div>
+						
+					  </section>
+				 
+				  	  <section class="wrapper style1 align-center">
+						  <div class="inner medium">
+							  <h2>Vous avez une question</h2>
+							  <form method="post" action="#">
+								  <div class="fields">
+									  <div class="field half">
+										  <label for="name">Nom</label>
+										  <input type="text" name="name" id="name" value="" />
+									  </div>
+									  <div class="field half">
+										  <label for="email">Email</label>
+										  <input type="email" name="email" id="email" value="" />
+									  </div>
+									  <div class="field">
+										  <label for="message">Message</label>
+										  <textarea name="message" id="message" rows="6"></textarea>
+									  </div>
+								  </div>
+								  <ul class="actions special">
+									  <li><input type="submit" name="submit" id="submit" value="Envoyer" /></li>
+								  </ul>
+							  </form>
+  
+						  </div>
+					  </section> 
+{% endblock %}

@@ -10,6 +10,11 @@
       <h4 class="card-title"><a href="{{ path('resource.show', {slug: resource.slug, id: resource.id }) }}">{{ resource.title ~ ' (' ~ resource.type ~ ')' }}</a></h4>
       <h5 class="card-author">{{ resource.auteur|replace({'|':' ; '}) }}</h5>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a class="btn btn-primary" href="{{ path('resource.selectionadd', {slug: resource.slug, id: resource.id }) }}">Sélectionner</a>
+      {% if app.request.query.get('page') is not null %}
+        {% set page = app.request.query.get('page') %}
+      {% else %}
+        {% set page=1 %}
+      {% endif %}
+      <a class="btn btn-primary" href="{{ path('resource.selectionadd', {slug: resource.slug, id: resource.id }) }}?page={{ page }}">Sélectionner</a>
     </div>
 </div>

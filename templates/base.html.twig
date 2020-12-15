@@ -87,7 +87,7 @@
     					<li class="nav-item"><a class="nav-link" href={{ path('app_login') }}>Connexion</a></li>	
     				{% endif %}
     			<li class="nav-item">
-					<a class="nav-link" style="display:inline;" href="{{ path('basket.new') }}">Votre sélection</a>
+					<a class="nav-link" style="display:inline;" href="{{ path('admin.basket.new') }}">Votre sélection</a>
 					{% set panier = app.session.get('panier') %}
 				    {% set count =  panier|length %}
 				    {% if(count > 0) %}

@@ -138,7 +138,7 @@ class HomeController  extends AbstractController {
         $front = $this->repository->findFront();
         $foldersFront = $this->repository->findFolderFront();
         
-        dump($foldersFront);
+        //dump($foldersFront);
         //$session->set('q', $q);
         //dump($pagination);die();
 
@@ -252,29 +252,27 @@ public function searchtest(Request $request, Session $session, TransformedFinder
     public function searchFacet1(Request $request, SessionInterface $session, TransformedFinder  $resourcesFinder)
     {
         $session->remove('q');
-        
         $q = $request->get('q', null); 
-        $session->set('q', $q);
         $field = $request->get('field', null);
-        
         $facet = $request->get('facet', null);
-
-        //$q = self::enleverCaracteresSpeciaux($q);
+       
+        $session->set('field', $field);
+        $session->set('facet', $facet);
+        
         //$q = rtrim($q);
         if ($field == '_all') {
             if (strlen($q) >= 100) {
                 $q = substr($q, 0 , 100);
             }
         }
-        
-         $chacacters = array("\"","/","L'",",","0","1","2","3","4","5","6","7","8","9","(",")",".","&","quot;","[","]","(Le)","(La)","(L')","»","«",":","?","!");
+         
+        $chacacters = array("\"","/","L'",",","0","1","2","3","4","5","6","7","8","9","(",")",".","&","quot;","[","]","(Le)","(La)","(L')","»","«",":","?","!");
          //$chacacters = array("\"","/","L'",",",".","&","quot;","[","]","(Le)","(La)","(L')","»","«",":","?","!");
          $chacacters2 = array("'","-"," ","'");
          //$chacacters2 = array("'"," ","'");
          // $q = self::cleanStr($q);
          $q = self::enleverCaracteresSpeciaux($q);
          $q = preg_replace('/[^A-Za-z0-9\-]/', '*', $q);
-         dump($q);
          //$q = str_replace($chacacters, "*", $q);
          //$q = str_replace($chacacters2, "*", $q);
          $q = strtolower($q);
@@ -284,6 +282,19 @@ public function searchtest(Request $request, Session $session, TransformedFinder
             $q = '*'.$q."*";
          }
          
+        $session->set('q', $q); 
+        $allresults = $this->queryAll($q, $field, $facet, $resourcesFinder, $request);
+        
+        $pagination = $allresults[0];
+        $nbresult = $allresults[1];
+        $typesFacet = $allresults[2];
+        $personsFacet = $allresults[3];
+        $oeuvresFacet = $allresults[4];
+        $organismesFacet = $allresults[5];
+        $tagsFacet = $allresults[6];
+        $geosFacet = $allresults[7];
+
+        /**
         $query = $this->repository->searchFullElastic($q, $field, $facet, $resourcesFinder, $request);
 
         $paginatorAdapter = $resourcesFinder->createHybridPaginatorAdapter($query);
@@ -293,8 +304,8 @@ public function searchtest(Request $request, Session $session, TransformedFinder
         $pagination->setMaxPerPage(12);
        
         $nbresult = $pagination->getNbResults();
-
-        /** Facets */
+        
+        
         if ($field == '_all'){
             $typesFacet = $this->getSearchFacet1('types', 'type', $q, 200);
             $personsFacet = $this->getSearchFacet1('persons', 'person', $q, 15);
@@ -311,8 +322,8 @@ public function searchtest(Request $request, Session $session, TransformedFinder
             $tagsFacet = $this->getSearchFacet1('tags', 'tag', $q, 15);
             $geosFacet = $this->getSearchFacet1('geos', 'geo', $q, 15);
          }
-
-
+          */
+   
          return $this->render('pages/results.html.twig',[
             'current_page' => 'results',
             'pagination' => $pagination,
@@ -323,8 +334,6 @@ public function searchtest(Request $request, Session $session, TransformedFinder
             'organismesFacet' => $organismesFacet,
             'tagsFacet' => $tagsFacet,
             'geosFacet' => $geosFacet
-
-            //'form' => $form->createView()
         ]);
     }
 
@@ -980,8 +989,40 @@ public function searchtest(Request $request, Session $session, TransformedFinder
          return $dat;
       }
    }
-
    
+   public  function queryAll($q, $field, $facet, TransformedFinder $resourcesFinder, Request $request)
+   {
+    $query = $this->repository->searchFullElastic($q, $field, $facet, $resourcesFinder, $request);
+
+    $paginatorAdapter = $resourcesFinder->createHybridPaginatorAdapter($query);
+    $pagination = new Pagerfanta(new FantaPaginatorAdapter($paginatorAdapter));
+
+    $pagination->setCurrentPage($request->query->getInt('page', 1));
+    $pagination->setMaxPerPage(12);
+    $nbresult = $pagination->getNbResults();
+
+    /** Facets */
+    if ($field == '_all'){
+        $typesFacet = $this->getSearchFacet1('types', 'type', $q, 200);
+        $personsFacet = $this->getSearchFacet1('persons', 'person', $q, 15);
+        $oeuvresFacet = $this->getSearchFacet1('oeuvres', 'oeuvre', $q, 15);
+        $organismesFacet = $this->getSearchFacet1('organismes', 'organisme', $q, 10);
+        $tagsFacet = $this->getSearchFacet1('tags', 'tag', $q, 15);
+        $geosFacet = $this->getSearchFacet1('geos', 'geo', $q, 15);
+     }
+     elseif ($field == 'person' || $field == 'oeuvre' || $field == 'organisme' || $field == 'type' || $field == 'tag' || $field == 'geo') {
+        $typesFacet = $this->getSearchFacet1('types', 'type', $q, 20);
+        $personsFacet = $this->getSearchFacet1('persons', 'person', $q, 15);
+        $oeuvresFacet = $this->getSearchFacet1('oeuvres', 'oeuvre', $q, 15);
+        $organismesFacet = $this->getSearchFacet1('organismes', 'organisme', $q, 10);
+        $tagsFacet = $this->getSearchFacet1('tags', 'tag', $q, 15);
+        $geosFacet = $this->getSearchFacet1('geos', 'geo', $q, 15);
+     }
+     
+     $allResults = array($pagination, $nbresult, $typesFacet, $personsFacet, $oeuvresFacet, $organismesFacet, $tagsFacet, $geosFacet);
+     return ($allResults);
+
+   }
 }
 
 

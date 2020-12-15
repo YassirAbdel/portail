@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Admin;
 use App\Entity\Basket;
 use App\Form\BasketType;
 use App\Repository\BasketRepository;
@@ -14,22 +14,22 @@ use App\Controller\HomeController;
 use FOS\ElasticaBundle\Finder\TransformedFinder;
 
 /**
- * @Route("/basket")
+ * @Route("admin/basket")
  */
-class BasketController extends AbstractController
+class AdminBasketController extends AbstractController
 {
     /**
-     * @Route("/", name="basket.index", methods={"GET"})
+     * @Route("/", name="admin.basket.index", methods={"GET"})
      */
     public function index(BasketRepository $basketRepository): Response
     {
-        return $this->render('basket/index.html.twig', [
+        return $this->render('admin/basket/index.html.twig', [
             'baskets' => $basketRepository->findAll(),
         ]);
     }
    
     /**
-     * @Route("/new", name="basket.new", methods={"GET","POST"})
+     * @Route("/new", name="admin.basket.new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
     {
@@ -44,7 +44,7 @@ class BasketController extends AbstractController
             ->add('resources')
            //->add('save', SubmitType::class, ['label' => 'Create Task'])
             ->getForm();
-        */
+        **/
         $form->handleRequest($request);
         
         if ($form->isSubmitted() && $form->isValid()) {
@@ -53,17 +53,17 @@ class BasketController extends AbstractController
             $entityManager->flush();
             $session->remove('panier');
             
-            return $this->redirectToRoute('basket.index');
+            return $this->redirectToRoute('admin.basket.index');
         }
         
-        return $this->render('basket/new.html.twig', [
+        return $this->render('admin/basket/new.html.twig', [
             'basket' => $basket,
             'form' => $form->createView(),
         ]);
     }
     
     /**
-     * @Route("/vider", name="basket.vider", methods={"GET","POST"})
+     * @Route("/vider", name="admin.basket.vider", methods={"GET","POST"})
      */
     
     public function viderBasket(Request $request): Response
@@ -82,20 +82,20 @@ class BasketController extends AbstractController
     
 
     /**
-     * @Route("/{id}/show", name="basket.show", methods={"GET"})
+     * @Route("/{id}/show", name="admin.basket.show", methods={"GET"})
      */
     public function show(Basket $basket): Response
     {
         dump($basket);
         $id_basket = $basket->getId();
         dump($id_basket);
-        return $this->render('basket/show.html.twig', [
+        return $this->render('admin/basket/show.html.twig', [
             'basket' => $basket
         ]);
     }
 
     /**
-     * @Route("/{id}/edit", name="basket.edit", methods={"GET","POST"})
+     * @Route("/{id}/edit", name="admin.basket.edit", methods={"GET","POST"})
      */
     public function edit(Basket $basket, Request $request): Response
     {
@@ -115,7 +115,7 @@ class BasketController extends AbstractController
             ]);
         }
 
-        return $this->render('basket/edit.html.twig', [
+        return $this->render('admin/basket/edit.html.twig', [
             'basket' => $basket,
             'form' => $form->createView(),
             
@@ -123,7 +123,7 @@ class BasketController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="basket.delete", methods={"DELETE"})
+     * @Route("/{id}", name="admin.basket.delete", methods={"DELETE"})
      */
     public function delete(Request $request, Basket $basket): Response
     {
@@ -138,7 +138,7 @@ class BasketController extends AbstractController
     
     
     /**
-     * @route("/addressource/{slug}-{id}" , name="resource.basketadd", requirements={"slug" : "^[a-z0-9]+(?:-[a-z0-9]+)*$", "id" : "\d+"},  methods="GET|POST")
+     * @route("/addressource/{slug}-{id}" , name="admin.resource.basketadd", requirements={"slug" : "^[a-z0-9]+(?:-[a-z0-9]+)*$", "id" : "\d+"},  methods="GET|POST")
      * @return Response
      * @param Resource resource
      * @param string slug
@@ -178,7 +178,7 @@ class BasketController extends AbstractController
     }
     
    /**
-     * @route("/addtoselection/{slug}-{id}" , name="resource.selectionadd", requirements={"slug" : "^[a-z0-9]+(?:-[a-z0-9]+)*$", "id" : "\d+"},  methods="GET|POST")
+     * @route("/addtoselection/{slug}-{id}" , name="admin.resource.selectionadd", requirements={"slug" : "^[a-z0-9]+(?:-[a-z0-9]+)*$", "id" : "\d+"},  methods="GET|POST")
      * @return Response
      * @param Resource resource
      * @param string slug

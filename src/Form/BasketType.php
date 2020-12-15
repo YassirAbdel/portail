@@ -8,12 +8,8 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
-use Symfony\Component\Form\Extension\Core\Type\HiddenType;
-use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
-use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
-use Symfony\Component\Form\Extension\Core\Type\CollectionType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\HttpFoundation\Request;
+use Doctrine\ORM\EntityRepository;
+
 
 class BasketType extends AbstractType
 {
@@ -22,8 +18,20 @@ class BasketType extends AbstractType
         
         $builder
             ->add('title')
-            ->add('resources')
+            ->add('resources', EntityType::class, [
+                'class' => Resource::class,
+                'required' => false, 
+                'choice_label' => 'title',
+                'multiple' => true,
+                'query_builder' => function (EntityRepository $er) {
+                    return $er->createQueryBuilder('r')
+                    ->setMaxResults(30);    
+                },
+                
+            ])
+          
             //->add('creat_at')
+           
         ;
     }
 
@@ -31,7 +39,8 @@ class BasketType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => Basket::class,
-            'translation_domain' => 'forms'
+            'translation_domain' => 'forms',
+            'allow_extra_fields' => true
         ]);
     }
 }

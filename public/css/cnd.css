@@ -361,6 +361,7 @@ strong, b {
 .button a {
 	text-decoration: none;
 }
+
 /*** Responsive mode ***/
 @media screen and (max-width: 320px) {
 
@@ -506,7 +507,7 @@ strong, b {
 		.form-group {
 			width: 380px;
 			font-size: 0.6rem;
-		}
+		}	
 }
 @media screen and (max-width: 736px) {
 
@@ -553,6 +554,10 @@ strong, b {
 			width: 300px;
 			font-size: 0.6rem;
 		}
+		.form-group h3 {
+			margin-top: 1.5rem;
+		}
+		
 }
 @media screen and (min-width: 768px) {
 
@@ -589,7 +594,9 @@ strong, b {
 		.banner.style1 .image {
 			width: 100%;
 		}
-		
+		.form-group h3 {
+			margin-top: -2rem;
+		}
 }
 @media screen and (min-width: 834px) {
 
@@ -685,6 +692,7 @@ strong, b {
 		.logo-cnd-subtitle {
 			line-height: 12.33rem;
 		}
+		
 }
 @media screen and (max-width: 1366px) and (max-width: 2050px) {
 
@@ -698,6 +706,7 @@ strong, b {
 		.logo-cnd-subtitle {
 			line-height: 12.33rem;
 		}
+		
 }
 @media screen and (max-width: 1366px) {
 
@@ -807,7 +816,7 @@ strong, b {
 	.card {
 		width: 30%;
 		/* si toute la largeur : width: 100%; */
-		
 	}
+	
 	
 }

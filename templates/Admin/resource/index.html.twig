@@ -72,7 +72,7 @@
 					<td>{{ resource.title }}</td>
 					<td>{{ resource.type }}</td>
 					<td>
-						<p class="card-text"><a href="{{ path('resource.basketadd', {slug: resource.slug, id: resource.id }) }}" class="btn btn-secondary">Sélectionner</a></p>
+						<p class="card-text"><a href="{{ path('admin.resource.basketadd', {slug: resource.slug, id: resource.id }) }}" class="btn btn-secondary">Sélectionner</a></p>
     				<td>
     					
     					<a href="{{ path('admin.resource.edit', {id: resource.id}) }}" class="btn btn-secondary">Éditer</a>

@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Basket index{% endblock %}
+
+{% block body %}
+    <h1>Liste des sélections</h1>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titre</th>
+                <th>Date de création</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for basket in baskets %}
+            <tr>
+                <td>{{ basket.id }}</td>
+                <td>{{ basket.title }}</td>
+                <td>{{ basket.creatAt ? basket.creatAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td style="display:inline">
+                    <a href="{{ path('basket.show', {'id': basket.id}) }}" class="btn btn-primary">Consulter</a>
+                    <a href="{{ path('basket.edit', {'id': basket.id}) }}" class="btn btn-primary">Editer</a>
+                </td>
+                <td>
+                 {{ include('basket/_delete_form.html.twig') }}
+                 </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">Liste de sélection vide</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,26 +1,19 @@
 <form action="{{ path('basket.new') }}" method="post">
-        <div id="basket">
-        	<div class="form-row">
-    			<div class="form-group col-md-9">
-        			<h4><label for="basket_title" class="required">Titre</label></h5>
-        			<input type="text" id="basket_title" name="basket[title]" required="required" maxlength="255" class="form-control form-control-lg" />
-        		</div>
+<div id="basket">
+    <div class="form-row">
+    	<div class="form-group col-md-6">
+        	<h3>Titre</h3>
+        		<input type="text" id="basket_title" name="basket[title]" required="required" maxlength="255" class="form-control form-control-lg" />
         	</div>
-        
+        </div>
         {% set resources = app.session.get('panier') %}
-        
         {% for resource in resources %}
         	<input type="hidden" name="basket[resources][]" value="{{ resource.id }}"/>
-        {% endfor %}
-       
-        </div>
+        {% endfor %}       
         <input type="hidden" id="basket__token" name="basket[_token]" value="{{ csrf_token('basket') }}"/>
-          
-    <table class="table">		
-    <tr>		
-       	<td><button class="btn btn-primary">Enregistrer</button></td>
-        <td><a href="{{ path('basket.index') }}" class="btn btn-primary">Liste des sélections</a></td>
-        <td><a href="{{ path('basket.vider') }}"  class="btn btn-primary">Vider votre sélection</a></td>
-    </tr>
-    </table>
+    </div>
+    <button class="btn btn-primary">Enregistrer</button>
+    <button class="btn btn-primary" style="margin-right:5px;"><a style="color:#162068;!important;font-weight:900;font-size:1.3rem;text-decoration:none;" href="{{ path('basket.index') }}">Liste des sélections</a></bottom>
+    <button class="btn btn-primary"><a style="color:#162068;!important;font-weight:900;font-size:1.3rem;text-decoration:none;" href="{{ path('basket.vider') }}">Vider votre sélection</a></bottom>
+</div>
 </form>

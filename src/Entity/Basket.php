@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\BasketRepository")
+ * @ORM\Table(name="basket")
  */
 class Basket
 {
@@ -31,7 +32,17 @@ class Basket
 
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Resource", inversedBy="baskets")
+     * @ORM\JoinTable(
+     *  name="basket_resource",
+     *  joinColumns={
+     *      @ORM\JoinColumn(name="basket_id", referencedColumnName="id")
+     *  },
+     *  inverseJoinColumns={
+     *      @ORM\JoinColumn(name="resource_id", referencedColumnName="id")
+     *  }
+     * )
      */
+    
     private $resources;
 
     public function __construct()

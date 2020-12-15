@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Basket{% endblock %}
+
+{% block body %}
+    <h1>Votre sélection</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ basket.id }}</td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ basket.title }}</td>
+            </tr>
+            <tr>
+                <th>Date de création</th>
+                <td>{{ basket.creatAt ? basket.creatAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+    
+     <h2>Détails des ressources de votre sélection</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">Type de ressource</th>
+          <th scope="col">Titre</th>
+          <th scope="col">Auteur</th>
+        </tr>
+      </thead>
+      <tbody>
+       {% for resource in basket.resources %}
+            <tr>
+              <th scope="row">{{ resource.id }}</th>
+              <td>{{ resource.type }}</td>
+              <td>{{ resource.title }}</td>
+              <td>{{ resource.auteur }}</td>
+            </tr>
+       {% endfor %}
+      </tbody>
+    </table>
+
+ <table class="table">
+ 	<tbody>
+    	<tr>
+        	<td><a href="{{ path('basket.edit', {'id': basket.id}) }}" class="btn btn-primary">Editer</a></td>
+			<td><a href="{{ path('basket.index') }}" class="btn btn-primary">Liste des sélections</a></td>
+			<td>{{ include('basket/_delete_form.html.twig') }}</td>
+       </tr>
+    </tbody>
+ </table>     
+       
+    
+{% endblock %}

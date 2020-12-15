@@ -73,7 +73,14 @@
 							<ul>
 								<li><a href="{{ path('home') }}#collections" class="btn btn-secondary btn-lg" style="text-decoration:none;padding:0;" role="button" aria-disabled="true"><h3><span class="collections" style="color:#162068;font-weight: 600;letter-spacing: 0.05em;">Collections</span></h3></a></li>
 								<li><a href="{{ path('home') }}#dossiers" class="btn btn-secondary btn-lg" style="text-decoration:none;" role="button" aria-disabled="true"><h3><span class="dossiers" style="color:#162068;font-weight: 600;letter-spacing: 0.05em;">Dossiers</span></h3></a></li>
-								<li><a href="#" class="btn btn-secondary btn-lg" style="text-decoration:none;padding-left:0;" role="button" aria-disabled="true"><h3><span class="dossiers" style="color:#162068;font-weight: 600;letter-spacing: 0.05em;">Sélection (0)</span></h3></a></li>
+								<li><a href="{{ path('basket.new') }}" class="btn btn-secondary btn-lg" style="text-decoration:none;padding-left:0;" role="button" aria-disabled="true"><h3><span class="dossiers" style="color:#162068;font-weight: 600;letter-spacing: 0.05em;">Sélection 
+								{% set panier = app.session.get('panier') %}
+				    			{% set count =  panier|length %}
+				    			{% if(count == 0) %}
+								(0)
+								{% else %}
+				    			({{ count }})
+								{% endif %}</span></h3></a></li>
 
 								
 								<!-- <li><i class="icon-second basket"><img src="{{ asset('images/icones/ic_shopping_basket_black_48dp.png') }}"></i></li> -->
